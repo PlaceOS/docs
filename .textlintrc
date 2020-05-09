@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "alex": {
+      "allow": []
+    },
+    "common-misspellings": {
+      "ignore": []
+    },
+    "en-capitalization": true,
+    "no-empty-section": true,
+    "no-exclamation-question-mark": true,
+    "period-in-list-item": true,
+    "rousseau": {
+      "showLevels": ["suggestion", "warning", "error"]
+    },
+    "terminology": {
+      "defaultTerms": true,
+      "terms": [
+        "PlaceOS"
+      ]
+    },
+    "write-good": true
+  }
+}
