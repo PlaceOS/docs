@@ -12,7 +12,13 @@
     "one-sentence-per-line": true,
     "period-in-list-item": true,
     "rousseau": {
-      "showLevels": ["suggestion", "warning", "error"]
+      "showLevels": ["suggestion", "warning", "error"],
+       ignoreInlineNodeTypes: ["Code", "Html"],
+    },
+    "spelling": {
+      "language": "en-au",
+      "wordDefinitionRegexp": "/[\\w']+/g",
+      "suggestCorrections": true,
     },
     "terminology": {
       "defaultTerms": true,
