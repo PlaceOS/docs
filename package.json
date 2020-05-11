@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "placeos-docs",
   "version": "1.0.0",
   "description": "This repository contains the human-created technical docs, guides and reference material for PlaceOS.",
   "private": true,
