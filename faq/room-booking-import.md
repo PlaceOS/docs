@@ -16,10 +16,14 @@ A typical configuration consists of
 The script below runs through the level zones and updates any systems with a
 resource email address to the standard configuration.
 
+
 ## Prerequisites
 
 Obtain the client id and secret from the domains tab in backoffice.
 Then you can use any valid administration account credentials for that domain.
+
+* create a calendar module that will be shared between all systems, note the module id
+* add the Bookings driver to the system and note the driver id
 
 
 ## Room bookings import script
