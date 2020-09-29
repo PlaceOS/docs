@@ -1,0 +1,57 @@
+# Meraki wireless tracking
+
+Configuring PlaceOS to interact with Meraki wireless systems
+
+
+## Prerequisites
+
+For more detail information on requirements please read the following:
+https://docs.google.com/document/d/1Ry2rZxSWgcRhJSNaFPbc7vetQtD1IsO_JD3KV_9wb5U/edit
+
+* Enable the scanning API (provides x, y coordinates of MAC addresses)
+  * https://developer.cisco.com/meraki/scanning-api/#!introduction/scanning-api
+  * Use Version 3 of the API
+  * PlaceOS requires the secret and validator codes
+* Enable the dashboard API (provides IP address and usernames, mapping to MAC addresses)
+  * https://documentation.meraki.com/zGeneral_Administration/Other_Topics/The_Cisco_Meraki_Dashboard_API
+  * Use Version 1 of the API
+  * PlaceOS requires the API key
+
+
+## Backoffice configuration
+
+1. Add the following driver from our [standard repository](https://github.com/PlaceOS/drivers)
+
+* Cisco Meraki Dashboard
+
+2. Configure the following settings on the driver:
+
+```yaml
+
+meraki_validator: configure if scanning API is enabled
+meraki_secret: configure if scanning API is enabled
+meraki_api_key: configure for the dashboard API
+
+```
+
+3. Add an instance of the driver to your tracking system
+   * start the module
+
+4. Create a trigger called `Meraki Scanner`
+   * Tick the enable webhook checkbox
+   * add GET and POST to the supported methods
+
+5. Add the trigger to your tracking system
+   * ensure it is enabled
+   * ensure `execute` is also enabled
+
+6. Click the link icon to copy the webhook link to your clipboard
+   * the webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98
+   * add the following to the end of the webhook: `&exec=true&mod=Dashboard&method=scanning_api`
+   * so the final webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api
+   * If you goto this URL it should return the validator code
+
+7. Provide the webhook URL to the Meraki administrator
+   * request they send you the secret and the validator they configure
+   * update these on the dashboard driver in backoffice
+   * ask the administrator to validate the URL once again
