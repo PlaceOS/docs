@@ -55,3 +55,12 @@ meraki_api_key: configure for the dashboard API
    * request they send you the secret and the validator they configure
    * update these on the dashboard driver in backoffice
    * ask the administrator to validate the URL once again
+
+
+### Configuring location tracking
+
+To enable device learning provide a `default_network_id` setting, this id should look like: `L_68xxx50007xxx0`
+This will query for devices on the network and map MAC addresses to usernames.
+
+This enables the location functionality via the `locate_user(email, username)` function.
+See the location services document for more information on how this works.
