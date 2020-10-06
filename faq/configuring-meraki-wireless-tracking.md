@@ -64,3 +64,28 @@ This will query for devices on the network and map MAC addresses to usernames.
 
 This enables the location functionality via the `locate_user(email, username)` function.
 See the location services document for more information on how this works.
+
+
+#### Meraki Maps to PlaceOS Zones
+
+To configure a map id to zone mapping
+
+1. in backoffice execute `Dashboard.sync_floorplan_sizes`
+2. view and then copy the result, this shows the IDs and floor names
+3. configure the following settings in the driver:
+
+```yaml
+
+floorplan_mappings:
+  g_72728977375679:
+    level_name: Sydney - ground floor
+    building: zone-EmWLJNm0i~6
+    level: zone-FBkrOX0ZGoy
+  g_72789428956672:
+    level_name: Sydney - level 1
+    building: zone-EmWLJNm0i~6
+    level: zone-EmWVhHG3Bhz
+
+```
+
+`level_name` is there as a hint, building and level ids are the only requirement
