@@ -28,6 +28,8 @@ Such as a location calculated by a wireless network
   "last_seen": 1601555879,
   "building": "zone-EmWLJNm0i~6",
   "level": "zone-Epaq-dE1DaH",
+  "map_width": 1234.2,
+  "map_height": 123.8,
 
   // driver can include additional data to help with debugging
   "meraki_floor_id": "g_727894289736675",
