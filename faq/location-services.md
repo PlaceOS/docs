@@ -24,6 +24,7 @@ Such as a location calculated by a wireless network
   "y": 36.85052447328469,
   "lng": 55.27498749637098,
   "lat": 25.20090608906493,
+  "mac": "66e0fd1279ce",
   "variance": 4.5194575835650745,
   "last_seen": 1601555879,
   "building": "zone-EmWLJNm0i~6",
@@ -50,6 +51,7 @@ Such as a desk
   // this is the desk they've reserved, but false means they are not there
   "at_location": false,
   "map_id": "desk-4-1006",
+  "mac": "66e0fd1279ce",
   "level": "zone_1234",
   "building": "zone_1234"
 }
