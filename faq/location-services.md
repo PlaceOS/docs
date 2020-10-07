@@ -65,8 +65,9 @@ Such as an event in a meeting room
 
 {
   "location": "meeting",
-  "ends_at": 1234567,
-  "resource_calendars": ["meeting2.city1@org.com", "meeting8.city4@org.com"]
+  "resource_calendars": ["meeting2.city1@org.com", "meeting8.city4@org.com"],
+  "event_id": "meet-1234567",
+  "ends_at": 1234567
 }
 
 ```
