@@ -22,7 +22,7 @@ Such as a location calculated by a wireless network
   "coordinates_from": "bottom-left",
   "x": 27.113065326953013,
   "y": 36.85052447328469,
-  "lng": 55.27498749637098,
+  "lon": 55.27498749637098,
   "lat": 25.20090608906493,
   "mac": "66e0fd1279ce",
   "variance": 4.5194575835650745,
