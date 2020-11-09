@@ -116,7 +116,44 @@ you find this under bucket permissions -> CORS configuration
 </CORSConfiguration>
 ```
 
-The bucket policy will allow for public read, although the uploads should be configured as public
+You'll want to configure the access key with minimal permissions too
+
+1. in IAM, create a new user to act as the service account
+2. grant the user no permissions except S3 List, Read, Write, Object permissions management 
+3. generate some access keys to use for signing upload requests
+
+An example IAM user policy for file uploads
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::os.place.tech"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:*Object",
+            "Resource": "arn:aws:s3:::os.place.tech/*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObjectVersionAcl",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+If you don't want he user to have object permission management then you also override the bucket level policy, where all objects are public
 
 ```json
 {
@@ -135,9 +172,3 @@ The bucket policy will allow for public read, although the uploads should be con
     ]
 }
 ```
-
-You'll want to configure the access key with minimal permissions too
-
-1. in IAM, create a new user to act as the service account
-2. grant the user no permissions except S3 List, Read, Write
-3. generate some access keys to use for signing upload requests
