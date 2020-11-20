@@ -1,17 +1,48 @@
-# Modules
+---
+id: modules
+title: Modules
+description: Modules are instances of drivers
+---
 
-_Modules_ are instances of [drivers](drivers.md). These represent a device to be controlled, service integration or piece of logic that controls how a system should behave.
+<!-- # Modules -->
 
-![Modules are instances of drivers.](../.gitbook/assets/concepts-modules.svg)
+*Modules* are instances of [drivers](drivers.md).
+Each module represents either:
+- A specifc physical device controlled by PlaceOS,
+- A specific digital service or software platform, or
+- Logic that controls how a specific set of devices and services should behave
 
-All modules expose two things:
+<!-- images pending asset folder or mermaid.js -->
+<!-- ![Modules are instances of drivers.](../.gitbook/assets/concepts-modules.svg) -->
 
-1. **State** - status information about the device, service, or higher level logic they control \(e.g. power status, upcoming booking info, recent chat messages\)
-2. **Behavior** - actions which they can execute \(e.g. power on/off, create/edit booking, post a chat message\)
+## Purpose
 
+All modules have two broad functions on the system they control:
 
+1. **State**: status information about the device, service, or higher level logic they control. 
+Some examples of this kind of data could be:
+   - Power status
+   - Upcoming booking info
+   - Recent chat messages
+1. **Behavior**: actions which the device, service, or logic can do.
+Some examples of these actions could be:
+   - Power on/off
+   - Create/edit booking
+   - Post a chat message
 
-Each module can be individual started or stopped at any time. When started, ngine will attempt to connect to the associated physical device or service and keep track of its status. When Stopped, Engine will disconnect from that device and not send any commands to it. Or in the case of logic modules, this can be used to enable / disable its functionality.
+## Starting and Stopping Modules
 
-Modules must be associated with at least one [system](systems.md). Where a device or service is used across multiple systems \(such as a lighting gateway, centrally racked matrix switcher, or common service such as a chatbot integration\) the same instance can be shared across everywhere it is needed.
+Each module can be individually started or stopped at any time.
+When started, the driver connects to the associated physical device or service and keeps track of its status.
+When stopped, the driver disconnects from its device and will not send or receive any data or commands.
+For logic modules, this enables / disables its functionality.
 
+## Modules and Systems
+
+Modules must be a part of *at least* one [system](systems.md), but can be part of more than one system. 
+Each system can use the same module instance everywhere it's required.
+Examples of modules used this way could be:
+- A lighting gateway
+- Centrally racked matrix switcher
+- A common service such as a chatbot integration
+ 

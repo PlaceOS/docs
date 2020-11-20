@@ -14,9 +14,10 @@
     "rousseau": {
       "showLevels": ["suggestion", "warning", "error"],
        ignoreInlineNodeTypes: ["Code", "Html"],
+       "ignoreTypes": ["passive"] //covered better by write-good
     },
     "spelling": {
-      "language": "en-au",
+      "language": "en",
       "wordDefinitionRegexp": "/[\\w']+/g",
       "suggestCorrections": true,
     },

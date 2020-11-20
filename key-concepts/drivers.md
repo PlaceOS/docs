@@ -5,21 +5,26 @@ description: Overview of the 2 types of drivers
 ---
 <!-- # Drivers -->
 
-_Drivers_ are executable programs which help different parts of the digital ecosystem interact with each other.
-They provide the ability to either:
+_Drivers_ are executable programs. 
+They help different parts of the digital ecosystem interact with each other.
+PlaceOS has drivers that fall into one of two categories:
 
 ## Device and Service Drivers
-**Communicate** respectively with hardware or software in external systems, incorporating them into the PlaceOS framework. These control any functionality of the external systems and handle any incoming data. 
+- **Communicate** with external systems and lets them talk to PlaceOS
+- Represent hardware or software respectively
+- Control any functionality of the external systems and handle any incoming data
 
 ## Logic Drivers
-**Coordinate** actions across modules and build complex behaviours. 
-These don't represent physical objects in the network, 
-but rather represent abstract or conceptual functions which may require the interaction of several different devices or software platforms.
+- **Coordinate** actions across modules and build complex behaviours. 
+- Don't map to specific physical objects
+- Represent abstract or conceptual functions 
+- May use a variety of devices or software platforms
 
-<!-- images pending  -->
+<!-- images pending asset folder or mermaid.js -->
 <!-- ![Drivers either communicate or coordinate.](../.gitbook/assets/concepts-drivers.svg) -->
 
-All drivers, regardless of type, must be instantiated as [modules](modules.md) before they can be used.
+## Drivers and Modules
+[Modules](modules.md) are instances of drivers, letting the rest of PlaceOS access their specific funtions.
 
 
 
