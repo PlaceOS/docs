@@ -1,8 +1,27 @@
-# Systems
+---
+id: systems
+title: Systems
+description: Systems are collections of modules
+---
+<!-- # Systems -->
 
-A _system_ is a collection of [modules](modules.md), [settings](settings.md) and basic metadata \(name, description etc\). They provide the main logical building blocks within Engine deployments.
+A *system* is the main logical building blocks within PlaceOS. 
+They contain three components:
+- A collection of [modules](modules.md)
+- [Settings](settings.md) which will apply to the system and modules in it
+- Basic metadata (name, description etc)
 
-![Systems have settings and a collection of modules.](../.gitbook/assets/concepts-system.svg)
+<!-- images pending asset folder or mermaid.js -->
+<!-- ![Systems have settings and a collection of modules.](../.gitbook/assets/concepts-system.svg) -->
 
-Systems often represent physical spaces \(such as a meeting room\) but can also represent standalone items such as a digital signage endpoint or a non-physical system with information based inputs and outputs.
+## Purpose
 
+Systems often represent physical spaces, such as meeting rooms.
+They can also represent connected items which run across physical spaces, such as a range of digital signage. 
+Otherwise, they can represent a non-physical system with data inputs and outputs, such as a payment portal.
+
+## Systems and Zones
+
+[Zones](zones.md) are groups of systems which can reflect their physical or conceptiual groupings.
+Systems can belong to zero or more zones.
+<!-- not sure about zero -->
