@@ -14,7 +14,7 @@
     "rousseau": {
       "showLevels": ["suggestion", "warning", "error"],
        ignoreInlineNodeTypes: ["Code", "Html"],
-       //"ignoreTypes": ["passive"] //covered better by write-good
+       "ignoreTypes": ["passive"] //covered better by write-good
     },
     "spelling": {
       "language": "en",
