@@ -11,7 +11,7 @@ All content is [Markdown](https://www.markdownguide.org/).
 
 To aid in version control and encourage clear, concise communication use [semantic line breaks](https://sembr.org/).
 This, along with  analysis of language complexity and style will be automatically checked.
-These checks are an aid, not a hindrance and can configured via [.textlintrc](./textlintrx).
+These checks are an aid, not a hindrance and can configured via [.textlintrc](./.textlintrc).
 
 Corrections, additions or any changes should take place in their own branch (or fork).
 When you are happy with your changes, submit a PR for automated proofreading and feedback from a human.
