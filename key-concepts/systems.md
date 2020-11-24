@@ -22,6 +22,6 @@ Otherwise, they can represent a non-physical system with data inputs and outputs
 
 ## Systems and Zones
 
-[Zones](zones.md) are groups of systems which can reflect their physical or conceptiual groupings.
+[Zones](zones.md) are groups of systems which can reflect their physical or conceptual groupings.
 Systems can belong to zero or more zones.
 <!-- not sure about zero -->

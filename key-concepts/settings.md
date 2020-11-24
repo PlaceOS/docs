@@ -15,7 +15,7 @@ Examples of some common uses for settings are:
 - Source names
 - DSP block IDs
 - Lighting control IDs
-- Device auth information
+- Device authorization information
 - Desk / room auto-release timeouts
 
 Within driver files are definitions for naming conventions and expected values for the settings. 
@@ -49,7 +49,7 @@ If it's a new concept, you can [learn more here](https://learnxinyminutes.com/do
 ## Settings inheritance
 
 Different layers define settings which then combine to produce the final configuration.
-This simplifies large deployments, standardises systems and reduces management overhead.
+This simplifies large deployments, standardizes systems and reduces management overhead.
 
 Systems inherit all the settings from each zone that they are in. 
 Zones pass down their settings to all systems within them.
@@ -61,4 +61,4 @@ Similarly, modules inherit all the settings from the driver that they instantiat
 
 Settings inherited from a zone or driver combine with any settings defined directly on the system or module.
 If an inherited setting has the same key as one defined directly, the latter will override the inherited one.
-This lets you write general settings at a higher 'shared' point, with more specific ones on each lower tier.
+This lets you write general settings at a higher common level, with more specific ones on each lower tier.

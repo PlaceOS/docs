@@ -15,7 +15,7 @@ PlaceOS has drivers that fall into one of two categories:
 - Control any functionality of the external systems and handle any incoming data
 
 ## Logic Drivers
-- **Coordinate** actions across modules and build complex behaviours. 
+- **Coordinate** actions across modules and build complex behaviors. 
 - Don't map to specific physical objects
 - Represent abstract or conceptual functions 
 - May use a variety of devices or software platforms
@@ -24,7 +24,7 @@ PlaceOS has drivers that fall into one of two categories:
 <!-- ![Drivers either communicate or coordinate.](../.gitbook/assets/concepts-drivers.svg) -->
 
 ## Drivers and Modules
-[Modules](modules.md) are instances of drivers, letting the rest of PlaceOS access their specific funtions.
+[Modules](modules.md) are instances of drivers, letting the rest of PlaceOS access their specific functions.
 
 
 

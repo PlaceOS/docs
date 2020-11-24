@@ -8,7 +8,7 @@ description: Modules are instances of drivers
 
 *Modules* are instances of [drivers](drivers.md).
 Each module represents either:
-- A specifc physical device controlled by PlaceOS,
+- A specific physical device controlled by PlaceOS,
 - A specific digital service or software platform, or
 - Logic that controls how a specific set of devices and services should behave
 

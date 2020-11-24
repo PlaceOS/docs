@@ -21,7 +21,8 @@
         "PlaceOS",
         "/\\b(?:[A-Z]){2,}\\b/g", // acronyms
         "chatbot",
-        "webhook"
+        "webhook",
+        "backoffice"
       ],
     },
     "terminology": {
