@@ -19,7 +19,7 @@
       "language": "en",
       "skipPatterns": [
         "PlaceOS",
-        "/\b(?:[A-Z]){2,}\b/g", // acronyms
+        "/\\b(?:[A-Z]){2,}\\b/g", // acronyms
         "chatbot",
         "webhook"
       ],
