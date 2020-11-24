@@ -1,6 +1,20 @@
-# Triggers
+---
+id: triggers
+title: Triggers
+description: Triggers can add simple logic to the system
+---
+<!-- # Triggers -->
 
-_Triggers_ provide the abiity to dynamically link state and behaviour across different modules. They are used to define actions that fire based on a certain system state, time, or external input from a webhook.
+*Triggers* provide a way to dynamically link state and behaviour across different modules.
+They define actions that will occur based on certain criteria, such as:
+- System state
+- Time
+- External input such as a webhook
 
-Using backoffice it's possible to create, assign and manage triggers to build event driven behaviour that accompanies core system logic.
+## Customisation
+
+Triggers permit modules to influence the behaviour of other modules directly. 
+In PlaceOS backoffice, users can create, assign and manage triggers.
+This way, they can customise extensive event driven behaviour. 
+That accompanies more complex core system behaviour written in the logic [modules](modules.md).
 

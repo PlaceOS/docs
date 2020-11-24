@@ -1,4 +1,16 @@
-# Interfaces
+---
+id: interfaces
+title: Interfaces
+description: Interfaces are ways for users to interact with PlaceOS
+---
+<!-- # Interfaces -->
 
-_Interfaces_ are web pages or native apps that provide users with a direct method of interaction with an Engine instance. Common examples of these are a staff app, control UI, booking system or other experiences that lend themselves to screen-based interaction.
+*Interfaces* are web pages or native apps that provide users with a direct method of interaction with PlaceOS.
+They are suitable for any experiences that lend themselves to screen-based interaction.
+Common examples of interfaces are:
+- A staff app
+- Control UI
+- A booking system
 
+<!-- Should this have a link to one of the demo sites with a staff app - or stills from it -->
+<!-- Stub. possibly either substantially expand on it, or roll into another section -->

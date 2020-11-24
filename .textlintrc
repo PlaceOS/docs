@@ -19,11 +19,11 @@
     "spelling": {
         "language": "en",
         "skipPatterns": ["JavaScript"],
-        "wordDefinitionRegexp": "/[\w']+/g",
+        "wordDefinitionRegexp": "/[\\w']+/g",
         "suggestCorrections": true,
-        "editor.formatOnSave": true //not a real setting?
+//        "editor.formatOnSave": true //not a real setting?
     },
-//    "spellchecker": true,//{
+//    "spellchecker": {
  //     skipWords: ['JavaScript', 'ECMAScript'],
   //    skipRegExps: ['(?:[a-z]+)Script'],
    //  skipNodeTypes: ['Comment'],

@@ -5,12 +5,27 @@ description: Settings can be configured at any level
 ---
 <!-- # Settings -->
 
-_Settings_ are the configuration information that define how a deployment should behave.
+*Settings* are the configuration information that define how a deployment should behave.
 Any level can have defined settings, which are ultimately consumed by [modules](modules.md). 
 [Zones](zones.md), [systems](systems.md), [drivers](drivers.md) or [modules](modules.md) can have settings defined on them. 
 Together, these create a system configuration that is easier to manage at scale.
 
+Examples of some common uses for settings are: 
+- Available video inputs/outputs
+- Source names
+- DSP block IDs
+- Lighting control IDs
+- Device auth information
+- Desk / room auto-release timeouts
+
+Within driver files are definitions for naming conventions and expected values for the settings. 
+They will vary based on each deployment, but the general structure will always be similar.
+
+## JSON definitions
+
 Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sample), that is, key-value pairs:
+<!-- considering keeping some instances of passive in. Considering making an allowlist style guide for manual review and future authors. -->
+
 
 <!-- {% code title="" %} -->
 ```javascript
@@ -31,32 +46,19 @@ Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sa
 If it's a new concept, you can [learn more here](https://learnxinyminutes.com/docs/json/).
 :::
 
-Within driver files are definitions for naming conventions and expected values for the settings. 
-They will vary based on each deployment, but the general structure will always be similar.
+## Settings inheritance
 
-Examples of some common uses for settings are: 
-- Available video inputs/outputs
-- Source names
-- DSP block IDs
-- Lighting control IDs
-- Device auth information
-- Desk / room auto-release timeouts
-
-## Settings lookup
-
-To simplify large deployments, standardise systems and reduce management overhead, different layers define settings which then combine to produce the final configuration.
+Different layers define settings which then combine to produce the final configuration.
+This simplifies large deployments, standardises systems and reduces management overhead.
 
 Systems inherit all the settings from each zone that they are in. 
 Zones pass down their settings to all systems within them.
-
 Similarly, modules inherit all the settings from the driver that they instantiate.
 
 <!-- ![Settings inheritance.](../.gitbook/assets/concepts-settings.svg) -->
 
-## Specific beats general
+## Specific Overrules General
 
-When a system or module inherets settings from a zone or driver, they mesh with any settings defined directly on it.
-If an inherited setting has the same key as one defined directly on that system or module, the latter will override the inherited attribute.
-This allows a general config to be applied at the highest 'shared' point of a system, with more specific configuration applied on a system or individual module basis. 
-Rewel asdghhj.
-
+Settings inherited from a zone or driver combine with any settings defined directly on the system or module.
+If an inherited setting has the same key as one defined directly, the latter will override the inherited one.
+This lets you write general settings at a higher 'shared' point, with more specific ones on each lower tier.
