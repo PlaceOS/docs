@@ -13,25 +13,22 @@
     "period-in-list-item": true,
     "rousseau": {
       "showLevels": ["suggestion", "warning", "error"],
-       ignoreInlineNodeTypes: ["Code", "Html"],
-       "ignoreTypes": ["passive"] //covered better by write-good
+      "ignoreTypes": ["passive"] // covered by write-good
     },
     "spelling": {
-        "language": "en",
-        "skipPatterns": ["JavaScript"],
-        "wordDefinitionRegexp": "/[\\w']+/g",
-        "suggestCorrections": true,
-//        "editor.formatOnSave": true //not a real setting?
+      "language": "en",
+      "skipPatterns": [
+        "PlaceOS",
+        "/\b(?:[A-Z]){2,}\b/g", // acronyms
+        "chatbot",
+        "webhook"
+      ],
     },
-//    "spellchecker": {
- //     skipWords: ['JavaScript', 'ECMAScript'],
-  //    skipRegExps: ['(?:[a-z]+)Script'],
-   //  skipNodeTypes: ['Comment'],
-    //},
     "terminology": {
       "defaultTerms": true,
       "terms": [
-        "PlaceOS"
+        "PlaceOS",
+        "Place Technology"
       ]
     },
     "write-good": true
