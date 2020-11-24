@@ -17,18 +17,23 @@
        "ignoreTypes": ["passive"] //covered better by write-good
     },
     "spelling": {
-      "language": "en",
-      "wordDefinitionRegexp": "/[\\w']+/g",
-      "suggestCorrections": true,
+        "language": "en",
+        "skipPatterns": ["JavaScript"],
+        "wordDefinitionRegexp": "/[\w']+/g",
+        "suggestCorrections": true,
+        "editor.formatOnSave": true //not a real setting?
     },
+//    "spellchecker": true,//{
+ //     skipWords: ['JavaScript', 'ECMAScript'],
+  //    skipRegExps: ['(?:[a-z]+)Script'],
+   //  skipNodeTypes: ['Comment'],
+    //},
     "terminology": {
       "defaultTerms": true,
       "terms": [
         "PlaceOS"
       ]
     },
-    "write-good": true{
-      "passive": false, // this or rousseau
-    }
+    "write-good": true
   }
 }
