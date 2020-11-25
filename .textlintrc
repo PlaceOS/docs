@@ -14,7 +14,10 @@
     "rousseau": {
       "showLevels": ["suggestion", "warning", "error"],
       "ignoreInlineNodeTypes": ["Code", "Html"], 
-      "ignoreTypes": ["passive", "sentence:uppercase"] // covered by write-good and en-capitalization
+      "ignoreTypes": [
+        "passive",            // covered by write-good
+        "sentence:uppercase", // covered by en-capitalization
+      ],
     },
     "spelling": {
       "language": "en",
