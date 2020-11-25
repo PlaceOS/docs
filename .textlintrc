@@ -13,7 +13,8 @@
     "period-in-list-item": true,
     "rousseau": {
       "showLevels": ["suggestion", "warning", "error"],
-      "ignoreTypes": ["passive"] // covered by write-good
+      "ignoreInlineNodeTypes": ["Code", "Html"], 
+      "ignoreTypes": ["passive", "sentence:uppercase"] // covered by write-good and en-capitalization
     },
     "spelling": {
       "language": "en",
