@@ -13,17 +13,24 @@
     "period-in-list-item": true,
     "rousseau": {
       "showLevels": ["suggestion", "warning", "error"],
-       ignoreInlineNodeTypes: ["Code", "Html"],
+      "ignoreInlineNodeTypes": ["Code", "Html"], 
+      "ignoreTypes": ["passive", "sentence:uppercase"] // covered by write-good and en-capitalization
     },
     "spelling": {
-      "language": "en-au",
-      "wordDefinitionRegexp": "/[\\w']+/g",
-      "suggestCorrections": true,
+      "language": "en",
+      "skipPatterns": [
+        "PlaceOS",
+        "/\\b(?:[A-Z]){2,}\\b/g", // acronyms
+        "chatbot",
+        "webhook",
+        "backoffice"
+      ],
     },
     "terminology": {
       "defaultTerms": true,
       "terms": [
-        "PlaceOS"
+        "PlaceOS",
+        "Place Technology"
       ]
     },
     "write-good": true
