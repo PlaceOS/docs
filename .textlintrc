@@ -30,16 +30,17 @@ rules:
   spelling:
     language: en
     skipPatterns:
-    - PlaceOS
+    - '/placeos/i'
+    - '/backoffice/i'
     - '/\b(?:[A-Z]){2,}\b/g' # acronyms
     - chatbot
     - webhook
-    - backoffice
 
   terminology:
     defaultTerms: true
     terms:
-    - PlaceOS
-    - Place Technology
+    - ['place\W?os', 'PlaceOS']
+    - ['place\W?tech(nology)?', 'Place Technology']
+    - ['back\W?office', 'Backoffice']
 
   write-good: true
