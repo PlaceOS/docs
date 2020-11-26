@@ -26,11 +26,11 @@ On a state change, PlaceOS  will publish a message with the payload containing t
 The associated driver defines the structure and change frequency of this state.
 
 If a state change is for a system which isn't assigned to a building, level or area, that topic level will be an underscore character 
- (```“_”```).
+ (`“_”`).
 
 ### Payload
 The *payload* is the value of the status variable paired with a timestamp
-```
+```html
 {
   "time": unix_integer_milliseconds,
   "value": "payload is a serialized json string"
@@ -38,7 +38,7 @@ The *payload* is the value of the status variable paired with a timestamp
 ```
 
 ### Wildcard Subscriptions
-Topic wildcards may be used to subscribe to state information associated with specific spaces, integration types or related state information. 
+Wildcards can replace any topic level to catch state information across different services. 
 Some commons examples are:
 
 All events within a building: 
@@ -54,18 +54,41 @@ Power status for all displays:
 ```html
 placeos/<org>/state/+/+/+/+/+/Display/+/power
 ```
-Call status information for Cisco VC endpoints (```dep-123``` is the driver ID for them):
+Call status information for Cisco VC endpoints (`dep-123` is the driver ID for Cisco VC):
 ```html
 placeos/<org>/state/+/+/+/+/dep-123/+/+/call_status
 ```
 
 ### Privacy
-Before propagating, depending on configuration, state changes can be parsed for content resembling sensitive information such email addresses or user identifiers.
-These filters may be defined based on deployment requirements.
-When a match occurs, the value may be replaced by a hashed version of itself, masked, or the associated event dropped.
+Some deployment requirements may include filtering of sensitive information.
+The system parses state changes for content such as email addresses or user IDs before they propagate.
+A match can lead to actions such as:
+- Replacing the value with a hashed version of itself
+- Masking the value 
+- Dropping the associated event
 
 ## Metadata
-Text
+Metadata is available for `building`, `level`, `area`, `system` and `driver` tiers. 
+The format is this persistent topic:
+
+```html
+placeos/<org>/metadata/<id>
+```
+
+The payload will always be a JSON object. 
+It contains the associated entities model which will include the friendly name of the entity, e.g.
+
+```html
+{
+  "name": "Cisco VC"
+}
+```
+```
+{
+  "name": "Level 24"
+}
+```
+<!-- message types & overall structure needs clarifying, may be mqtt standard? -->
 
 ## Cloud Brokers
 Text
