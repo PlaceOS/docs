@@ -37,7 +37,7 @@ Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/p
 |---| ---|---|---|
 Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br>Room Control<br>Visitor Kiosks|It is advised to use the Chrome Kiosk App and lock out the device Home Button to prevent unauthorised access/changes to the device configuration. <br> Can be remotely managed via Moki.<br> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)
 
-<!-- no point messing with column width or vertical spacing until we see how docusaur handles it -->
+<!-- no point messing with column width or vertical spacing until we see how docusaur handles it, but possibly html wrapping can address this. Don't want to get too caught up in that though -->
 
 [//]: # (may need to use this type of comment in stead depending on handling)
 
