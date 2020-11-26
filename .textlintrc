@@ -21,6 +21,7 @@
       "skipPatterns": [
         "PlaceOS",
         "/\\b(?:[A-Z]){2,}\\b/g", // acronyms
+        "/[0-9]+/g", //numbers 
         "chatbot",
         "webhook",
         "backoffice"
