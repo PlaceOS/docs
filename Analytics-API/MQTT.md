@@ -12,6 +12,10 @@ This provides environment information to external systems such as [Amazon MQTT S
 
 <!-- These headings are as-provided, but seem to be kind of nonsense. Have a paragraph here to kind of overview the topics to follow. "Message Types" header removed for now. -->
 
+MQTT messages consist of a *header* and a *payload* and typically have low bandwidth usage. 
+The header declares the topic of the message, and the payload carries data as key-value pairs.
+PlaceOS uses two types of message sent over MQTT: State Changes and Metadata.
+
 ## State Change
 Changes to module state information propagates in real time. 
 All change messages share the following topic structure:
@@ -28,7 +32,7 @@ The associated driver defines the structure and change frequency of this state.
 If a state change is for a system which isn't assigned to a building, level or area, that topic level will be an underscore character 
  (`“_”`).
 
-### Payload
+### State Change Payload
 The *payload* is the value of the status variable paired with a timestamp
 ```html
 {
@@ -36,8 +40,33 @@ The *payload* is the value of the status variable paired with a timestamp
   "value": "payload is a serialized json string"
 }
 ```
+## Metadata
+Metadata is available for `building`, `level`, `area`, `system` and `driver` tiers. 
+The format is this persistent topic:
 
-### Wildcard Subscriptions
+```html
+placeos/<org>/metadata/<id>
+```
+
+### Metadata Payloads
+
+Metadata payloads are JSON objects that contain model info for the publishing entity. 
+This includes the human-readable "friendly name", e.g.
+
+```html
+{
+  "name": "Cisco VC"
+}
+```
+```
+{
+  "name": "Level 24"
+}
+```
+
+
+
+## Wildcard Subscriptions
 Wildcards can replace any topic level to catch state information across different services. 
 Some commons examples are:
 
@@ -59,7 +88,7 @@ Call status information for Cisco VC endpoints (`dep-123` is the driver ID for C
 placeos/<org>/state/+/+/+/+/dep-123/+/+/call_status
 ```
 
-### Privacy
+## Privacy
 Some deployment requirements may include filtering of sensitive information.
 The system parses state changes for content such as email addresses or user IDs before they propagate.
 A match can lead to actions such as:
@@ -67,28 +96,13 @@ A match can lead to actions such as:
 - Masking the value 
 - Dropping the associated event
 
-## Metadata
-Metadata is available for `building`, `level`, `area`, `system` and `driver` tiers. 
-The format is this persistent topic:
-
-```html
-placeos/<org>/metadata/<id>
-```
-
-The payload will always be a JSON object. 
-It contains the associated entities model which will include the friendly name of the entity, e.g.
-
-```html
-{
-  "name": "Cisco VC"
-}
-```
-```
-{
-  "name": "Level 24"
-}
-```
-<!-- message types & overall structure needs clarifying, may be mqtt standard? -->
-
 ## Cloud Brokers
-Text
+<!-- either have clickable images of logos, or the logo image with clickable name below -->
+```
+- https://www.cloudmqtt.com/
+- https://cloud.google.com/iot/docs/how-tos/mqtt-bridge
+- https://myqtthub.com/en
+- https://elements.heroku.com/addons/cloudmqtt
+- https://www.hivemq.com/ https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support
+- https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html
+```
