@@ -1,31 +1,60 @@
-{
-  "rules": {
-    "alex": {
-      "allow": []
-    },
-    "common-misspellings": {
-      "ignore": []
-    },
-    "en-capitalization": true,
-    "no-empty-section": true,
-    "no-exclamation-question-mark": true,
-    "one-sentence-per-line": true,
-    "period-in-list-item": true,
-    "rousseau": {
-      "showLevels": ["suggestion", "warning", "error"],
-       ignoreInlineNodeTypes: ["Code", "Html"],
-    },
-    "spelling": {
-      "language": "en-au",
-      "wordDefinitionRegexp": "/[\\w']+/g",
-      "suggestCorrections": true,
-    },
-    "terminology": {
-      "defaultTerms": true,
-      "terms": [
-        "PlaceOS"
-      ]
-    },
-    "write-good": true
-  }
-}
+rules:
+  alex:
+    allow: []
+
+  common-misspellings:
+    ignore: []
+
+  en-capitalization: true
+
+  no-empty-section: true
+
+  no-exclamation-question-mark: true
+
+  one-sentence-per-line: true
+
+  period-in-list-item: true
+
+  rousseau:
+    showLevels:
+    - suggestion
+    - warning
+    - error
+    ignoreInlineNodeTypes:
+    - Code
+    - Html
+    ignoreTypes:
+    - passive            # covered by write-good
+    - sentence:uppercase # covered by en-capitalization
+
+  spelling:
+    language: en
+    skipPatterns:
+    - '/placeos/i'
+    - '/backoffice/i'
+    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
+    - '/[0-9]+/g'             # numbers 
+    - AOpen
+    - chatbot
+    - Chromebase
+    - ChromeBox
+    - ChromeOS
+    - Fargate
+    - Kubernetes
+    - Mimo
+    - Moki
+    - Optica
+    - SaaS
+    - webhook
+    
+
+  terminology:
+    defaultTerms: true
+    terms:
+    - ['place\W?os', 'PlaceOS']
+    - ['place\W?tech(nology)?', 'Place Technology']
+    - ['back\W?office', 'Backoffice']
+    - "Kubernetes"
+    - ['saas', SaaS]
+
+  write-good: true
