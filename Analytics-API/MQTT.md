@@ -10,8 +10,6 @@ description: Guide on integrating PlaceOS with MQTT messaging
 PlaceOS supports publishing module state information via MQTT. 
 This provides environment information to external systems such as [Amazon MQTT Service](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
-<!-- These headings are as-provided, but seem to be kind of nonsense. Have a paragraph here to kind of overview the topics to follow. "Message Types" header removed for now. -->
-
 MQTT messages consist of a *header* and a *payload* and typically have low bandwidth usage. 
 The header declares the topic of the message, and the payload carries data as key-value pairs.
 PlaceOS uses two types of message sent over MQTT: State Changes and Metadata.
@@ -23,12 +21,11 @@ All change messages share the following topic structure:
 ``` html
 placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
-<!-- some kind of key expandign the above. Original had an image. html isn't *right* but the colouratin is nice-->
+<!-- some kind of key expanding the above. Original had an image. html isn't *right* but the colouratin is nice-->
 
-<!--What part of PlaceOS? messaging service?-->
+<!--What part of PlaceOS? messaging service? Does this microservice (?) have a title? -->
 On a state change, PlaceOS  will publish a message with the payload containing the new state value as a JSON entity. 
 The associated driver defines the structure and change frequency of this state.
-
 If a state change is for a system which isn't assigned to a building, level or area, that topic level will be an underscore character 
  (`“_”`).
 
@@ -97,7 +94,7 @@ A match can lead to actions such as:
 - Dropping the associated event
 
 ## Cloud Brokers
-<!-- either have clickable images of logos, or the logo image with clickable name below -->
+<!-- either have clickable images of logos (img from original doc), or the logo image with clickable name below -->
 ```
 - https://www.cloudmqtt.com/
 - https://cloud.google.com/iot/docs/how-tos/mqtt-bridge
