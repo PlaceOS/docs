@@ -3,8 +3,11 @@ id: recommended-hardware
 title: Recommended Hardware
 description: Tried and tested hardware options for PlaceOS
 ---
+ 
+import Tabs from "@theme/Tabs"; 
+import TabItem from "@theme/TabItem"; 
 
-# Recommended Hardware
+<!-- # Recommended Hardware -->
 <!-- Worth renaming as it extends beyond hardware to OS & platforms -->
 
 The PlaceOS Platform is vendor agnostic, meaning that it works with any other hardware or software.
@@ -15,33 +18,40 @@ Everything below delivers reliable and consistent results on the platform.
 
 ## User Interface Devices (by OS)
 
-<!-- consider putting each OS on a tab as supported by docusaurus for a neater implementation -->
-
-### Chrome
-
-|Manufacturer |Model | Use Case | Notes
-|---| ---|---|---|
-AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br>Room Control|Supports remote management via Google CDM.|
-AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br> Supports remote management via Google CDM.
-InTouch|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br>Room Control, <br> Visitor Kiosks, <br>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.
-
-### Android
+<Tabs defaultValue="chrome" values={[{label:'Chrome',value:'chrome'},{label:'Android',value:'android'},{label:'Apple',value:'apple'}]}>
+  <TabItem value="chrome"> 
 
 |Manufacturer |Model | Use Case | Notes
 |---| ---|---|---|
-QBic|[TD-1060P](https://www.qbictechnology.com/td-1060slim)|Room Booking, <br>Room Control|Native Android Devices featuring full API that allows device configuration as part of a System in PlaceOS Backoffice. 
-Samsung|[Tab (all)](https://www.samsung.com/au/tablets/)|Room Booking, <br>Room Control,<br>Visitor Kiosks| Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration.<br>Supports remote management via Moki.
-Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/products/mimo-adapt-iqv-10-1-digital-signage-tablet-with-leds-rk3288-processor-with-light-bars-mct-10hpq-poe-2lb)|Room Booking, <br>Room Control|Mimo 10" Panel includes side LED Light Bars that PlaceOS can control as room availability indicators.<br>Supports remote management via Moki.
+AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br/>Room Control |Supports remote management via Google CDM.|
+AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.
+InTouch|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.
 
+  </TabItem>
+  <TabItem value="android">
+
+|Manufacturer |Model | Use Case | Notes
+|---| ---|---|---|
+QBic|[TD-1060P](https://www.qbictechnology.com/td-1060slim)|Room Booking, <br/>Room Control|Native Android Devices featuring full API that allows device configuration as part of a System in PlaceOS Backoffice. 
+Samsung|[Tab (all)](https://www.samsung.com/au/tablets/)|Room Booking, <br/>Room Control,<br/>Visitor Kiosks| Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration.<br/>Supports remote management via Moki.
+Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/products/mimo-adapt-iqv-10-1-digital-signage-tablet-with-leds-rk3288-processor-with-light-bars-mct-10hpq-poe-2lb)|Room Booking, <br/>Room Control|Mimo 10" Panel includes side LED Light Bars that PlaceOS can control as room availability indicators.<br/>Supports remote management via Moki.
+
+  </TabItem>
+  <TabItem value="apple">
+
+|Manufacturer |Model | Use Case | Notes
+|---| ---|---|---|
+Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Control<br/>Visitor Kiosks|Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration. <br/> Supports remote management via Moki.<br/> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)
+
+  </TabItem>
+</Tabs>
+
+<!-- ### Chrome -->
+<!-- ### Android -->
+<!-- ### Apple  -->
 <!-- original doc had inline images in table, try adding these in when asset directories are more managed -->
 
-### Apple 
-
-|Manufacturer |Model | Use Case | Notes
-|---| ---|---|---|
-Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br>Room Control<br>Visitor Kiosks|Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration. <br> Supports remote management via Moki.<br> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)
-
-<!-- no point messing with column width or vertical spacing until we see how docusaur handles it, but possibly html wrapping can address this. Don't want to get too caught up in that though -->
+<!-- no point messing with column width or vertical spacing until we see how docusaur handles it, but possibly html wrapping can address this. Don"t want to get too caught up in that though -->
 
 [//]: # (may need to use this type of comment in stead depending on handling)
 
@@ -59,7 +69,7 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br>Room Contro
 |---|---|---|
 [Zebra](https://www.zebra.com/ap/en/products/printers/desktop/compact-desktop-printers.html)|ZD410|Ethernet
 
-<!-- these last two possibly don't have to be tables, consider lists or something snazzier but not jarring compared to the tables above -->
+<!-- these last two possibly don"t have to be tables, consider lists or something snazzier but not jarring compared to the tables above -->
 
 ## Servers & Hosting
 
