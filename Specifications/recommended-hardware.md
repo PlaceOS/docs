@@ -1,7 +1,7 @@
 ---
-id: recommended-hardware
-title: Recommended Hardware
-description: Tried and tested hardware options for PlaceOS
+id: recommended-products
+title: Recommended Products
+description: Tried and tested products and vendors that work with PlaceOS
 ---
  
 import Tabs from "@theme/Tabs"; 
@@ -13,7 +13,7 @@ import TabItem from "@theme/TabItem";
 The PlaceOS Platform is vendor agnostic, meaning that it works with any other hardware or software.
 It has no direct requirements for specific equipment. 
 
-Here, you will find a list of hardware that has been fully tested by PlaceOS.
+Here, you will find a list of hardware that has been fully tested with PlaceOS.
 Everything below delivers reliable and consistent results on the platform.
 
 ## User Interface Devices (by OS)
