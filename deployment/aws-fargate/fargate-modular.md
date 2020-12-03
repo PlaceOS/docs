@@ -1,13 +1,13 @@
 # PlaceOS AWS Fargate Deploy
 
 ## Overview
-The following assists with deploying PlaceOS on AWS using Cloudformation templates.
+This page assists with deploying PlaceOS on AWS using CloudFormation templates.
 
 The templates configure a PlaceOS Fargate deployment from initial VPC configuration through to a functioning application and is modular by design.
 
-Each component of the deployment is specified by a cloudformation template and designed to be deployed as it's own Cloudformation stack.
+Each component of the deployment is specified by a CloudFormation template and designed to be deployed as it's own CloudFormation stack.
 
-The configurable components of the deploy and the templates utilised are listed below and are in order of recommended steps, beginning with VPC configuration...
+The configurable components of the deploy and the templates utilized are listed below and are in order of recommended steps, beginning with VPC configuration...
 
 <i>
 - **VPC** [vpc.yml]
@@ -37,7 +37,7 @@ e.g. the RethinkDB service uses EFS shares for it's */data* directory.
 For the RethinkDB template to pick up the correct EFS share, both the EFS template and the RethinkDB template must be configured with the same EnvironmentName variable.
 
 Use the same EnvironmentName variable throughout the deployment process.
-The templates are preconfigured to use *placeos* by default but this can be specified by the user and separate deployments within the same VPC should use a distinct EnvironmentName.
+The templates are preconfigured to use *PlaceOS* by default but this can be specified by the user and separate deployments within the same VPC should use a distinct EnvironmentName.
 
 The Stack name you choose for each component should describe the component being deployed but is not important to the function or configuration of the deployment.
 
@@ -57,19 +57,19 @@ Use the same EnvironmentName parameter as the VPC and select the VPC created in 
 
 ## Elasticsearch (AWS Managed Service) [elasticsearch.yml]
 After configuring the security groups to be used throughout the deplopyment, we can begin configuring the components that require them. 
-This template is preconfigured to deploy an Elasticsearch cluster version  comprising 2 instances of t2.small.elasticsearch instance type as default.
+This template is preconfigured to deploy an Elasticsearch cluster version  comprising 2 instances of t2.small.Elasticsearch instance type as default.
 
 The security group to use here will be tagged as (Elasticsearch | {EnvironmentName} | security group) and it is best to choose the Private subnets created by the VPC stack and tagged as (Private Subnet 1 | {EnvironmentName}) and (Private Subnet 2 | {EnvironmentName}).
 
-**N.B.** You might see a message relating to an IAM Service Linked Role for Elasticsearch, preventing this stack from deploying if you haven't previously configured AWS elasticsearch with your account. 
+**N.B.** You might see a message relating to an IAM Service Linked Role for Elasticsearch, preventing this stack from deploying if you haven't previously configured AWS Elasticsearch with your account. 
 There is a commented section beginning with **ESSLRole:** in the sec_groups.yml file. 
 You can uncomment this section and redeploy the Security Groups stack using amended sec_groups.yml file and redeploy this stack.
 
-## Elasticache (AWS Managed Service) [elasticache-redis-cluster.yml]
-This template is preconfigured to deploy an Elasticache Redis cluster with Multi-AZ support, comprising of 1 Node Group and two cache.t2.micro replicas as default. 
+## ElastiCache (AWS Managed Service) [elasticache-redis-cluster.yml]
+This template is preconfigured to deploy an ElastiCache Redis cluster with Multi-AZ support, comprising of 1 Node.js Group and two cache.t2.micro replicas as default. 
 The standard redis port is prepopulated in addition to configurable snapshot and maintenence window parameters.
 
- - **Security Group:** (Elasticache | {EnvironmentName} | security group)
+ - **Security Group:** (ElastiCache | {EnvironmentName} | security group)
  - **Subnets:** (Private Subnet 1 | {EnvironmentName}) and (Private Subnet 2 | {EnvironmentName}) 
 
 ## Application Load Balancer [load-balancer-https.yaml]
@@ -78,20 +78,20 @@ This template deploys an external, public facing load balancer for forwarding pu
 The ALB is the only component to be deployed via public subnets and it requires you use your own preconfigured certificate from AWS Certificate Manager. 
 It is configured with a certificate **Identifier** from ACM.
 
-A Secure Listener is used to serve https traffic. 
-All inbound http traffic is redirected to it's https equivalent.
+A Secure Listener is used to serve HTTPS traffic. 
+All inbound http traffic is redirected to it's HTTPS equivalent.
 
 - **Subnets:** (Public Subnet 1 | {EnvironmentName}), (Public Subnet 2 | {EnvironmentName})
 - **VPC:** ({EnvironmentName} | VPC)
 
 ## Elastic File System [EFS.yml]
 As the application deployment comprises of containers which are ephemeral, EFS is used as the persistent storage layer. 
-The RethinkDB, NGINX and frontends services utilise the EFS file system created by this template. 
-EFS is used for the rethinkdb data directory and by NGINX and frontends for file storage of the backoffice user interface.
+The RethinkDB, NGINX and Frontends services utilise the EFS file system created by this template. 
+EFS is used for the RethinkDB data directory and by NGINX and Frontends for file storage of the Backoffice user interface.
 
 - **Security Groups:**
   - SecurityGroupEFSNginxFrontends: (Nginx and Frontends -> EFS | {EnvironmentName} | security group)
-  - SecurityGroupEFSRethinkDB:  (Rethinkdb -> EFS | {EnvironmentName} | security group)
+  - SecurityGroupEFSRethinkDB:  (RethinkDB -> EFS | {EnvironmentName} | security group)
 - **Subnets:** (Private Subnet 1 | {EnvironmentName}), (Private Subnet 2 | {EnvironmentName})
 - **VPC:** ({EnvironmentName} | VPC)
 
@@ -106,7 +106,7 @@ Each template configures and deploys an ECS Task Definition, Service and Task.
 
 The user can configure the various ECS parameters as required but the default values specified are sufficient for this example.
 
-The *ServiceName* parameter configured will result in a Service Discovery record being created as {ServiceName}.{EnvironmentName} e.g. rethinkdb-primary.placeos for the RethinkDB template. 
+The *ServiceName* parameter configured will result in a Service Discovery record being created as {ServiceName}.{EnvironmentName} e.g. rethinkdb-primary.PlaceOS for the RethinkDB template. 
 All future services that require configuration with the database can use this value as an input parameter.
 
 The security groups to use for each template will be listed in the appropriate sections below and the VPC and Private subnets created by the VPC stack and tagged as (Private Subnet 1 | {EnvironmentName}) and (Private Subnet 2 | {EnvironmentName}) should be chosen.
@@ -120,93 +120,93 @@ Configure the EnvironmentName parameter as in all previous steps.
  The RethinkDB */data* directory is configured to use an EFS share that was created earlier by the Elastic File System stack. 
  Data stored by the database will persist if the container task is restarted/destroyed.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. rethinkdb-primary.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. rethinkdb-primary.PlaceOS
 - **Security Group:** (RethinkDB | {EnvironmentName} | security group)
 
 ## etcd [etcd-service.yml]
 etcd is used as the service discovery layer for PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. etcd.placeos
-- **Security Group:** (Etcd | {EnvironmentName} | security group)
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. etcd.PlaceOS
+- **Security Group:** (etcd | {EnvironmentName} | security group)
 
 ## dispatch [dispatch-service.yml]
 dispatch allows engine drivers to register new servers for devices that might connect to engine vs engine connecting to devices.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. dispatch.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. dispatch.PlaceOS
 - **Security Group:** (Dispatch | {EnvironmentName} | security group)
 
 ## NGINX [nginx-service.yml]
 NGINX is used as the web server for PlaceOS
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. nginx.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. nginx.PlaceOS
 - **Security Group:** (Nginx | {EnvironmentName} | security group)
 
 
-## frontends [frontends-service.yml]
-Frontends is intended to be a sidecar to the webserver that listens for published front-end repositories and clones them to the NGINX static folder on EFS.
+## `frontends [frontends-service.yml]`
+Frontends is intended to be a sidecar to the webserver that listens for published frontend repositories and clones them to the NGINX static folder on EFS.
 
 **N.B.** This is the first service with a configuration to reference a pre-configured service parameter i.e. the *RethinkDBHost* parameter referencing the RethinkDB service. 
-You can see here that it is pre-configured with ``rethinkdb-primary.placeos``. 
-If the user has used another EnvironmentName parameter than placeos or a different ServiceName parameter for the RethinkDB service, the user will need to adjust the *RethinkDBHost* parameter accordingly. 
+You can see here that it's preconfigured with ``rethinkdb-primary.placeos``. 
+If the user has used another EnvironmentName parameter than PlaceOS or a different ServiceName parameter for the RethinkDB service, the user will need to adjust the *RethinkDBHost* parameter accordingly. 
 The same logic applies to the RethinkDB Port and RethinkDBDB parameters.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. frontends.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. `frontends.placeos`
 - **Required Services:** RethinkDB
 - **Security Group:** (Frontends | {EnvironmentName} | security group)
 
-## auth [auth-service.yml]
+## `auth [auth-service.yml]`
 Auth provides the authentication service and API gatekeeper.
 
-This service references the Elasticache cluster configured earlier. 
+This service references the ElastiCache cluster configured earlier. 
 Configure the **Primary Endpoint** from Redis here. The *RedisURL* parameter will have the form ``redis://{Primary Endpoint}:{port}``
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. auth.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. auth.PlaceOS
 - **Required Services:** Redis, RethinkDB
 - **Security Group:** (Auth | {EnvironmentName} | security group)
 
-## core [core-service.yml]
+## `core [core-service.yml]`
 Core is the coordination service for running drivers on PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. core.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. core.PlaceOS
 - **Required Services:** Redis, RethinkDB, etcd
 - **Security Group:** (Core | {EnvironmentName} | security group)
 
-## triggers [triggers-service.yml]
+## `triggers [triggers-service.yml]`
 Triggers is the PlaceOS service for handling events and conditional triggers.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. triggers.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. triggers.PlaceOS
 - **Required Services:** Redis, RethinkDB, etcd
 - **Security Group:** (Triggers | {EnvironmentName} | security group)
 
-## rubber-soul [rubber-soul-service.yml]
-Rubber-soul is a service that hooks into rethinkdb-orm models and generates elasticsearch indicies.
+## `rubber-soul [rubber-soul-service.yml]`
+Rubber-soul is a service that hooks into [`rethinkdb-orm`](https://github.com/spider-gazelle/rethinkdb-orm) models and generates Elasticsearch indicies.
 
 This service references the Elasticsearch cluster configured earlier. 
 Configure the ESURI with the Elasticsearch **VPC Endpoint** which will have the form ``https://xxxxxx...es.amazonaws.com.``
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. rubber-soul.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. rubber-soul.PlaceOS
 - **Required Services:** Elasticsearch, RethinkDB
 - **Security Group:** (Rubber Soul | {EnvironmentName} | security group)
 
 ## `rest-api [rest-api-service.yml]`
 This template configures and deploys the rest-api ECS Task Definition, Service and Task. Rest-api is an API service for interacting with PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. rest-api.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. rest-api.PlaceOS
 - **Required Services:** Elasticsearch, RethinkDB, Redis, etcd, frontends, rubber-soul, triggers
 - **Security Group:** (Rest-api | {EnvironmentName} | security group)
 
 ## `init [init-service.yml]`
 Init is a bootstrapper for the PlaceOS instance.
 
-This service requires the **DNS Name** of the application load balancer as this is used as the url for accessing the application. 
+This service requires the **DNS Name** of the application load balancer as this is used as the URL for accessing the application. 
 The email and password configured here will also create a login you can use once the application is deployed.
 
-- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. init.placeos
+- **Service Discovery created:**: {ServiceName}.{EnvironmentName} e.g. init.PlaceOS
 - **Required Services:** RethinkDB, auth, Application Load Balancer {DNS Name}
 - **Security Group:** (Init | {EnvironmentName} | security group)
 
 N.B. This service will never completely finish deploying as the task is designed to exit after it has run. You can either update the ECS Service to have zero **Number of tasks** or cancel the stack deployment once it has run successfully.
 
-## Accessing the deployed PlaceOS backoffice application
-If you have configured all of the above steps correctly - the backoffice application will be available via
+## Accessing the deployed PlaceOS Backoffice application
+If you have configured all of the above steps correctly - the Backoffice application will be available via
 ``https://{Application Load Balancer DNS NAME}/login?continue=/backoffice`` using the email and password configured by the init service.
