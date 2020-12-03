@@ -43,4 +43,5 @@ rules:
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['back\W?office', 'Backoffice']
 
-  write-good: true
+  write-good:
+    severity: warning
