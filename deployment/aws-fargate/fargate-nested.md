@@ -45,7 +45,7 @@ The root stack requires the following files and directory structure:
 ## VPC Architecture `infra/vpc.yml`
 The **VPC** root stack template `infra/vpc.yml` deploys two private and two public subnets. 
 For each of these the user can configure:
- 
+
 - CIDR ranges 
 - An internet gateway 
 - Two NAT gateways 
