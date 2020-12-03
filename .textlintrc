@@ -37,30 +37,52 @@ rules:
     skipPatterns:
     - '/placeos/i'
     - '/backoffice/i'
+    - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/[0-9]+/g'             # numbers 
+    # capitalization isn't handled well here, 
+    # might need the /i on any which are not in terminology?
+    # for anything in terminology, add only the corrected version
+    # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
     - AOpen
+    - balancer                
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
+    - CloudFormation
+    - ElastiCache
+    - Elasticsearch
+    - etcd
     - Fargate
+    - Frontends
     - Kubernetes
     - Mimo
     - Moki
+    - NGINX
     - Optica
+    - RethinkDB
     - SaaS
+    - subnet
     - webhook
     
 
   terminology:
     defaultTerms: true
     terms:
+    - ['back\W?office', 'Backoffice']
+    - ['front[- ]end', frontend]
+    - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-    - ['back\W?office', 'Backoffice']
-    - "Kubernetes"
     - ['saas', SaaS]
+    - "CloudFormation"
+    - "ElastiCache"
+    - "Elasticsearch"
+    - "etcd"
+    - "Kubernetes"
+    - "NGINX"
+    - "RethinkDB"
 
   write-good:
     severity: warning
