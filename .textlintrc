@@ -66,6 +66,7 @@ rules:
     defaultTerms: true
     terms:
     - ['back\W?office', 'Backoffice']
+    - ['ETCD', 'etcd']
     - ['front[- ]end', frontend]
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['place\W?os', 'PlaceOS']
@@ -74,7 +75,6 @@ rules:
     - "CloudFormation"
     - "ElastiCache"
     - "Elasticsearch"
-    - "etcd"
     - "Kubernetes"
     - "NGINX"
     - "RethinkDB"
