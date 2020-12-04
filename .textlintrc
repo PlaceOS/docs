@@ -26,6 +26,10 @@ rules:
     - Html
     ignoreTypes:
     - passive            # covered by write-good
+    - lexical-illusion
+    - so
+    - adverbs
+    - weasel
     - sentence:uppercase # covered by en-capitalization
 
   spelling:
