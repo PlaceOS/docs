@@ -1,4 +1,10 @@
-# PlaceOS AWS Fargate Deploy using Nested CloudFormation Stacks
+---
+id: fargate-nested
+title:  PlaceOS AWS Fargate Deploy using Nested CloudFormation Stacks
+description: Deployment guide for PlaceOS on AWS CloudFormation templates.
+---
+<!-- # PlaceOS AWS Fargate Deploy using Nested CloudFormation Stacks -->
+
 ## Overview
 
 <!-- This is the one that the majority of people will use, will only use other for custom impementation. Show this first
@@ -17,39 +23,39 @@ Each component is designed to deploy as its own CloudFormation stack.
 
 The root stack requires the following files and directory structure:
 
-<!-- standardise some format of filenames - `` or [] or something -->
-- **Security Groups** [`infra/sec_groups.yml`]
-- **Application Load Balancer** [`infra/load-balancer-https.yml`]
-- **Elastic File System** [infra/EFS.yml]
-- **Elasticsearch** [managed/elasticsearch.yml]
-- **ElastiCache** [managed/elasticache-redis-cluster.yml]
-- **Fargate Cluster** [fargate/ecs-cluster.yml]
-- **RethinkDB** [fargate/rethinkdb/single/rethinkdb-primary.yml]
-- **etcd** [fargate/etcd-service.yml]
-- **dispatch** [fargate/dispatch-service.yml]
-- **NGINX** [fargate/nginx-service.yml]
-- **Frontends** [fargate/frontends-service.yml]
-- **`auth`** [fargate/auth-service.yml]
-- **`core`** [fargate/core-service.yml]
-- **triggers** [fargate/triggers-service.yml]
-- **rubber-soul** [fargate/rubber-soul-service.yml]
-- **REST API** [fargate/rest-api-service.yml]
-- **`init`** [fargate/init-service.yml]
+<!-- standardise some format of filenames - `` only -->
+- **Security Groups:** `infra/sec_groups.yml`
+- **Application Load Balancer:** `infra/load-balancer-https.yml`
+- **Elastic File System:** `infra/EFS.yml`
+- **Elasticsearch:** `managed/elasticsearch.yml`
+- **ElastiCache:** `managed/elasticache-redis-cluster.yml`
+- **Fargate Cluster:** `fargate/ecs-cluster.yml`
+- **RethinkDB:** `fargate/rethinkdb/single/rethinkdb-primary.yml`
+- **etcd:** `fargate/etcd-service.yml`
+- **dispatch:** `fargate/dispatch-service.yml`
+- **NGINX:** `fargate/nginx-service.yml`
+- **Frontends:** `fargate/frontends-service.yml`
+- **`auth`:** `fargate/auth-service.yml`
+- **`core`:** `fargate/core-service.yml`
+- **triggers:** `fargate/triggers-service.yml`
+- **`rubber-soul`:** `fargate/rubber-soul-service.yml`
+- **REST API:** `fargate/rest-api-service.yml`
+- **`init`:** `fargate/init-service.yml`
 
-## VPC Architecture `[infra/vpc.yml]`
-The **VPC** root stack template `[infra/vpc.yml]` deploys two private and two public subnets. 
+## VPC Architecture `infra/vpc.yml`
+The **VPC** root stack template `infra/vpc.yml` deploys two private and two public subnets. 
 For each of these the user can configure:
+
 - CIDR ranges 
 - An internet gateway 
 - Two NAT gateways 
 - Routes and route tables 
 
-The application load balancer is the only component that needs to be in the public subnet.
+The application load balancer is the only component that should deploy in public subnets.
 
 ## Configuring the root stack template
 Once you have uploaded the files to s3, use `root-stack-templates/placeos/deploy.yml` to deploy PlaceOS.
 The required parameters are:
-
 
 - **`BucketName`** S3 Bucket name where nested templates live
 - **`CertificateId`**  Certificate Identifier from AWS ACM - required for TLS/SSL
@@ -64,7 +70,6 @@ The required parameters are:
 - **`VPC`** Select the VPC containing the public and private subnets
 - **`VpcCIDR`** IP range (CIDR notation) for the VPC
 
-
 ## AWS `EnvironmentName` parameter and Stack naming
 The `EnvironmentName` parameter's uses include: 
 - Tagging 
@@ -74,7 +79,7 @@ The `EnvironmentName` parameter's uses include:
 *PlaceOS* is the default but each deployment in the same VPC should configure its own `EnvironmentName`.
 The Stack name you choose for each component has no effect on the function of the deployment. 
 
-## `init [fargate/init-service.yml]`
+## `init` `fargate/init-service.yml`
 `init` is a bootstrapper for the PlaceOS instance and is the final step in the deployment. 
 This service will never actually finish as the task will exit after it has run. 
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
@@ -82,7 +87,10 @@ You can update the ECS Service to have zero **Number of tasks** once it has been
 ## Accessing the deployed PlaceOS Backoffice application
 You can expect the deployment to take 20-30 minutes, most of which is Elasticsearch.
 The Backoffice application will be available at:  
-`https://{Application Load Balancer DNS NAME}/login?continue=/backoffice` 
+
+<i>
+`https://{Application Load Balancer DNS NAME}/login?continue=/backoffice`
+</i>
 
 The credentials are the email and password set by the `init` service.
 You can also find the application URL listed as an output for the `init` nested stack.
