@@ -50,3 +50,9 @@ rules:
 
   write-good:
     severity: warning
+
+
+filters:
+  allowlist:
+    allow:
+    - '/<i>.*<\/i>/g'    # idiomatic terms
