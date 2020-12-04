@@ -3,9 +3,11 @@ id: recommended-products
 title: Recommended Products
 description: Tried and tested products and vendors that work with PlaceOS
 ---
- 
+
+<i> 
 import Tabs from "@theme/Tabs"; 
 import TabItem from "@theme/TabItem"; 
+</i>
 
 <!-- # Recommended Hardware -->
 <!-- Worth renaming as it extends beyond hardware to OS & platforms -->
@@ -18,6 +20,7 @@ Everything below delivers reliable and consistent results on the platform.
 
 ## User Interface Devices (by OS)
 
+<!-- Maybe don't escape this and just use a html detail element ([#27](https://github.com/PlaceOS/docs/issues/27)) -->
 <Tabs defaultValue="chrome" values={[{label:'Chrome',value:'chrome'},{label:'Android',value:'android'},{label:'Apple',value:'apple'}]}>
   <TabItem value="chrome"> 
 
