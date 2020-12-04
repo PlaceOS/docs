@@ -37,7 +37,7 @@ rules:
     skipPatterns:
     - '/placeos/i'
     - '/backoffice/i'
-    - '/\b(?:[A-Z]){2,}\b/g' # acronyms
+    - '/[A-Z]{2,}/'      # acronyms
     - chatbot
     - webhook
 
