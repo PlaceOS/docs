@@ -16,6 +16,7 @@ rules:
   period-in-list-item: true
 
   rousseau:
+    severity: warning
     showLevels:
     - suggestion
     - warning
