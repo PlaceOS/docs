@@ -4,14 +4,6 @@ title: Recommended Products
 description: Tried and tested products and vendors that work with PlaceOS
 ---
 
-<i> 
-import Tabs from "@theme/Tabs"; 
-import TabItem from "@theme/TabItem"; 
-</i>
-
-<!-- # Recommended Hardware -->
-<!-- Worth renaming as it extends beyond hardware to OS & platforms -->
-
 The PlaceOS Platform is vendor agnostic, meaning that it works with any other hardware or software.
 It has no direct requirements for specific equipment. 
 
@@ -20,18 +12,19 @@ Everything below delivers reliable and consistent results on the platform.
 
 ## User Interface Devices (by OS)
 
-<!-- Maybe don't escape this and just use a html detail element ([#27](https://github.com/PlaceOS/docs/issues/27)) -->
-<Tabs defaultValue="chrome" values={[{label:'Chrome',value:'chrome'},{label:'Android',value:'android'},{label:'Apple',value:'apple'}]}>
-  <TabItem value="chrome"> 
+<details>
+  <summary>Chrome</summary> 
 
-|Manufacturer |Model | Use Case | Notes
-|---| ---|---|---|
-AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br/>Room Control |Supports remote management via Google CDM.|
-AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.
-InTouch|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.
+  |Manufacturer |Model | Use Case | Notes
+  |---| ---|---|---|
+  AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br/>Room Control |Supports remote management via Google CDM.|
+  AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.
+  <i>InTouch</i>|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.
 
-  </TabItem>
-  <TabItem value="android">
+</details>
+
+<details>
+  <summary>Andriod</summary> 
 
 |Manufacturer |Model | Use Case | Notes
 |---| ---|---|---|
@@ -39,24 +32,20 @@ QBic|[TD-1060P](https://www.qbictechnology.com/td-1060slim)|Room Booking, <br/>R
 Samsung|[Tab (all)](https://www.samsung.com/au/tablets/)|Room Booking, <br/>Room Control,<br/>Visitor Kiosks| Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration.<br/>Supports remote management via Moki.
 Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/products/mimo-adapt-iqv-10-1-digital-signage-tablet-with-leds-rk3288-processor-with-light-bars-mct-10hpq-poe-2lb)|Room Booking, <br/>Room Control|Mimo 10" Panel includes side LED Light Bars that PlaceOS can control as room availability indicators.<br/>Supports remote management via Moki.
 
-  </TabItem>
-  <TabItem value="apple">
+</details>
+
+<details>
+  <summary>Apple</summary> 
 
 |Manufacturer |Model | Use Case | Notes
 |---| ---|---|---|
 Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Control<br/>Visitor Kiosks|Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration. <br/> Supports remote management via Moki.<br/> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)
 
-  </TabItem>
-</Tabs>
+</details>
 
-<!-- ### Chrome -->
-<!-- ### Android -->
-<!-- ### Apple  -->
 <!-- original doc had inline images in table, try adding these in when asset directories are more managed -->
 
 <!-- no point messing with column width or vertical spacing until we see how docusaur handles it, but possibly html wrapping can address this. Don"t want to get too caught up in that though -->
-
-[//]: # (may need to use this type of comment in stead depending on handling)
 
 ## Mobile Device Management Platforms (MDM) 
 
@@ -64,7 +53,7 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Contr
 |---|---|---|
 [Moki](	https://moki.com/)|Android and iOS|Cloud SaaS
 [Google CDM](https://cloud.google.com/chrome-enterprise/os/)|ChromeOS|Cloud SaaS
-[MobileIron](https://www.mobileiron.com/en/unified-endpoint-management/solutions/mobile-device-management)|iOS|
+<i>[MobileIron](https://www.mobileiron.com/en/unified-endpoint-management/solutions/mobile-device-management)</i> |iOS|
 
 ## Label Printers 
 <!-- consider having this as a general peripherals table? -->
