@@ -16,6 +16,7 @@ rules:
   period-in-list-item: true
 
   rousseau:
+    severity: warning
     showLevels:
     - suggestion
     - warning
@@ -25,6 +26,10 @@ rules:
     - Html
     ignoreTypes:
     - passive            # covered by write-good
+    - lexical-illusion
+    - so
+    - adverbs
+    - weasel
     - sentence:uppercase # covered by en-capitalization
 
   spelling:
@@ -32,8 +37,8 @@ rules:
     skipPatterns:
     - '/placeos/i'
     - '/backoffice/i'
-    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
-    - '/[0-9]+/g'             # numbers 
+    - '/[A-Z]{2,}/'      # acronyms
+    - '/[0-9]+/g'        # numbers 
     - AOpen
     - chatbot
     - Chromebase
@@ -56,4 +61,11 @@ rules:
     - "Kubernetes"
     - ['saas', SaaS]
 
-  write-good: true
+  write-good:
+    severity: warning
+
+
+filters:
+  allowlist:
+    allow:
+    - '/<i>.*<\/i>/g'    # idiomatic terms
