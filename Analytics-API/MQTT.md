@@ -21,6 +21,17 @@ All change messages share the following topic structure:
 ``` html
 placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
+In this structure, each section is a unique identifying tag to represent part of the system.
+- `<org>`: Organization ID
+- `<bld>`: Building ID
+- `<lvl>`: Level ID
+- `<area>`: [Area](../key-concepts/zones.md) ID
+- `<sys>`: [System](../key-concepts/systems.md) ID
+- `<drv>`: [Driver](../key-concepts/drivers.md) ID
+- `<mod>`: [Module](../key-concepts/modules.md) ID
+- `<idx>`: Module Index
+- `<state>`: State Key
+
 <!-- some kind of key expanding the above. Original had an image. html isn't *right* but the colouratin is nice-->
 
 <!--What part of PlaceOS? messaging service? Does this microservice (?) have a title? -->
@@ -94,12 +105,12 @@ A match can lead to actions such as:
 - Dropping the associated event
 
 ## Cloud Brokers
-<!-- either have clickable images of logos (img from original doc), or the logo image with clickable name below -->
-```
-- https://www.cloudmqtt.com/
-- https://cloud.google.com/iot/docs/how-tos/mqtt-bridge
-- https://myqtthub.com/en
-- https://elements.heroku.com/addons/cloudmqtt
-- https://www.hivemq.com/ https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support
-- https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html
-```
+<!-- Want to add clickable images of logos (img from original doc) -->
+
+- [Cloud MQTT](https://www.cloudmqtt.com/)
+- [Google Cloud](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
+- <i>[MyQTTHub](https://myqtthub.com/en)</i>
+- <i>[Heroku CloudMQTT](https://elements.heroku.com/addons/cloudmqtt)</i>
+- <i>[HiveMQ](https://www.hivemq.com/)</i>
+- [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
+- [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
