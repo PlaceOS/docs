@@ -1,39 +1,58 @@
-{
-  "rules": {
-    "alex": {
-      "allow": []
-    },
-    "common-misspellings": {
-      "ignore": []
-    },
-    "en-capitalization": true,
-    "no-empty-section": true,
-    "no-exclamation-question-mark": true,
-    "one-sentence-per-line": true,
-    "period-in-list-item": true,
-    "rousseau": {
-      "showLevels": ["suggestion", "warning", "error"],
-      "ignoreInlineNodeTypes": ["Code", "Html"], 
-      "ignoreTypes": ["passive", "sentence:uppercase"] // covered by write-good and en-capitalization
-    },
-    "spelling": {
-      "language": "en",
-      "skipPatterns": [
-        "PlaceOS",
-        "/\\b(?:[A-Z]){2,}\\b/g", // acronyms
-        "/[0-9]+/g", //numbers 
-        "chatbot",
-        "webhook",
-        "backoffice"
-      ],
-    },
-    "terminology": {
-      "defaultTerms": true,
-      "terms": [
-        "PlaceOS",
-        "Place Technology"
-      ]
-    },
-    "write-good": true
-  }
-}
+rules:
+  alex:
+    allow: []
+
+  common-misspellings:
+    ignore: []
+
+  en-capitalization: true
+
+  no-empty-section: true
+
+  no-exclamation-question-mark: true
+
+  one-sentence-per-line: true
+
+  period-in-list-item: true
+
+  rousseau:
+    severity: warning
+    showLevels:
+    - suggestion
+    - warning
+    - error
+    ignoreInlineNodeTypes:
+    - Code
+    - Html
+    ignoreTypes:
+    - passive            # covered by write-good
+    - lexical-illusion
+    - so
+    - adverbs
+    - weasel
+    - sentence:uppercase # covered by en-capitalization
+
+  spelling:
+    language: en
+    skipPatterns:
+    - '/placeos/i'
+    - '/backoffice/i'
+    - '/[A-Z]{2,}/'      # acronyms
+    - chatbot
+    - webhook
+
+  terminology:
+    defaultTerms: true
+    terms:
+    - ['place\W?os', 'PlaceOS']
+    - ['place\W?tech(nology)?', 'Place Technology']
+    - ['back\W?office', 'Backoffice']
+
+  write-good:
+    severity: warning
+
+
+filters:
+  allowlist:
+    allow:
+    - '/<i>.*<\/i>/g'    # idiomatic terms
