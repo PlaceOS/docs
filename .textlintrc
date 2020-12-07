@@ -79,4 +79,11 @@ rules:
     - "NGINX"
     - "RethinkDB"
 
-  write-good: true
+  write-good:
+    severity: warning
+
+
+filters:
+  allowlist:
+    allow:
+    - '/<i>.*<\/i>/g'    # idiomatic terms
