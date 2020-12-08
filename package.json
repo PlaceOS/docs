@@ -1,0 +1,18 @@
+{
+  "name": "placeos-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "docusaurus build node_modules/placeos-docs-site",
+    "start": "docusaurus start node_modules/placeos-docs-site",
+    "test": "textlint --format pretty-error '{,!(node_modules)/**/}*.md'"
+  },
+  "config": {
+    "docs_path": "../../"
+  },
+  "files": "{./,./**}/*.md",
+  "devDependencies": {
+    "orthograph-err": "github:place-labs/orthograph-err",
+    "placeos-docs-site": "github:placeos/docs-site"
+  }
+}
