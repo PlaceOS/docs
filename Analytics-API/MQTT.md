@@ -37,8 +37,7 @@ In this structure, each section is a unique identifying tag to represent part of
 <!--What part of PlaceOS? messaging service? Does this microservice (?) have a title? -->
 On a state change, PlaceOS  will publish a message with the payload containing the new state value as a JSON entity. 
 The associated driver defines the structure and change frequency of this state.
-If a state change is for a system which isn't assigned to a building, level or area, that topic level will be an underscore character 
- (`“_”`).
+If a state change is for a system which isn't assigned to a building, level or area, that topic level will be an underscore character (`_`).
 
 ### State Change Payload
 The *payload* is the value of the status variable paired with a timestamp
@@ -114,3 +113,6 @@ A match can lead to actions such as:
 - <i>[HiveMQ](https://www.hivemq.com/)</i>
 - [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
 - [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
+
+
+<abbr title="Hyper Text Markup Language">HTML</abbr>
