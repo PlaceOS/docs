@@ -18,7 +18,7 @@ PlaceOS uses two types of message sent over MQTT: State Changes and Metadata.
 Changes to module state information propagates in real time. 
 All change messages share the following topic structure:
 
-``` html
+``` markdown
 placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
 In this structure, each section is a unique identifying tag to represent part of the system.
@@ -41,7 +41,7 @@ If a state change is for a system which isn't assigned to a building, level or a
 
 ### State Change Payload
 The *payload* is the value of the status variable paired with a timestamp
-```html
+```json
 {
   "time": unix_integer_milliseconds,
   "value": "payload is a serialized json string"
@@ -51,7 +51,7 @@ The *payload* is the value of the status variable paired with a timestamp
 Metadata is available for `building`, `level`, `area`, `system` and `driver` tiers. 
 The format is this persistent topic:
 
-```html
+```json
 placeos/<org>/metadata/<id>
 ```
 
@@ -60,12 +60,12 @@ placeos/<org>/metadata/<id>
 Metadata payloads are JSON objects that contain model info for the publishing entity. 
 This includes the human-readable "friendly name", e.g.
 
-```html
+```json
 {
   "name": "Cisco VC"
 }
 ```
-```
+```json
 {
   "name": "Level 24"
 }
@@ -78,20 +78,20 @@ Wildcards can replace any topic level to catch state information across differen
 Some commons examples are:
 
 All events within a building: 
-```html
+```markup
 placeos/<org>/state/<bld>/# 
 ```
 
 Connected status of all devices:
-```html
+```markup
 placeos/<org>/state/+/+/+/+/+/+/+/connected 
 ```
 Power status for all displays:
-```html
+```markup
 placeos/<org>/state/+/+/+/+/+/Display/+/power
 ```
 Call status information for Cisco VC endpoints (`dep-123` is the driver ID for Cisco VC):
-```html
+```markup
 placeos/<org>/state/+/+/+/+/dep-123/+/+/call_status
 ```
 
