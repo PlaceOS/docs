@@ -48,7 +48,7 @@ The *payload* is the value of the status variable paired with a timestamp
 }
 ```
 ## Metadata
-Metadata is available for `building`, `level`, `area`, `system` and `driver` tiers. 
+Metadata is available for *building*, *level*, *area*, *system* and *driver* tiers. 
 The format is this persistent topic:
 
 ```markup
@@ -108,9 +108,9 @@ A match can lead to actions such as:
 
 - [Cloud MQTT](https://www.cloudmqtt.com/)
 - [Google Cloud](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
-- <i>[MyQTTHub](https://myqtthub.com/en)</i>
-- <i>[Heroku CloudMQTT](https://elements.heroku.com/addons/cloudmqtt)</i>
-- <i>[HiveMQ](https://www.hivemq.com/)</i>
+- [MyQTTHub](https://myqtthub.com/en)
+- [Heroku CloudMQTT](https://elements.heroku.com/addons/cloudmqtt)
+- [HiveMQ](https://www.hivemq.com/)
 - [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
 - [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
