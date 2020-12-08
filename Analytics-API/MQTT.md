@@ -18,7 +18,7 @@ PlaceOS uses two types of message sent over MQTT: State Changes and Metadata.
 Changes to module state information propagates in real time. 
 All change messages share the following topic structure:
 
-``` markdown
+``` markup
 placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
 In this structure, each section is a unique identifying tag to represent part of the system.
@@ -51,7 +51,7 @@ The *payload* is the value of the status variable paired with a timestamp
 Metadata is available for `building`, `level`, `area`, `system` and `driver` tiers. 
 The format is this persistent topic:
 
-```json
+```markup
 placeos/<org>/metadata/<id>
 ```
 
