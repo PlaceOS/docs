@@ -55,4 +55,5 @@ rules:
 filters:
   allowlist:
     allow:
-    - '/<i>.*<\/i>/g'    # idiomatic terms
+    - '/<i>.*<\/i>/g'         # idiomatic terms
+    - '/\[(.*)\]\(.*\1.*\)/i' # link text in link
