@@ -113,4 +113,3 @@ A match can lead to actions such as:
 - [HiveMQ](https://www.hivemq.com/)
 - [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
 - [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
-de the id being the path from docs/ (in this instance it would be analytics-api/mqtt) as the page "name" would be more intuitive imo. Valid if you want to stick with the default. I can see good arguments like forced consistency - having ID
