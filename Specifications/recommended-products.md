@@ -7,7 +7,7 @@ description: Tried and tested products and vendors that work with PlaceOS
 The PlaceOS Platform is vendor agnostic, meaning that it works with any other hardware or software.
 It has no direct requirements for specific equipment. 
 
-Here, you will find a list of hardware that has been fully tested with PlaceOS.
+Here you will find a list of hardware that has been fully tested with PlaceOS.
 Everything below delivers reliable and consistent results on the platform.
 
 ## User Interface Devices (by OS)
