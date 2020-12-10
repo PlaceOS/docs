@@ -38,7 +38,7 @@ rules:
     - '/placeos/i'
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
-    - '/[0-9]+/g'             # numbers 
+    - '/[0-9]+/g'        # numbers 
     - AOpen
     - chatbot
     - Chromebase
