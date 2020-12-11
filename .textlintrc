@@ -37,8 +37,8 @@ rules:
     skipPatterns:
     - '/placeos/i'
     - '/backoffice/i'
-    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
-    - '/[0-9]+/g'             # numbers 
+    - '/[A-Z]{2,}/'      # acronyms
+    - '/[0-9]+/g'        # numbers 
     - AOpen
     - chatbot
     - Chromebase
