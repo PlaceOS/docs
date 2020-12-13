@@ -81,6 +81,3 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Contr
 [Ubuntu server](https://ubuntu.com/server)|18.04 LTS
 [Red Hat Enterprise Linux ](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)|7+
 
-
-
-
