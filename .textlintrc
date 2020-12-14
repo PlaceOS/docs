@@ -40,7 +40,8 @@ rules:
     # for anything in terminology, add only the corrected version
     # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
     - AOpen
-    - balancer                
+    - '/balancer/i'
+    - bootstrapper
     - chatbot
     - Chromebase
     - ChromeBox
@@ -58,7 +59,7 @@ rules:
     - Optica
     - RethinkDB
     - SaaS
-    - subnet
+    - '/subnet/i'
     - webhook
     
 
