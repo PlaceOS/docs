@@ -265,4 +265,4 @@ Once you have completed the above steps, the Backoffice application will be avai
 
 <i>`https://{Application Load Balancer DNS NAME}/login?continue=/backoffice`</i>
   
-The credentials are the email and password set by the `init` service..
+The credentials are the email and password set by the `init` service.
