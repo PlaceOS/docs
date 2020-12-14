@@ -14,26 +14,26 @@ From VPC configuration to a functioning application, it's all modular by design.
 A CloudFormation template specifies all the components.
 Each component is designed to deploy as its own CloudFormation stack.
 
-The configurable components of the deploy and the templates utilized are listed below and are in order of recommended steps, beginning with VPC configuration:
+The configurable components and the templates used, in order of recommended steps, are:
 
-- **VPC** [vpc.yml]
-- **Security Groups** [sec_groups.yml]
-- **Elasticsearch** [elasticsearch.yml]
-- **ElastiCache** [elasticache-redis-cluster.yml]
-- **Application Load Balancer** [load-balancer-https.yaml]
-- **Elastic File System** [EFS.yml]
-- **Fargate Cluster** [ecs-cluster.yml]
-- **RethinkDB** [rethinkdb-primary.yml]
-- **etcd** [etcd-service.yml]
-- **dispatch** [dispatch-service.yml]
-- **NGINX** [nginx-service.yml]
-- **Frontends** [frontends-service.yml]
-- **`auth`** [auth-service.yml]
-- **`core`** [core-service.yml]
-- **triggers** [triggers-service.yml]
-- **rubber-soul** [rubber-soul-service.yml]
-- **REST API** [rest-api-service.yml]
-- **`init`** [init-service.yml]
+- **VPC** `vpc.yml`
+- **Security Groups** `sec_groups.yml`
+- **Elasticsearch** `elasticsearch.yml`
+- **ElastiCache** `elasticache-redis-cluster.yml`
+- **Application Load Balancer** `load-balancer-https.yaml`
+- **Elastic File System** `EFS.yml`
+- **Fargate Cluster** `ecs-cluster.yml`
+- **RethinkDB** `rethinkdb-primary.yml`
+- **etcd** `etcd-service.yml`
+- **dispatch** `dispatch-service.yml`
+- **NGINX** `nginx-service.yml`
+- **Frontends** `frontends-service.yml`
+- **`auth`** `auth-service.yml`
+- **`core`** `core-service.yml`
+- **triggers** `triggers-service.yml`
+- **`rubber-soul`** `rubber-soul-service.yml`
+- **REST API** `rest-api-service.yml`
+- **`init`** `init-service.yml`
 
 ## AWS Environment Name parameter and Stack naming
 The `EnvironmentName` parameter's uses include: 
@@ -49,6 +49,8 @@ Use the same `EnvironmentName` variable throughout the deployment process.
 *PlaceOS* is the default but each deployment in the same VPC should configure its own `EnvironmentName`.
 The Stack name you choose for each component should be descriptive but has no effect on the function of the deployment. 
 
+<!-- CONSIDER: From this point on, breaking it into One Step Per Page, with many small docs -->
+
 ## VPC Architecture: `vpc.yml`
 The **VPC** template deploys two private and two public subnets. 
 For each of these the user can configure:
@@ -60,49 +62,68 @@ For each of these the user can configure:
 
 The application load balancer is the only component that should deploy in public subnets.
 
+:::info  
 **The `EnvironmentName` parameter chosen here should be the same for all other consequent templates.**
 
-Although the important values have been prepopulated, you can specify an environment name you will use throughout the PlaceOS deployment and whatever CIDR ranges you require.
+These values have presets, but you can specify any `EnvironmentName` and CIDR ranges you want.
 
 ## Security Groups: `sec_groups.yml`
-Once the VPC from the previous step is available, you can use the this template to configure all the AWS Securty Groups that will be used throughout the configuration of remaining stacks. 
-As the stacks and services are deployed on a serverless and managed architecture, security groups are used to allow only communications that are necessary between the various components of the application.
+Once the VPC is available, use this template to configure all the AWS Security Groups for the remaining stacks. 
+The stacks and services are on a serverless and managed architecture. 
+Use security groups to prevent unnecessary communications between the application components.
 
 Use the same `EnvironmentName` parameter as the VPC and select the VPC created in the previous step.
 
 ## Elasticsearch (AWS Managed Service): `elasticsearch.yml`
-After configuring the security groups to be used throughout the deplopyment, we can begin configuring the components that require them. 
-This template is preconfigured to deploy an Elasticsearch cluster version  comprising 2 instances of t2.small.Elasticsearch instance type as default.
+After configuring the security groups, you can begin configuring the components that use them. 
+The default configuration of this template deploys an Elasticsearch cluster version with 2 instances of `t2.small.Elasticsearch`.
 
-The security group to use here will be tagged as (Elasticsearch | {`EnvironmentName`} | security group) and it is best to choose the Private subnets created by the VPC stack and tagged as (Private Subnet 1 | {`EnvironmentName`}) and (Private Subnet 2 | {`EnvironmentName`}).
+Here you should use the security group with AWS tags 
+> (Elasticsearch | {`EnvironmentName`} | security group).  
 
-**N.B.** You might see a message relating to an IAM Service Linked Role for Elasticsearch, preventing this stack from deploying if you haven't previously configured AWS Elasticsearch with your account. 
+It's best to choose the Private subnets created by the VPC stack and tagged as 
+> (Private Subnet 1 | {`EnvironmentName`}) 
+
+And 
+> (Private Subnet 2 | {`EnvironmentName`}).
+
+:::info
+You might see a message relating to an IAM Service Linked Role for Elasticsearch. 
+It prevents this stack from deploying if you haven't already configured AWS Elasticsearch with your account. 
 There is a commented section beginning with **`ESSLRole:`** in the sec_groups.yml file. 
 You can uncomment this section and redeploy the Security Groups stack using amended sec_groups.yml file and redeploy this stack.
 
 ## ElastiCache (AWS Managed Service): `elasticache-redis-cluster.yml`
-This template is preconfigured to deploy an ElastiCache Redis cluster with Multi-AZ support, comprising of 1 Node.js Group and two cache.t2.micro replicas as default. 
-The standard redis port is prepopulated in addition to configurable snapshot and maintenance window parameters.
+The default configuration of this template deploys an ElastiCache Redis cluster with Multi-AZ support.
+It comprises of 1 Node.js Group and two `cache.t2.micro` replicas as default. 
+The Redis port, snapshot and maintenance window parameters have default values but are configurable.
 
- - **Security Group:** (ElastiCache | {`EnvironmentName`} | security group)
+Here you should use the security group with AWS tags 
+ - **Security Group:** 
+ > (ElastiCache | {`EnvironmentName`} | security group)
  - **Subnets:** (Private Subnet 1 | {`EnvironmentName`}) and (Private Subnet 2 | {`EnvironmentName`}) 
+<!-- settle on a solution for displaying the tag groups. Prose description and >Quote ? Or, -list with **bold titles** ? Not `code blocks` as they are used for variables in the tags -->
 
 ## Application Load Balancer: `load-balancer-https.yaml`
-This template deploys an external, public facing load balancer for forwarding public traffic to internal services.
+This template deploys an external, public facing load balancer.
+It forwards public traffic to internal services.
 
-The ALB is the only component to be deployed via public subnets and it requires you use your own preconfigured certificate from AWS Certificate Manager. 
-It is configured with a certificate **Identifier** from ACM.
+The application load balancer is the only component that should deploy in public subnets.
+It requires you use your own preconfigured certificate from AWS Certificate Manager. 
+It's configured with a certificate **Identifier** from ACM.
+<!-- what is this about -->
 
-A Secure Listener is used to serve HTTPS traffic. 
-All inbound http traffic is redirected to it's HTTPS equivalent.
+A Secure Listener serves HTTPS traffic. 
+All inbound HTTP traffic is redirected to its HTTPS equivalent.
 
 - **Subnets:** (Public Subnet 1 | {`EnvironmentName`}), (Public Subnet 2 | {`EnvironmentName`})
 - **VPC:** ({`EnvironmentName`} | VPC)
 
 ## Elastic File System: `EFS.yml`
-As the application deployment comprises of containers which are ephemeral, EFS is used as the persistent storage layer. 
-The RethinkDB, NGINX and Frontends services utilise the EFS file system created by this template. 
-EFS is used for the RethinkDB data directory and by NGINX and Frontends for file storage of the Backoffice user interface.
+As the application deployment comprises of containers which are ephemeral, EFS is the persistent storage layer. 
+The RethinkDB, NGINX and Frontends services use the Elastic File System created by this template. 
+EFS is the RethinkDB data directory. 
+NGINX and Frontends us it for file storage of the Backoffice user interface.
 
 - **Security Groups:**
   - SecurityGroupEFSNginxFrontends: (Nginx and Frontends -> EFS | {`EnvironmentName`} | security group)
@@ -131,7 +152,7 @@ Configure the `EnvironmentName` parameter as in all previous steps.
 
 ## RethinkDB `rethinkdb-primary.yml`
  RethinkDB is used as the database for PlaceOS. 
- RethinkDB can operate as a cluster but for the purposes of this example we will deploy a single primary member.
+ RethinkDB can operate as a cluster but for the purposes of this example you will deploy a single primary member.
 
  The RethinkDB `/data` directory is configured to use an EFS share that was created earlier by the Elastic File System stack. 
  Data stored by the database will persist if the container task is restarted/destroyed.
@@ -215,7 +236,8 @@ Rest-api is an API service for interacting with PlaceOS.
 - **Security Group:** (Rest-api | {`EnvironmentName`} | security group)
 
 ## `init [init-service.yml]`
-Init is a bootstrapper for the PlaceOS instance.
+
+`init` is a bootstrapper for the PlaceOS instance and is the final step in the deployment. 
 
 This service requires the **DNS Name** of the application load balancer as this is used as the URL for accessing the application. 
 The email and password configured here will also create a login you can use once the application is deployed.
@@ -224,7 +246,8 @@ The email and password configured here will also create a login you can use once
 - **Required Services:** RethinkDB, auth, Application Load Balancer {DNS Name}
 - **Security Group:** (Init | {`EnvironmentName`} | security group)
 
-N.B. This service will never actually finish as the task will exit after it has run. 
+<!-- possibly :::info etc -->
+This service will never actually finish as the task will exit after it has run. 
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
 
 ## Accessing the deployed PlaceOS Backoffice application
