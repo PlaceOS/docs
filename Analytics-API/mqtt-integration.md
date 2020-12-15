@@ -75,7 +75,7 @@ This includes the human-readable "friendly name", e.g.
 
 ## Wildcard Subscriptions
 Wildcards can replace any topic level to catch state information across different services. 
-Some commons examples are:
+Some common examples are:
 
 All events within a building: 
 ```markup
@@ -105,6 +105,7 @@ A match can lead to actions such as:
 
 ## Cloud Brokers
 <!-- Want to add clickable images of logos (img from original doc) -->
+<!-- And a few words "service providers for blah include blah" -->
 
 - [Cloud MQTT](https://www.cloudmqtt.com/)
 - [Google Cloud](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
