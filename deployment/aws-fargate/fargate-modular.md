@@ -64,6 +64,7 @@ The application load balancer is the only component that should deploy in public
 
 :::info  
 **The `EnvironmentName` parameter chosen here should be the same for all other consequent templates.**
+:::
 
 These values have presets, but you can specify any `EnvironmentName` and CIDR ranges you want.
 
@@ -78,20 +79,21 @@ Use the same `EnvironmentName` parameter as the VPC and select the VPC created i
 After configuring the security groups, you can begin configuring the components that use them. 
 The default configuration of this template deploys an Elasticsearch cluster version with 2 instances of `t2.small.Elasticsearch`.
 
-Here you should use the security group with AWS tags 
+AWS tags which identify the associated components are:
+#### **Security Group** 
 > (Elasticsearch | {`EnvironmentName`} | security group).  
 
-It's best to choose the Private subnets created by the VPC stack and tagged as 
-> (Private Subnet 1 | {`EnvironmentName`}) 
+#### **Private Subnets**
+> (Private Subnet 1 | {`EnvironmentName`})  
+> (Private Subnet 2 | {`EnvironmentName`})
 
-And 
-> (Private Subnet 2 | {`EnvironmentName`}).
-
-:::info
+:::info  
 You might see a message relating to an IAM Service Linked Role for Elasticsearch. 
-It prevents this stack from deploying if you haven't already configured AWS Elasticsearch with your account. 
-There is a commented section beginning with **`ESSLRole:`** in the sec_groups.yml file. 
-You can uncomment this section and redeploy the Security Groups stack using amended sec_groups.yml file and redeploy this stack.
+It prevents this stack from deploying if you haven't already set up AWS Elasticsearch with your account. 
+You can address this by:  
+1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file. 
+1) Redeploy the Security Groups stack using amended `sec_groups.yml`  
+1) Redeploy this (Elasticsearch) stack
 
 ## ElastiCache (AWS Managed Service): `elasticache-redis-cluster.yml`
 The default configuration of this template deploys an ElastiCache Redis cluster with Multi-AZ support.
@@ -99,9 +101,11 @@ It comprises of 1 Node.js Group and two `cache.t2.micro` replicas as default.
 The Redis port, snapshot and maintenance window parameters have default values but are configurable.
 
 Here you should use the security group with AWS tags 
- - **Security Group:** 
+ #### **Security Group:** 
  > (ElastiCache | {`EnvironmentName`} | security group)
- - **Subnets:** (Private Subnet 1 | {`EnvironmentName`}) and (Private Subnet 2 | {`EnvironmentName`}) 
+ #### **Subnets:** 
+ > (Private Subnet 1 | {`EnvironmentName`})  
+ > (Private Subnet 2 | {`EnvironmentName`}) 
 <!-- settle on a solution for displaying the tag groups. Prose description and >Quote ? Or, -list with **bold titles** ? Not `code blocks` as they are used for variables in the tags -->
 
 ## Application Load Balancer: `load-balancer-https.yaml`
@@ -114,30 +118,36 @@ It's configured with a certificate **Identifier** from ACM.
 <!-- what is this about -->
 
 A Secure Listener serves HTTPS traffic. 
-All inbound HTTP traffic is redirected to its HTTPS equivalent.
+All inbound HTTP traffic redirects to its matching HTTPS.
 
-- **Subnets:** (Public Subnet 1 | {`EnvironmentName`}), (Public Subnet 2 | {`EnvironmentName`})
-- **VPC:** ({`EnvironmentName`} | VPC)
+#### **Subnets:** 
+> (Public Subnet 1 | {`EnvironmentName`})  
+> (Public Subnet 2 | {`EnvironmentName`})
+#### **VPC:** 
+> ({`EnvironmentName`} | VPC)
 
 ## Elastic File System: `EFS.yml`
-As the application deployment comprises of containers which are ephemeral, EFS is the persistent storage layer. 
-The RethinkDB, NGINX and Frontends services use the Elastic File System created by this template. 
+As the application deployment consists of ephemeral containers, EFS is the persistent storage layer. 
+RethinkDB, NGINX and Frontends services use the Elastic File System created by this template. 
 EFS is the RethinkDB data directory. 
 NGINX and Frontends us it for file storage of the Backoffice user interface.
-
-- **Security Groups:**
-  - SecurityGroupEFSNginxFrontends: (Nginx and Frontends -> EFS | {`EnvironmentName`} | security group)
-  - SecurityGroupEFSRethinkDB:  (RethinkDB -> EFS | {`EnvironmentName`} | security group)
-- **Subnets:** (Private Subnet 1 | {`EnvironmentName`}), (Private Subnet 2 | {`EnvironmentName`})
-- **VPC:** ({`EnvironmentName`} | VPC)
+<!-- Use of NGINX seems inconsistent - sentence case is common in these files including in variable names -->
+#### **Security Groups:**
+  - SecurityGroupEFSNginxFrontends: 
+  > (NGINX and Frontends -> EFS | {`EnvironmentName`} | security group)
+  - SecurityGroupEFSRethinkDB:  
+  > (RethinkDB -> EFS | {`EnvironmentName`} | security group)
+#### **Subnets:** 
+> (Private Subnet 1 | {`EnvironmentName`}), (Private Subnet 2 | {`EnvironmentName`})
+#### **VPC:** 
+> ({`EnvironmentName`} | VPC)
 
 ## Fargate Cluster: `ecs-cluster.yml`
-This template deploys the Elastic Container Service [ECS] cluster that will be used for all PlaceOS container services.
-The ECS Cluster will be configured with the `EnvironmentName` parameter.
-Use the same `EnvironmentName` parameter as prior steps.
+This template deploys the Elastic Container Service [ECS] cluster for all PlaceOS container services.
+The ECS Cluster configuration requires the same `EnvironmentName` parameter as prior steps.
 
-## Notes on deploying the Fargate services.
-What remains to be configured are the Fargate components of the deployment and they share a lot of common parameters and configuration.
+### Notes on deploying the Fargate services.
+The Fargate components of the deployment still need to be configured, and they share a lot of common parameters and configuration.
 
 Each template configures and deploys an ECS Task Definition, Service and Task.
 
@@ -176,8 +186,8 @@ etcd is used as the service discovery layer for PlaceOS.
 ## NGINX [nginx-service.yml]
 NGINX is used as the web server for PlaceOS
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. nginx.PlaceOS
-- **Security Group:** (Nginx | {`EnvironmentName`} | security group)
+- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. nginx.placeos
+- **Security Group:** (NGINX | {`EnvironmentName`} | security group)
 
 
 ## `frontends [frontends-service.yml]`
