@@ -51,7 +51,7 @@ The *payload* is the value of the status variable paired with a timestamp
 Metadata is available for *building*, *level*, *area*, *system* and *driver* tiers. 
 The format is this persistent topic:
 
-```json
+```markup
 placeos/<org>/metadata/<id>
 ```
 
