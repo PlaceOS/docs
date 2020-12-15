@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "docusaurus build node_modules/placeos-docs-site",
-    "start": "docusaurus start node_modules/placeos-docs-site",
+    "build": "docusaurus build ${npm_package_config_site_dir}",
+    "start": "docusaurus start ${npm_package_config_site_dir}",
     "test": "textlint --format pretty-error '{,!(node_modules)/**/}*.md'"
   },
   "config": {
+    "site_dir": "node_modules/placeos-docs-site",
     "docs_path": "../../"
   },
   "files": "{./,./**}/*.md",
