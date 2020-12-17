@@ -90,10 +90,11 @@ AWS tags which identify the associated components are:
 :::info  
 You might see a message relating to an IAM Service Linked Role for Elasticsearch. 
 It prevents this stack from deploying if you haven't already set up AWS Elasticsearch with your account. 
-You can address this by:  
-1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file. 
-1) Redeploy the Security Groups stack using amended `sec_groups.yml`  
-1) Redeploy this (Elasticsearch) stack
+You can address this by:
+<!-- full stops? -->
+1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file.
+1) Redeploy the Security Groups stack using amended `sec_groups.yml`.
+1) Redeploy this (Elasticsearch) stack.
 
 ## ElastiCache (AWS Managed Service): `elasticache-redis-cluster.yml`
 The default configuration of this template deploys an ElastiCache Redis cluster with Multi-AZ support.
@@ -101,11 +102,11 @@ It comprises of 1 Node.js Group and two `cache.t2.micro` replicas as default.
 The Redis port, snapshot and maintenance window parameters have default values but are configurable.
 
 Here you should use the security group with AWS tags 
- #### **Security Group:** 
- > (ElastiCache | {`EnvironmentName`} | security group)
- #### **Subnets:** 
- > (Private Subnet 1 | {`EnvironmentName`})  
- > (Private Subnet 2 | {`EnvironmentName`}) 
+#### **Security Group:** 
+> (ElastiCache | {`EnvironmentName`} | security group)
+#### **Subnets:** 
+> (Private Subnet 1 | {`EnvironmentName`})  
+> (Private Subnet 2 | {`EnvironmentName`}) 
 <!-- settle on a solution for displaying the tag groups. Prose description and >Quote ? Or, -list with **bold titles** ? Not `code blocks` as they are used for variables in the tags -->
 
 ## Application Load Balancer: `load-balancer-https.yaml`
@@ -133,72 +134,102 @@ EFS is the RethinkDB data directory.
 NGINX and Frontends us it for file storage of the Backoffice user interface.
 <!-- Use of NGINX seems inconsistent - sentence case is common in these files including in variable names -->
 #### **Security Groups:**
-  - SecurityGroupEFSNginxFrontends: 
-  > (NGINX and Frontends -> EFS | {`EnvironmentName`} | security group)
-  - SecurityGroupEFSRethinkDB:  
-  > (RethinkDB -> EFS | {`EnvironmentName`} | security group)
+- SecurityGroupEFSNginxFrontends: 
+> (NGINX and Frontends -> EFS | {`EnvironmentName`} | security group)
+- SecurityGroupEFSRethinkDB:  
+> (RethinkDB -> EFS | {`EnvironmentName`} | security group)
 #### **Subnets:** 
-> (Private Subnet 1 | {`EnvironmentName`}), (Private Subnet 2 | {`EnvironmentName`})
+> (Private Subnet 1 | {`EnvironmentName`})  
+(Private Subnet 2 | {`EnvironmentName`})
 #### **VPC:** 
 > ({`EnvironmentName`} | VPC)
+
+<!-- Acronym solution would get extensive application in this document -->
 
 ## Fargate Cluster: `ecs-cluster.yml`
 This template deploys the Elastic Container Service [ECS] cluster for all PlaceOS container services.
 The ECS Cluster configuration requires the same `EnvironmentName` parameter as prior steps.
 
+<!-- which services does "below" refer to? All following? -->
 ### Notes on deploying the Fargate services.
-The Fargate components of the deployment still need to be configured, and they share a lot of common parameters and configuration.
-
+The Fargate components of the deployment still need configuration. 
+They share a lot of common parameters.
 Each template configures and deploys an ECS Task Definition, Service and Task.
+The user can configure the ECS parameters as required but the default values specified are okay for this example.
 
-The user can configure the various ECS parameters as required but the default values specified are sufficient for this example.
+The `ServiceName` parameter configured will result in creation of a Service Discovery record as 
+> {`ServiceName`}.{`EnvironmentName`}
+  
+For example, `rethinkdb-primary.placeos` would be the record for the RethinkDB template. 
+All future services that need configuration with the database can use this value as an input parameter.
 
-The *ServiceName* parameter configured will result in a Service Discovery record being created as {ServiceName}.{`EnvironmentName`} e.g. rethinkdb-primary.PlaceOS for the RethinkDB template. 
-All future services that require configuration with the database can use this value as an input parameter.
-
-The security groups to use for each template will be listed in the appropriate sections below and the VPC and Private subnets created by the VPC stack and tagged as (Private Subnet 1 | {`EnvironmentName`}) and (Private Subnet 2 | {`EnvironmentName`}) should be chosen.
+The security groups to use for each template will appear in the appropriate sections below.
+Tags for VPC and Private subnets are: 
+#### **Subnets:** 
+> (Private Subnet 1 | {`EnvironmentName`})  
+> (Private Subnet 2 | {`EnvironmentName`})
+#### **VPC:** 
+> ({`EnvironmentName`} | VPC)
 
 Configure the `EnvironmentName` parameter as in all previous steps.
-
+<!-- Add links to these resources maybe like for etcd and nginx -->
 ## RethinkDB `rethinkdb-primary.yml`
- RethinkDB is used as the database for PlaceOS. 
- RethinkDB can operate as a cluster but for the purposes of this example you will deploy a single primary member.
+<!-- this is kind of passive bs - allowable? -->
+RethinkDB serves as the database for PlaceOS.
+RethinkDB can operate as a cluster but for the purposes of this example you will deploy a single primary member.
 
- The RethinkDB `/data` directory is configured to use an EFS share that was created earlier by the Elastic File System stack. 
- Data stored by the database will persist if the container task is restarted/destroyed.
+The RethinkDB `/data` directory uses an EFS share as created earlier by the Elastic File System stack. 
+Data stored by the database will persist if the container task gets restarted or destroyed.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. rethinkdb-primary.PlaceOS
-- **Security Group:** (RethinkDB | {`EnvironmentName`} | security group)
+#### **Service Discovery created:**
+> {`ServiceName`}.{`EnvironmentName`}  
+e.g. `rethinkdb-primary.placeos`
 
-<!-- etcd is always all-lower even in titles and sentence starts -->
+#### **Security Group:** 
+> (RethinkDB | {`EnvironmentName`} | security group)
+
+<!-- etcd is always all-lowercase even in titles and sentence starts - <i> or `` or leave it or? -->
 ## etcd: `etcd-service.yml`
-etcd is used as the service discovery layer for PlaceOS.
+[etcd](https://github.com/etcd-io/etcd) is the service discovery layer for PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. etcd.PlaceOS
-- **Security Group:** (etcd | {`EnvironmentName`} | security group)
+#### **Service Discovery created:**
+>{`ServiceName`}.{`EnvironmentName`}  
+e.g. `etcd.placeos`
+#### **Security Group:** 
+> (etcd | {`EnvironmentName`} | security group)
 
 ## Dispatch: `dispatch-service.yml`
-`dispatch` allows engine drivers to register new servers for devices that might connect to engine vs engine connecting to devices.
+[`dispatch`](https://github.com/PlaceOS/dispatch) allows drivers to register new servers to enable devices to connect to PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. dispatch.PlaceOS
-- **Security Group:** (Dispatch | {`EnvironmentName`} | security group)
+#### **Service Discovery created:**: 
+> {`ServiceName`}.{`EnvironmentName`}  
+e.g. `dispatch.placeos`
+#### **Security Group:** 
+> (Dispatch | {`EnvironmentName`} | security group)
 
 ## NGINX [nginx-service.yml]
-NGINX is used as the web server for PlaceOS
+[NGINX](https://github.com/nginxinc/) is the web server for PlaceOS. 
+See more on our implementation [here](https://github.com/PlaceOS/nginx)
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. nginx.placeos
-- **Security Group:** (NGINX | {`EnvironmentName`} | security group)
+#### **Service Discovery created:**
+> {`ServiceName`}.{`EnvironmentName`}  
+e.g. `nginx.placeos`
+#### **Security Group:**
+> (NGINX | {`EnvironmentName`} | security group)
 
 
-## `frontends [frontends-service.yml]`
-Frontends is intended to be a sidecar to the webserver that listens for published frontend repositories and clones them to the NGINX static folder on EFS.
+## `frontends` [`frontends-service.yml`]
+[Frontends](https://github.com/PlaceOS/frontends) is a sidecar to the webserver.
+It listens for published frontend repositories and clones them to the NGINX static folder on EFS.
 
-**N.B.** This is the first service with a configuration to reference a pre-configured service parameter i.e. the *RethinkDBHost* parameter referencing the RethinkDB service. 
+:::info
+This is the first service with a configuration to reference a pre-configured service parameter i.e. the *RethinkDBHost* parameter referencing the RethinkDB service. 
 You can see here that it's preconfigured with ``rethinkdb-primary.placeos``. 
-If the user has used another `EnvironmentName` parameter than PlaceOS or a different ServiceName parameter for the RethinkDB service, the user will need to adjust the *RethinkDBHost* parameter accordingly. 
+If the user has used another `EnvironmentName` parameter than PlaceOS or a different `ServiceName` parameter for the RethinkDB service, the user will need to adjust the *RethinkDBHost* parameter accordingly. 
 The same logic applies to the RethinkDB Port and RethinkDBDB parameters.
+:::
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. `frontends.placeos`
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. `frontends.placeos`
 - **Required Services:** RethinkDB
 - **Security Group:** (Frontends | {`EnvironmentName`} | security group)
 
@@ -209,21 +240,21 @@ This service references the ElastiCache cluster configured earlier.
 Configure the **Primary Endpoint** from Redis here. 
 The *RedisURL* parameter will have the form ``redis://{Primary Endpoint}:{port}``
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. auth.PlaceOS
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. auth.PlaceOS
 - **Required Services:** Redis, RethinkDB
 - **Security Group:** (Auth | {`EnvironmentName`} | security group)
 
 ## `core [core-service.yml]`
 Core is the coordination service for running drivers on PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. core.PlaceOS
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. core.PlaceOS
 - **Required Services:** Redis, RethinkDB, etcd
 - **Security Group:** (Core | {`EnvironmentName`} | security group)
 
 ## `triggers [triggers-service.yml]`
 Triggers is the PlaceOS service for handling events and conditional triggers.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. triggers.PlaceOS
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. triggers.PlaceOS
 - **Required Services:** Redis, RethinkDB, etcd
 - **Security Group:** (Triggers | {`EnvironmentName`} | security group)
 
@@ -233,7 +264,7 @@ Rubber-soul is a service that hooks into [`rethinkdb-orm`](https://github.com/sp
 This service references the Elasticsearch cluster configured earlier. 
 Configure the ESURI with the Elasticsearch **VPC Endpoint** which will have the form ``https://xxxxxx...es.amazonaws.com.``
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. rubber-soul.PlaceOS
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. rubber-soul.PlaceOS
 - **Required Services:** Elasticsearch, RethinkDB
 - **Security Group:** (Rubber Soul | {`EnvironmentName`} | security group)
 
@@ -241,7 +272,7 @@ Configure the ESURI with the Elasticsearch **VPC Endpoint** which will have the 
 This template configures and deploys the rest-api ECS Task Definition, Service and Task. 
 Rest-api is an API service for interacting with PlaceOS.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. rest-api.PlaceOS
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. rest-api.PlaceOS
 - **Required Services:** Elasticsearch, RethinkDB, Redis, etcd, frontends, rubber-soul, triggers
 - **Security Group:** (Rest-api | {`EnvironmentName`} | security group)
 
@@ -252,7 +283,7 @@ Rest-api is an API service for interacting with PlaceOS.
 This service requires the **DNS Name** of the application load balancer as this is used as the URL for accessing the application. 
 The email and password configured here will also create a login you can use once the application is deployed.
 
-- **Service Discovery created:**: {ServiceName}.{`EnvironmentName`} e.g. init.PlaceOS
+- **Service Discovery created:**: {`ServiceName`}.{`EnvironmentName`} e.g. init.PlaceOS
 - **Required Services:** RethinkDB, auth, Application Load Balancer {DNS Name}
 - **Security Group:** (Init | {`EnvironmentName`} | security group)
 
@@ -264,5 +295,5 @@ You can update the ECS Service to have zero **Number of tasks** once it has been
 Once you have completed the above steps, the Backoffice application will be available at:
 
 <i>`https://{Application Load Balancer DNS NAME}/login?continue=/backoffice`</i>
-  
+
 The credentials are the email and password set by the `init` service.
