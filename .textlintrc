@@ -90,7 +90,6 @@ rules:
   write-good:
     severity: warning
 
-
 filters:
   allowlist:
     allow:

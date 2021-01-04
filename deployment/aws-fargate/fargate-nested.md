@@ -71,7 +71,6 @@ The required parameters are:
 
 ## AWS `EnvironmentName` parameter and Stack naming
 The `EnvironmentName` parameter's uses include: 
-
 - Tagging 
 - Service discovery 
 - Linking outputs of templates with inputs of later templates
