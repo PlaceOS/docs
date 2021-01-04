@@ -7,8 +7,7 @@ description: Deployment guide for PlaceOS on AWS CloudFormation templates.
 
 ## Overview
 
-<!-- This is the one that the majority of people will use, will only use other for custom impementation. Show this first
- -->
+<!-- This is the one that the majority of people will use, will only use other for custom impementation. Show this first -->
 This page assists with deploying PlaceOS on AWS using CloudFormation templates.
 The templates configure a PlaceOS Fargate deployment including an optional VPC configuration. 
 The basic premise is: 
@@ -16,7 +15,7 @@ The basic premise is:
 1) Upload the nested templates to an s3 bucket  
 1) Orchestrate the deployment using a root stack template 
 
-You can use the `upload-s3.sh` script to upload the required files to a configurable s3 bucket using the AWS CLI tool.
+You can use the `upload-s3.sh` script in the AWS command-line tool to upload the required files to a configurable s3 bucket.
 
 A CloudFormation template specifies all the components.
 Each component is designed to deploy as its own CloudFormation stack.
@@ -72,6 +71,7 @@ The required parameters are:
 
 ## AWS `EnvironmentName` parameter and Stack naming
 The `EnvironmentName` parameter's uses include: 
+
 - Tagging 
 - Service discovery 
 - Linking outputs of templates with inputs of later templates

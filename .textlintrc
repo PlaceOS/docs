@@ -36,7 +36,6 @@ rules:
     language: en
     skipPatterns:
     - '/placeos/i'
-    - '/backoffice/i'
     - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/[0-9]+/g'             # numbers 
@@ -45,6 +44,7 @@ rules:
     # for anything in terminology, add only the corrected version
     # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
     - AOpen
+    - '/backoffice/i'
     - '/balancer/i'
     - bootstrapper
     - chatbot
@@ -63,6 +63,7 @@ rules:
     - Moki
     - NGINX
     - Optica
+    - '/preconfigure[ds]?/i'
     - RethinkDB
     - SaaS
     - '/subnet/i'

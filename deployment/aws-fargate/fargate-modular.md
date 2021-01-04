@@ -30,7 +30,7 @@ The configurable components and the templates used, in order of recommended step
 - **Frontends** `frontends-service.yml`
 - **`auth`** `auth-service.yml`
 - **`core`** `core-service.yml`
-- **Triggers** `triggers-service.yml`
+- **triggers** `triggers-service.yml`
 - **`rubber-soul`** `rubber-soul-service.yml`
 - **REST API** `rest-api-service.yml`
 - **`init`** `init-service.yml`
@@ -77,7 +77,7 @@ Use the same `EnvironmentName` parameter as the VPC and select the VPC created i
 
 ## Elasticsearch (AWS Managed Service): `elasticsearch.yml`
 After configuring the security groups, you can begin configuring the components that use them. 
-The default configuration of this template deploys an Elasticsearch cluster version with 2 instances of `t2.small.Elasticsearch`.
+By default, this template deploys an Elasticsearch cluster version with 2 instances of `t2.small.Elasticsearch`.
 
 AWS tags which identify the associated components are:
 #### **Security Group** 
@@ -87,6 +87,7 @@ AWS tags which identify the associated components are:
 > (Private Subnet 1 | {`EnvironmentName`})  
 > (Private Subnet 2 | {`EnvironmentName`})
 
+<!-- IAM service? Identity Access Management -->
 :::info  
 You might see a message relating to an IAM Service Linked Role for Elasticsearch. 
 It prevents this stack from deploying if you haven't already set up AWS Elasticsearch with your account. 
@@ -97,7 +98,7 @@ You can address this by:
 1) Redeploy this (Elasticsearch) stack.
 
 ## ElastiCache (AWS Managed Service): `elasticache-redis-cluster.yml`
-The default configuration of this template deploys an ElastiCache Redis cluster with Multi-AZ support.
+By default, this template deploys an ElastiCache Redis cluster with Multi-AZ support.
 It comprises of 1 Node.js Group and two `cache.t2.micro` replicas as default. 
 The Redis port, snapshot and maintenance window parameters have default values but are configurable.
 
@@ -219,7 +220,7 @@ e.g. `nginx.placeos`
 
 
 ## Frontends [`frontends-service.yml`]
-[Frontends](https://github.com/PlaceOS/frontends) is a sidecar to the webserver.
+[Frontends](https://github.com/PlaceOS/frontends) is a sidecar to the web server.
 It listens for published frontend repositories and clones them to the NGINX static folder on EFS.
 
 #### **Required Services:** 
