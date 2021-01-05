@@ -87,7 +87,7 @@ You can update the ECS Service to have zero **Number of tasks** once it has been
 You can expect the deployment to take 20-30 minutes, most of which is Elasticsearch.
 The Backoffice application will be available at:  
 
-<i>`https://{Application_Load_Balancer_DNS_NAME}/login?continue=/backoffice`</i>
+<i>https://{`Application_Load_Balancer_DNS_NAME`}/login?continue=/backoffice</i>
 
 The credentials are the email and password set by the `init` service.
 You can also find the application URL listed as an output for the `init` nested stack.
