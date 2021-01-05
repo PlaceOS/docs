@@ -338,6 +338,6 @@ You can update the ECS Service to have zero **Number of tasks** once it has been
 ## Accessing the deployed PlaceOS Backoffice application
 Once you have completed the above steps, the Backoffice application will be available at:
 
-<i>`https://{Application Load Balancer DNS NAME}/login?continue=/backoffice`</i>
+<i>`https://{Application_Load_Balancer_DNS_NAME}/login?continue=/backoffice`</i>
 
 The credentials are the email and password set by the `init` service.
