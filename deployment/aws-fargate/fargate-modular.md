@@ -1,7 +1,7 @@
 ---
 id: fargate-modular
-title:  PlaceOS AWS Fargate Deploy using modular CloudFormation Stacks
-description: Deployment guide for PlaceOS on AWS CloudFormation templates.
+title: AWS Fargate on Modular CloudFormation Stacks
+description: Deployment guide for PlaceOS on Modular AWS CloudFormation templates.
 ---
 
 <!-- # PlaceOS AWS Fargate Deploy -->
@@ -64,6 +64,7 @@ The application load balancer is the only component that should deploy in public
 
 :::info  
 **The `EnvironmentName` parameter chosen here should be the same for all other consequent templates.**
+
 :::
 
 These values have presets, but you can specify any `EnvironmentName` and CIDR ranges you want.
@@ -92,10 +93,13 @@ AWS tags which identify the associated components are:
 You might see a message relating to an IAM Service Linked Role for Elasticsearch. 
 It prevents this stack from deploying if you haven't already set up AWS Elasticsearch with your account. 
 You can address this by:
-<!-- full stops? -->
-1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file.
-1) Redeploy the Security Groups stack using amended `sec_groups.yml`.
-1) Redeploy this (Elasticsearch) stack.
+<!-- full stops? --> 
+1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file
+
+1) Redeploy the Security Groups stack using amended `sec_groups.yml`
+
+1) Redeploy this (Elasticsearch) stack  
+:::
 
 ## ElastiCache (AWS Managed Service): `elasticache-redis-cluster.yml`
 By default, this template deploys an ElastiCache Redis cluster with Multi-AZ support.

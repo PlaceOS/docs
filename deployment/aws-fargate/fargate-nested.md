@@ -1,7 +1,7 @@
 ---
 id: fargate-nested
-title:  PlaceOS AWS Fargate Deploy using Nested CloudFormation Stacks
-description: Deployment guide for PlaceOS on AWS CloudFormation templates.
+title: AWS Fargate on Nested CloudFormation Stacks
+description: Deployment guide for PlaceOS on Nested AWS CloudFormation templates.
 ---
 <!-- # PlaceOS AWS Fargate Deploy using Nested CloudFormation Stacks -->
 
@@ -22,7 +22,6 @@ Each component is designed to deploy as its own CloudFormation stack.
 
 The root stack requires the following files and directory structure:
 
-<!-- standardise some format of filenames - `` only -->
 - **Security Groups:** `infra/sec_groups.yml`
 - **Application Load Balancer:** `infra/load-balancer-https.yml`
 - **Elastic File System:** `infra/EFS.yml`
