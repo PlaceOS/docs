@@ -5,9 +5,12 @@ description: Guide on integrating PlaceOS with MQTT messaging
 ---
 <!-- # MQTT -->
 
-<!-- images in old file, need rehosting https://docs.google.com/document/d/1gBZD296sF0cZXYyRKrRjn-wi5c408Yg1189S-DV9JgE/edit# -->
+<!-- Temporary Proof of Concept for Mermaid.js -->
 
-PlaceOS supports publishing module state information via MQTT. 
+![](https://mermaid.ink/img/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG4gICAgY3MoKENsb3VkIFNlcnZpY2VzKSkgPC0tPiBvXG4gICAgbXFbTVFUVCBQcm92aWRlcnNdIC0tIEFsbCBldmVudHMgJiBtZXRhZGF0YSBwdXNoZWQgdG8gYnJva2VyIGZvciBhbmFseXNpcyAtLT4gbVxuICAgIGwtLT5vcGRcblxuXG4gICAgc3ViZ3JhcGggSW50ZXJuZXQgR2F0ZXdheVxuICAgICAgICBjc1xuICAgICAgICBtcVxuICAgIGVuZFxuXG4gICAgc3ViZ3JhcGggVmlydHVhbCBQcml2YXRlIENsb3VkXG4gICAgICAgIG9bT3V0bG9vazM2NV1vLS1vTFxuICAgICAgICBtW01RVFQgc2VydmljZV1cbiAgICAgICAgbWVbTWVyYWtpXVxuICAgICAgICBsW0xvY2tlcnNdXG4gICAgICAgIEx7TG9naWN9IFxuICAgICAgICBMIG8tLW8gbWVcbiAgICAgICAgTCBvLS1vIGxcbiAgICAgICAgcFtQbGFjZU9TXSBvLS1vIExcbiAgICAgICAgbSBvLS1vIHBcbiAgICAgICAgcCBvLS1vIHJcbiAgICAgICAgcltSRVNULUFQSV1cbiAgICBlbmRcblxuICAgIG9wZFtPbi1QcmVtIERldmljZXNdICAgICIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+
+PlaceOS supports publishing module state information via
+ <abbr title="Message Queuing Telemetry Transpot">MQTT</abbr>. 
 This provides environment information to external systems such as [Amazon MQTT Service](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
 MQTT messages consist of a *header* and a *payload* and typically have low bandwidth usage. 
@@ -23,8 +26,8 @@ placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
 In this structure, each section is a unique identifying tag to represent part of the system.
 - `<org>`: Organization ID
-- `<bld>`: Building ID
-- `<lvl>`: Level ID
+- `<bld>`: [Building](../key-concepts/zones.md) ID
+- `<lvl>`: [Level](../key-concepts/zones.md) ID
 - `<area>`: [Area](../key-concepts/zones.md) ID
 - `<sys>`: [System](../key-concepts/systems.md) ID
 - `<drv>`: [Driver](../key-concepts/drivers.md) ID
@@ -32,12 +35,13 @@ In this structure, each section is a unique identifying tag to represent part of
 - `<idx>`: Module Index
 - `<state>`: State Key
 
-<!-- some kind of key expanding the above. Original had an image. html isn't *right* but the colouratin is nice-->
 
 <!--What part of PlaceOS? messaging service? Does this microservice (?) have a title? -->
 On a state change, PlaceOS  will publish a message with the payload containing the new state value as a JSON entity. 
-The associated driver defines the structure and change frequency of this state.
-If a state change is for a system which isn't assigned to a building, level or area, that topic level will be an underscore character (`_`).
+The associated driver defines the structure and frequency of this state change.
+
+Some systems may not have a building, level, or area.
+If they generate a state change, the missing topic level will be an underscore character (`_`).
 
 ### State Change Payload
 The *payload* is the value of the status variable paired with a timestamp
@@ -104,8 +108,10 @@ A match can lead to actions such as:
 - Dropping the associated event
 
 ## Cloud Brokers
-<!-- Want to add clickable images of logos (img from original doc) -->
 <!-- And a few words "service providers for blah include blah" -->
+
+<!-- Ideally link each logo to each provider? Orig doc has the logos as separate images too -->
+![MQTT brokers' logos](mqtt-brokers-logos.png "MQTT Brokers")
 
 - [Cloud MQTT](https://www.cloudmqtt.com/)
 - [Google Cloud](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
