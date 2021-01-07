@@ -48,12 +48,18 @@ Such as a desk
 
 {
   "location": "desk",
-  // this is the desk they've reserved, but false means they are not there
-  "at_location": false,
+  // the count of people at the location, desks will typically be 0 or 1
+  // however other location types could have more
+  "at_location": 1,
   "map_id": "desk-4-1006",
-  "mac": "66e0fd1279ce",
   "level": "zone_1234",
-  "building": "zone_1234"
+  "building": "zone_1234",
+  
+  // if provided can be used to look up user details
+  "mac": "66e0fd1279ce",
+  
+  // provided if known
+  "capacity": 1
 }
 
 ```
@@ -70,6 +76,22 @@ Such as an event in a meeting room
   "resource_calendars": ["meeting2.city1@org.com", "meeting8.city4@org.com"],
   "event_id": "meet-1234567",
   "ends_at": 1234567
+}
+
+// Or for a desk or car-space booking etc
+// where the asset ID is the map id
+
+{
+  "location": "booking",
+  "asset_id": "desk-4-1006"
+  "event_id": "booking-4567",
+  "ends_at": 1234567,
+
+  "building": "zone_1234",
+  "level": "zone_1234",
+  
+  "staff_email": "bob@tmart",
+  "staff_name": "Bob Jane"
 }
 
 ```
