@@ -83,13 +83,14 @@ Such as an event in a meeting room
 
 {
   "location": "booking",
+  "checked_in": false,
   "asset_id": "desk-4-1006"
-  "event_id": "booking-4567",
-  "ends_at": 1234567,
-
+  "booking_id": "booking-4567",
   "building": "zone_1234",
   "level": "zone_1234",
+  "ends_at": 1234567,
   
+  "mac": "placeos-user-id",
   "staff_email": "bob@tmart",
   "staff_name": "Bob Jane"
 }
