@@ -90,15 +90,15 @@ AWS tags which identify the associated components are:
 
 <!-- IAM service? Identity Access Management -->
 :::info  
-You might see a message relating to an IAM Service Linked Role for Elasticsearch. 
+You might see a message relating to an <abbr title="Identity Access Management">IAM</abbr> Service Linked Role for Elasticsearch. 
 It prevents this stack from deploying if you haven't already set up AWS Elasticsearch with your account. 
-You can address this by:
-<!-- full stops? --> 
-1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file
+You can address this by:  
 
-1) Redeploy the Security Groups stack using amended `sec_groups.yml`
+1) Un-commenting the section beginning with **`ESSLRole:`** in the `sec_groups.yml` file  
 
-1) Redeploy this (Elasticsearch) stack  
+2) Redeploy the Security Groups stack using amended `sec_groups.yml`   
+
+3) Redeploy this (Elasticsearch) stack  
 :::
 
 ## ElastiCache (AWS Managed Service): `elasticache-redis-cluster.yml`
