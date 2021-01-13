@@ -12,8 +12,8 @@ Everything below delivers reliable and consistent results on the platform.
 
 ## User Interface Devices (by OS)
 
-<details>
-  <summary>Chrome</summary> 
+<!--tabs start-->
+# Chrome 
 
   |Manufacturer |Model | Use Case | Notes
   |---| ---|---|---|
@@ -21,10 +21,7 @@ Everything below delivers reliable and consistent results on the platform.
   AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.
   <i>InTouch</i>|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.
 
-</details>
-
-<details>
-  <summary>Andriod</summary> 
+# Android
 
 |Manufacturer |Model | Use Case | Notes
 |---| ---|---|---|
@@ -32,16 +29,13 @@ QBic|[TD-1060P](https://www.qbictechnology.com/td-1060slim)|Room Booking, <br/>R
 Samsung|[Tab (all)](https://www.samsung.com/au/tablets/)|Room Booking, <br/>Room Control,<br/>Visitor Kiosks| Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration.<br/>Supports remote management via Moki.
 Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/products/mimo-adapt-iqv-10-1-digital-signage-tablet-with-leds-rk3288-processor-with-light-bars-mct-10hpq-poe-2lb)|Room Booking, <br/>Room Control|Mimo 10" Panel includes side LED Light Bars that PlaceOS can control as room availability indicators.<br/>Supports remote management via Moki.
 
-</details>
-
-<details>
-  <summary>Apple</summary> 
+# Apple
 
 |Manufacturer |Model | Use Case | Notes
 |---| ---|---|---|
 Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Control<br/>Visitor Kiosks|Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration. <br/> Supports remote management via Moki.<br/> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)
 
-</details>
+<!--tabs end-->
 
 <!-- original doc had inline images in table, try adding these in when asset directories are more managed -->
 
