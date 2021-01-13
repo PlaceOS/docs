@@ -6,7 +6,7 @@ description: Brief intro to the product
 PlaceOS is a software platform which makes interaction with physical spaces simple.
 It provides tools to design, build and iterate integrated digital experiences for physical environments.
 
-To do this it merges elements on an API gateway, ESB (Enterprise Service Bus), and traditional BMS (Building Management Systems), without the legacy baggage.
-This allows disperate systems, devices and services to combine as a seamless UX for your _place_, whatever that is.
+To do this it merges elements on an API gateway, <abbr title="Enterprise Service Bus">ESB</abbr>, and traditional <abbr title="Building Management Systems">BMS</abbr>, without the legacy baggage.
+This allows disparate systems, devices and services to combine as a seamless UX for your _place_, whatever that is.
 
-<!-- can we have like, a hover on acronyms to get their full version? Expanding in brackets gets clunky, omitting the expansion is unclear and exclusionary to readers -->
+<!-- note about the purpose of this Docs Site, and differences to the Portal, maybe a very high level overview of Sections -->

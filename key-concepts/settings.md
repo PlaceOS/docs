@@ -26,8 +26,6 @@ They will vary based on each deployment, but the general structure will always b
 Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sample), that is, key-value pairs:
 <!-- considering keeping some instances of passive in. Considering making an allowlist style guide for manual review and future authors. -->
 
-
-<!-- {% code title="" %} -->
 ```javascript
 {
   "key": "value",
@@ -38,9 +36,7 @@ Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sa
   }
 }
 ```
-<!-- {% endcode %} -->
 
-<!-- info, note or tip -->
 :::info 
  JSON is a common data-interchange format designed to be readable for humans, and for machines to parse and generate.
 If it's a new concept, you can [learn more here](https://learnxinyminutes.com/docs/json/).
