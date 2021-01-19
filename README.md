@@ -142,6 +142,11 @@ If this field is not present, this will default to its title.
 Relative priority against other documents within the same directory for ordering in navigation.
 Ordered documents will appears first, followed by others sorted alphabetically on `id`.
 
+#### `sidebar_hide`
+Flag for publishing a document as unlisted.
+Document contents will publish for direct access, but will not appear within sidebar navigation.
+`false` by default.
+
 #### `sidebar_categroy_label`
 Label to use for the folder within sidebar navigation.
 Defaults to the directory name.
@@ -149,6 +154,11 @@ _Note: applies to the first document within the group, as defined by `sidebar_or
 
 #### `sidebar_category_order`
 Relative priority against sibling categories for ordering in navigation.
+_Note: applies to the first document within the group, as defined by `sidebar_order`._
+
+#### `sidebar_category_hide`
+Flag for publishing a document category as unlisted.
+`false` by default.
 _Note: applies to the first document within the group, as defined by `sidebar_order`._
 
 #### `keywords`
