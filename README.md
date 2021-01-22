@@ -147,7 +147,7 @@ Flag for publishing a document as unlisted.
 Document contents will publish for direct access, but will not appear within sidebar navigation.
 `false` by default.
 
-#### `sidebar_categroy_label`
+#### `sidebar_category_label`
 Label to use for the folder within sidebar navigation.
 Defaults to the directory name.
 _Note: applies to the first document within the group, as defined by `sidebar_order`._
