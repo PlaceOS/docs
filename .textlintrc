@@ -36,18 +36,65 @@ rules:
     language: en
     skipPatterns:
     - '/placeos/i'
+    - '/\b\S*\.\S{2,4}/g'     # filenames
+    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
+    - '/[0-9]+/g'             # numbers 
+    # capitalization isn't handled well here, 
+    # might need the /i on any which are not in terminology?
+    # for anything in terminology, add only the corrected version
+    # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
+    - AOpen
+    - '/analytics/i'
+    - '/automations/i'
     - '/backoffice/i'
-    - '/[A-Z]{2,}/'      # acronyms
-    - '/[0-9]+/g'        # numbers 
+    - '/balancer/i'
+    - bootstrapper
     - chatbot
+    - Chromebase
+    - ChromeBox
+    - ChromeOS
+    - CloudFormation
+    - ElastiCache
+    - Elasticsearch
+    - etcd
+    - Fargate
+    - frontend
+    - Frontends
+    - GSuite
+    - '/integrations/i'
+    - Kubernetes
+    - Meraki
+    - '/microservice[s]?/i'
+    - Mimo
+    - Moki
+    - NGINX
+    - Optica
+    - '/preconfigure[ds]?/i'
+    - RethinkDB
+    - SaaS
+    - '/subnet/i'
     - webhook
+    
 
   terminology:
     defaultTerms: true
     terms:
+    - ['back\W?office', 'Backoffice']
+    - ['ETCD', 'etcd']
+    - ['front[- ]end', frontend]
+    - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-    - ['back\W?office', 'Backoffice']
+#    - ['place\W?analytics', PlaceAnalytics]
+    - ['saas', SaaS]
+    - "CloudFormation"
+    - "ElastiCache"
+    - "Elasticsearch"
+    - "GSuite"
+    - "Kubernetes"
+    - "Meraki"
+    - "NGINX"
+    - "RethinkDB"
 
   write-good:
     severity: warning
@@ -56,5 +103,7 @@ rules:
 filters:
   allowlist:
     allow:
-    - '/<i>.*<\/i>/g'    # idiomatic terms
-    - '/\[(.*\W)?(\w+)(\W.{4,})?\]\(.*\2.*\)/i'  # link text in link
+    - '/<i>.*<\/i>/g'                         # idiomatic terms
+    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  #link text that is also in url
+    # getting around write-good's soft checks
+    - '/requirement[s]?/i'
