@@ -38,6 +38,7 @@ rules:
     - '/placeos/i'
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
+    - Auth0
     - chatbot
     - webhook
 
@@ -47,6 +48,7 @@ rules:
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['back\W?office', 'Backoffice']
+    - Auth0
 
   write-good:
     severity: warning
