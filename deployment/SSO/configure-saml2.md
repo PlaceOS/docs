@@ -79,7 +79,7 @@ The authentication source will be saved with some default values
 **Copy the URL** to your clipboard
 7. Click edit on the Authentication source which was created
    1. In the Assertion URL field, paste the URL which was copied in the previous step, but edit it to include "/callback"
-   2. Example: If you copied _"_[https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX)_"_ then set the Assertion URL to "[https://engine.example-organisation.com/auth/adfs/callback?id=\*\*adfs-XXXXXXXX\*\*](https://engine.example-organisation.com/auth/adfs/callback?id=**adfs-XXXXXXXX**)_"_
+   2. Example: If you copied `https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX` then set the Assertion URL to `https://engine.example-organisation.com/auth/adfs/callback?id=**adfs-XXXXXXXX**`
    3. Click Save
 
 ## Step 2: Register a new service/app in your authentication provider
@@ -88,12 +88,12 @@ The authentication source will be saved with some default values
 
 You will need to enter these details from Step 1 into your SAML2 Identity provider dashboard:
 
-1. The **Assertion URL** \(also known as the **Callback URL**\)
-2. The **Issuer** \(also known as the **Identifier**\)
-3. The **Login URL** which is the homepage of the app \(e.g. [https://engine.example-organisation.com/app-name/](https://engine.example-organisation.com/app-name/)\)
+1. The **Assertion URL** (also known as the **Callback URL**)
+2. The **Issuer** (also known as the **Identifier**)
+3. The **Login URL** which is the homepage of the app (e.g. `https://engine.example-organisation.com/app-name/`)
 4. Optionally, the **SAML2 Metadata URL**. 
-This can XML file contains the above information and can be fed into to some configuration dashboard \(like ADFS\). 
-For the engine auth source you created above in step 1.7, the metadata URL will be "[https://engine.example-organisation.com/auth/adfs/metadata?id=\*\*adfs-XXXXXXXX\*\*](https://engine.example-organisation.com/auth/adfs/metadata?id=**adfs-XXXXXXXX**)_"_
+This can XML file contains the above information and can be fed into to some configuration dashboard (like ADFS). 
+For the engine auth source you created above in step 1.7, the metadata URL will be `https://engine.example-organisation.com/auth/adfs/metadata?id=**adfs-XXXXXXXX**`
 
 Follow the instructions for your Identity Provider:
 
@@ -138,8 +138,8 @@ Once there are no login issues, this SAML2 authentication can be set as the defa
 Still on the Domains tab, edit the DOMAIN by clicking the pen icon at the top right \(above the "Users" sub-tab\)
 
 1. Replace the **Login URL** with `/auth/login?provider=adfs&id=[adfs-XXXXXXXXX]&continue=` where `[adfs-XXXXXXXXX]` is the ID from the PlaceOS SAML2 login URL
-2. Replace the **Logout URL** with <i> `/auth/logout?continue=[SAML2_LOGOUT_URL]` </i> where `[SAML2_LOGOUT_URL]` is the logout URL provided by your SAML2 identity provider 
-<!-- it doesn't like the question mark even in a code block? I feel like I had an issue raised about this -->
+2. Replace the **Logout URL** with <i>`/auth/logout?continue=[SAML2_LOGOUT_URL]`</i> where `[SAML2_LOGOUT_URL]` is the logout URL provided by your SAML2 identity provider 
+<!-- This requires a hack for one sentence per line--->  
    1. Azure AD logout URLs are often in the format:  
 `https://login.microsoftonline.com/saml2`
    2. ADFS logout URLs are often in the format:
