@@ -1,7 +1,7 @@
 # Configuring DNA Spaces
 
 Configuring PlaceOS to interact with DNA Spaces.
-If you have multiple buildings
+If you have multiple buildings you'll need to configure location services for each, however they can share the DNA Spaces module
 
 
 ## Prerequisites
