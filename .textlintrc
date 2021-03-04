@@ -38,6 +38,8 @@ rules:
     - '/placeos/i'
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
+    - '/[0-9]+/g'             # numbers 
+    - auth
     - Auth0
     - chatbot
     - webhook
