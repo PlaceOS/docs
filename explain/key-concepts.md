@@ -1,6 +1,6 @@
 ---
 id: key-concepts
-title: Key concepets
+title: Key concepts
 description: here is concept
 ---
-asdf text here
+Some text here

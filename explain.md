@@ -2,6 +2,7 @@
 id: explain
 title: Explain md
 description: Overview of the 2 types of drivers
+slug: /explain
 ---
 
-naming conflict with folder.
+Naming conflict with folder.
