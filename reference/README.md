@@ -1,3 +1,10 @@
+---
+id: reference
+title: Technical References for PlaceOS
+description: Reference guides and technical documentation
+---
+<!-- Check what is required re: slug and sidebar -->
+
 Reference guides are _technical descriptions of the machinery_ and how to operate it.
 
 Reference guides have one job: to describe.
