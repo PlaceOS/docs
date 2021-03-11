@@ -12,7 +12,9 @@ They are a look into the machinery of PlaceOS itself.
 
 :::info 
 
-Documents here are auto-generated and closely linked to the code itself. For human written documents please see the other sections
+Documents here are auto-generated and linked to the code itself. 
+For human written documents please see the other sections.
+
 :::
 
 
