@@ -2,6 +2,7 @@
 id: systems
 title: Systems
 description: Systems are collections of modules
+sidebar_order: 3
 ---
 <!-- # Systems -->
 

@@ -2,6 +2,9 @@
 id: key-concepts
 title: Key Concepts
 description: Core concepts to be familiar with when working with Engine.
+slug: ./
+sidebar_order: 0
+sidebar_category_label: Key Concepts
 ---
 
 

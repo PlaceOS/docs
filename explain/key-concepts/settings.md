@@ -2,6 +2,7 @@
 id: settings
 title: Settings
 description: Settings can be configured at any level
+sidebar_order: 5
 ---
 <!-- # Settings -->
 

@@ -2,6 +2,7 @@
 id: triggers
 title: Triggers
 description: Triggers can add simple logic to the system
+sidebar_order: 6
 ---
 <!-- # Triggers -->
 
