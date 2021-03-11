@@ -1,8 +1,3 @@
----
-id: how-to
-title: How-To Guides for PlaceOS
-description: Practical walkthroughs for common use-cases
----
 
 How-to guides take the reader through the steps required to solve a real-world problem.
 

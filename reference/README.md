@@ -1,8 +1,3 @@
----
-id: reference
-title: Technical References for PlaceOS
-description: Reference guides and technical documentation
----
 
 Reference guides are _technical descriptions of the machinery_ and how to operate it.
 

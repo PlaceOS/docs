@@ -1,6 +1,7 @@
 ---
 id: tutorial
 title: Tutorials
+description: Introductions for different aspects of the platform
 slug: ./
 sidebar_order: 0
 sidebar_category_label: Tutorials

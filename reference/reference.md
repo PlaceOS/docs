@@ -1,6 +1,7 @@
 ---
 id: reference
 title: Reference Material
+description: Reference guides and technical documentation
 slug: ./
 sidebar_order: 0
 sidebar_category_label: Reference Material

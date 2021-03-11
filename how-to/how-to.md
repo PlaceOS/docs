@@ -1,6 +1,7 @@
 ---
 id: how-to
 title: How To Guides
+description: Practical walkthroughs for common use-cases
 slug: ./
 sidebar_order: 0
 sidebar_category_label: How To Guides
