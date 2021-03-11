@@ -3,19 +3,17 @@ id: reference
 title: Reference Material
 slug: ./
 sidebar_order: 0
-sidebar_category_label: Reference
+sidebar_category_label: Reference Material
 sidebar_category_order: 3
 ---
 
-Reference guides are _technical descriptions of the machinery_ and how to operate it.
+Reference material is low-level documentation with lots of technical detail.
+They are a look into the machinery of PlaceOS itself.
 
-Reference guides have one job: to describe.
+:::info 
 
-> Documents here are auto-generated.
-> **Do not edit by hand**.
-> If information requires improvement or expansion, this must take place in upstream sources.
-
-Reference material is **information-oriented**.
+Documents here are auto-generated and closely linked to the code itself. For human written documents please see the other sections
+:::
 
 
 If you want high-level coverage of topic areas, see the [overview](../overview).

@@ -9,12 +9,7 @@ sidebar_category_order: 2
 
 How-to guides take you through the steps required to solve a real-world problem.
 They are directions to achieve a specific goals in the PlaceOS ecosystem.
-
-How-to guides are distinct from [tutorials](../tutorial/):
-- A tutorial is a lesson that explores a topic
-- A how-to is an answer to a question, or a process to follow
-
-In a how-to guide, you can assume base level knowledge, tooling familiarity and understanding.
+How-to guides assume base level knowledge, withsome familiarity and understanding of the systems they use.
 
 If you want high-level coverage of topic areas, see the [overview](../overview).
 
