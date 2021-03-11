@@ -1,7 +1,10 @@
 ---
 id: tutorial
-title: Tutorials for PlaceOS
-description: Introductions for different aspects of the platform
+title: Tutorials
+slug: ./
+sidebar_order: 0
+sidebar_category_label: Tutorials
+sidebar_category_order: 1
 ---
 
 Tutorials are _lessons_ that take the reader by the hand through a series of steps to complete a project of some kind.
@@ -14,3 +17,9 @@ Under your instruction, the student will follow a series of actions to achieve s
 The end has to be meaningful, but also achievable for a complete beginner.
 
 The important thing is that having done the tutorial, the learner is in a position to make sense of the rest of the documentation.
+
+If you want high-level coverage of topic areas, see the [overview](../overview).
+
+If you're looking for docs to help you with a task, try a [how-to](../how-to/) guide.
+
+For low-level detailed technical docs, see the [reference](../reference/) material.
