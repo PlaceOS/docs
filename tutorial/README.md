@@ -1,4 +1,3 @@
-
 Tutorials are _lessons_ that take the reader by the hand through a series of steps to complete a project of some kind.
 They should show a beginner that they can achieve something with a new tool or concept.
 

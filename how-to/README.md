@@ -1,4 +1,3 @@
-
 How-to guides take the reader through the steps required to solve a real-world problem.
 
 They are directions to achieve a specific end and are wholly **goal-oriented**.

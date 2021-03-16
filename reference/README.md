@@ -1,4 +1,3 @@
-
 Reference guides are _technical descriptions of the machinery_ and how to operate it.
 
 Reference guides have one job: to describe.
