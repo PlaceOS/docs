@@ -1,5 +1,4 @@
 ---
-id: zones
 title: Zones
 description: Zones are collections of systems
 sidebar_order: 5

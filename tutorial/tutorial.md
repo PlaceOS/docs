@@ -1,5 +1,4 @@
 ---
-id: tutorial
 title: Tutorials
 description: Introductions for different aspects of the platform
 slug: ./

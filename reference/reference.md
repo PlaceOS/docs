@@ -1,5 +1,4 @@
 ---
-id: reference
 title: Reference Material
 description: Reference guides and technical documentation
 slug: ./

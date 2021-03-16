@@ -1,5 +1,4 @@
 ---
-id: interfaces
 title: Interfaces
 description: Interfaces are ways for users to interact with PlaceOS
 sidebar_order: 8

@@ -1,5 +1,4 @@
 ---
-id: how-to
 title: How To Guides
 description: Practical walkthroughs for common use-cases
 slug: ./

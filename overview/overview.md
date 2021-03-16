@@ -1,5 +1,4 @@
 ---
-id: overview
 title: Overview
 description: High level coverage of broad topic areas
 slug: ./
