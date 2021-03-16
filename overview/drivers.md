@@ -2,7 +2,7 @@
 id: drivers
 title: Drivers
 description: Overview of the 2 types of drivers
-sidebar_order: 1
+sidebar_order: 2
 ---
 <!-- # Drivers -->
 
