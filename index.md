@@ -1,5 +1,6 @@
 ---
 title: What is PlaceOS?
+slug: /
 description: Brief intro to the product
 ---
 <!-- This is a placeholder page in markdown to be replaced post-mvp with a more pleasing React page -->
