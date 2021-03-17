@@ -13,6 +13,7 @@ To do this it merges any and all elements - from lighting and AV to entire BMS -
 **Automation** boosts workplace efficiency and ease of use for any space.   
 **Iteration** lets your space constantly improve and grow with you and your needs. 
 
+<!-- Todo, have icons etc to match the place.tech/solutions/platform page -->
 
 ## Sections of this site {#sections}
 
@@ -26,5 +27,7 @@ If you want to learn in more detail about a process or feature, try a [tutorial]
 If you're looking for docs to help you with a task, try a [how-to](../how-to/) guide.
 
 For low-level detailed technical docs, see the [reference](../reference/) material.
+
+<!-- Todo: add a neat version of the doc compass in suitable theme -->
 
 *[BMS]: Building Management Systems
