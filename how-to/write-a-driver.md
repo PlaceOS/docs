@@ -1,4 +1,7 @@
-# How to write a driver
+---
+title: How To Write A Driver
+description: Everything you need to know about writing drivers for PlaceOS
+---
 
 There are three main uses of drivers:
 
@@ -11,8 +14,6 @@ From a driver structure standpoint there is no difference between these types.
 * The same driver works over a TCP, UDP or SSH transport
 * All drivers support HTTP methods with a defined URI endpoint 
 * All drivers have access to logic helpers when associated with a System
-
-<!-- Typically a driver will only implement one of these interfaces. -->
 
 ## Queue
 The queue is a list of potentially asynchronous tasks that should be performed in a sequence.
