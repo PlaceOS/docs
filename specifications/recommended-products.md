@@ -37,10 +37,6 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Contr
 
 <!--tabs end-->
 
-<!-- original doc had inline images in table, try adding these in when asset directories are more managed -->
-
-<!-- no point messing with column width or vertical spacing until we see how docusaur handles it, but possibly html wrapping can address this. Don"t want to get too caught up in that though -->
-
 ## Mobile Device Management Platforms (MDM) 
 
 |Platform|Target OS|Cloud/On-Premises|
@@ -48,12 +44,6 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Contr
 [Moki](	https://moki.com/)|Android and iOS|Cloud SaaS
 [Google CDM](https://cloud.google.com/chrome-enterprise/os/)|ChromeOS|Cloud SaaS
 <i>[MobileIron](https://www.mobileiron.com/en/unified-endpoint-management/solutions/mobile-device-management)</i> |iOS|
-
-## Label Printers 
-<!-- consider having this as a general peripherals table? -->
-|Manufacturer|Model|Connection type|
-|---|---|---|
-[Zebra](https://www.zebra.com/ap/en/products/printers/desktop/compact-desktop-printers.html)|ZD410|Ethernet
 
 <!-- these last two possibly don't have to be tables, consider lists or something snazzier but not jarring compared to the tables above -->
 
