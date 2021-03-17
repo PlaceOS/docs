@@ -1,15 +1,18 @@
 ---
-title: What is PlaceOS?
+title: PlaceOS Documentation
 slug: /
-description: Brief intro to the product
+description: Explanations, how-to guides, tutorials and technical references for working with and building on PlaceOS.
 ---
 <!-- This is a placeholder page in markdown to be replaced post-mvp with a more pleasing React page -->
 
-PlaceOS is a software platform which makes interaction with physical spaces simple.
-It provides tools to design, build and iterate integrated digital experiences for physical environments.
+PlaceOS is a [software platform](https://place.technology/solutions/platform) which enriches interaction with physical space.
+It provides tools to design, build and iterate integrated digital experiences for physical environments. 
+To do this it merges any and all elements - from lighting and AV to entire BMS - without the legacy baggage.
 
-To do this it merges elements on an API gateway, ESB, and traditional BMS, without the legacy baggage.
-This allows disparate systems, devices and services to combine as a seamless UX for your _place_, whatever that is.
+**Integration** of disparate systems, devices and services forms a seamless experience for your space.  
+**Automation** boosts workplace efficiency and ease of use for any space.   
+**Iteration** lets your space constantly improve and grow with you and your needs. 
+
 
 ## Sections of this site {#sections}
 
@@ -24,28 +27,4 @@ If you're looking for docs to help you with a task, try a [how-to](../how-to/) g
 
 For low-level detailed technical docs, see the [reference](../reference/) material.
 
-```text
-                               ▲
-                               │
-                           practical
-                               │
-                               │
-            tutorials          │            how-to
-      (learning-orientated)    │     (problem-orientated)
-                               │
-                               │
-◄─study────────────────────────┼──────────────────────────work─►
-                               │
-                               │
-             explain           │           reference
-   (understanding-orientated)  │   (information-orientated)
-                               │
-                               │
-                          theoretical
-                               │
-                               ▼
-```
-
-
-*[ESB]: Enterprise Service Bus  
 *[BMS]: Building Management Systems
