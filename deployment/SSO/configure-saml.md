@@ -1,7 +1,7 @@
 ---
-id: configure-saml2
-title: Configuring PlaceOS for SAML2
-description: Steps required for enabling SAML2 sign on for users logging in to PlaceOS web apps
+id: configure-saml
+title: How To Configure PlaceOS for SAML
+description: Steps required for enabling SAML sign on for users logging in to PlaceOS web apps
 ---
 <!-- New Gospel
 https://docs.google.com/document/d/12lCTbqLP2QPg1Gbey9GWLMyDXLFJ6DyolPy65uBnW_c/edit#heading=h.snxcqt1425dd -->
@@ -9,8 +9,8 @@ https://docs.google.com/document/d/12lCTbqLP2QPg1Gbey9GWLMyDXLFJ6DyolPy65uBnW_c/
 <!-- Related doc may be required: general auth
 https://docs.google.com/document/d/1oQdht64Wgc8yLlWASkJKMRart8MZYTtZMKqU97QAjgw/edit -->
 
-By default, Engine uses local authentication. 
-An admin account is generated upon initial deployment and the administrator can manually create additional user accounts in the Backoffice \(on the Users tab\).
+By default, PlaceOS uses local authentication. 
+An admin account is generated upon initial deployment and the administrator can manually create user accounts in Backoffice (on the Users tab).
 
 Switching to federated authentication is recommended. 
 There are 3 steps required:
@@ -20,14 +20,9 @@ There are 3 steps required:
 3. Back in Backoffice, update the SAML2 Identity provider entry with the new details retrieved from step 2
 
 ## Prerequisites
-
 1. Confirm the final UAT and PROD URLs of the web apps
 2. Ensure that the **DNS** entries for these URLs are active and forwarding to the server(s)
 3. Ensure that the SSL certificates for the above domains are signed and recognized as secure
-
-
-1. The domain where users will visit to login must exist as a valid **DNS** entry 
-2. Browsers should consider the domain secure: Valid **SSL certificates** should be in place and served by either your load balancer or the web server in front of Engine
 
 ## Step 1: Add a new SAML2 authentication source
 
