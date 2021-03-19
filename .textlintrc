@@ -38,8 +38,48 @@ rules:
     - '/placeos/i'
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
+    - '/webhook[s]?/i'
+    - Atlona
+    - B2C
+    - Barco
+    - Biamp
     - chatbot
-    - webhook
+    - ClearOne
+    - ClickShare
+    - Cognipoint
+    - ControlSpace
+    - Denon
+    - DynaLite
+    - Echo360
+    - Extron
+    - Floorsense
+    - Foxtel
+    - Gantner Relaxx
+    - Gmail
+    - Helvar
+    - IoT
+    - Kentix
+    - Lenel
+    - Lightware
+    - Lumens
+    - Lutron
+    - MediaSite
+    - Meraki
+    - MessageMedia
+    - Modbus
+    - Pexip
+    - PointGrab
+    - Polycom
+    - PowerSoft
+    - Pressac
+    - RealPresence
+    - Screen Technics
+    - Shure
+    - Symmetrix
+    - TriplePlay
+    - Vergesense
+    - Webex
+    - Wolfvision
 
   terminology:
     defaultTerms: true
