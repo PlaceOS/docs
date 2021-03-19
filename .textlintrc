@@ -41,10 +41,21 @@ rules:
     - '/placeos/i'
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
+    - '/[0-9]+/g'        # numbers 
     - '/tokeniz(er|ed|ing)?/i'
+    - AOpen
     - chatbot
+    - Chromebase
+    - ChromeBox
+    - ChromeOS
+    - Fargate
+    - Kubernetes
+    - Mimo
+    - Moki
     - Multicast
+    - Optica
     - pre-
+    - SaaS
     - webhook
 
 
@@ -55,6 +66,8 @@ rules:
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['back\W?office', 'Backoffice']
+    - "Kubernetes"
+    - ['saas', SaaS]
 
   write-good:
     severity: warning
