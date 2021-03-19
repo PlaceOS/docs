@@ -1,6 +1,9 @@
 rules:
   alex:
-    allow: []
+    allow: 
+    - execute
+    - execution
+    - special
 
   common-misspellings:
     ignore: []
@@ -35,19 +38,24 @@ rules:
   spelling:
     language: en
     skipPatterns:
-    - '/placeos/i'
-    - '/\b\S*\.\S{2,4}/g'     # filenames
-    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
-    - '/[0-9]+/g'             # numbers 
     # capitalization isn't handled well here, 
-    # might need the /i on any which are not in terminology?
     # for anything in terminology, add only the corrected version
+    # might need the /i on any which are not in terminology?
     # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
-    - AOpen
+    - '/[0-9]+/g'             # numbers 
+    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
+    - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/analytics/i'
     - '/automations/i'
     - '/backoffice/i'
     - '/balancer/i'
+    - '/integrations/i'
+    - '/microservice[s]?/i'
+    - '/placeos/i'
+    - '/preconfigure[ds]?/i'
+    - '/subnet/i'
+    - '/tokeniz(er|ed|ing)?/i'
+    - AOpen
     - bootstrapper
     - chatbot
     - Chromebase
@@ -61,20 +69,20 @@ rules:
     - frontend
     - Frontends
     - GSuite
-    - '/integrations/i'
     - Kubernetes
     - Meraki
-    - '/microservice[s]?/i'
     - Mimo
     - Moki
+    - Multicast
     - NGINX
     - Optica
-    - '/preconfigure[ds]?/i'
+    - pre-
     - RethinkDB
     - SaaS
-    - '/subnet/i'
     - webhook
     
+
+
 
   terminology:
     defaultTerms: true
@@ -85,7 +93,7 @@ rules:
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-#    - ['place\W?analytics', PlaceAnalytics]
+    - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
     - "CloudFormation"
     - "ElastiCache"
