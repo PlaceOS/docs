@@ -1,6 +1,9 @@
 rules:
   alex:
-    allow: []
+    allow: 
+    - execute
+    - execution
+    - special
 
   common-misspellings:
     ignore: []
@@ -39,11 +42,17 @@ rules:
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
     - '/webhook[s]?/i'
+    - '/[0-9]+/g'        # numbers 
+    - '/tokeniz(er|ed|ing)?/i'
+    - AOpen
     - Atlona
     - B2C
     - Barco
     - Biamp
     - chatbot
+    - Chromebase
+    - ChromeBox
+    - ChromeOS
     - ClearOne
     - ClickShare
     - Cognipoint
@@ -52,6 +61,7 @@ rules:
     - DynaLite
     - Echo360
     - Extron
+    - Fargate
     - Floorsense
     - Foxtel
     - Gantner Relaxx
@@ -59,6 +69,7 @@ rules:
     - Helvar
     - IoT
     - Kentix
+    - Kubernetes
     - Lenel
     - Lightware
     - Lumens
@@ -66,20 +77,29 @@ rules:
     - MediaSite
     - Meraki
     - MessageMedia
+    - Mimo
     - Modbus
+    - Moki
+    - Multicast
+    - Optica
     - Pexip
     - PointGrab
     - Polycom
     - PowerSoft
+    - pre-
     - Pressac
     - RealPresence
+    - SaaS
     - Screen Technics
     - Shure
     - Symmetrix
     - TriplePlay
     - Vergesense
     - Webex
+    - webhook
     - Wolfvision
+
+
 
   terminology:
     defaultTerms: true
@@ -87,6 +107,8 @@ rules:
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['back\W?office', 'Backoffice']
+    - "Kubernetes"
+    - ['saas', SaaS]
 
   write-good:
     severity: warning
