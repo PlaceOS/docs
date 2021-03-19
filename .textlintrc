@@ -1,6 +1,9 @@
 rules:
   alex:
-    allow: []
+    allow: 
+    - execute
+    - execution
+    - special
 
   common-misspellings:
     ignore: []
@@ -38,8 +41,13 @@ rules:
     - '/placeos/i'
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
+    - '/tokeniz(er|ed|ing)?/i'
     - chatbot
+    - Multicast
+    - pre-
     - webhook
+
+
 
   terminology:
     defaultTerms: true
