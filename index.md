@@ -17,16 +17,15 @@ To do this, it merges any and all elements - from lighting and AV to entire BMS 
 
 ## Sections of this site {#sections}
 
-Documentation for PlaceOS fits into one of 4 categories based on the doc's purpose. 
-You can navigate between them at the top of the page.
+The documentation for PlaceOS is split into 4 categories, which you can reach via navigation at the top of the page.
 
-If you want high-level coverage of topic areas, see the [overview](../overview).
+See the [overview](../overview) for high-level coverage of topic areas.
 
-If you want to learn in more detail about a process or feature, try a [tutorial](../tutorial/).
+Try a [tutorial](../tutorial/) to learn in more detail about a process or feature.
 
-If you're looking for docs to help you with a task, try a [how-to](../how-to/) guide.
+Try a [how-to](../how-to/) for docs to help you with a specific task.
 
-For low-level detailed technical docs, see the [reference](../reference/) material.
+See the [reference material](../reference/) for low-level detailed technical docs.
 
 <!-- Todo: add a neat version of the doc compass in suitable theme -->
 
