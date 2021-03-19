@@ -1,6 +1,9 @@
 rules:
   alex:
-    allow: []
+    allow: 
+    - execute
+    - execution
+    - special
 
   common-misspellings:
     ignore: []
@@ -39,6 +42,7 @@ rules:
     - '/backoffice/i'
     - '/[A-Z]{2,}/'      # acronyms
     - '/[0-9]+/g'        # numbers 
+    - '/tokeniz(er|ed|ing)?/i'
     - AOpen
     - chatbot
     - Chromebase
@@ -48,9 +52,13 @@ rules:
     - Kubernetes
     - Mimo
     - Moki
+    - Multicast
     - Optica
+    - pre-
     - SaaS
     - webhook
+
+
 
   terminology:
     defaultTerms: true
