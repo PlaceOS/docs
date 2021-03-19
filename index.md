@@ -7,7 +7,7 @@ description: Explanations, how-to guides, tutorials and technical references for
 
 PlaceOS is a [software platform](https://place.technology/solutions/platform) which enriches interaction with physical space.
 It provides tools to design, build and iterate integrated digital experiences for physical environments. 
-To do this it merges any and all elements - from lighting and AV to entire BMS - without the legacy baggage.
+To do this, it merges any and all elements - from lighting and AV to entire BMS - without the legacy baggage.
 
 **Integration** of disparate systems, devices and services forms a seamless experience for your space.  
 **Automation** boosts workplace efficiency and ease of use for any space.   
