@@ -3,6 +3,36 @@
 This repository contains technical docs, guides and reference material for PlaceOS.
 
 
+## Structure
+
+Documentation groups into one of 4 top-level types.
+Each of these provide information for different contexts.
+
+```text
+                               ▲
+                               │
+                           practical
+                               │
+                               │
+            tutorials          │            how-to
+      (learning-orientated)    │     (problem-orientated)
+                               │
+                               │
+◄─study────────────────────────┼──────────────────────────work─►
+                               │
+                               │
+             explain           │           reference
+   (understanding-orientated)  │   (information-orientated)
+                               │
+                               │
+                          theoretical
+                               │
+                               ▼
+```
+
+For information on how to structure each of these, see the README's located in each directory.
+
+
 ## Format and Language Style
 
 All content is [Markdown](https://www.markdownguide.org/).

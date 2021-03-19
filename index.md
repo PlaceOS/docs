@@ -1,5 +1,4 @@
 ---
-id: overview
 slug: /
 ---
 
