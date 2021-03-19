@@ -1,5 +1,5 @@
 ---
-title: How To Write A Driver
+title: Writing A Driver
 description: Everything you need to know about writing drivers for PlaceOS
 ---
 
