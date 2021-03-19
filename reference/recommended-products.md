@@ -9,7 +9,7 @@ It has no direct requirements for specific equipment.
 Here you will find a list of compatible products that have been fully tested with PlaceOS.
 Everything below delivers reliable and consistent results on the platform.
 
-## User Interface Devices (by OS)
+## User Interface Devices (by OS) {#UI-devices}
 
 <!--tabs start-->
 # Chrome 
@@ -36,7 +36,7 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Contr
 
 <!--tabs end-->
 
-## Mobile Device Management Platforms (MDM) 
+## Mobile Device Management Platforms (MDM) {#MDM}
 
 |Platform|Target OS|Cloud/On-Premises|
 |---|---|---|
