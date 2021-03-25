@@ -7,17 +7,7 @@ description: Reference for functional requirements for a system implementing Pla
 
 Below is a list of high level functions that PlaceOS is capable of and the technical requirements for each.
 
-<!-- 
-Function | Description | Requirement
----|---|---
-Log in using existing enterprise credentials (single sign-on) | Users will not need to “sign up” and remember a new user account/password. | Integration with enterprise identity providers via SAML2 or OAuth2. Examples: <ul><li> Azure AD Enterprise Application </li><li> ADFS, </li><li> Google GSuite authentication </li></ul>
-Book Rooms |  PlaceOS web apps will be able to search and book room/user Calendars from the enterprise directory (e.g. Office 365 / Exchange Online / Google GSuite) | Office 365 / Exchange Online or Google Calendar: <ul><li>Integration with Microsoft Graph API via an Azure “Registered App”</li><li> All required Calendars and Users must be accessible via MS Graph API</li><li> OR Google Calendar API, users on GSuite</li></ul> 
-Show or use sensor data | PlaceOS web apps or analytics will be able to show or track live sensor data (e.g. desk occupancy, in-room people count, air quality, etc… | Compatible PlaceOS Driver for the devices/services <br/> Network connectivity to the devices/services or their gateway.
-Control devices | PlaceOS web apps or automations will be able to send messages to edge devices over the network in order to control them or receive their live status information. | Compatible PlaceOS Driver for the devices/services <br/> Network connectivity to the devices/services or their gateway.
-Locate Devices | PlaceOS web apps will be able to show where in the building a user’s device may currently be located (if their laptop/mobile is online). This may be used to infer where a person is located. | Integration with locations services such as: <ul><li> Cisco DNA Spaces </li><li> Meraki RTLS </li><li>HP Aruba</li></ul> 
-Analytics for connected devices/integrations | Provide time-synced, retrospective data for all connected devices/integrations via an analytics dashboard, enabling insights. | PlaceAnalytics extension 
--->
-
+<!-- Can rearrange as a table if needed -->
 
 ### Log in with SSO
 Users can log on using existing enterprise credentials. 

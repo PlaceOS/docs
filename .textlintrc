@@ -77,7 +77,8 @@ rules:
     - Moki
     - NGINX
     - Optica
-    - '/preconfigure[ds]?/i'
+    - pre-
+    - proxying
     - RethinkDB
     - SaaS
     - '/subnet/i'
