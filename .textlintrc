@@ -38,30 +38,29 @@ rules:
   spelling:
     language: en
     skipPatterns:
-    # capitalization isn't handled well here, 
     # for anything in terminology, add only the corrected version
-    # might need the /i on any which are not in terminology?
-    # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
     - '/[0-9]+/g'             # numbers 
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/analytics/i'
     - '/automations/i'
     - '/backoffice/i'
-    - '/balancer/i'
-    - '/integrations/i'
+    - '/(re)?balance(r)?/i'
+    - '/integrat(ion|or)[s]?/i'
     - '/microservice[s]?/i'
     - '/placeos/i'
     - '/preconfigure[ds]?/i'
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
     - AOpen
+    - auth
     - bootstrapper
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
     - CloudFormation
+    - config
     - ElastiCache
     - Elasticsearch
     - etcd
@@ -69,6 +68,7 @@ rules:
     - frontend
     - Frontends
     - GSuite
+    - init
     - Kubernetes
     - Meraki
     - Mimo
