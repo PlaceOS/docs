@@ -18,10 +18,7 @@ They work in different combinations to best suit the needs of each site.
 ![Kubernetes diagram](./assets/k8s-components.svg)
 
 <!-- See the [Docker Image]() and [Source on GitHub](). -->
-
-Service|Description|Reference
----|---|---
-ingress|Serves web requests (static files and upstream reverse proxying to REST-API). |[Docker Image](https://hub.docker.com/r/yobasystems/alpine-nginx) <br/> [Github Source](https://GitHub.com/nginx/nginx)
+<!-- can rearrange as a table if needed -->
 
 ### ingress
  Serves web requests (static files and upstream reverse proxying to REST-API).  
@@ -33,7 +30,7 @@ ingress|Serves web requests (static files and upstream reverse proxying to REST-
 
 ### RethinkDB
  Database for permanent storage of PlaceOS configuration. 
- Configuration: Three node cluster in 3 different availability zones within same region for HA.  
+ Configuration: Three node cluster in 3 different availability zones within same region for [HA](#HADC).  
  See the [Docker Image](https://hub.docker.com/_/rethinkdb) and [Source on GitHub](https://GitHub.com/rethinkdb/rethinkdb).
 
 ### PlaceOS core
