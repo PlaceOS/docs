@@ -4,11 +4,15 @@ rules:
     - execute
     - execution
     - special
+    - traps
 
   common-misspellings:
     ignore: []
 
   en-capitalization: true
+    allowWords:
+    - etcd
+    - ingress
 
   no-empty-section: true
 
@@ -106,6 +110,8 @@ rules:
     - "Meraki"
     - "NGINX"
     - "RethinkDB"
+    exclude:
+    - 'Node(?:js)?'
 
   write-good:
     severity: warning
