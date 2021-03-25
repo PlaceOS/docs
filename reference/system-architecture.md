@@ -15,7 +15,7 @@ High level network diagram of an implementation orchestrated via Kubernetes on A
 PlaceOS service integrators and support partners manage these microservices.
 They work in different combinations to best suit the needs of each site.
 
-![Kubernetes diagram](./assets/k8s-components.svg)
+![Kubernetes diagram](./assets/k8s-components.png)
 
 <!-- See the [Docker Image]() and [Source on GitHub](). -->
 <!-- can rearrange as a table if needed -->
