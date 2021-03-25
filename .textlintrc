@@ -38,25 +38,29 @@ rules:
   spelling:
     language: en
     skipPatterns:
-    - '/placeos/i'
-    - '/\b\S*\.\S{2,4}/g'     # filenames
-    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
-    - '/[0-9]+/g'             # numbers 
-    # capitalization isn't handled well here, 
-    # might need the /i on any which are not in terminology?
     # for anything in terminology, add only the corrected version
-    # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
-    - AOpen
+    - '/[0-9]+/g'             # numbers 
+    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
+    - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/analytics/i'
     - '/automations/i'
     - '/backoffice/i'
-    - '/balancer/i'
+    - '/(re)?balance(r)?/i'
+    - '/integrat(ion|or)[s]?/i'
+    - '/microservice[s]?/i'
+    - '/placeos/i'
+    - '/preconfigure[ds]?/i'
+    - '/subnet/i'
+    - '/tokeniz(er|ed|ing)?/i'
+    - AOpen
+    - auth
     - bootstrapper
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
     - CloudFormation
+    - config
     - ElastiCache
     - Elasticsearch
     - etcd
@@ -65,6 +69,7 @@ rules:
     - Frontends
     - GSuite
     - '/integrations/i'
+    - init
     - Kubernetes
     - Meraki
     - '/microservice[s]?/i'
