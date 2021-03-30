@@ -52,7 +52,6 @@ rules:
     - '/(re)?balance(r)?/i'
     - '/integrat(ion|or)[s]?/i'
     - '/microservice[s]?/i'
-    - '/placeos/i'
     - '/preconfigure[ds]?/i'
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
@@ -81,6 +80,7 @@ rules:
     - Moki
     - NGINX
     - Optica
+    - PlaceOS
     - pre-
     - proxying
     - RethinkDB
