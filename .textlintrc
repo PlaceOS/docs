@@ -71,13 +71,12 @@ rules:
     - frontend
     - Frontends
     - GSuite
-    - '/integrations/i'
     - init
     - Kubernetes
     - Meraki
-    - '/microservice[s]?/i'
     - Mimo
     - Moki
+    - Multicast
     - NGINX
     - Optica
     - PlaceOS
