@@ -87,9 +87,9 @@ rules:
   terminology:
     defaultTerms: true
     terms:
-    - ['back\W?office', 'Backoffice']
     - ['auth', 'authorization']
     - ['auth', 'authentication']
+    - ['back\W?office', 'Backoffice']
     - ['config', 'configuration']
     - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
