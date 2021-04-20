@@ -56,14 +56,13 @@ rules:
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
     - AOpen
-    - auth
+    - Auth
     - bootstrapper
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
     - CloudFormation
-    - config
     - ElastiCache
     - Elasticsearch
     - etcd
@@ -94,19 +93,21 @@ rules:
     defaultTerms: true
     terms:
     - ['back\W?office', 'Backoffice']
+    - ['auth', 'authorization' 'authentication']
+    - ['config', 'configuration']
     - ['ETCD', 'etcd']
-    - ['front[- ]end', frontend]
+    - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
+    - ['gsuite', 'Google Workspace (G Suite)']
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-#    - ['place\W?analytics', PlaceAnalytics]
+    - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
-    - "CloudFormation"
-    - "ElastiCache"
+    - "AWS CloudFormation"
+    - "AWS ElastiCache"
     - "Elasticsearch"
-    - "GSuite"
     - "Kubernetes"
-    - "Meraki"
+    - ['meraki', "Cisco Meraki"]
     - "NGINX"
     - "RethinkDB"
     exclude:
