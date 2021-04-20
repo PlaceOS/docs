@@ -37,7 +37,7 @@ They work in different combinations to best suit the needs of each site.
  Application in a Docker container that interfaces with external devices/services.  
  See the [Docker Image](https://hub.docker.com/r/placeos/core) and [Source on GitHub](https://GitHub.com/PlaceOS/core).
 
-### PlaceOS auth
+### PlaceOS Auth
  Application in a Docker container that provides authentication.  
  See the [Docker Image](https://hub.docker.com/r/placeos/auth) and [Source on GitHub](https://GitHub.com/PlaceOS/auth).
 
@@ -75,7 +75,7 @@ They are distributed among the instances of core and exist in memory of the Plac
 Modules reflect their runtime state in Redis, making it available for other components of the system
 
 The PlaceOS Backoffice web application manages them both via PlaceOS REST-API. 
-It updates module config via RethinkDB.
+It updates module configuration via RethinkDB.
 
 
 ### Service Discovery 

@@ -9,10 +9,8 @@ rules:
   common-misspellings:
     ignore: []
 
-  en-capitalization: true
-    allowWords:
-    - etcd
-    - ingress
+  en-capitalization: 
+    allowWords: [etcd, ingress]
 
   no-empty-section: true
 
@@ -87,14 +85,13 @@ rules:
   terminology:
     defaultTerms: true
     terms:
-    - ['auth', 'authorization']
-    - ['auth', 'authentication']
+    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
     - ['back\W?office', 'Backoffice']
     - ['config', 'configuration']
     - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
-    - ['gsuite', 'Google Workspace (G Suite)']
+    - ['gsuite', 'Google Workspace (GSuite)']
     - ['meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
