@@ -83,9 +83,6 @@ rules:
     - RethinkDB
     - SaaS
     - webhook
-    
-
-
 
   terminology:
     defaultTerms: true
@@ -114,7 +111,6 @@ rules:
 
   write-good:
     severity: warning
-
 
 filters:
   allowlist:
