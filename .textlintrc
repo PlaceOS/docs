@@ -82,7 +82,6 @@ rules:
     - proxying
     - RethinkDB
     - SaaS
-    - '/subnet/i'
     - webhook
     
 
@@ -99,6 +98,7 @@ rules:
     - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['gsuite', 'Google Workspace (G Suite)']
+    - ['meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['place\W?analytics', PlaceAnalytics]
@@ -107,7 +107,6 @@ rules:
     - "AWS ElastiCache"
     - "Elasticsearch"
     - "Kubernetes"
-    - ['meraki', "Cisco Meraki"]
     - "NGINX"
     - "RethinkDB"
     exclude:
