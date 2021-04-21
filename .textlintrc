@@ -78,6 +78,7 @@ rules:
     - PlaceOS
     - pre-
     - proxying
+    - QBic
     - RethinkDB
     - SaaS
     - webhook

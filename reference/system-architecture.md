@@ -86,8 +86,8 @@ If a service is offline, etcd will automatically remove it’s entry  after the 
 Interested services are made aware of any changes to the cluster so they can rebalance.
 
 ### Distribution of Modules across Cores {#multi-core}
-Module distribution across instances of active PlaceOS Cores is determined by rendezvous hashing.
-When a Core goes online/offline, rendezvous hashing determines the new distribution.
+Rendezvous hashing determines the module distribution across active instances of PlaceOS Cores. 
+It also alters the distribution when a core goes online or offline.
 All Cores will push runtime Module state to Redis where other components can access it.
 That state can persist the availability of the Core. 
 
