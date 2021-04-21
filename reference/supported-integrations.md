@@ -18,7 +18,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 ## Directory Services
 * Azure AD (via MS Graph API)
 * Hybrid on-premise Active Directory (via MS Graph API)
-* Google GSuite
+* Google Workspace (GSuite)
 * IBM Domino 
 
 ## Messaging
@@ -29,9 +29,8 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Node-RED
 
 ## Resource Booking
-* Exchange Online (via MS Graph API)
-* GSuite (Google Calendar API)
-* IBM Domino
+* Microsoft 365
+* Google Workspace (GSuite)
 * Native PlaceOS resource booking
 
 ## Common Protocols/Standards
