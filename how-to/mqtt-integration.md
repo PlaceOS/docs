@@ -119,3 +119,6 @@ A match can lead to actions such as:
 - [HiveMQ](https://www.hivemq.com/)
 - [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
 - [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
+
+
+*[MQTT]: Message Queuing Telemetry Transpot
