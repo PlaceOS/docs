@@ -18,11 +18,11 @@ Integration with enterprise identity providers via SAML2 or OAuth2.
 Examples:
 - Azure AD Enterprise Application
 - ADFS
-- Google GSuite authentication
+- Google Workspace (GSuite) authentication
 
 ### Book Rooms
 PlaceOS web apps are able to search and book room & user Calendars from the enterprise directory. 
-Enterprise directories include Office 365, Exchange Online, Google GSuite etc.  
+Enterprise directories include Office 365, Exchange Online, Google Workspace (GSuite) etc.  
 
 **Requirement**  
 Office 365/Exchange Online or Google Calendar: 
@@ -54,7 +54,7 @@ This infers a user's location and the distribution/density of people.
 **Requirement**  
 Locations services such as:
 - Cisco DNA Spaces
-- Meraki RTLS
+- Cisco Meraki RTLS
 - HP Aruba
 
 ### Analytics for connected integrations 
@@ -63,4 +63,6 @@ An analytics dashboard enables insights.
 
 **Requirement**  
 PlaceAnalytics API
-<!-- double check what PlaceAnalytics is referring to, pretty sure its API -->
+
+*[ADFS]: Active Directory Federation Services  
+*[RTLS]: Real-Time Location Services  

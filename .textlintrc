@@ -92,13 +92,14 @@ rules:
     - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['gsuite', 'Google Workspace (GSuite)']
-    - ['meraki', "Cisco Meraki"]
+    - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
     - "AWS CloudFormation"
     - "AWS ElastiCache"
+    - "Cisco Meraki"
     - "Elasticsearch"
     - "Kubernetes"
     - "NGINX"
