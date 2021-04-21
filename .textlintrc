@@ -4,11 +4,13 @@ rules:
     - execute
     - execution
     - special
+    - traps
 
   common-misspellings:
     ignore: []
 
-  en-capitalization: true
+  en-capitalization: 
+    allowWords: [etcd, ingress]
 
   no-empty-section: true
 
@@ -38,43 +40,81 @@ rules:
   spelling:
     language: en
     skipPatterns:
-    - '/placeos/i'
+    # for anything in terminology, add only the corrected version
+    - '/[0-9]+/g'             # numbers 
+    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
+    - '/\b\S*\.\S{2,4}/g'     # filenames
+    - '/analytics/i'
+    - '/automations/i'
     - '/backoffice/i'
-    - '/[A-Z]{2,}/'      # acronyms
-    - '/[0-9]+/g'        # numbers 
+    - '/(re)?balance(r)?/i'
+    - '/integrat(ion|or)[s]?/i'
+    - '/microservice[s]?/i'
+    - '/preconfigure[ds]?/i'
+    - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
     - AOpen
+    - Auth
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
+    - CloudFormation
+    - ElastiCache
+    - Elasticsearch
+    - etcd
     - Fargate
+    - frontend
+    - Frontends
+    - GSuite
+    - init
     - Kubernetes
+    - Meraki
     - Mimo
     - Moki
     - Multicast
+    - NGINX
     - Optica
+    - PlaceOS
     - pre-
+    - proxying
+    - QBic
+    - RethinkDB
     - SaaS
     - webhook
-
-
 
   terminology:
     defaultTerms: true
     terms:
+    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
+    - ['back\W?office', 'Backoffice']
+    - ['config', 'configuration']
+    - ['ETCD', 'etcd']
+    - ['front[- ]end', 'frontend']
+    - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
+    - ['gsuite', 'Google Workspace (GSuite)']
+    - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-    - ['back\W?office', 'Backoffice']
-    - "Kubernetes"
+    - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
+    - "AWS CloudFormation"
+    - "AWS ElastiCache"
+    - "Cisco Meraki"
+    - "Elasticsearch"
+    - "Kubernetes"
+    - "NGINX"
+    - "RethinkDB"
+    exclude:
+    - 'Node(?:js)?'
 
   write-good:
     severity: warning
 
-
 filters:
   allowlist:
     allow:
-    - '/<i>.*<\/i>/g'    # idiomatic terms
-    - '/\[(.*\W)?(\w+)(\W.{4,})?\]\(.*\2.*\)/i'  # link text in link
+    - '/<i>.*<\/i>/g'                         # idiomatic terms
+    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  #link text that is also in url
+    # getting around write-good's soft checks
+    - '/requirement[s]?/i'
