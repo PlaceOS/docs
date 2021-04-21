@@ -3,6 +3,8 @@ title: Supported Integrations
 description: Devices and services which are ready to integrate with PlaceOS
 ---
 
+<!-- Do not remove deprecated integrations, move them to the last category. Jon's request. -->
+
 PlaceOS has a range of pre-built drivers for integrating with third party services and devices. 
 Drivers are written in [Crystal Lang](https://crystal-lang.org/) and based on our [Framework](https://github.com/PlaceOS/driver).
 <!-- consider the explain page for Crystal Lang -->
@@ -19,7 +21,6 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Azure AD (via MS Graph API)
 * Hybrid on-premise Active Directory (via MS Graph API)
 * Google Workspace (GSuite)
-* IBM Domino 
 
 ## Messaging
 * Email (MS Graph, Gmail, SMTP, AWS SES)
@@ -125,3 +126,6 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Kentix Sensors
 * Foxtel STB
 * Gantner Relaxx Lockers
+
+## Legacy or deprecated integrations
+* IBM Domino 
