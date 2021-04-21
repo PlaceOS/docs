@@ -11,7 +11,7 @@ PlaceOS has drivers that fall into one of two categories:
 
 ## Integration Drivers
 - **Communicate** with external systems and lets them talk to PlaceOS
-- Represent hardware or software platforms
+- Represent hardware or software platforms (i.e. device or service)
 - Control any functionality of the external systems and handle any incoming data
 
 ## Logic Drivers
