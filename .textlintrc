@@ -53,35 +53,79 @@ rules:
     - '/preconfigure[ds]?/i'
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
+    - '/webhook[s]?/i'
     - AOpen
+    - Atlona
     - Auth
+    - B2C
+    - BACnet
+    - Barco
+    - Biamp
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
+    - ClearOne
+    - ClickShare
     - CloudFormation
+    - Cognipoint
+    - ControlSpace
+    - Denon
+    - DynaLite
+    - Echo360
     - ElastiCache
     - Elasticsearch
     - etcd
+    - Extron
     - Fargate
+    - Floorsense
+    - Foxtel
     - frontend
     - Frontends
+    - Gantner Relaxx
+    - Gmail
     - GSuite
+    - Helvar
     - init
+    - IoT
+    - Kentix
     - Kubernetes
+    - Lenel
+    - Lightware
+    - Lumens
+    - Lutron
+    - MediaSite
     - Meraki
+    - MessageMedia
     - Mimo
+    - Modbus
     - Moki
     - Multicast
     - NGINX
     - Optica
+    - Pexip
+    - PJLink
     - PlaceOS
+    - PointGrab
+    - Polycom
+    - PowerSoft
     - pre-
+    - Pressac
     - proxying
     - QBic
+    - RealPresence
     - RethinkDB
     - SaaS
+    - Screen Technics
+    - Shure
+    - Symmetrix
+    - TriplePlay
+    - Vergesense
+    - Webex
     - webhook
+    - Wolfvision
+
+
 
   terminology:
     defaultTerms: true
@@ -92,7 +136,7 @@ rules:
     - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
-    - ['gsuite', 'Google Workspace (GSuite)']
+    - ['(google )?gsuite', 'Google Workspace (GSuite)']
     - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
