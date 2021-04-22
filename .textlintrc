@@ -1,11 +1,16 @@
 rules:
   alex:
-    allow: []
+    allow: 
+    - execute
+    - execution
+    - special
+    - traps
 
   common-misspellings:
     ignore: []
 
-  en-capitalization: true
+  en-capitalization: 
+    allowWords: [etcd, ingress]
 
   no-empty-section: true
 
@@ -35,57 +40,117 @@ rules:
   spelling:
     language: en
     skipPatterns:
-    - '/placeos/i'
-    - '/\b\S*\.\S{2,4}/g'     # filenames
-    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
-    - '/[0-9]+/g'             # numbers 
-    # capitalization isn't handled well here, 
-    # might need the /i on any which are not in terminology?
     # for anything in terminology, add only the corrected version
-    # Unrelated: do we add stanard shortenings like auth, docs, init, etc 
-    - AOpen
+    - '/[0-9]+/g'             # numbers 
+    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
+    - '/\b\S*\.\S{2,4}/g'     # filenames
+    - '/analytics/i'
+    - '/automations/i'
     - '/backoffice/i'
-    - '/balancer/i'
-    - bootstrapper
+    - '/(re)?balance(r)?/i'
+    - '/integrat(ion|or)[s]?/i'
+    - '/microservice[s]?/i'
+    - '/preconfigure[ds]?/i'
+    - '/subnet/i'
+    - '/tokeniz(er|ed|ing)?/i'
+    - '/webhook[s]?/i'
+    - AOpen
+    - Atlona
+    - Auth
+    - B2C
+    - BACnet
+    - Barco
+    - Biamp
     - chatbot
     - Chromebase
     - ChromeBox
     - ChromeOS
+    - ClearOne
+    - ClickShare
     - CloudFormation
+    - Cognipoint
+    - ControlSpace
+    - Denon
+    - DynaLite
+    - Echo360
     - ElastiCache
     - Elasticsearch
     - etcd
+    - Extron
     - Fargate
+    - Floorsense
+    - Foxtel
     - frontend
     - Frontends
+    - Gantner Relaxx
+    - Gmail
+    - GSuite
+    - Helvar
+    - init
+    - IoT
+    - Kentix
     - Kubernetes
+    - Lenel
+    - Lightware
+    - Lumens
+    - Lutron
+    - MediaSite
+    - Meraki
+    - MessageMedia
     - Mimo
+    - Modbus
     - Moki
+    - Multicast
     - NGINX
     - Optica
-    - '/preconfigure[ds]?/i'
+    - Pexip
+    - PJLink
+    - PlaceOS
+    - PointGrab
+    - Polycom
+    - PowerSoft
+    - pre-
+    - Pressac
+    - proxying
+    - QBic
+    - RealPresence
     - RethinkDB
     - SaaS
-    - '/subnet/i'
+    - Screen Technics
+    - Shure
+    - Symmetrix
+    - TriplePlay
+    - Vergesense
+    - Webex
     - webhook
-    
+    - Wolfvision
+
+
 
   terminology:
     defaultTerms: true
     terms:
+    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
     - ['back\W?office', 'Backoffice']
+    - ['config', 'configuration']
     - ['ETCD', 'etcd']
-    - ['front[- ]end', frontend]
+    - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
+    - ['(google )?gsuite', 'Google Workspace (GSuite)']
+    - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
+    - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
-    - "CloudFormation"
-    - "ElastiCache"
+    - "AWS CloudFormation"
+    - "AWS ElastiCache"
+    - "Cisco Meraki"
     - "Elasticsearch"
     - "Kubernetes"
     - "NGINX"
     - "RethinkDB"
+    exclude:
+    - 'Node(?:js)?'
 
   write-good:
     severity: warning
@@ -95,3 +160,5 @@ filters:
     allow:
     - '/<i>.*<\/i>/g'                         # idiomatic terms
     - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  #link text that is also in url
+    # getting around write-good's soft checks
+    - '/requirement[s]?/i'
