@@ -1,15 +1,13 @@
 ---
-id: mqtt-integration
 title: MQTT Integration
 description: Guide on integrating PlaceOS with MQTT messaging
 ---
-<!-- # MQTT -->
 
 <!-- Temporary Proof of Concept for Mermaid.js -->
 
 ![](https://mermaid.ink/img/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG4gICAgY3MoKENsb3VkIFNlcnZpY2VzKSkgPC0tPiBvXG4gICAgbXFbTVFUVCBQcm92aWRlcnNdIC0tIEFsbCBldmVudHMgJiBtZXRhZGF0YSBwdXNoZWQgdG8gYnJva2VyIGZvciBhbmFseXNpcyAtLT4gbVxuICAgIGwtLT5vcGRcblxuXG4gICAgc3ViZ3JhcGggSW50ZXJuZXQgR2F0ZXdheVxuICAgICAgICBjc1xuICAgICAgICBtcVxuICAgIGVuZFxuXG4gICAgc3ViZ3JhcGggVmlydHVhbCBQcml2YXRlIENsb3VkXG4gICAgICAgIG9bT3V0bG9vazM2NV1vLS1vTFxuICAgICAgICBtW01RVFQgc2VydmljZV1cbiAgICAgICAgbWVbTWVyYWtpXVxuICAgICAgICBsW0xvY2tlcnNdXG4gICAgICAgIEx7TG9naWN9IFxuICAgICAgICBMIG8tLW8gbWVcbiAgICAgICAgTCBvLS1vIGxcbiAgICAgICAgcFtQbGFjZU9TXSBvLS1vIExcbiAgICAgICAgbSBvLS1vIHBcbiAgICAgICAgcCBvLS1vIHJcbiAgICAgICAgcltSRVNULUFQSV1cbiAgICBlbmRcblxuICAgIG9wZFtPbi1QcmVtIERldmljZXNdICAgICIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
-PlaceOS supports publishing module state information via <abbr title="Message Queuing Telemetry Transpot">MQTT</abbr>. 
+PlaceOS supports publishing module state information via MQTT. 
 This provides environment information to external systems such as [Amazon MQTT Service](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
 MQTT messages consist of a *header* and a *payload* and typically have low bandwidth usage. 
@@ -17,7 +15,7 @@ The header declares the topic of the message, and the payload carries data as ke
 PlaceOS uses two types of message sent over MQTT: State Changes and Metadata.
 
 ## State Change
-Changes to module state information propagates in real time. 
+Changes to module state propagate in real time. 
 All change messages share the following topic structure:
 
 ```markup
@@ -25,18 +23,18 @@ placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
 In this structure, each section is a unique identifying tag to represent part of the system.
 - `<org>`: Organization ID
-- `<bld>`: [Building](../key-concepts/zones.md) ID
-- `<lvl>`: [Level](../key-concepts/zones.md) ID
-- `<area>`: [Area](../key-concepts/zones.md) ID
-- `<sys>`: [System](../key-concepts/systems.md) ID
-- `<drv>`: [Driver](../key-concepts/drivers.md) ID
-- `<mod>`: [Module](../key-concepts/modules.md) ID
+- `<bld>`: [Building](../overview/zones.md) ID
+- `<lvl>`: [Level](../overview/zones.md) ID
+- `<area>`: [Area](../overview/zones.md) ID
+- `<sys>`: [System](../overview/systems.md) ID
+- `<drv>`: [Driver](../overview/drivers.md) ID
+- `<mod>`: [Module](../overview/modules.md) ID
 - `<idx>`: Module Index
 - `<state>`: State Key
 
 
 <!--What part of PlaceOS? messaging service? Does this microservice (?) have a title? -->
-On a state change, PlaceOS  will publish a message with the payload containing the new state value as a JSON entity. 
+On a state change, the module will publish a message with the payload containing the new state value as a JSON entity. 
 The associated driver defines the structure and frequency of this state change.
 
 Some systems may not have a building, level, or area.
@@ -121,4 +119,4 @@ A match can lead to actions such as:
 - [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
 
-*[MQTT]: Message Queuing Telemetry Transpot
+*[MQTT]: Message Queuing Telemetry Transport
