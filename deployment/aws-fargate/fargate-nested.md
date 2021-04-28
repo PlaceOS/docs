@@ -40,7 +40,7 @@ The root stack requires the following files and directory structure:
 - **REST API:** `fargate/rest-api-service.yml`
 - **`init`:** `fargate/init-service.yml`
 
-## VPC Architecture `infra/vpc.yml`
+## VPC Architecture `infra/vpc.yml` {# architecture}
 The **VPC** root stack template `infra/vpc.yml` deploys two private and two public subnets. 
 For each of these the user can configure:
 
@@ -51,7 +51,7 @@ For each of these the user can configure:
 
 The application load balancer is the only component that should deploy in public subnets.
 
-## Configuring the root stack template
+## Configuring the root stack template {#Stack-configuration}
 Once you have uploaded the files to s3, use `root-stack-templates/placeos/deploy.yml` to deploy PlaceOS.
 The required parameters are:
 
@@ -68,7 +68,7 @@ The required parameters are:
 - **`VPC`** Select the VPC containing the public and private subnets
 - **`VpcCIDR`** IP range (CIDR notation) for the VPC
 
-## AWS `EnvironmentName` parameter and Stack naming
+## AWS `EnvironmentName` parameter and Stack naming {#Environment-Name}
 The `EnvironmentName` parameter's uses include: 
 - Tagging 
 - Service discovery 
@@ -77,12 +77,15 @@ The `EnvironmentName` parameter's uses include:
 *PlaceOS* is the default but each deployment in the same VPC should configure its own `EnvironmentName`.
 The Stack name you choose for each component has no effect on the function of the deployment. 
 
-## `init` `fargate/init-service.yml`
-`init` is a bootstrapper for the PlaceOS instance and is the final step in the deployment. 
+## <i>init</i>: `fargate/init-service.yml` {#init}
+[init](https://github.com/PlaceOS/init) initializes the PlaceOS instance and is the final step in the deployment. 
+ 
+:::info  
 This service will never actually finish as the task will exit after it has run. 
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
+:::
 
-## Accessing the deployed PlaceOS Backoffice application
+## Accessing the deployed PlaceOS Backoffice application {#Accessing-backoffice}
 You can expect the deployment to take 20-30 minutes, most of which is Elasticsearch.
 The Backoffice application will be available at:  
 

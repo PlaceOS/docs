@@ -41,6 +41,7 @@ rules:
     language: en
     skipPatterns:
     # for anything in terminology, add only the corrected version
+    # hyphenated prefixes are considered separate words
     - '/[0-9]+/g'             # numbers 
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/\b\S*\.\S{2,4}/g'     # filenames
@@ -50,9 +51,12 @@ rules:
     - '/(re)?balance(r)?/i'
     - '/integrat(ion|or)[s]?/i'
     - '/microservice[s]?/i'
+    - '/pre-/i'
     - '/preconfigure[ds]?/i'
+    - '/serverless/i'
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
+    - '/un-/i'
     - '/webhook[s]?/i'
     - AOpen
     - Atlona
@@ -109,7 +113,6 @@ rules:
     - PointGrab
     - Polycom
     - PowerSoft
-    - pre-
     - Pressac
     - proxying
     - QBic
@@ -130,7 +133,6 @@ rules:
   terminology:
     defaultTerms: true
     terms:
-    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
     - ['back\W?office', 'Backoffice']
     - ['config', 'configuration']
     - ['ETCD', 'etcd']
@@ -142,10 +144,12 @@ rules:
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
+    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
     - "AWS CloudFormation"
     - "AWS ElastiCache"
     - "Cisco Meraki"
     - "Elasticsearch"
+    - "init" # the service, otherwise spell out "initialize" etc (not handled)
     - "Kubernetes"
     - "NGINX"
     - "RethinkDB"
