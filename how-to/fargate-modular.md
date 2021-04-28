@@ -1,10 +1,9 @@
 ---
 id: fargate-modular
-title: AWS Fargate on Modular CloudFormation Stacks
+title: Deploy AWS Fargate on Modular CloudFormation Stacks
 description: Deployment guide for PlaceOS on Modular AWS CloudFormation templates.
+sidebar_order: 2
 ---
-
-<!-- # PlaceOS AWS Fargate Deploy -->
 
 ## Overview
 
@@ -118,7 +117,6 @@ It forwards public traffic to internal services.
 The application load balancer is the only component that should deploy in public subnets.
 It requires you use your own preconfigured certificate from AWS Certificate Manager. 
 It's configured with a certificate **Identifier** from ACM.
-<!-- what is this about -->
 
 A Secure Listener serves HTTPS traffic. 
 All inbound HTTP traffic redirects to its matching HTTPS.
@@ -135,7 +133,6 @@ As the application deployment consists of ephemeral containers, EFS is the persi
 RethinkDB, NGINX and Frontends services use the Elastic File System created by this template. 
 EFS is the RethinkDB data directory. 
 NGINX and Frontends us it for file storage of the Backoffice user interface.
-<!-- Use of NGINX seems inconsistent - sentence case is common in these files including in variable names -->
 #### **Security Groups:**
 - SecurityGroupEFSNginxFrontends: 
 > (NGINX and Frontends -> EFS | {`EnvironmentName`} | security group)
@@ -149,13 +146,10 @@ NGINX and Frontends us it for file storage of the Backoffice user interface.
 #### **VPC:** 
 > ({`EnvironmentName`} | VPC)
 
-<!-- Acronym solution would get extensive application in this document -->
-
 ## Fargate Cluster: `ecs-cluster.yml` {#Cluster}
 This template deploys the Elastic Container Service (ECS) cluster for all PlaceOS container services.
 The ECS Cluster configuration requires the same `EnvironmentName` parameter as prior steps.
 
-<!-- which services does "below" refer to? All following? -->
 ### Notes on deploying the Fargate services.
 The Fargate components of the deployment still need configuration. 
 They share a lot of common parameters.
@@ -178,9 +172,8 @@ Tags for VPC and Private subnets are:
 > ({`EnvironmentName`} | VPC)
 
 Configure the `EnvironmentName` parameter as in all previous steps.
-<!-- Add links to these resources maybe like for etcd and nginx -->
+
 ## RethinkDB `rethinkdb-primary.yml` {#RethinkDB}
-<!-- this is kind of passive bs - allowable? -->
 [RethinkDB](https://github.com/rethinkdb/rethinkdb) serves as the database for PlaceOS.
 RethinkDB can operate as a cluster but for the purposes of this example you will deploy a single primary member.
 
@@ -195,7 +188,6 @@ E.g. `rethinkdb-primary.placeos`
 #### **Security Group:** 
 > (RethinkDB | {`EnvironmentName`} | security group)
 
-<!-- etcd is always all-lowercase even in titles and sentence starts - <i> or `` or leave it or? -->
 ## <i>etcd</i>: `etcd-service.yml` {#etcd}
 [etcd](https://github.com/etcd-io/etcd) is the service discovery layer for PlaceOS.
 
@@ -305,7 +297,6 @@ E.g. `triggers.placeos`
 
 This service references the Elasticsearch cluster configured earlier. 
 Configure the ESURI with the Elasticsearch **VPC Endpoint** which will have the form `https://xxxxxx...es.amazonaws.com.`
-<!-- Not sure I understand this example URL -->
 
 #### **Required Services:** 
 - Elasticsearch 

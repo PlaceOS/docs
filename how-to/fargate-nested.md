@@ -1,13 +1,13 @@
 ---
 id: fargate-nested
-title: AWS Fargate on Nested CloudFormation Stacks
+title: Deploy AWS Fargate on Nested CloudFormation Stacks
 description: Deployment guide for PlaceOS on Nested AWS CloudFormation templates.
+sidebar_order: 1
 ---
-<!-- # PlaceOS AWS Fargate Deploy using Nested CloudFormation Stacks -->
+<!-- This is the one that the majority of people will use, will only use other for custom impementation. Show this first -->
 
 ## Overview
 
-<!-- This is the one that the majority of people will use, will only use other for custom impementation. Show this first -->
 This page assists with deploying PlaceOS on AWS using CloudFormation templates.
 The templates configure a PlaceOS Fargate deployment including an optional VPC configuration. 
 The basic premise is: 
