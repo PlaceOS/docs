@@ -82,7 +82,7 @@ You now need to enter two pieces of information into Backoffice (Step 3 of [Conf
 
 You will need the "Application (client) ID" found on the Overview page of your App Registration. 
 Adding `spn:` to the front will give the "Issuer", e.g. _`spn:00000000-0000-0000-0000-000000000000`_.
-The `0` digits are the "Application (client) ID" from Azure AD. Paste this value into the Issuer field of the SAML2 auth object you created in PlaceOS.
+The `0` digits are the "Application (client) ID" from Azure AD. Paste this value into the Issuer field of the SAML2 authentication object you created in PlaceOS.
 
 ### **IDP Target URL**
 
@@ -90,7 +90,7 @@ Also known as **SAML2 sign-on endpoint.**
 This is the URL that PlaceOS redirects users to, so they can login with your SAML2 ID provider. 
 For Azure AD, the URL is: `https://login.microsoftonline.com/<TENANT-ID>/saml2`.
 The "Directory (tenant) ID" can is in the Overview tab of your Azure App Registration. 
-Paste this into the IDP Target URL field of the SAML2 auth object you created in PlaceOS
+Paste this into the IDP Target URL field of the SAML2 authentication object you created in PlaceOS
 
 
 *[SSO]: Single Sign On
