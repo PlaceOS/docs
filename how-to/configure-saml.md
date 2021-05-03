@@ -1,6 +1,6 @@
 ---
 id: configure-saml
-title: How To Configure PlaceOS for SAML
+title: Configure PlaceOS for SAML
 description: Steps required for enabling SAML sign on for users logging in to PlaceOS web apps
 sidebar_order: 3
 ---
