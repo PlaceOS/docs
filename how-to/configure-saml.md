@@ -79,8 +79,9 @@ You will need to configure your SAML Identity provider dashboard.
 This process will vary by provider, see the below guides for common options:
 
 - [Azure AD](saml2-azure.md)
-<!-- - [ADFS](saml2-with-adfs.md) -->
-<!-- - [Auth0](saml2-with-auth0.md) -->
+- [AD FS](saml2-adfs.md)
+- [Auth0](saml2-auth0.md)
+- [Google Workspace](saml2-google)
 
 ## Configure default redirects for the PlaceOS Domain
 <!-- All images from here down need new screenshots -->
@@ -138,4 +139,4 @@ Look for the text **"Callback phase initiated"** and the SAML response data is n
 
 ![Image alt-text](images/image5.png "image_tooltip") -->
 
-*[ADFS]: Active Directory Federation Services
+*[AD FS]: Active Directory Federation Services

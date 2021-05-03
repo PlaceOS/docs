@@ -47,9 +47,11 @@ rules:
   terminology:
     defaultTerms: true
     terms:
+    - ['adfs', 'AD FS']
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['back\W?office', 'Backoffice']
+    - ['google workplace', 'Google Workspace']
     - Auth0
 
   write-good:
