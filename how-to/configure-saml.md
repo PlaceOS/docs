@@ -10,6 +10,7 @@ An admin account is generated upon initial deployment.
 The administrator can manually create user accounts in Backoffice (on the Users tab).
 We recommend switching to federated authentication. 
 
+
 ## Prerequisites
 1. Confirm the final UAT and PROD URLs of the web apps
 2. Ensure that the **DNS** entries for these URLs are active and forwarding to the server(s)
@@ -21,7 +22,6 @@ We recommend switching to federated authentication.
 1. Login as an admin to Backoffice
 2. On the **Domains** tab, select the Domain that represents the URL where you wish to enable SAML
 3. In the **Authentication** section click **Add new** 
-<!--  , select "**SAML2 / ADFS**"  -->
 
 This will open up the SAML form. 
 Here is a description of each field:
@@ -48,7 +48,7 @@ Here is a description of each field:
     -  Typically leave this blank on first save, and it will fill in the default value
 
 Once you click save, it will generate an authentication ID.
-You can find it in the `/saml_auths` response on the Authentication tab:
+You can find it in the `/saml_auths` response on the Authentication tab.
 
 <!-- ![Image alt-text](image1.png "image_tooltip") -->
 
@@ -76,6 +76,14 @@ This could be the Issuer, or some request attributes.
 ## Step 2: Register a new service in your authentication provider
 
 You will need to configure your SAML Identity provider dashboard.
+From the above steps you will need:
+- The **Issuer** (also known as the **Identifier**)
+- The **Assertion URL** (also known as the **Callback URL**)
+- The **Login URL** which is the homepage of the app 
+- The **Metadata URL** (optional). 
+This can XML file contains the above information and can be fed into to some configuration dashboards (like ADFS). 
+
+
 This process will vary by provider, see the below guides for common options:
 
 - [Azure AD](saml2-azure.md)
@@ -93,7 +101,7 @@ Once you have tested the Login URL above you can update the default login page f
 
 
 <!-- ![Image alt-text](images/image2.png "image_tooltip") -->
-
+<!-- May require more of the words from old Engine configiure-saml.md depending on Backoffice screenshot detail & content -->
 
 ## Debugging
 
@@ -131,12 +139,11 @@ Copy and paste the SAML response into the SAML decoder.
 Look for the text **"Callback phase initiated"** and the SAML response data is nearby
 
 
-## Example
+<!-- ## Example -->
 
+<!-- ![Image alt-text](images/image4.png "image_tooltip") -->
 
-<!-- ![Image alt-text](images/image4.png "image_tooltip")
+<!-- ![Image alt-text](images/image5.png "image_tooltip") -->
 
-
-![Image alt-text](images/image5.png "image_tooltip") -->
 
 *[AD FS]: Active Directory Federation Services
