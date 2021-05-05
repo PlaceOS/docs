@@ -61,6 +61,7 @@ rules:
     - AOpen
     - Atlona
     - Auth
+    - Auth0
     - B2C
     - BACnet
     - Barco
@@ -123,6 +124,7 @@ rules:
     - Shure
     - Symmetrix
     - TriplePlay
+    - URIs                    # Accepted plural
     - Vergesense
     - Webex
     - webhook
@@ -133,18 +135,21 @@ rules:
   terminology:
     defaultTerms: true
     terms:
+    - ['adfs', 'AD FS']
     - ['back\W?office', 'Backoffice']
     - ['config', 'configuration']
     - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['(google )?gsuite', 'Google Workspace (GSuite)']
+    - ['google workplace', 'Google Workspace']
     - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
     - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
+    - "Auth0"
     - "AWS CloudFormation"
     - "AWS ElastiCache"
     - "Cisco Meraki"
