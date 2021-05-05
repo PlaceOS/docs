@@ -1,6 +1,5 @@
 {
   "name": "placeos-docs",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "docusaurus build ${npm_package_config_site_dir}",
@@ -11,9 +10,8 @@
     "site_dir": "node_modules/placeos-docs-site",
     "docs_path": "../../"
   },
-  "files": "{./,./**}/*.md",
   "devDependencies": {
-    "orthograph-err": "github:place-labs/orthograph-err",
-    "placeos-docs-site": "github:placeos/docs-site"
+    "orthograph-err": "place-labs/orthograph-err",
+    "placeos-docs-site": "placeos/docs-site"
   }
 }
