@@ -1,6 +1,6 @@
 ---
-title: API Links
-description: External links to PlaceOS Apiary
+title: API
+description: Specifications for interaction with PlaceOS
 ---
 
 For detailed information on PlaceOS API, please see them on Apiary:
