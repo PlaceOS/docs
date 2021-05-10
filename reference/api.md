@@ -3,7 +3,7 @@ title: API
 description: Specifications for interaction with PlaceOS
 ---
 
-For detailed information on PlaceOS API, please see them on Apiary:
+For detailed information on PlaceOS API, please follow the external links below.   
 
 - [PlaceOS API](https://placeos.docs.apiary.io/#)
 
