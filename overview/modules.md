@@ -35,7 +35,7 @@ Some examples of these actions could be:
 Each module can be individually started or stopped at any time.
 When started, the driver connects to the physical or digital integration and keeps track of its status.
 When stopped, the driver disconnects from its integration and will not send or receive any data or commands.
-For logic modules, this enables / disables its functionality.
+For logic modules, this enables/disables its functionality.
 
 ## Modules and Systems
 
