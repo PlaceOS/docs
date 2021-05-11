@@ -9,7 +9,7 @@ sidebar_order: 8
 They are suitable for any experiences that lend themselves to screen-based interaction.
 Common examples of interfaces are:
 - A staff app
-- Meeting room control interfaces
+- A meeting room control interface
 - A booking system
 
 <!-- Should this have a link to one of the demo sites with a staff app - or stills from it -->
