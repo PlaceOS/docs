@@ -40,7 +40,7 @@ The root stack requires the following files and directory structure:
 - **REST API:** `fargate/rest-api-service.yml`
 - **`init`:** `fargate/init-service.yml`
 
-## VPC Architecture `infra/vpc.yml` {# architecture}
+## VPC Architecture `infra/vpc.yml` {#architecture}
 The **VPC** root stack template `infra/vpc.yml` deploys two private and two public subnets. 
 For each of these the user can configure:
 
