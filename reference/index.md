@@ -2,8 +2,6 @@
 title: Reference Material
 description: Reference guides and technical documentation
 slug: ./
-sidebar_category_label: Reference Material
-sidebar_category_order: 3
 ---
 
 Reference material is low-level documentation with lots of technical detail.

@@ -2,6 +2,10 @@
 title: PlaceOS Documentation
 slug: /
 description: Explanations, how-to guides, tutorials and technical references for working with and building on PlaceOS.
+hide_title: true
+hide_table_of_contents: true
+sidebar_label: What is PlaceOS?
+sidebar_position: 1
 ---
 <!-- This is a placeholder page in markdown to be replaced post-mvp with a more pleasing React page -->
 

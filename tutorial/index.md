@@ -2,8 +2,6 @@
 title: Tutorials
 description: Introductions for different aspects of the platform
 slug: ./
-sidebar_category_label: Tutorials
-sidebar_category_order: 1
 ---
 
 Tutorials are lessons that will walk you through a series of steps to introduce a concept within PlaceOS.

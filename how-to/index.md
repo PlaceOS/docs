@@ -2,8 +2,6 @@
 title: How To Guides
 description: Practical walkthroughs for common use-cases
 slug: ./
-sidebar_category_label: How To Guides
-sidebar_category_order: 2
 ---
 
 How-to guides take you through the steps required to solve a real-world problem.

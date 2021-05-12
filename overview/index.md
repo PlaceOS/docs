@@ -2,8 +2,8 @@
 title: Overview
 description: High level coverage of broad topic areas
 slug: ./
-sidebar_category_label: Overview
-sidebar_category_order: 0
+sidebar_label: Overview
+sidebar_position: 0
 ---
 
 The pages in this section are broadly cover most topics around the PlaceOS ecosystem.

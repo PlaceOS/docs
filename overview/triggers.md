@@ -1,7 +1,7 @@
 ---
 title: Triggers
 description: Triggers can add simple logic to the system
-sidebar_order: 7
+sidebar_position: 7
 ---
 <!-- # Triggers -->
 
