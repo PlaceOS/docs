@@ -12,7 +12,7 @@
     "docs_path": "../../"
   },
   "devDependencies": {
-    "orthograph-err": "place-labs/orthograph-err",
-    "placeos-docs-site": "placeos/docs-site"
+    "orthograph-err": "github:place-labs/orthograph-err",
+    "placeos-docs-site": "github:placeos/docs-site#launch-prep"
   }
 }
