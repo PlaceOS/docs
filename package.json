@@ -1,5 +1,6 @@
 {
   "name": "placeos-docs",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "docusaurus build ${npm_package_config_site_dir}",
