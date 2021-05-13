@@ -45,8 +45,23 @@ To allow the endpoint auto login to work, construct the URL using the encoded cr
 
 ### Escaping Characters
 
-Details for escaping characters.
+If there are additional query params in the URL after # then they will need to be [URL encoded](https://www.urlencoder.org/).
 
+This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces.
+
+?, =, & and # are the main characters that need to be encoded.
+
+For example the following URL will need to be escaped:
+
+`https://placeos.domain/login/unattended.html?u=dT1zaWduYWdlQHN5ZG5leS5lZHUuYXUmcD1wbGFjZW9zMTIzdXN5ZCM=&continue=/kiosk/#/SYSTEM_ID_GOES_HERE`
+
+This will become:
+
+`https://placeos.domain/login/unattended.html?u=dT1zaWduYWdlQHN5ZG5leS5lZHUuYXUmcD1wbGFjZW9zMTIzdXN5ZCM=&continue=/kiosk/%23/SYSTEM_ID_GOES_HERE`
+
+And will end up at: 
+
+`https://placeos.domain/kiosk/#/SYSTEM_ID_GOES_HERE`
 
 
 
