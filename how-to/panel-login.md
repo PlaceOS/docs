@@ -48,7 +48,7 @@ If there are additional query parameters in the URL after `#` then they will nee
 
 This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces.
 
-?, =, & and # are the main characters that need to be encoded.
+`?`, `=`, `&` and `#` are the main characters that need to be encoded.
 
 For example the following URL will need to be escaped:
 
