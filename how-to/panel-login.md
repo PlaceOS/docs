@@ -4,10 +4,14 @@ description: Allow automatic or unatteded authentication for PlaceOS Frontend Ap
 sidebar_position: 8
 ---
 
-By default, PlaceOS requires users to authentication against frontend applications (Workplace, Kiosks, Concierge etc.).
-Endpoint Auto Login allows you to configure panels to authenticate against PlaceOS Automatically. 
-This removes the requirement for users to manually enter credentials to authenticate the application.
-This feature is most commonly used with unattended user interfaces, such as map and visitor kiosks.  
+PlaceOS requires all interactions to be authenticated and associated with a specific identity.
+This includes those coming from fixed devices such as visitor sign-in kiosks or public information displays.
+Endpoint auto-login may be used to provide persistent sessions for this style of shared device.
+
+:::tip
+When PlaceOS is paired with an external Identity Provider that supports unattended device login, a standard SSO flow should be used.
+Auto-login provides an alternative for legacy devices, or environments where this may not be supported.
+:::
 
 
 ## Prerequisites
