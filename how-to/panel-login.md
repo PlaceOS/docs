@@ -1,5 +1,4 @@
 ---
-id: panel-login
 title: Configure Endpoint Auto Login
 description: Allow automatic or unatteded authentication for PlaceOS Frontend Applications
 sidebar_position: 8
@@ -62,6 +61,5 @@ This will become:
 And will end up at: 
 
 `https://placeos.domain/kiosk/#/SYSTEM_ID_GOES_HERE`
-
 
 
