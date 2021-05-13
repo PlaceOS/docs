@@ -45,7 +45,7 @@ To allow the endpoint auto login to work, construct the URL using the encoded cr
 
 ### Escaping Characters
 
-If there are additional query params in the URL after # then they will need to be [URL encoded](https://www.urlencoder.org/).
+If there are additional query parameters in the URL after # then they will need to be [URL encoded](https://www.urlencoder.org/).
 
 This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces.
 
