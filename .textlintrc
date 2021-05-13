@@ -63,6 +63,7 @@ rules:
     - Auth
     - Auth0
     - B2C
+    - backend
     - BACnet
     - Barco
     - Biamp
@@ -113,6 +114,7 @@ rules:
     - PlaceOS
     - PointGrab
     - Polycom
+    - PowerShell
     - PowerSoft
     - Pressac
     - proxying
@@ -157,6 +159,7 @@ rules:
     - "init" # the service, otherwise spell out "initialize" etc (not handled)
     - "Kubernetes"
     - "NGINX"
+    - "PowerShell"
     - "RethinkDB"
     exclude:
     - 'Node(?:js)?'
