@@ -24,6 +24,8 @@ This feature is most commonly used with unattended user interfaces, such as map 
 4. Enter an email address (this does not need to be an active address)
 5. Enter a strong password
 
+![New User Entry](./assets/panel_login_new_user.png)
+
 ## Step 2: Encode Username and Password
 
 You will need to Base64 Encode your users email address and password. 
