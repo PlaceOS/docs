@@ -6,7 +6,7 @@ sidebar_position: 8
 ---
 
 By default, PlaceOS requires users to authentication against frontend applications (Workplace, Kiosks, Concierge etc.).
-Panel Auto Login allows you to configure panels to authenticate against PlaceOS Automatically. 
+Endpoint Auto Login allows you to configure panels to authenticate against PlaceOS Automatically. 
 This removes the requirement for users to manually enter credentials to authenticate the application.
 This feature is most commonly used with unattended user interfaces, such as map and visitor kiosks.  
 
