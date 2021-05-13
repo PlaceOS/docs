@@ -1,7 +1,7 @@
 ---
 title: Systems
 description: Systems are collections of modules
-sidebar_order: 4
+sidebar_position: 4
 ---
 <!-- # Systems -->
 

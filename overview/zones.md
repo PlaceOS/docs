@@ -1,7 +1,7 @@
 ---
 title: Zones
 description: Zones are collections of systems
-sidebar_order: 5
+sidebar_position: 5
 ---
 <!-- # Zones -->
 

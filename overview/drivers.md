@@ -1,7 +1,7 @@
 ---
 title: Drivers
 description: Overview of the 2 types of drivers
-sidebar_order: 2
+sidebar_position: 2
 ---
 <!-- # Drivers -->
 

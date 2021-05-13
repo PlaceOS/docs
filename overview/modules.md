@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Modules are instances of drivers
-sidebar_order: 3
+sidebar_position: 3
 ---
 
 <!-- # Modules -->
