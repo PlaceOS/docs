@@ -1,12 +1,13 @@
 ---
 id: panel-login
-title: Configure Panel Auto Login
-description: Allow automatic or unatteded authentication for PlaceOS Front End Applications
+title: Configure Endpoint Auto Login
+description: Allow automatic or unatteded authentication for PlaceOS Frontend Applications
 sidebar_position: 8
 ---
 
-By default, PlaceOS requires users to authentication against front end applications (Workplace, Kiosks, Concierge etc.)
-Panel Auto Login allows you to configure panels to authenticate against PlaceOS Automatically, without requiring the user to enter credentials each time.
+By default, PlaceOS requires users to authentication against frontend applications (Workplace, Kiosks, Concierge etc.).
+Panel Auto Login allows you to configure panels to authenticate against PlaceOS Automatically. 
+This removes the requirement for users to manually enter credentials to authenticate the application.
 This feature is most commonly used with unattended user interfaces, such as map and visitor kiosks.  
 
 
@@ -20,7 +21,7 @@ This feature is most commonly used with unattended user interfaces, such as map 
 
 1. Login as an admin to Backoffice
 2. On the **Users** click **Add new**
-3. Enter the required information, we recommend setting the username as Touchpanel User
+3. Enter the required information, we recommend setting the username as `Touchpanel User`
 4. Enter an email address (this does not need to be an active address)
 5. Enter a strong password
 
@@ -28,11 +29,23 @@ This feature is most commonly used with unattended user interfaces, such as map 
 
 ## Step 2: Encode Username and Password
 
-You will need to Base64 Encode your users email address and password. 
+In this step, you will encode the touch panel users email address and password into a base64 string.
+This can be done via a base64 encoding service such as [base64 Encoder](https://www.base64encode.net/). 
+
+1. Encode the users email and password in the following format: `u=touchpanel@placeos.com&p=123456`
+2. Once encoded, the above example will be: `dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
 
 ## Step 3: Construct URL for Applications
 
-Setup URL for Applications
+To allow the endpoint auto login to work, construct the URL using the encoded credentials. 
+
+1. The first part of the URL will be your PlaceOS domain followed by the `login/unattended.html?` path. For example: `https://PLACEOS.DOMAIN/login/unattended.html?`
+2. Now add the encoded credentials: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
+3. Finally, add the path to the desired application, for an AV control application this would be: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2&continue=/control/`
+
+### Escaping Characters
+
+Details for escaping characters.
 
 
 
