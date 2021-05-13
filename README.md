@@ -182,7 +182,7 @@ The description used by search engines.
 If this field is not present, it will default to the first line of the contents.
 
 #### `slug`
-Allows to customize the document url.
+Allows to customize the document URL.
 If unspecified the document path will mirror its position within this repository's file structure.
 
 
