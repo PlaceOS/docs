@@ -58,7 +58,6 @@ This will become:
 
 `https://placeos.domain/login/unattended.html?u=dT1zaWduYWdlQHN5ZG5leS5lZHUuYXUmcD1wbGFjZW9zMTIzdXN5ZCM=&continue=/kiosk/%23/SYSTEM_ID_GOES_HERE`
 
-And will end up at: 
+Following login, this will redirect to:
 
 `https://placeos.domain/kiosk/#/SYSTEM_ID_GOES_HERE`
-
