@@ -20,7 +20,7 @@ This feature is most commonly used with unattended user interfaces, such as map 
 
 1. Login as an admin to Backoffice
 2. On the **Users** click **Add new**
-3. Enter the required information, we recommend setting the username as `Touchpanel User`
+3. Enter the required information, including a descriptive username (e.g. `Touchpanel User`)
 4. Enter an email address (this does not need to be an active address)
 5. Enter a strong password
 
