@@ -42,7 +42,8 @@ This can be done via a base64 encoding service such as [base64 Encoder](https://
 
 To allow the endpoint auto login to work, construct the URL using the encoded credentials. 
 
-1. The first part of the URL will be your PlaceOS domain followed by the `login/unattended.html?` path. For example: `https://PLACEOS.DOMAIN/login/unattended.html?`
+1. The first part of the URL will be your PlaceOS domain followed by the `login/unattended.html?` path. 
+For example: `https://PLACEOS.DOMAIN/login/unattended.html?`
 2. Now add the encoded credentials: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
 3. Finally, add the path to the desired application, for an AV control application this would be: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2&continue=/control/`
 
