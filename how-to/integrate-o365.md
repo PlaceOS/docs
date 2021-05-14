@@ -1,9 +1,7 @@
 ---
-title: Deploy AWS Fargate on Modular CloudFormation Stacks
-description: Deployment guide for PlaceOS on Modular AWS CloudFormation templates.
+title: Microsoft Office365 Integration
+description: How to integrate PlaceOS with Office365 
 ---
-
-# Microsoft Office365
 
 PlaceOS integrates with Microsoft Office 365 via [Graph API](https://docs.microsoft.com/en-us/graph/overview). 
 An Azure Active Directory admin must use Azure Portal to create an "App Registration" for PlaceOS.
@@ -22,7 +20,7 @@ An Azure user with admin permissions for Azure Active Directory will need to per
 ### Register the App
 
 1. Login to the Azure Portal and view the ["App Registrations" page of the "Azure Active Directory" blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)  
-2. If an existing App has been registered for Engine for use with Azure Single-Sign-On (SAML2), then we can re-use this app - select it. 
+2. If an existing App has been registered for PlaceOS for use with [Azure SSO (SAML2)](saml2-azure.md), then we can re-use this app - select it. 
 If not, then click "New registration"  
 3. Type a descriptive name for the application, set the Supported account Type to _"Accounts in this organizational directory only"_ and leave the Redirect URI blank. 
 Click "Register"
@@ -221,3 +219,5 @@ engine:
 volumes: 
 - ./0365-engine/:/home/aca-apps/ruby-engine-app
 ```
+
+*[SSO]: Single Sign On
