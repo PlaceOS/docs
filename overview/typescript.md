@@ -1,6 +1,6 @@
 ---
-title: Typescript
-description: Typescript is an open-source language which builds on JavaScript
+title: TypeScript
+description: TypeScript is an open-source language which builds on JavaScript
 sidebar_position: 8
 ---
 
@@ -10,20 +10,20 @@ TypeScript is an open-source language which builds on JavaScript, one of the wor
 
 Types provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.
 
-## Typescript and Angular
+## TypeScript and Angular
 
-Angular applications can only be built with Typescript.
-As Angular is the predominant language used for PlaceOS Frontend Applications this makes Typescript a requirement.
+Angular applications can only be built with TypeScript.
+As Angular is the predominant language used for PlaceOS Frontend Applications this makes TypeScript a requirement.
 
 ### Versioning
 
-For Typescript, the version is dictated by the Angular version.
+For TypeScript, the version is dictated by the Angular version.
 
-Angular 12 (currently used by PlaceOS Frontends) supports Typescript version 4.2.4.
+Angular 12 (currently used by PlaceOS Frontends) supports TypeScript version 4.2.4.
 
-## Typescript References and Tooling
+## TypeScript References and Tooling
 
-The [Typescript Handbook](https://www.typescriptlang.org/docs/handbook) provides detailed documentation specifically related to Typescript. 
+The [TypeScript Handbook](https://www.TypeScriptlang.org/docs/handbook) provides detailed documentation specifically related to TypeScript. 
 
 PlaceOS use [NX](https://nx.dev/) which is a suite of powerful tools to assist with testing and building Javascript Applications.
 
