@@ -1,3 +1,7 @@
+---
+title: Deploy AWS Fargate on Modular CloudFormation Stacks
+description: Deployment guide for PlaceOS on Modular AWS CloudFormation templates.
+---
 
 # Microsoft Office365
 

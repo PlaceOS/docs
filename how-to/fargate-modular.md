@@ -1,5 +1,4 @@
 ---
-id: fargate-modular
 title: Deploy AWS Fargate on Modular CloudFormation Stacks
 description: Deployment guide for PlaceOS on Modular AWS CloudFormation templates.
 sidebar_order: 2

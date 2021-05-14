@@ -1,5 +1,4 @@
 ---
-id: saml2-azure
 title: Configure SAML2 with Azure AD
 description: Steps required for enabling SAML2 sign on for PlaceOS on Azure AD
 sidebar_order: 4

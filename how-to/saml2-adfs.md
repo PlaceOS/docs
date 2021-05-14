@@ -1,5 +1,4 @@
 ---
-id: saml2-adfs
 title: Configure SAML2 with AD FS
 description: Steps required for enabling SAML2 sign on for PlaceOS on ADFS
 sidebar_order: 6

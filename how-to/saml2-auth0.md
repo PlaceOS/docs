@@ -1,5 +1,4 @@
 ---
-id: saml2-auth0
 title: Configure SAML2 with Auth0
 description: Steps required for enabling SAML2 sign on for PlaceOS with Auth0
 sidebar_order: 7
