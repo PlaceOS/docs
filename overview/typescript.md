@@ -13,7 +13,7 @@ Types provide a way to describe the shape of an object, providing better documen
 ## TypeScript and Angular
 
 Angular applications can only be built with TypeScript.
-As Angular is the predominant language used for PlaceOS Frontend Applications this makes TypeScript a requirement.
+As Angular is the predominant language used for PlaceOS frontend applications this makes TypeScript a requirement.
 
 ### Versioning
 
