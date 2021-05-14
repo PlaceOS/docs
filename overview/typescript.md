@@ -25,7 +25,7 @@ Angular 12 (currently used by PlaceOS Frontends) supports TypeScript version 4.2
 
 The [TypeScript Handbook](https://www.TypeScriptlang.org/docs/handbook) provides detailed documentation specifically related to TypeScript. 
 
-PlaceOS use [NX](https://nx.dev/) which is a suite of powerful tools to assist with testing and building Javascript Applications.
+PlaceOS use [NX](https://nx.dev/) which is a suite of powerful tools to assist with testing and building JavaScript Applications.
 
 NX adds [Jest](https://jestjs.io/) for Unit Testing and [Cypress](https://www.cypress.io/) for Integration and End-to-End Testing.
 
