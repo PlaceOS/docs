@@ -33,5 +33,6 @@ The [Angular CLI](https://angular.io/cli) is a command-line interface that lets 
 
 ## Automated Browser Testing
 
-Automated browser testing may be used to validate application test cases. Any [Selenium](https://www.selenium.dev/) based automated test suite would be suitable for this purpose, including tools such as [Katalon Studio](https://www.katalon.com/).
+Automated browser testing may be used to validate application test cases. 
+Any [Selenium](https://www.selenium.dev/) based automated test suite would be suitable for this purpose, including tools such as [Katalon Studio](https://www.katalon.com/).
 
