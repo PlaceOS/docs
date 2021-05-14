@@ -6,7 +6,7 @@ sidebar_position: 8
 
 ## Overview
 
-TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.
+TypeScript is an open-source language which builds on JavaScript by adding static type definitions.
 
 Types provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.
 
@@ -35,4 +35,3 @@ The [Angular CLI](https://angular.io/cli) is a command-line interface that lets 
 
 Automated browser testing may be used to validate application test cases. 
 Any [Selenium](https://www.selenium.dev/) based automated test suite would be suitable for this purpose, including tools such as [Katalon Studio](https://www.katalon.com/).
-
