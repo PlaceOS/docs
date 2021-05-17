@@ -1,11 +1,54 @@
 name: Proofread
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+permissions:
+  checks: write
+  contents: read
+  statuses: write
 
 jobs:
   proofread:
     name: Proofread
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: place-labs/orthograph-err@master
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+
+      - name: Setup cache
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install deps
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: Proofread changed docs
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          git diff origin/${GITHUB_BASE_REF}..origin/${GITHUB_HEAD_REF} \
+            --diff-filter=AM \
+            --name-only -- '*.md' \
+            | xargs npm run lint
+
+      - name: Proofread all docs
+        if: ${{ github.event_name == 'push' }}
+        run: npm run lint .

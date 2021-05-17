@@ -7,14 +7,28 @@
     "serve": "docusaurus serve ${npm_package_config_site_dir}",
     "clear": "docusaurus clear ${npm_package_config_site_dir}",
     "start": "docusaurus start ${npm_package_config_site_dir}",
-    "test": "textlint --format pretty-error '{,!(node_modules)/**/}*.md'"
+    "lint": "textlint --format compact",
+    "test": "textlint --format pretty-error ."
   },
   "config": {
     "site_dir": "node_modules/placeos-docs-site",
     "docs_path": "../../"
   },
   "devDependencies": {
-    "orthograph-err": "place-labs/orthograph-err",
-    "placeos-docs-site": "placeos/docs-site"
+    "dictionary-en": "3.1.0",
+    "placeos-docs-site": "placeos/docs-site",
+    "textlint": "11.9.1",
+    "textlint-filter-rule-allowlist": "2.0.1",
+    "textlint-rule-alex": "3.0.0",
+    "textlint-rule-common-misspellings": "1.0.1",
+    "textlint-rule-en-capitalization": "2.0.3",
+    "textlint-rule-no-empty-section": "1.1.0",
+    "textlint-rule-no-exclamation-question-mark": "1.1.0",
+    "textlint-rule-one-sentence-per-line": "1.0.2",
+    "textlint-rule-period-in-list-item": "0.3.2",
+    "textlint-rule-rousseau": "1.4.6",
+    "textlint-rule-spelling": "0.3.0",
+    "textlint-rule-terminology": "2.1.5",
+    "textlint-rule-write-good": "1.6.2"
   }
 }
