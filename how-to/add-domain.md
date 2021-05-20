@@ -19,8 +19,8 @@ This guide will step through the process of creating a domain and the associated
 1. Log in to Backoffice on the domain created during deployment and select the Domains tab
 2. Select the + button to bring up the New Domain form
 3. Add the following fields:
-   - `Name`: Can be anything to identify the domain, usually the domain itself makes most sense) ie. `placeos.domain.com`
-   - `Domain`: The actual domain, without a protocol ie. `placeos.domain.com`
+   - `Name`: Can be anything to identify the domain, usually the domain itself makes most sense) i.e. `placeos.domain.com`
+   - `Domain`: The actual domain, without a protocol i.e. `placeos.domain.com`
    - `Login URL`: The URL redirected to when a user logs in. You should usually set this to `/login?continue={{url}}`
    - `Logout URL`: The URL redirected to when a user logs out. You should usually set this to `/auth/logout`
 
@@ -32,7 +32,7 @@ This guide will step through the process of creating a domain and the associated
 1. Select the Applications tab
 2. Select the New Application button. This brings up the New Application form
 3. Add the following fields:
-   - `Name`: Can be anything to identify the applications, usually the folder path where the application resides but capitalised ie. `Backoffice`
+   - `Name`: Can be anything to identify the applications, usually the folder path where the application resides but capitalised i.e. `Backoffice`
    - `Scopes`: Leave this blank
    - `Skip Authorizaiton`: Check the box to set this to `true`
    - `Login URL`: The location that users are redirected to after completing SSO authentication. This will generally be something like `https://<domain>/<application path>/oauth-resp.html`
