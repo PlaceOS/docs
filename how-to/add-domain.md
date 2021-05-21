@@ -7,7 +7,8 @@ sidebar_position: 3
 
 ## Overview
 
-This guide will step through the process of creating a domain and the associated application(s) that will exist on that domain. Domains must be created before sources of authentication (such as [SAML](configure-saml.md)) can be associated with an existing domain.
+This guide will step through the process of creating a domain and the associated application(s) that will exist on that domain. 
+Domains must be created before sources of authentication (such as [SAML](configure-saml.md)) can be associated with an existing domain.
 
 ## Prerequisites
 1. PlaceOS has been deployed via AWS Fargate on [Nested](fargate-nested.md) or [Modular](fargate-nested.md) CloudFormation Stacks
@@ -21,8 +22,10 @@ This guide will step through the process of creating a domain and the associated
 3. Add the following fields:
    - `Name`: Can be anything to identify the domain, usually the domain itself makes most sense) i.e. `placeos.domain.com`
    - `Domain`: The actual domain, without a protocol i.e. `placeos.domain.com`
-   - `Login URL`: The URL redirected to when a user logs in. You should usually set this to `/login?continue={{url}}`
-   - `Logout URL`: The URL redirected to when a user logs out. You should usually set this to `/auth/logout`
+   - `Login URL`: The URL redirected to when a user logs in. 
+   You should usually set this to `/login?continue={{url}}`
+   - `Logout URL`: The URL redirected to when a user logs out. 
+   You should usually set this to `/auth/logout`
 
 
 ![Add Domain](./assets/add_domain.png)
@@ -30,12 +33,14 @@ This guide will step through the process of creating a domain and the associated
 ## Step 2: Add an Application to the Domain
 
 1. Select the Applications tab
-2. Select the New Application button. This brings up the New Application form
+2. Select the New Application button. 
+This brings up the New Application form
 3. Add the following fields:
-   - `Name`: Can be anything to identify the applications, usually the folder path where the application resides but capitalised i.e. `Backoffice`
+   - `Name`: Can be anything to identify the applications, usually the folder path where the application resides but capitalized i.e. `Backoffice`
    - `Scopes`: Leave this blank
    - `Skip Authorizaiton`: Check the box to set this to `true`
-   - `Login URL`: The location that users are redirected to after completing SSO authentication. This will generally be something like `https://<domain>/<application path>/oauth-resp.html`
+   - `Login URL`: The location that users are redirected to after completing SSO authentication. 
+   This will generally be something like `https://<domain>/<application path>/oauth-resp.html`
 
 ![Add Application](./assets/add_application.png)
 
@@ -48,7 +53,8 @@ This guide will step through the process of creating a domain and the associated
    - `First Name`: Add the first name of the user, this is required
    - `Last Name`: Add the last name of the user, this is required
    - `Email`: This will be the username and is required
-   - `System Admin`: Denotes whether the user will be an admin (and thus can access and make changes in Backoffice). This will usually be set to true when creating users in this interface
+   - `System Admin`: Denotes whether the user will be an admin (and thus can access and make changes in Backoffice). 
+   This will usually be set to true when creating users in this interface
    - `Password` and `Confirm Password`: Enter the password which the user will use to login (when not using SSO)
 
 ![Add Domain](./assets/add_user.png)
