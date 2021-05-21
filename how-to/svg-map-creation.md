@@ -1,5 +1,5 @@
 ---
-title: CSVG Map Creation
+title: SVG Map Creation
 description: Create SVG Maps for use with PlaceOS
 sidebar_position: 9
 ---
