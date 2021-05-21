@@ -20,6 +20,8 @@ This is much like the maps ACA designs for its clients, we take your average eng
 
 Get architectural floor plan from client and branding colours (if provided).
 
+![Base Building Floor Plan](./assets/svg-maps/svg1.png)
+
 ### Step 2 - File Set Up & Import Architecture Drawing To AI
 
 When working in illustrator it is important to set your artboards to pixels (px) for web form
