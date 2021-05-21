@@ -27,10 +27,10 @@ Get architectural floor plan from client and branding colours (if provided).
 
 When working in illustrator it is important to set your artboards to pixels (px) for web form
 
-- Drag drop a jpeg version of the floor plan into ai
+- Drag drop a JPEG version of the floor plan into ai
 - To get started with the right settings we need to select preferences from Illustrator>preferences>General
-- Select "scale corners" and "scale strokes and effects" this will make sure all your objects will scale to the stroke you set it at which provides freedom in scalability .
-- Select "Units" from the Side options and double check everything is set to pixels as we are working in web.
+- Select "scale corners" and "scale strokes and effects" this will make sure all your objects will scale to the stroke you set it at which provides freedom in scalability
+- Select "Units" from the Side options and double check everything is set to pixels as we are working in web
 
 ![Illustrator Preferences](./assets/svg-maps/svg2.png)
 
@@ -61,11 +61,11 @@ The outline shape of the floor should be a little but thicker in point size comp
 
 To get started on the skeleton -select the "pen tool" and select a point size that is best to outline walls. 
 This can be anywhere from 2px-6px. 
-Begin illustrating the custom map ignoring any outlines that are not needed eg pipes near bathrooms or electrical rooms can be outlined around and given a darker blank space in its fill.
+Begin illustrating the custom map ignoring any outlines that are not needed e.g. pipes near bathrooms or electrical rooms can be outlined around and given a darker blank space in its fill.
 
 ### Step 7 - Space Highlights
 
-Once rooms have been outlined check the architectural floor plan to see which spaces require signage eg rest rooms, stairs or cafe spots. 
+Once rooms have been outlined check the architectural floor plan to see which spaces require signage e.g. rest rooms, stairs or cafe spots. 
 These spaces can have a filled space highlight that compliments the background colour of the map.
 
 ### Step 8 - Compare Floor Plans
@@ -82,14 +82,15 @@ Once complete lock layer.
 
 ### Step 10 - Adding Bookable Rooms
 
-In a new layer, using the “rectangle tool” begin create overlay for room bookings (bookable rooms), ensure the over layer is between 40%- 60% black. Room layer should be on a layer below lines (for appearances to look neater). 
+In a new layer, using the “rectangle tool” begin create overlay for room bookings (bookable rooms), ensure the over layer is between 40%- 60% black. 
+Room layer should be on a layer below lines (for appearances to look neater). 
 Name layer “room bookings”.
 
 ### Step 11 - Booking ID's
 
 In this layer “room bookings” you will be required to give room ids, usually provided by the client. 
 Clients usually give the room ids/ specification to which they would like. 
-Capitalised or lower case, room and level number order etc... but all rooms should be labeled according to the following “area- level. room number-status”.
+Capitalised or lower case, room and level number order etc. but all rooms should be labeled according to the following “area- level. room number-status”.
 
 :::tip
 IMPORTANT: All IDs MUST start with a LETTER (i.e. must not start with a number or other character). 
@@ -105,7 +106,7 @@ Make sure text colour is white or a colour that stands out against the map backg
 
 ### Step 13 - Adding Icons
 
-Lastly, on another layer, add icons to your map, icons should follow the branding guidelines e.g. style, colours, line weight/thickness etc... ensure colours chosen for icons also stand out against the map background.
+Lastly, on another layer, add icons to your map, icons should follow the branding guidelines e.g. style, colours, line weight/thickness etc. ensure colours chosen for icons also stand out against the map background.
 
 ### Step 14 - Checking Names/ID
 
