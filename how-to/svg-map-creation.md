@@ -1,4 +1,5 @@
 ---
+id: svg-map-creation
 title: SVG Map Creation
 description: Create SVG Maps for use with PlaceOS
 sidebar_position: 9
@@ -30,6 +31,12 @@ When working in illustrator it is important to set your artboards to pixels (px)
 - To get started with the right settings we need to select preferences from Illustrator>preferences>General
 - Select "scale corners" and "scale strokes and effects" this will make sure all your objects will scale to the stroke you set it at which provides freedom in scalability .
 - Select "Units" from the Side options and double check everything is set to pixels as we are working in web.
+
+![Illustrator Preferences](./assets/svg-maps/svg2.png)
+
+![Make sure scale corners and scale strokes and effects are selected.](./assets/svg-maps/svg3.png)
+
+![Select "Units" and double check everything is set to "Pixels"](./assets/svg-maps/svg4.png)
 
 ### Step 3 - Creating Your Layers
 
