@@ -2,7 +2,7 @@
 id: saml2-google
 title: Configure SAML2 with Google Workspace
 description: Steps required for enabling SAML2 sign on for PlaceOS on Google Workspace
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 PlaceOS uses a Custom SAML App to provide integrated SSO via Google User Authentication. 

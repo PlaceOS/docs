@@ -2,7 +2,7 @@
 id: saml2-auth0
 title: Configure SAML2 with Auth0
 description: Steps required for enabling SAML2 sign on for PlaceOS with Auth0
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 Use this page in tandem with [Configuring PlaceOS for SAML2](configure-saml.md) if you are using Auth0 domains for SSO.
