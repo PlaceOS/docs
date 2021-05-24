@@ -16,9 +16,15 @@ Crystal is a programming language with the following goals:
 
 ## Why Crystal?
 
+Security: we can distribute a single static binary in a docker container, there is little chance of exploit.
+
+Speed: the binaries are seriously fast, see [Spider-Gazelle](https://github.com/spider-gazelle/).
+
+Developer happiness: all the benefits of Go Lang with the elegance of Ruby.
+
 ## Resources
 
-### Installing Crytal
+### Installing Crystal
 
 [Follow these instructions](https://crystal-lang.org/install)
 
@@ -32,12 +38,16 @@ Crystal is a programming language with the following goals:
 
 Spider-Gazelle is a Rails esque web framework with a focus on speed and extensibility for Crystal Lang. 
 
-## Reources
+Spider-Gazelle is up to 35 times faster than Ruby on Rails.
+
+![Speed Rankings](./assets/ranking.png)
+
+### Reources
 
 ### Github
 
-![Spider-Gazelle on Github](https://github.com/spider-gazelle/)
+[Spider-Gazelle on Github](https://github.com/spider-gazelle/)
 
 ### Documentation
 
-![Spider-Gazelle Documentation](https://spider-gazelle.net/#/)
+[Spider-Gazelle Documentation](https://spider-gazelle.net/#/)
