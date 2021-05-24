@@ -4,8 +4,6 @@ description: Information and Resources related to the Crystal Programming Langua
 sidebar_position: 1
 ---
 
-## Overview
-
 Crystal is a programming language with the following goals:
 
 * Have a syntax similar to Ruby (but compatibility with it is not a goal)
@@ -18,7 +16,7 @@ Crystal is a programming language with the following goals:
 
 Security: we can distribute a single static binary in a docker container, there is little chance of exploit.
 
-Speed: the binaries are seriously fast, see [Spider-Gazelle](https://github.com/spider-gazelle/).
+Speed: the binaries are seriously fast, see [Spider-Gazelle](#spider-gazelle).
 
 Developer happiness: all the benefits of Go Lang with the elegance of Ruby.
 
@@ -42,7 +40,7 @@ Spider-Gazelle is up to 35 times faster than Ruby on Rails.
 
 ![Speed Rankings](./assets/ranking.png)
 
-### Reources
+## Reources
 
 ### Github
 
