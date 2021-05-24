@@ -1,7 +1,7 @@
 ---
 title: TypeScript
 description: TypeScript is an open-source language which builds on JavaScript
-sidebar_position: 8
+sidebar_position: 2
 ---
 
 ## Overview
