@@ -1,8 +1,7 @@
 ---
-id: add-domain
 title: Add a Domain to Backoffice
 description: Steps required for adding a domain to the Backoffice application
-sidebar_position: 3
+sidebar_position: 10
 ---
 
 ## Overview
