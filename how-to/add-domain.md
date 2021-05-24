@@ -19,7 +19,7 @@ Domains must be created before sources of authentication (such as [SAML](configu
 1. Log in to Backoffice on the domain created during deployment and select the Domains tab
 2. Select the + button to bring up the New Domain form
 3. Add the following fields:
-   - `Name`: Can be anything to identify the domain, usually the domain itself makes most sense) i.e. `placeos.domain.com`
+   - `Name`: Can be anything to identify the domain, usually the domain itself makes most sense i.e. `placeos.domain.com`
    - `Domain`: The actual domain, without a protocol i.e. `placeos.domain.com`
    - `Login URL`: The URL redirected to when a user logs in. 
    You should usually set this to `/login?continue={{url}}`
