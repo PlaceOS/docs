@@ -31,21 +31,3 @@ Developer happiness: all the benefits of Go Lang with the elegance of Ruby.
 * [Language Reference](http://crystal-lang.org/reference)
 * [Standard library API](https://crystal-lang.org/api)
 * [Roadmap](https://github.com/crystal-lang/crystal/wiki/Roadmap)
-
-## Spider-Gazelle
-
-Spider-Gazelle is a Rails esque web framework with a focus on speed and extensibility for Crystal Lang. 
-
-Spider-Gazelle is up to 35 times faster than Ruby on Rails.
-
-![Speed Rankings](./assets/ranking.png)
-
-## Resources
-
-### Github
-
-[Spider-Gazelle on Github](https://github.com/spider-gazelle/)
-
-### Documentation
-
-[Spider-Gazelle Documentation](https://spider-gazelle.net/#/)
