@@ -25,6 +25,8 @@ By default, PlaceOS uses a local authentication method.
 
 PlaceOS Supports Federated Authentication via SAML, this is the advised method of user authentication.
 
+Under this configuration, in accordance with the SAML Standard, PlaceOS is the service provider (SP).
+
 Authentication providers can be associated with [Domains](../../how-to/add-domain.md) in PlaceOS.
 
 - [Configure SAML in PlaceOS](../../how-to/configure-saml.md)

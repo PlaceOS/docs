@@ -1,5 +1,5 @@
 ---
 title: HTTP
-description: Overview of the 2 types of drivers
+description: Supporting inforation regarding the HTTP Protocol
 sidebar_position: 1
 ---

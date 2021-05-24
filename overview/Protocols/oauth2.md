@@ -1,6 +1,6 @@
 ---
 title: OAuth2
-description: Overview of the 2 types of drivers
+description: OAuth2 Standard Overview and Use with PlaceOS
 sidebar_position: 3
 ---
 
