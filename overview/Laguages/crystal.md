@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Crystal is a programming language with the following goals:
 
-* Have a syntax similar to Ruby (but compatibility with it is not a goal)
+* Have a syntax like Ruby (but compatibility with Ruby is not a goal)
 * Statically type-checked but without having to specify the type of variables or method arguments
 * Be able to call C code by writing bindings to it in Crystal
 * Have compile-time evaluation and generation of code, to avoid boilerplate code
@@ -16,7 +16,7 @@ Crystal is a programming language with the following goals:
 
 Security: we can distribute a single static binary in a docker container, there is little chance of exploit.
 
-Speed: the binaries are seriously fast, see [Spider-Gazelle](#spider-gazelle).
+Speed: the binaries are fast, see [Spider-Gazelle](#spider-gazelle).
 
 Developer happiness: all the benefits of Go Lang with the elegance of Ruby.
 
