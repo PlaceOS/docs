@@ -35,8 +35,10 @@ When working in illustrator it is important to set your artboards to pixels (px)
 ![Illustrator Preferences](./assets/svg-maps/svg2.png)
 
 ![Make sure scale corners and scale strokes and effects are selected.](./assets/svg-maps/svg3.png)
+*Make sure scale corners and scale strokes and effects are selected.*
 
 ![Select "Units" and double check everything is set to "Pixels"](./assets/svg-maps/svg4.png)
+*Select "Units" and double check everything is set to "Pixels"*
 
 ### Step 3 - Creating Your Layers
 
@@ -44,14 +46,23 @@ Before getting started on design it is important to name and order your layers.
 The ideal way to create layers is to start from the bottom working your way up. 
 So for a floor plan that would be to start from the simple features such as the overall skeleton shaping of a building, signage such as toilets, stairs, lifts and lastly adding furniture and room statuses towards the end.
 
+![Original floor plan should be locked to avoid it moving out of place while designing.](./assets/svg-maps/svg5.png)
+*Original floor plan should be locked to avoid it moving out of place while designing.*
+
 ### Step 4 - Creating Floors
 
 In a new layer start outlining your architectural floor plan, fill in shape with colour (as outlined by brand guidelines), lock the layer and name layer “outline”
+
+![Layers](./assets/svg-maps/svg6.png)
+
 
 ### Step 5 - Floor Dimension
 
 Copy and paste outline and fill in with colour (new layer) and lock the layer - name layer “bkd”. 
 Ensure this shape is shifted to the side or downward (building shapes vary) to give a shadow or building structure effect to the “outline” layer.
+
+![Floor Dimensions](./assets/svg-maps/svg7.png)
+
 
 ### Step 6 - Outlining Floors aka "The Skeleton"
 
@@ -63,15 +74,21 @@ To get started on the skeleton -select the "pen tool" and select a point size th
 This can be anywhere from 2px-6px. 
 Begin illustrating the custom map ignoring any outlines that are not needed e.g. pipes near bathrooms or electrical rooms can be outlined around and given a darker blank space in its fill.
 
+![Outlining Floors](./assets/svg-maps/svg8.png)
+
 ### Step 7 - Space Highlights
 
 Once rooms have been outlined check the architectural floor plan to see which spaces require signage e.g. rest rooms, stairs or cafe spots. 
 These spaces can have a filled space highlight that compliments the background colour of the map.
 
+![Space Highlights](./assets/svg-maps/svg-step7.png)
+
 ### Step 8 - Compare Floor Plans
 
 To make things easier check the architectural floor plan and begin placing furniture and other features in designated spaces and rooms. 
 If you already have them designed, if not you will need to create your own according to the brand guidelines.
+
+![Compare Floorplans](./assets/svg-maps/svg12.png)
 
 ### Step 9 - Completing Layers
 
@@ -80,11 +97,17 @@ Ensure plants are kept simple and are not composed of a gradient.
 Once complete name layer “plants and furniture”. 
 Once complete lock layer.
 
+![Completing Layer](./assets/svg-maps/svg13.png)
+
+
 ### Step 10 - Adding Bookable Rooms
 
 In a new layer, using the “rectangle tool” begin create overlay for room bookings (bookable rooms), ensure the over layer is between 40%- 60% black. 
 Room layer should be on a layer below lines (for appearances to look neater). 
 Name layer “room bookings”.
+
+![Adding Bookable Rooms](./assets/svg-maps/svg14.png)
+
 
 ### Step 11 - Booking ID's
 
@@ -97,6 +120,9 @@ IMPORTANT: All IDs MUST start with a LETTER (i.e. must not start with a number o
 This is due to the CSS selector conventions.
 :::
 
+![Booking ID](./assets/svg-maps/svg15.png)
+
+
 ### Step 12 - Adding Text
 
 Once each room layer is labeled you can create another layer “text” here you will label each room and section of the map. 
@@ -104,9 +130,15 @@ This text should be Arial and anything larger than 6pt text size.
 For rooms use Arial bold or medium for other sections of the map use Arial regular or light. 
 Make sure text colour is white or a colour that stands out against the map background.
 
+![Adding Text](./assets/svg-maps/svg16.png)
+
+
 ### Step 13 - Adding Icons
 
 Lastly, on another layer, add icons to your map, icons should follow the branding guidelines e.g. style, colours, line weight/thickness etc. ensure colours chosen for icons also stand out against the map background.
+
+![Adding Icons](./assets/svg-maps/svg17.png)
+
 
 ### Step 14 - Checking Names/ID
 
@@ -121,25 +153,33 @@ IMPORTANT: All IDs MUST start with a LETTER (i.e. must not start with a number o
 This is due to the CSS selector conventions.
 :::
 
+![Checking Names and ID](./assets/svg-maps/svg19.png)
+
+
 ### Step 15 - Exporting
 
-Go to file>export as>SVG> save to designated folder > ensure the following is correct:
-styling > internal CSS
-Font > SVG
+Go to File > Export As > SVG > Save to designated folder. 
 
-Images > preserve
-Object IDs> Layer names Decimal > 3
-Tick > minify and responsive Select > ok
+Ensure the following is correct:
+
+1. Styling > Internal CSS
+2. Font > SVG
+3. Images > preserve
+4. Object IDs> Layer names Decimal > 3
+5. Tick > minify and responsive Select > ok
+
+![Exporting](./assets/svg-maps/svg20.png)
+
 
 ### Checklist
 
-- Client Architectural floor plans
-- Client room ids and room names
-- Client/brand guidelines
-- Client/brand colour pallet
-- Create furniture and plants that follow client/brand guidelines
-- Have the latest Adobe Illustrator CC2019
-- Name the file "client_map_level"
-- Name layers
-- Save As.. (Always)
-- Once you complete check room ids for no duplicates
+- [ ] Client Architectural floor plans
+- [ ] Client room ids and room names
+- [ ] Client/brand guidelines
+- [ ] Client/brand colour pallet
+- [ ] Create furniture and plants that follow client/brand guidelines
+- [ ] Have the latest Adobe Illustrator CC2019
+- [ ] Name the file "client_map_level"
+- [ ] Name layers
+- [ ] Save As.. (Always)
+- [ ] Once you complete check room ids for no duplicates
