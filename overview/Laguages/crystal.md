@@ -7,12 +7,12 @@ sidebar_position: 1
 Crystal is a programming language with the following goals:
 
 * Have a syntax similar to Ruby (but compatibility with it is not a goal)
-* Statically type-checked but without having to specify the type of variables or method arguments.
-* Be able to call C code by writing bindings to it in Crystal.
-* Have compile-time evaluation and generation of code, to avoid boilerplate code.
-* Compile to efficient native code.
+* Statically type-checked but without having to specify the type of variables or method arguments
+* Be able to call C code by writing bindings to it in Crystal
+* Have compile-time evaluation and generation of code, to avoid boilerplate code
+* Compile to efficient native code
 
-## Why Crystal?
+## Why Crystal
 
 Security: we can distribute a single static binary in a docker container, there is little chance of exploit.
 
@@ -40,7 +40,7 @@ Spider-Gazelle is up to 35 times faster than Ruby on Rails.
 
 ![Speed Rankings](./assets/ranking.png)
 
-## Reources
+## Resources
 
 ### Github
 
