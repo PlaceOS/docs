@@ -22,8 +22,22 @@ Crystal is a programming language with the following goals:
 
 [Follow these instructions](https://crystal-lang.org/install)
 
-### Documentation
+###  Crystal Documentation
 
 * [Language Reference](http://crystal-lang.org/reference)
 * [Standard library API](https://crystal-lang.org/api)
 * [Roadmap](https://github.com/crystal-lang/crystal/wiki/Roadmap)
+
+## Spider-Gazelle
+
+Spider-Gazelle is a Rails esque web framework with a focus on speed and extensibility for Crystal Lang. 
+
+## Reources
+
+### Github
+
+![Spider-Gazelle on Github](https://github.com/spider-gazelle/)
+
+### Documentation
+
+![Spider-Gazelle Documentation](https://spider-gazelle.net/#/)
