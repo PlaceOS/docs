@@ -4,7 +4,9 @@ rules:
     - execute
     - execution
     - special
+    - stroke
     - traps
+    profanitySureness: 2
 
   common-misspellings:
     ignore: []
@@ -58,6 +60,7 @@ rules:
     - '/tokeniz(er|ed|ing)?/i'
     - '/un-/i'
     - '/webhook[s]?/i'
+    - Arial
     - AOpen
     - Atlona
     - Auth
@@ -116,6 +119,7 @@ rules:
     - PowerSoft
     - Pressac
     - proxying
+    - px
     - QBic
     - RealPresence
     - RethinkDB
@@ -157,6 +161,7 @@ rules:
     - "init" # the service, otherwise spell out "initialize" etc (not handled)
     - "Kubernetes"
     - "NGINX"
+    - "px"
     - "RethinkDB"
     exclude:
     - 'Node(?:js)?'

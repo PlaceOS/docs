@@ -9,17 +9,17 @@ sidebar_position: 9
 
 Maps are where function meets form, and are the starting point of any conversation between a user and the platform.
 
-A bespoke map is like a tailored suit or custom jewellery piece - you can elevate something simple by perfecting the details which takes the final product to the next level. 
+A bespoke map is like a tailored suit or custom jewelry piece - you can elevate something simple by perfecting the details which takes the final product to the next level. 
 The choices you make along the way will define the story you tell with the finished product. 
 This guide will step you through the process in creating a map that is easy to use and visually effective.
 
 When going custom you’ll get to choose from a range of details, which can really elevate your suit to the next level. 
-Linings, button colours and stitching choices can all be made. 
+Linings, button colors and stitching choices can all be made. 
 This is much like the maps ACA designs for its clients, we take your average engineering map and we give it a makeover to impress the user.
 
 ### Step 1 - Obtain Floor Plans
 
-Get architectural floor plan from client and branding colours (if provided).
+Get architectural floor plan from client and branding colors (if provided).
 
 ![Base Building Floor Plan](./assets/svg-maps/svg1.png)
 
@@ -27,7 +27,7 @@ Get architectural floor plan from client and branding colours (if provided).
 
 When working in illustrator it is important to set your artboards to pixels (px) for web form
 
-- Drag drop a JPEG version of the floor plan into ai
+- Drag drop a JPEG version of the floor plan into AI
 - To get started with the right settings we need to select preferences from Illustrator>preferences>General
 - Select "scale corners" and "scale strokes and effects" this will make sure all your objects will scale to the stroke you set it at which provides freedom in scalability
 - Select "Units" from the Side options and double check everything is set to pixels as we are working in web
@@ -51,14 +51,14 @@ So for a floor plan that would be to start from the simple features such as the 
 
 ### Step 4 - Creating Floors
 
-In a new layer start outlining your architectural floor plan, fill in shape with colour (as outlined by brand guidelines), lock the layer and name layer “outline”
+In a new layer start outlining your architectural floor plan, fill in shape with color (as outlined by brand guidelines), lock the layer and name layer “outline”
 
 ![Layers](./assets/svg-maps/svg6.png)
 
 
 ### Step 5 - Floor Dimension
 
-Copy and paste outline and fill in with colour (new layer) and lock the layer - name layer “bkd”. 
+Copy and paste outline and fill in with color (new layer) and lock the layer - name layer “bkd”. 
 Ensure this shape is shifted to the side or downward (building shapes vary) to give a shadow or building structure effect to the “outline” layer.
 
 ![Floor Dimensions](./assets/svg-maps/svg7.png)
@@ -79,7 +79,7 @@ Begin illustrating the custom map ignoring any outlines that are not needed e.g.
 ### Step 7 - Space Highlights
 
 Once rooms have been outlined check the architectural floor plan to see which spaces require signage e.g. rest rooms, stairs or cafe spots. 
-These spaces can have a filled space highlight that compliments the background colour of the map.
+These spaces can have a filled space highlight that compliments the background color of the map.
 
 ![Space Highlights](./assets/svg-maps/svg-step7.png)
 
@@ -109,11 +109,11 @@ Name layer “room bookings”.
 ![Adding Bookable Rooms](./assets/svg-maps/svg14.png)
 
 
-### Step 11 - Booking ID's
+### Step 11 - Booking IDs
 
 In this layer “room bookings” you will be required to give room ids, usually provided by the client. 
 Clients usually give the room ids/ specification to which they would like. 
-Capitalised or lower case, room and level number order etc. but all rooms should be labeled according to the following “area- level. room number-status”.
+Capitalized or lower case, room and level number order etc. but all rooms should be labeled according to the following `area- level. room number-status`.
 
 :::tip
 IMPORTANT: All IDs MUST start with a LETTER (i.e. must not start with a number or other character). 
@@ -128,14 +128,14 @@ This is due to the CSS selector conventions.
 Once each room layer is labeled you can create another layer “text” here you will label each room and section of the map. 
 This text should be Arial and anything larger than 6pt text size. 
 For rooms use Arial bold or medium for other sections of the map use Arial regular or light. 
-Make sure text colour is white or a colour that stands out against the map background.
+Make sure text color is white or a color that stands out against the map background.
 
 ![Adding Text](./assets/svg-maps/svg16.png)
 
 
 ### Step 13 - Adding Icons
 
-Lastly, on another layer, add icons to your map, icons should follow the branding guidelines e.g. style, colours, line weight/thickness etc. ensure colours chosen for icons also stand out against the map background.
+Lastly, on another layer, add icons to your map, icons should follow the branding guidelines e.g. style, colors, line weight/thickness etc. ensure colors chosen for icons also stand out against the map background.
 
 ![Adding Icons](./assets/svg-maps/svg17.png)
 
@@ -146,7 +146,7 @@ Once all elements are on your map go back to the booking layer and be sure to ch
 
 We would recommend placing the names in order to ensure there are no double ups. 
 
-Remember the SVG map will not work on the front end if two rooms have the same id.
+Remember the SVG map will not work on the frontend if two rooms have the same ID.
 
 :::tip
 IMPORTANT: All IDs MUST start with a LETTER (i.e. must not start with a number or other character). 
@@ -165,8 +165,8 @@ Ensure the following is correct:
 1. Styling > Internal CSS
 2. Font > SVG
 3. Images > preserve
-4. Object IDs> Layer names Decimal > 3
-5. Tick > minify and responsive Select > ok
+4. Object IDs > Layer names Decimal > 3
+5. Tick > minify and responsive Select > OK
 
 ![Exporting](./assets/svg-maps/svg20.png)
 
@@ -174,12 +174,12 @@ Ensure the following is correct:
 ### Checklist
 
 - [ ] Client Architectural floor plans
-- [ ] Client room ids and room names
+- [ ] Client room IDs and room names
 - [ ] Client/brand guidelines
-- [ ] Client/brand colour pallet
+- [ ] Client/brand color pallet
 - [ ] Create furniture and plants that follow client/brand guidelines
 - [ ] Have the latest Adobe Illustrator CC2019
-- [ ] Name the file "client_map_level"
+- [ ] Name the file `client_map_level`
 - [ ] Name layers
-- [ ] Save As.. (Always)
-- [ ] Once you complete check room ids for no duplicates
+- [ ] Save As (Always)
+- [ ] Once you complete check room IDs for no duplicates
