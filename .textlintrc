@@ -48,6 +48,7 @@ rules:
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/analytics/i'
+    - '/artboard[s]?/i'
     - '/automations/i'
     - '/backoffice/i'
     - '/(re)?balance(r)?/i'
