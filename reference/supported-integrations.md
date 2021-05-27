@@ -24,7 +24,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 
 ## Messaging
 * Email (MS Graph, Gmail, SMTP, AWS SES)
-* SMS (MessageMedia)
+* SMS (MessageMedia, Whispir, Amazon SMS)
 * MQTT
 * Webhooks
 * Node-RED
@@ -45,17 +45,16 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Modbus TCP
 
 ## Real Time Location
+* Cisco DNA Spaces
 * Cisco Meraki RTLS
 * Cisco CMX
 * HP Aruba ALE
 
 ## Sensors
-* MQTT ingest
-* Azure IoT Hub
 * Vergesense
 * Floorsense
-* Pressac
-* PointGrab Cognipoint
+* XY Sense
+* Xovis
 
 ## Network
 * Cisco Meraki
@@ -66,8 +65,6 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 ## Building Access
 * Lenel
 * Gallagher
-* Honeywell
-* Johnson Controls
 
 ## Conferencing / UC
 * Cisco Collaboration Endpoints (via Webex API)
@@ -89,7 +86,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Extron (Switchers)
 * Atlona (Video over IP)
 * Lightware Switchers
-* SVSI
+* SVSi
 * Kramer (Switchers)
 * Echo360 Capture Appliances
 * MediaSite Capture Appliances/Server
