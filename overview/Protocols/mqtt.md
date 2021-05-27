@@ -25,8 +25,8 @@ MQTT messages consist of a *header* and a *payload* and typically have low bandw
 The header declares the topic of the message, and the payload carries data as key-value pairs.
 
 PlaceOS uses two types of message sent over MQTT: State Changes and Metadata.
-Further information on configuring MQTT Brokers for PlaceOS can be found in [MQTT Brokers](../../how-to/mqtt-brokers.md)
-<!-- This page does not exist? -->
+For further information on configuring MQTT for PlaceOS, see the guide on [MQTT Integration](../../how-to/mqtt-integration.md)
+
 
 ## Resources
 
