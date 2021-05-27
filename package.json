@@ -1,19 +1,15 @@
 {
   "name": "placeos-docs",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "docusaurus build ${npm_package_config_site_dir}",
-    "start": "docusaurus start ${npm_package_config_site_dir}",
+    "start": "export DOCS_PATH=$INIT_CWD && npm explore placeos-docs-site -- npm start",
+    "build": "export DOCS_PATH=$INIT_CWD && npm explore placeos-docs-site -- npm run build -- --out-dir ${INIT_CWD}/build",
+    "serve": "npm explore placeos-docs-site -- npm run serve --dir ${INIT_CWD}/build",
     "test": "textlint --format pretty-error '{,!(node_modules)/**/}*.md'"
   },
-  "config": {
-    "site_dir": "node_modules/placeos-docs-site",
-    "docs_path": "../../"
-  },
-  "files": "{./,./**}/*.md",
   "devDependencies": {
-    "orthograph-err": "github:place-labs/orthograph-err",
-    "placeos-docs-site": "github:placeos/docs-site"
+    "orthograph-err": "place-labs/orthograph-err",
+    "placeos-docs-site": "placeos/docs-site"
   }
 }

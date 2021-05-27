@@ -1,7 +1,7 @@
 ---
 title: Settings
 description: Settings can be configured at any level
-sidebar_order: 6
+sidebar_position: 6
 ---
 <!-- # Settings -->
 

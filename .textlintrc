@@ -4,7 +4,9 @@ rules:
     - execute
     - execution
     - special
+    - stroke
     - traps
+    profanitySureness: 2
 
   common-misspellings:
     ignore: []
@@ -41,22 +43,29 @@ rules:
     language: en
     skipPatterns:
     # for anything in terminology, add only the corrected version
+    # hyphenated prefixes are considered separate words
     - '/[0-9]+/g'             # numbers 
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/analytics/i'
+    - '/artboard[s]?/i'
     - '/automations/i'
     - '/backoffice/i'
     - '/(re)?balance(r)?/i'
     - '/integrat(ion|or)[s]?/i'
     - '/microservice[s]?/i'
+    - '/pre-/i'
     - '/preconfigure[ds]?/i'
+    - '/serverless/i'
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
+    - '/un-/i'
     - '/webhook[s]?/i'
+    - Arial
     - AOpen
     - Atlona
     - Auth
+    - Auth0
     - B2C
     - BACnet
     - Barco
@@ -109,9 +118,9 @@ rules:
     - PointGrab
     - Polycom
     - PowerSoft
-    - pre-
     - Pressac
     - proxying
+    - px
     - QBic
     - RealPresence
     - RethinkDB
@@ -120,6 +129,7 @@ rules:
     - Shure
     - Symmetrix
     - TriplePlay
+    - URIs                    # Accepted plural
     - Vergesense
     - Webex
     - webhook
@@ -130,24 +140,29 @@ rules:
   terminology:
     defaultTerms: true
     terms:
-    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
+    - ['adfs', 'AD FS']
     - ['back\W?office', 'Backoffice']
     - ['config', 'configuration']
     - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
     - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['(google )?gsuite', 'Google Workspace (GSuite)']
+    - ['google workplace', 'Google Workspace']
     - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
+    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
+    - "Auth0"
     - "AWS CloudFormation"
     - "AWS ElastiCache"
     - "Cisco Meraki"
     - "Elasticsearch"
+    - "init" # the service, otherwise spell out "initialize" etc (not handled)
     - "Kubernetes"
     - "NGINX"
+    - "px"
     - "RethinkDB"
     exclude:
     - 'Node(?:js)?'

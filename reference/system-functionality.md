@@ -17,7 +17,7 @@ They do not need to “sign up” nor remember a new user account/password.
 Integration with enterprise identity providers via SAML2 or OAuth2. 
 Examples:
 - Azure AD Enterprise Application
-- ADFS
+- AD FS
 - Google Workspace (GSuite) authentication
 
 ### Book Rooms
@@ -64,5 +64,5 @@ An analytics dashboard enables insights.
 **Requirement**  
 PlaceAnalytics API
 
-*[ADFS]: Active Directory Federation Services  
+*[AD FS]: Active Directory Federation Services  
 *[RTLS]: Real-Time Location Services  

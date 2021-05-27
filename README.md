@@ -164,32 +164,15 @@ If this field is not present, the document's title will default to its `id`.
 Whether to hide the title at the top of the document.
 `false` by default.
 
+#### `hide_table_of_contents`
+Whether to hide the table of contents to the right.
+
 #### `sidebar_label`
 The text shown in the document sidebar and in the next/previous button for this document.
 If this field is not present, this will default to its title.
 
-#### `sidebar_order`
+#### `sidebar_position`
 Relative priority against other documents within the same directory for ordering in navigation.
-Ordered documents will appears first, followed by others sorted alphabetically on `id`.
-
-#### `sidebar_hide`
-Flag for publishing a document as unlisted.
-Document contents will publish for direct access, but will not appear within sidebar navigation.
-`false` by default.
-
-#### `sidebar_category_label`
-Label to use for the folder within sidebar navigation.
-Defaults to the directory name.
-_Note: applies to the first document within the group, as defined by `sidebar_order`._
-
-#### `sidebar_category_order`
-Relative priority against sibling categories for ordering in navigation.
-_Note: applies to the first document within the group, as defined by `sidebar_order`._
-
-#### `sidebar_category_hide`
-Flag for publishing a document category as unlisted.
-`false` by default.
-_Note: applies to the first document within the group, as defined by `sidebar_order`._
 
 #### `keywords`
 Keywords meta tag for the document page, for search engines.
@@ -197,6 +180,10 @@ Keywords meta tag for the document page, for search engines.
 #### `description`
 The description used by search engines.
 If this field is not present, it will default to the first line of the contents.
+
+#### `slug`
+Allows to customize the document URL.
+If unspecified the document path will mirror its position within this repository's file structure.
 
 
 ## Workflow
