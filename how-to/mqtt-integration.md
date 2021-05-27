@@ -105,10 +105,10 @@ A match can lead to actions such as:
 - Dropping the associated event
 
 ## Cloud Brokers
-<!-- And a few words "service providers for blah include blah" -->
+PlaceOS can integrate with MQTT Brokers including the major service providers listed below.
 
-<!-- Ideally link each logo to each provider? Orig doc has the logos as separate images too -->
-![MQTT brokers' logos](mqtt-brokers-logos.png "MQTT Brokers")
+<!-- Ideally link each logo to each provider? Old doc has the logos as separate images too -->
+![MQTT brokers' logos](assets/mqtt-brokers-logos.png "MQTT Brokers")
 
 - [Cloud MQTT](https://www.cloudmqtt.com/)
 - [Google Cloud](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
