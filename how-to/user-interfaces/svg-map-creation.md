@@ -2,7 +2,7 @@
 id: svg-map-creation
 title: SVG Map Creation
 description: Create SVG Maps for use with PlaceOS
-sidebar_position: 9
+sidebar_position: 1
 ---
 
 ## Intro

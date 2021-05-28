@@ -27,7 +27,7 @@ Under this configuration, by the SAML Standard, PlaceOS is the Service Provider 
 
 Authentication providers can be associated with [Domains](../../how-to/add-domain.md) in PlaceOS.
 
-- [Configure SAML in PlaceOS](../../how-to/configure-saml.md)
+- [Configure SAML in PlaceOS](../../how-to/authentication/configure-saml.md)
 - [Add Domains in PlaceOS](../../how-to/add-domain.md)
 
 ## Resources

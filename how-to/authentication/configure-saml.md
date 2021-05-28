@@ -2,7 +2,7 @@
 id: configure-saml
 title: Configure PlaceOS for SAML
 description: Steps required for enabling SAML sign on for users logging in to PlaceOS web apps
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 By default, PlaceOS uses local authentication. 
