@@ -11,9 +11,8 @@ This guide will step through the process of creating a domain and the associated
 You must create a domain before adding authentication sources (such as [SAML](configure-saml.md)) to it.
 
 ## Prerequisites
-1. PlaceOS has been deployed via AWS Fargate on [Nested](fargate-nested.md) or [Modular](fargate-nested.md) CloudFormation Stacks
-2. [The Backoffice application is set up and accessible](fargate-nested.md#Accessing-backoffice)
-3. Domain(s) required for the deployment and the applications on these domains are known
+1. PlaceOS has been deployed
+3. Domain(s) required and the applications on these domains are known
 
 ## Step 1: Create the New Domain
 
