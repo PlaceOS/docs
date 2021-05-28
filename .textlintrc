@@ -166,6 +166,7 @@ rules:
     - "RethinkDB"
     exclude:
     - 'Node(?:js)?'
+    - 'web[- ]?site(s)?'
 
   write-good:
     severity: warning
