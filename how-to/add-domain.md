@@ -12,7 +12,7 @@ You must create a domain before adding authentication sources (such as [SAML](co
 
 ## Prerequisites
 1. PlaceOS has been deployed
-3. Domain(s) required and the applications on these domains are known
+2. Domain(s) required and the applications on these domains are known
 
 ## Step 1: Create the New Domain
 
