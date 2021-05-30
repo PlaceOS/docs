@@ -86,7 +86,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Extron (Switchers)
 * Atlona (Video over IP)
 * Lightware Switchers
-* SVSi
+* SVSI
 * Kramer (Switchers)
 * Echo360 Capture Appliances
 * MediaSite Capture Appliances/Server
