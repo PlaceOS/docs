@@ -24,7 +24,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 
 ## Messaging
 * Email (MS Graph, Gmail, SMTP, AWS SES)
-* SMS (MessageMedia, Whispir, Amazon SMS)
+* SMS (MessageMedia, Whispir, Amazon SNS)
 * MQTT
 * Webhooks
 * Node-RED
