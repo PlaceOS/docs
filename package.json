@@ -10,20 +10,20 @@
     "test": "textlint --format pretty-error ."
   },
   "devDependencies": {
-    "dictionary-en": "3.1.0",
+    "dictionary-en": "^3.1.0",
     "placeos-docs-site": "placeos/docs-site",
-    "textlint": "11.9.1",
-    "textlint-filter-rule-allowlist": "2.0.1",
-    "textlint-rule-alex": "3.0.0",
-    "textlint-rule-common-misspellings": "1.0.1",
-    "textlint-rule-en-capitalization": "2.0.3",
-    "textlint-rule-no-empty-section": "1.1.0",
-    "textlint-rule-no-exclamation-question-mark": "1.1.0",
+    "textlint": "^12.0.0",
+    "textlint-filter-rule-allowlist": "^2.0.1",
+    "textlint-rule-alex": "^3.0.0",
+    "textlint-rule-common-misspellings": "^1.0.1",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-no-empty-section": "^1.1.0",
+    "textlint-rule-no-exclamation-question-mark": "^1.1.0",
     "textlint-rule-one-sentence-per-line": "place-labs/textlint-rule-one-sentence-per-line",
-    "textlint-rule-period-in-list-item": "0.3.2",
-    "textlint-rule-rousseau": "1.4.6",
-    "textlint-rule-spelling": "0.3.0",
-    "textlint-rule-terminology": "2.1.5",
-    "textlint-rule-write-good": "1.6.2"
+    "textlint-rule-period-in-list-item": "^0.3.2",
+    "textlint-rule-rousseau": "^1.4.6",
+    "textlint-rule-spelling": "^0.3.0",
+    "textlint-rule-terminology": "^2.1.5",
+    "textlint-rule-write-good": "^1.6.2"
   }
 }
