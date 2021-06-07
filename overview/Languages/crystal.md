@@ -14,7 +14,8 @@ Crystal is a programming language with the following goals:
 
 ## Why Crystal
 
-Security: we can distribute a single static binary in a docker container, there is little chance of exploit.
+Security: we can distribute a single statically-linked binary in a docker container,
+this greatly reduces attack surface and reduces the likelihood of vulnerabilities.
 
 Speed: the binaries are fast, see [Spider-Gazelle](#spider-gazelle).
 
