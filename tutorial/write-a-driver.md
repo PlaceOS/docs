@@ -12,7 +12,7 @@ There are three main uses of drivers:
 From a driver structure standpoint there is no difference between these types.
 
 * The same driver works over a TCP, UDP or SSH transport
-* All drivers support HTTP methods with a defined URI endpoint 
+* All drivers support HTTP methods with a defined URI endpoint  
 * All drivers have access to logic helpers when associated with a System
 
 ## Queue
@@ -111,7 +111,7 @@ def perform_action_now!
 end
 ```
 
-You can also add a pre-processor to data coming in. 
+You can also add a pre-processor to data coming in.  
 This can be useful if you want to strip away a protocol layer.
 For example, if you are using Telnet and want to remove the telnet signals leaving the raw data for tokenizing
 
@@ -155,7 +155,7 @@ end
 ```
 
 ### Special SSH methods
-SSH connections will attempt to open a shell to the remote device. 
+SSH connections will attempt to open a shell to the remote device.  
 Sometimes you may be able to execute operations independently.
 
 ```crystal
@@ -167,7 +167,7 @@ end
 ```
 
 ### Logic drivers
-Logic drivers belong to a System and cannot be shared, which makes them different from other transports. 
+Logic drivers belong to a System and cannot be shared, which makes them different from other transports.  
 All other drivers can appear in any number of systems.
 
 You can access remote modules in the system via the `system` helper
@@ -294,7 +294,7 @@ There are two types:
 * Required settings - raise an error if the setting is unavailable
 * Optional settings - return `nil` if the setting is unavailable
 
-:::note 
+:::note  
 All settings will raise an error if they exist but fail to serialize (due to incorrect formatting etc.)
 :::
 
@@ -315,7 +315,7 @@ def on_update
 end
 ```
 
-You can update the local settings of a module, persisting them to the database. 
+You can update the local settings of a module, persisting them to the database.  
 Settings must be JSON serializable
 
 ```crystal
@@ -392,7 +392,7 @@ Interfaces provide a standard way of implementing and interacting with this.
 
 Though optional, they're recommended as they make drivers more modular and less complex.
 
-A full list of interfaces is [available in the driver framework](https://github.com/PlaceOS/driver/tree/master/src/placeos-driver/interface). 
+A full list of interfaces is [available in the driver framework](https://github.com/PlaceOS/driver/tree/master/src/placeos-driver/interface).  
 This will expand over time to cover common, repeated patterns as they emerge.
 
 ### Implementing an Interface
@@ -410,7 +410,7 @@ These may be overridden if the device or service provides a more efficient way t
 To keep compatibility, overridden methods must maintain feature and functional parity with the original.
 
 ### Using an Interface
-You can use the `system.implementing` method from any logic module. 
+You can use the `system.implementing` method from any logic module.  
 It returns a list of all drivers in the system which implement the Interface.
 
 The `accessor` macro provides a way to declare a dependency on a sibling driver for a specific function.

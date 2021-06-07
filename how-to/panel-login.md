@@ -33,16 +33,16 @@ Auto-login provides an option for devices or environments which may not support 
 ## Step 2: Encode Username and Password
 
 In this step, you will encode the touch panel users email address and password into a base64 string.
-Use a base64 encoding service such as [base64 Encoder](https://www.base64encode.net/). 
+Use a base64 encoding service such as [base64 Encoder](https://www.base64encode.net/).  
 
 1. Encode the users email and password in the following format: `u=touchpanel@placeos.com&p=123456`
 2. Once encoded, the above example will be: `dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
 
 ## Step 3: Construct URL for Applications
 
-To allow the endpoint auto login to work, construct the URL using the encoded credentials. 
+To allow the endpoint auto login to work, construct the URL using the encoded credentials.  
 
-1. The first part of the URL will be your PlaceOS domain followed by `login/unattended.html?`. 
+1. The first part of the URL will be your PlaceOS domain followed by `login/unattended.html?`.  
 For example: `https://PLACEOS.DOMAIN/login/unattended.html?`
 2. Now add the encoded credentials: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
 3. Finally, add the path to the desired application, for an AV control application this would be: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2&continue=/control/`
@@ -51,7 +51,7 @@ For example: `https://PLACEOS.DOMAIN/login/unattended.html?`
 
 If there are more query parameters in the URL after `#` then they will need to be [URL encoded](https://www.urlencoder.org/).
 
-This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces. 
+This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces.  
 
 `?`, `=`, `&` and `#` are the main characters that need encoding.
 

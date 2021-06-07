@@ -4,7 +4,7 @@ description: Tried and tested products and vendors that work with PlaceOS
 ---
 
 The PlaceOS Platform is vendor agnostic, meaning that it works with any other hardware or software.
-It has no direct requirements for specific equipment. 
+It has no direct requirements for specific equipment.  
 
 Here you will find a list of compatible products that have been fully tested with PlaceOS.
 Everything below delivers reliable and consistent results on the platform.
@@ -12,7 +12,7 @@ Everything below delivers reliable and consistent results on the platform.
 ## User Interface Devices (by OS) {#UI-devices}
 
 <!--tabs start-->
-# Chrome 
+# Chrome  
 
   |Manufacturer |Model | Use Case | Notes | PoE | Glass Mount
   |---| ---|---|---|---|---|

@@ -5,7 +5,7 @@ sidebar_position: 4
 ---
 <!-- # Systems -->
 
-A *system* is the main logical building blocks within PlaceOS. 
+A *system* is the main logical building blocks within PlaceOS.  
 They contain three components:
 - A collection of [modules](modules.md)
 - [Settings](settings.md) which will apply to the system and modules in it
@@ -17,7 +17,7 @@ They contain three components:
 ## Purpose
 
 Systems often represent physical spaces, such as meeting rooms.
-They can also represent connected items which run across physical spaces, such as a range of digital signage. 
+They can also represent connected items which run across physical spaces, such as a range of digital signage.  
 Otherwise, they can represent a non-physical system with data inputs and outputs, such as a payment portal.
 
 ## Systems and Zones

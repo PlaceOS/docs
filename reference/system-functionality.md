@@ -10,22 +10,22 @@ Below is a list of high level functions that PlaceOS is capable of and the techn
 <!-- Can rearrange as a table if needed -->
 
 ### Log in with SSO
-Users can log on using existing enterprise credentials. 
+Users can log on using existing enterprise credentials.  
 They do not need to “sign up” nor remember a new user account/password.  
 
 **Requirement**   
-Integration with enterprise identity providers via SAML2 or OAuth2. 
+Integration with enterprise identity providers via SAML2 or OAuth2.  
 Examples:
 - Azure AD Enterprise Application
 - AD FS
 - Google Workspace (GSuite) authentication
 
 ### Book Rooms
-PlaceOS web apps are able to search and book room & user Calendars from the enterprise directory. 
-Enterprise directories include Office 365, Exchange Online, Google Workspace (GSuite) etc.  
+PlaceOS web apps are able to search and book room & user Calendars from the enterprise directory.  
+Enterprise directories include Office 365, Exchange Online, Google Workspace (GSuite) etc.   
 
 **Requirement**  
-Office 365/Exchange Online or Google Calendar: 
+Office 365/Exchange Online or Google Calendar:  
 - Integration with Microsoft Graph API via an Azure “Registered App”
 - All required Calendars and Users must be accessible via MS Graph API *or* Google Calendar API if users are on GSuitexs
 
@@ -33,13 +33,13 @@ Office 365/Exchange Online or Google Calendar:
 PlaceOS web apps or analytics are able to show or track live sensor data, such as:
 - Desk occupancy
 - In-room people count
-- Air quality 
+- Air quality  
 
 **Requirement**   
 - Compatible PlaceOS Driver for the integration (device/service)
 - Network connectivity to the Cisco DNA Spaces integration or its gateway
 
-### Control devices 
+### Control devices  
 PlaceOS web apps or automations are able to send messages to edge devices over the network.
 These can control integrations or receive live status information.
 
@@ -57,8 +57,8 @@ Locations services such as:
 - Cisco Meraki RTLS
 - HP Aruba
 
-### Analytics for connected integrations 
-PlaceOS provides live and retrospective data for all connected integrations. 
+### Analytics for connected integrations  
+PlaceOS provides live and retrospective data for all connected integrations.  
 An analytics dashboard enables insights.
 
 **Requirement**  

@@ -19,7 +19,7 @@ Each module represents either:
 
 All modules have two broad functions on the system they control:
 
-1. **State**: status information about the integration or higher level logic they control. 
+1. **State**: status information about the integration or higher level logic they control.  
 Some examples of this kind of data could be:
    - Power status
    - Upcoming booking info
@@ -39,10 +39,10 @@ For logic modules, this enables / disables its functionality.
 
 ## Modules and Systems
 
-Modules must be a part of *at least* one [system](systems.md), but can be part of more than one system. 
+Modules must be a part of *at least* one [system](systems.md), but can be part of more than one system.  
 Each system can use the same module instance everywhere it's required.
 Examples of modules used this way could be:
 - A lighting gateway
 - Centrally installed audio-visual equipment
 - A common service such as a chatbot integration
- 
+  

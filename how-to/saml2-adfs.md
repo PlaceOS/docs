@@ -6,7 +6,7 @@ sidebar_position: 7
 ---
 
 Use this page in tandem with [Configuring PlaceOS for SAML2](configure-saml.md) if you are using AD FS.
-You can follow [Microsoft's instructions](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust) for most cases. 
+You can follow [Microsoft's instructions](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust) for most cases.  
 PlaceOS will use these four SAML2 claims:
 
 * First name

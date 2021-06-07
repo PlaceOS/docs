@@ -29,7 +29,7 @@ They work in different combinations to best suit the needs of each site.
  See the [Docker Image](https://hub.docker.com/r/bitnami/etcd) and [Source on GitHub](https://GitHub.com/etcd-io/etcd).
 
 ### RethinkDB
- Database for permanent storage of PlaceOS configuration. 
+ Database for permanent storage of PlaceOS configuration.  
  Configuration: Three node cluster in 3 different availability zones within same region for [HA](#HADC).  
  See the [Docker Image](https://hub.docker.com/_/rethinkdb) and [Source on GitHub](https://GitHub.com/rethinkdb/rethinkdb).
 
@@ -59,7 +59,7 @@ They work in different combinations to best suit the needs of each site.
  See the [Docker Image](https://hub.docker.com/r/placeos/rubber-soul) and [Source on GitHub](https://GitHub.com/PlaceOS/rubber-soul).
 
 ## High Availability and Distributed Control {#HADC}
-High availability works by distributing services through Availability Zones. 
+High availability works by distributing services through Availability Zones.  
 For platforms like AWS Fargate, containers are initially automatically distributed.
 If a zone becomes unavailable, containers are re-launched in an alternative Availability Zone.
 
@@ -67,29 +67,29 @@ If a zone becomes unavailable, containers are re-launched in an alternative Avai
 
 ### Components
 **[Drivers](overview/drivers.md)** exist as files inside the PlaceOS core containers.
-PlaceOS Core creates a separate process for each Driver in use. 
+PlaceOS Core creates a separate process for each Driver in use.  
 This will serve all the Modules (instances) of this Driver.
 
 **[Modules](overview/modules.md)** are instances of a Driver, that represent a single real-world device/service.
 They are distributed among the instances of core and exist in memory of the PlaceOS core containers.
 Modules reflect their runtime state in Redis, making it available for other components of the system
 
-The PlaceOS Backoffice web application manages them both via PlaceOS REST-API. 
+The PlaceOS Backoffice web application manages them both via PlaceOS REST-API.  
 It updates module configuration via RethinkDB.
 
 
-### Service Discovery 
-Instances of PlaceOS Core advertise their existence to an etcd cluster as they come online. 
-They also query etcd to discover other active instances. 
-Each service continues to advertise it’s existence with the short TTL while it's are online. 
-If a service is offline, etcd will automatically remove it’s entry  after the TTL expires. 
+### Service Discovery  
+Instances of PlaceOS Core advertise their existence to an etcd cluster as they come online.  
+They also query etcd to discover other active instances.  
+Each service continues to advertise it’s existence with the short TTL while it's are online.  
+If a service is offline, etcd will automatically remove it’s entry  after the TTL expires.  
 Interested services are made aware of any changes to the cluster so they can rebalance.
 
 ### Distribution of Modules across Cores {#multi-core}
-Rendezvous hashing determines the module distribution across active instances of PlaceOS Cores. 
+Rendezvous hashing determines the module distribution across active instances of PlaceOS Cores.  
 It also alters the distribution when a core goes online or offline.
 All Cores will push runtime Module state to Redis where other components can access it.
-That state can persist the availability of the Core. 
+That state can persist the availability of the Core.  
 
 
 *[SSO]: Single Sign On  

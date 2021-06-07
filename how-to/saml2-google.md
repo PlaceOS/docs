@@ -5,7 +5,7 @@ description: Steps required for enabling SAML2 sign on for PlaceOS on Google Wor
 sidebar_position: 6
 ---
 
-PlaceOS uses a Custom SAML App to provide integrated SSO via Google User Authentication. 
+PlaceOS uses a Custom SAML App to provide integrated SSO via Google User Authentication.  
 For detailed steps, see [Google's guide on setting up SAML](https://support.google.com/a/answer/6087519?hl=en)
 
 PlaceOS requires:
@@ -28,8 +28,8 @@ Example: `https://staffapp.placeos/auth/adfs/callback?id=adfs-XXXXX`
 
 ### Entity ID
 The Entity ID is the Audience Restriction.
-It dictates the intended entity or audience for the SAML Assertion. 
-This field is frequently referred to as the "Entity ID" or "Audience URI" by vendors. 
+It dictates the intended entity or audience for the SAML Assertion.  
+This field is frequently referred to as the "Entity ID" or "Audience URI" by vendors.  
 It can technically be any string of data up to 1024 characters long.
 Most commonly it's in the form of a URL that contains the Service Provider's name, and is often the same URL as the ACS.
 

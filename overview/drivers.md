@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 <!-- # Drivers -->
 
-_Drivers_ are the core components of the PlaceOS platform. 
+_Drivers_ are the core components of the PlaceOS platform.  
 They combine to help different parts of the digital ecosystem interact with each other.
 PlaceOS has drivers that fall into one of two categories:
 
@@ -17,7 +17,7 @@ PlaceOS has drivers that fall into one of two categories:
 ## Logic Drivers
 - **Coordinate** interactions between modules
 - Don't map to specific physical objects
-- Represent abstract or conceptual functions 
+- Represent abstract or conceptual functions  
 - May use a variety of devices or software platforms
 
 <!-- images pending asset folder or mermaid.js -->

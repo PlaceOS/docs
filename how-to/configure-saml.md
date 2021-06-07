@@ -5,10 +5,10 @@ description: Steps required for enabling SAML sign on for users logging in to Pl
 sidebar_position: 4
 ---
 
-By default, PlaceOS uses local authentication. 
-An admin account is generated upon initial deployment. 
+By default, PlaceOS uses local authentication.  
+An admin account is generated upon initial deployment.  
 The administrator can manually create user accounts in Backoffice (on the Users tab).
-We recommend switching to federated authentication. 
+We recommend switching to federated authentication.  
 
 
 ## Prerequisites
@@ -21,9 +21,9 @@ We recommend switching to federated authentication.
 
 1. Login as an admin to Backoffice
 2. On the **Domains** tab, select the Domain that represents the URL where you wish to enable SAML
-3. In the **Authentication** section click **Add new** 
+3. In the **Authentication** section click **Add new**
 
-This will open up the SAML form. 
+This will open up the SAML form.  
 Here is a description of each field:
 
 - `Name`: generic field for identifying the SSO
@@ -38,7 +38,7 @@ Here is a description of each field:
     -  Typically leave this blank on first save, and it will fill in the default value
     -  Clients sometimes request you change these to match their system
 - `Assertion URL (Reply URL / Callback URL)`: the PlaceOS URL that SSO sends data back to - to log someone in
-    -  First set this to the base domain of the application. 
+    -  First set this to the base domain of the application.  
     After saving this configuration for the first time, it will generate an ID (`adfs-XXXXXX`)
     -  See the image below and use the generated unique ID to build the Assertion URL
 - `Certificate Fingerprint / Full Certificate`: user for verifying a signed login request
@@ -79,9 +79,9 @@ You will need to configure your SAML Identity provider dashboard.
 From the above steps you will need:
 - The **Issuer** (also known as the **Identifier**)
 - The **Assertion URL** (also known as the **Callback URL**)
-- The **Login URL** which is the homepage of the app 
-- The **Metadata URL** (optional). 
-This can XML file contains the above information and can be fed into to some configuration dashboards (like ADFS). 
+- The **Login URL** which is the homepage of the app  
+- The **Metadata URL** (optional).  
+This can XML file contains the above information and can be fed into to some configuration dashboards (like ADFS).  
 
 
 This process will vary by provider, see the below guides for common options:
@@ -97,7 +97,7 @@ Once you have tested the Login URL above you can update the default login page f
 
 - Click the edit icon for the Domain (above the authentication tab)
 - Set the login URL to `/auth/login?provider=adfs&id=[ADFS-ID-HERE]&continue={{url}}`, replacing the `[ADFS-ID-HERE]` and leaving the `{{url}}` as is
-- Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout 
+- Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout  
 
 
 <!-- ![Image alt-text](images/image2.png "image_tooltip") -->
@@ -114,7 +114,7 @@ Then paste the XML into [Pretty Print](https://www.samltool.com/prettyprint.php)
 
 There are two methods of getting SSO data, described below:
 
-1. If you have an account you can use to test  
+1. If you have an account you can use to test   
 2. If the client is logging in and you have access to logs
 
 
@@ -123,8 +123,8 @@ There are two methods of getting SSO data, described below:
 1. Open the Chrome or Firefox inspection tool
 2. Go to the network tab
 3. Select: **preserve log**
-4. Go through the login flow. 
-The request coming back to the assertion URL is the one you want to inspect. 
+4. Go through the login flow.  
+The request coming back to the assertion URL is the one you want to inspect.  
 Assertion URL: `/auth/adfs/callback?id=[ADFS-ID-HERE]`
 
 

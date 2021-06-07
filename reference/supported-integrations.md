@@ -5,7 +5,7 @@ description: Devices and services which are ready to integrate with PlaceOS
 
 <!-- Do not remove deprecated integrations, move them to the last category. Jon's request. -->
 
-PlaceOS has a range of pre-built drivers for integrating with third party services and devices. 
+PlaceOS has a range of pre-built drivers for integrating with third party services and devices.  
 Drivers are written in [Crystal Lang](https://crystal-lang.org/) and based on our [Framework](https://github.com/PlaceOS/driver).
 <!-- consider the explain page for Crystal Lang -->
 
@@ -15,7 +15,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 ## Authentication
 * OAuth2 (JWT)
 * SAML2
-* Azure AD B2C for external 
+* Azure AD B2C for external  
 
 ## Directory Services
 * Azure AD (via MS Graph API)
@@ -125,4 +125,4 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Gantner Relaxx Lockers
 
 ## Legacy or deprecated integrations
-* IBM Domino 
+* IBM Domino  

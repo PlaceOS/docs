@@ -22,18 +22,18 @@ PlaceOS Frontends uses Angular 12 and TypeScript 4.2.4.
 
 ## TypeScript References and Tooling
 
-The [TypeScript Handbook](https://www.TypeScriptlang.org/docs/handbook) provides detailed documentation specifically related to TypeScript. 
+The [TypeScript Handbook](https://www.TypeScriptlang.org/docs/handbook) provides detailed documentation specifically related to TypeScript.  
 
 PlaceOS uses [NX](https://nx.dev/) tools to assist with testing and building JavaScript Applications.
 
 NX adds [Jest](https://jestjs.io/) for Unit Testing and [Cypress](https://www.cypress.io/) for Integration and End-to-End Testing.
 
-The [Angular CLI](https://angular.io/cli) lets you develop, scaffold and maintain Angular applications. 
+The [Angular CLI](https://angular.io/cli) lets you develop, scaffold and maintain Angular applications.  
 It's used with PlaceOS frontend applications.
 
 ## Automated Browser Testing
 
-Automated browser testing can check application test cases. 
+Automated browser testing can check application test cases.  
 Any [Selenium](https://www.selenium.dev/) based automated test suite would be suitable for this purpose.
 One possible tool is [Katalon Studio](https://www.katalon.com/).
 

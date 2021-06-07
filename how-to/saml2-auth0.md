@@ -11,7 +11,7 @@ You should follow [Auth0 instructions](https://auth0.com/docs/dashboard/guides/a
 
 ## Configuration
 
-* The `Name` of the application can be the domain name of your instance of PlaceOS 
+* The `Name` of the application can be the domain name of your instance of PlaceOS  
 * On the `Addons` tab, enable SAML2 Web App and use [these steps](https://auth0.com/docs/protocols/saml/saml2webapp-tutorial) as a guide
 * Set the `Application Callback URL` to match the `Assertion URL` in PlaceOS, e.g. `https://auth/adfs/callback?id=adfs-XXXXXX`
 * Paste in the below for `Settings`:

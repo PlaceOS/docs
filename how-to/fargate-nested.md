@@ -9,11 +9,11 @@ sidebar_position: 1
 ## Overview
 
 This page assists with deploying PlaceOS on AWS using CloudFormation templates.
-The templates configure a PlaceOS Fargate deployment including an optional VPC configuration. 
-The basic premise is: 
+The templates configure a PlaceOS Fargate deployment including an optional VPC configuration.  
+The basic premise is:  
 
-1) Upload the nested templates to an s3 bucket  
-1) Orchestrate the deployment using a root stack template 
+1) Upload the nested templates to an s3 bucket   
+1) Orchestrate the deployment using a root stack template  
 
 You can use the `upload-s3.sh` script in the AWS command-line tool to upload the required files to a configurable s3 bucket.
 
@@ -41,13 +41,13 @@ The root stack requires the following files and directory structure:
 - **`init`:** `fargate/init-service.yml`
 
 ## VPC Architecture `infra/vpc.yml` {#architecture}
-The **VPC** root stack template `infra/vpc.yml` deploys two private and two public subnets. 
+The **VPC** root stack template `infra/vpc.yml` deploys two private and two public subnets.  
 For each of these the user can configure:
 
-- CIDR ranges 
-- An internet gateway 
-- Two NAT gateways 
-- Routes and route tables 
+- CIDR ranges  
+- An internet gateway  
+- Two NAT gateways  
+- Routes and route tables  
 
 The application load balancer is the only component that should deploy in public subnets.
 
@@ -69,19 +69,19 @@ The required parameters are:
 - **`VpcCIDR`** IP range (CIDR notation) for the VPC
 
 ## AWS `EnvironmentName` parameter and Stack naming {#Environment-Name}
-The `EnvironmentName` parameter's uses include: 
-- Tagging 
-- Service discovery 
+The `EnvironmentName` parameter's uses include:  
+- Tagging  
+- Service discovery  
 - Linking outputs of templates with inputs of later templates
 
 *PlaceOS* is the default but each deployment in the same VPC should configure its own `EnvironmentName`.
-The Stack name you choose for each component has no effect on the function of the deployment. 
+The Stack name you choose for each component has no effect on the function of the deployment.  
 
 ## <i>init</i>: `fargate/init-service.yml` {#init}
-[init](https://github.com/PlaceOS/init) initializes the PlaceOS instance and is the final step in the deployment. 
- 
+[init](https://github.com/PlaceOS/init) initializes the PlaceOS instance and is the final step in the deployment.  
+  
 :::info  
-This service will never actually finish as the task will exit after it has run. 
+This service will never actually finish as the task will exit after it has run.  
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
 :::
 

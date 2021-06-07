@@ -10,10 +10,10 @@ Security Assertion Markup Language (SAML) is an open standard that allows Identi
 
 SAML is an umbrella standard that covers federation, identity management and SSO.
 
-The SAML specification defines three roles: 
-- The principal (typically a human user) 
-- The Service Provider (SP) 
-- The Identity Provider <i>(IdP)</i> 
+The SAML specification defines three roles:  
+- The principal (typically a human user)  
+- The Service Provider (SP)  
+- The Identity Provider <i>(IdP)</i>  
 
 In the primary use case addressed by SAML, the principal requests a service from the Service Provider.
 The Service Provider requests and obtains an authentication assertion from the Identity Provider.
