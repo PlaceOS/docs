@@ -115,6 +115,7 @@ rules:
     - Pexip
     - PJLink
     - PlaceOS
+    - PoE
     - PointGrab
     - Polycom
     - PowerSoft
@@ -133,7 +134,9 @@ rules:
     - Vergesense
     - Webex
     - webhook
+    - Whispir
     - Wolfvision
+    - Xovis
 
 
 

@@ -14,25 +14,25 @@ Everything below delivers reliable and consistent results on the platform.
 <!--tabs start-->
 # Chrome 
 
-  |Manufacturer |Model | Use Case | Notes
-  |---| ---|---|---|
-  AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br/>Room Control |Supports remote management via Google CDM.|
-  AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.
-  <i>InTouch</i>|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.
+  |Manufacturer |Model | Use Case | Notes | PoE | Glass Mount
+  |---| ---|---|---|---|---|
+  AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br/>Room Control |Supports remote management via Google CDM.|Adapter|No
+  AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.|Yes|NA
+  <i>InTouch</i>|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.|No|No
 
 # Android
 
-|Manufacturer |Model | Use Case | Notes
-|---| ---|---|---|
-QBic|[TD-1060P](https://www.qbictechnology.com/td-1060slim)|Room Booking, <br/>Room Control|Native Android Devices featuring full API that allows device configuration as part of a System in PlaceOS Backoffice. 
-Samsung|[Tab (all)](https://www.samsung.com/au/tablets/)|Room Booking, <br/>Room Control,<br/>Visitor Kiosks| Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration.<br/>Supports remote management via Moki.
-Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/products/mimo-adapt-iqv-10-1-digital-signage-tablet-with-leds-rk3288-processor-with-light-bars-mct-10hpq-poe-2lb)|Room Booking, <br/>Room Control|Mimo 10" Panel includes side LED Light Bars that PlaceOS can control as room availability indicators.<br/>Supports remote management via Moki.
+|Manufacturer |Model | Use Case | Notes | PoE | Glass Mount
+|---| ---|---|---|---|---|
+QBic|[TD-1060P](https://www.qbictechnology.com/td-1060slim)|Room Booking, <br/>Room Control|Native Android Devices featuring full API that allows device configuration as part of a System in PlaceOS Backoffice.|Yes|Yes
+Samsung|[Tab (all)](https://www.samsung.com/au/tablets/)|Room Booking, <br/>Room Control,<br/>Visitor Kiosks| Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration.<br/>Supports remote management via Moki.|No|No
+Mimo|[MCT-10HPQ-POE-2LB](https://www.mimomonitors.com/collections/10-1-tablets/products/mimo-adapt-iqv-10-1-digital-signage-tablet-with-leds-rk3288-processor-with-light-bars-mct-10hpq-poe-2lb)|Room Booking, <br/>Room Control|Mimo 10" Panel includes side LED Light Bars that PlaceOS can control as room availability indicators.<br/>Supports remote management via Moki.|Adapter|No
 
 # Apple
 
-|Manufacturer |Model | Use Case | Notes
-|---| ---|---|---|
-Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Control<br/>Visitor Kiosks|Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration. <br/> Supports remote management via Moki.<br/> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)
+|Manufacturer |Model | Use Case | Notes | PoE | Glass Mount
+|---| ---|---|---|---|---|
+Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Control<br/>Visitor Kiosks|Recommend using the Chrome Kiosk App and lock out the device Home Button to prevent unauthorized access/changes to the device configuration. <br/> Supports remote management via Moki.<br/> Suggested mounting Solution: [Optica Pro LED™ Enclosure for iPad mini 2/3/4/5](https://www.armoractive.com/products/optica-pro-LED-iPad-mini3.aspx)|Third-Party|Third-Party
 
 <!--tabs end-->
 
@@ -64,3 +64,5 @@ Apple|[iPad (all)](https://www.apple.com/au/ipad/)|Room Booking, <br/>Room Contr
 [Ubuntu server](https://ubuntu.com/server)|18.04 LTS
 [Red Hat Enterprise Linux ](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)|7+
 
+
+*[PoE]: Power over Ethernet
