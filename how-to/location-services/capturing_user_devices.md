@@ -172,7 +172,7 @@ if ($resultArr.length -gt 0) {
 
 ### Querying a MS Network Policy Server (RADIUS)
 
-This allows us to grab MAC addresses of BYOD devices. Useful if tracking mobile phones on the wifi is desirable.
+This allows us to grab MAC addresses of BYOD devices. Useful if tracking mobile phones on the Wi-Fi is desirable.
 
 ```powershell
 # Required for reliable Resolve-DnsName.

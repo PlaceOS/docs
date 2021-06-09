@@ -104,6 +104,6 @@ Such as an event in a meeting room
 ```
 
 
-## Configuring Meraki
+## Configuring Cisco Meraki
 
-See the [Meraki Wireless Tracking](meraki-tracking.md) guide.
+See the [Cisco Meraki Wireless Tracking](meraki-tracking.md) guide.

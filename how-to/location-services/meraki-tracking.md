@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Meraki wireless tracking
 
-Configuring PlaceOS to interact with Meraki wireless systems
+Configuring PlaceOS to interact with Cisco Meraki wireless systems
 
 
 ## Prerequisites
@@ -57,7 +57,7 @@ meraki_api_key: configure for the dashboard API
    * The final webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api
    * If you goto this URL it should return the validator code
 
-7. Provide the webhook URL to the Meraki administrator
+7. Provide the webhook URL to the Cisco Meraki administrator
    * Request they send you the secret and the validator they configure
    * Update these on the dashboard driver in backoffice
    * Ask the administrator to validate the URL once again
@@ -65,7 +65,7 @@ meraki_api_key: configure for the dashboard API
 
 ### Configuring location tracking
 
-To enable device learning provide a `default_network_id` setting, this id should look like: `L_68xxx50007xxx0`
+To enable device learning provide a `default_network_id` setting, this ID should look like: `L_68xxx50007xxx0`
 This will query for devices on the network and map MAC addresses to usernames.
 
 This enables the location functionality via the `locate_user(email, username)` function.
@@ -76,7 +76,7 @@ See the location services document for more information on how this works.
 
 To configure a map id to zone mapping
 
-1. In backoffice execute `Dashboard.sync_floorplan_sizes`
+1. In Backoffice execute `Dashboard.sync_floorplan_sizes`
 2. View and then copy the result, this shows the IDs and floor names
 3. Configure the following settings in the driver:
 
@@ -94,4 +94,4 @@ floorplan_mappings:
 
 ```
 
-`level_name` is there as a hint, building and level ids are the only requirement
+`level_name` is there as a hint, building and level IDs are the only requirement
