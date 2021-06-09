@@ -41,26 +41,26 @@ meraki_api_key: configure for the dashboard API
 ```
 
 3. Add an instance of the driver to your tracking system
-   * start the module
+   * Start the module
 
 4. Create a trigger called `Meraki Scanner`
    * Tick the enable webhook checkbox
-   * add GET and POST to the supported methods
+   * Add GET and POST to the supported methods
 
 5. Add the trigger to your tracking system
-   * ensure it is enabled
-   * ensure `execute` is also enabled
+   * Ensure it is enabled
+   * Ensure `execute` is also enabled
 
 6. Click the link icon to copy the webhook link to your clipboard
-   * the webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98
-   * add the following to the end of the webhook: `&exec=true&mod=Dashboard&method=scanning_api`
-   * so the final webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api
+   * The webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98
+   * Add the following to the end of the webhook: `&exec=true&mod=Dashboard&method=scanning_api`
+   * The final webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api
    * If you goto this URL it should return the validator code
 
 7. Provide the webhook URL to the Meraki administrator
-   * request they send you the secret and the validator they configure
-   * update these on the dashboard driver in backoffice
-   * ask the administrator to validate the URL once again
+   * Request they send you the secret and the validator they configure
+   * Update these on the dashboard driver in backoffice
+   * Ask the administrator to validate the URL once again
 
 
 ### Configuring location tracking
@@ -76,9 +76,9 @@ See the location services document for more information on how this works.
 
 To configure a map id to zone mapping
 
-1. in backoffice execute `Dashboard.sync_floorplan_sizes`
-2. view and then copy the result, this shows the IDs and floor names
-3. configure the following settings in the driver:
+1. In backoffice execute `Dashboard.sync_floorplan_sizes`
+2. View and then copy the result, this shows the IDs and floor names
+3. Configure the following settings in the driver:
 
 ```yaml
 
