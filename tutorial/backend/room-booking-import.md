@@ -6,7 +6,7 @@ sidebar_position: 2
 
 The PlaceOS room bookings module performs multiple roles:
   * A cache of upcoming bookings for staff apps
-  * Data for realtime analytics (room booked, in-use, empty, etc)
+  * Data for real-time analytics (room booked, in-use, empty, etc)
   * Data for room booking panel displays
   * Data for maps
 
@@ -45,7 +45,7 @@ dependencies:
 
 ```
 
-The script below supports redistribution and customisation via the command line options.
+The script below supports redistribution and customization via the command-line options.
 You can also update the defaults and run it without any options.
 
 ```ruby
