@@ -1,34 +1,35 @@
-# Room bookings
+---
+title: Import Bookable Rooms
+description: Steps required to import existing rooms into PlaceOS
+sidebar_position: 2
+---
 
 The PlaceOS room bookings module performs multiple roles:
+  * A cache of upcoming bookings for staff apps
+  * Data for realtime analytics (room booked, in-use, empty, etc)
+  * Data for room booking panel displays
+  * Data for maps
 
-* a cache of upcoming bookings for staff apps
-* data for realtime analytics (room booked, in-use, empty, etc)
-* data for room booking panel displays
-* data for maps
+A typical configuration consists of:
+  * A system with a resource email addresses defined
+  * A unique instance of the PlaceOS Bookings module for that room (logic module)
+  * A shared instance of the PlaceOS Calendar module, for making requests to the calendaring system
 
-A typical configuration consists of
-
-* a system with a resource email addresses defined
-* a unique instance of the PlaceOS Bookings module for that room (logic module)
-* a shared instance of the PlaceOS Calendar module, for making requests to the calendaring system
-
-The script below runs through the level zones and updates any systems with a
-resource email address to the standard configuration.
+The script below runs through the level zones and updates any systems with a resource email address to the standard configuration.
 
 
 ## Prerequisites
 
-Obtain the client id and secret from the domains tab in backoffice.
+Obtain the client ID and secret from the domains tab in backoffice.
 Then you can use any valid administration account credentials for that domain.
 
-* create a calendar module that will be shared between all systems, note the module id
-* add the Bookings driver to the system and note the driver id
+  * Create a calendar module that will be shared between all systems, note the module ID
+  * Add the Bookings driver to the system and note the driver ID
 
 
 ## Room bookings import script
 
-The only dependency is the PlaceOS crystal client
+The only dependency is the PlaceOS crystal client.
 
 ```yml
 
@@ -44,8 +45,8 @@ dependencies:
 
 ```
 
-The script below supports redistribution and customisation via the command line options
-however you can also update the defaults and run it without any options
+The script below supports redistribution and customisation via the command line options.
+You can also update the defaults and run it without any options.
 
 ```ruby
 
