@@ -4,7 +4,7 @@ description: Configure Meraki Wireless Tracking on PlaceOS
 sidebar_position: 3
 ---
 
-# Meraki wireless tracking
+# Cisco Meraki wireless tracking
 
 Configuring PlaceOS to interact with Cisco Meraki wireless systems
 
@@ -12,23 +12,22 @@ Configuring PlaceOS to interact with Cisco Meraki wireless systems
 ## Prerequisites
 
 For more detail information on requirements please read the following:
-https://docs.google.com/document/d/1Ry2rZxSWgcRhJSNaFPbc7vetQtD1IsO_JD3KV_9wb5U/edit
+[People Finding with Meraki on PlaceOS](people-finding-with-meraki.md)
 
 * Enable the scanning API (provides x, y coordinates of MAC addresses)
-  * https://developer.cisco.com/meraki/scanning-api/#!introduction/scanning-api
+  * [Cisco Meraki Scanning API](https://developer.cisco.com/meraki/scanning-api/#!introduction/scanning-api)
   * Use Version 3 of the API
   * PlaceOS requires the secret and validator codes
 * Enable the dashboard API (provides IP address and usernames, mapping to MAC addresses)
-  * https://documentation.meraki.com/zGeneral_Administration/Other_Topics/The_Cisco_Meraki_Dashboard_API
+  * [Cisco Meraki Dashboard API](https://documentation.meraki.com/zGeneral_Administration/Other_Topics/The_Cisco_Meraki_Dashboard_API)
   * Use Version 1 of the API
   * PlaceOS requires the API key
 
 
 ## Backoffice configuration
 
-1. Add the following driver from our [standard repository](https://github.com/PlaceOS/drivers)
-
-* Cisco Meraki Dashboard
+1. Add the following driver from our [Driver Repository](https://github.com/PlaceOS/drivers):
+   * Cisco Meraki Dashboard
 
 2. Configure the following settings on the driver:
 
@@ -52,14 +51,14 @@ meraki_api_key: configure for the dashboard API
    * Ensure `execute` is also enabled
 
 6. Click the link icon to copy the webhook link to your clipboard
-   * The webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98
+   * The webhook will look like: `https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98`
    * Add the following to the end of the webhook: `&exec=true&mod=Dashboard&method=scanning_api`
-   * The final webhook will look like: https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api
+   * The final webhook will look like: `https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api`
    * If you goto this URL it should return the validator code
 
 7. Provide the webhook URL to the Cisco Meraki administrator
    * Request they send you the secret and the validator they configure
-   * Update these on the dashboard driver in backoffice
+   * Update these on the dashboard driver in Backoffice
    * Ask the administrator to validate the URL once again
 
 
@@ -72,9 +71,9 @@ This enables the location functionality via the `locate_user(email, username)` f
 See the location services document for more information on how this works.
 
 
-#### Meraki Maps to PlaceOS Zones
+#### Cisco Meraki Maps to PlaceOS Zones
 
-To configure a map id to zone mapping
+To configure a map ID to zone mapping
 
 1. In Backoffice execute `Dashboard.sync_floorplan_sizes`
 2. View and then copy the result, this shows the IDs and floor names
