@@ -1,3 +1,9 @@
+---
+title: Capture User Devices
+description: Map Usernames to MAC Addresses via IP Addresses
+sidebar_position: 2
+---
+
 # Discovering User Devices
 
 For mapping usernames to MAC addresses via IP address.

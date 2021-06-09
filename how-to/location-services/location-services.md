@@ -1,4 +1,10 @@
-# Location services
+---
+title: Location Services
+description: Overview on Location Services Integration on PlaceOS
+sidebar_position: 1
+---
+
+## Location services
 
 Location services are any driver that implement the [Locatable Interface](https://github.com/PlaceOS/driver/blob/master/src/placeos-driver/interface/locatable.cr)
 
@@ -100,4 +106,4 @@ Such as an event in a meeting room
 
 ## Configuring Meraki
 
-See the configuring meraki wireless tracking guide
+See the [Meraki Wireless Tracking](meraki-tracking.md) guide.
