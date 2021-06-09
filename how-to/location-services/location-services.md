@@ -8,12 +8,12 @@ sidebar_position: 1
 
 Location services are any driver that implement the [Locatable Interface](https://github.com/PlaceOS/driver/blob/master/src/placeos-driver/interface/locatable.cr)
 
-[The Location Service](https://github.com/PlaceOS/drivers/blob/master/drivers/place/location_services.cr) driver collects the responses of locatable modules in the same system and returns this as the result of a location search.
+The [Location Service](https://github.com/PlaceOS/drivers/blob/master/drivers/place/location_services.cr) driver collects the responses of locatable modules in the same system and returns this as the result of a location search.
 
 
 ## Response types
 
-The frontend is responsible for translating the search responses into a pin on a map.
+The frontend translates the search responses into a pin on a map.
 These are the supported formats:
 
 
@@ -21,7 +21,7 @@ These are the supported formats:
 
 Such as a location calculated by a wireless network
 
-```javascript
+```json
 
 {
   "location": "wireless",
@@ -50,7 +50,7 @@ Such as a location calculated by a wireless network
 
 Such as a desk
 
-```javascript
+```json
 
 {
   "location": "desk",
@@ -75,7 +75,7 @@ Such as a desk
 
 Such as an event in a meeting room
 
-```javascript
+```json
 
 {
   "location": "meeting",

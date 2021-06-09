@@ -53,6 +53,7 @@ rules:
     - '/backoffice/i'
     - '/(re)?balance(r)?/i'
     - '/integrat(ion|or)[s]?/i'
+    - '/locatable/i'
     - '/microservice[s]?/i'
     - '/pre-/i'
     - '/preconfigure[ds]?/i'
@@ -60,6 +61,8 @@ rules:
     - '/subnet/i'
     - '/tokeniz(er|ed|ing)?/i'
     - '/un-/i'
+    - '/untrusted/i'
+    - '/validator/i'
     - '/webhook[s]?/i'
     - Arial
     - AOpen
@@ -135,6 +138,7 @@ rules:
     - Webex
     - webhook
     - Whispir
+    - Wi-Fi
     - Wolfvision
     - Xovis
 

@@ -43,18 +43,18 @@ meraki_api_key: configure for the dashboard API
    * Start the module
 
 4. Create a trigger called `Meraki Scanner`
-   * Tick the enable webhook checkbox
-   * Add GET and POST to the supported methods
+   * Tick the `enable webhook` checkbox
+   * Add `GET` and `POST` to the supported methods
 
 5. Add the trigger to your tracking system
-   * Ensure it is enabled
+   * Ensure it's enabled
    * Ensure `execute` is also enabled
 
 6. Click the link icon to copy the webhook link to your clipboard
    * The webhook will look like: `https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98`
    * Add the following to the end of the webhook: `&exec=true&mod=Dashboard&method=scanning_api`
    * The final webhook will look like: `https://placeos.company.com/api/engine/v2/webhook/trig-FNo91rRWO1x/notify?secret=59ad63f98&exec=true&mod=Dashboard&method=scanning_api`
-   * If you goto this URL it should return the validator code
+   * If you go to this URL it should return the validator code
 
 7. Provide the webhook URL to the Cisco Meraki administrator
    * Request they send you the secret and the validator they configure
@@ -68,12 +68,12 @@ To enable device learning provide a `default_network_id` setting, this ID should
 This will query for devices on the network and map MAC addresses to usernames.
 
 This enables the location functionality via the `locate_user(email, username)` function.
-See the location services document for more information on how this works.
+See the [location services](location-services.md) document for more information on how this works.
 
 
 #### Cisco Meraki Maps to PlaceOS Zones
 
-To configure a map ID to zone mapping
+To configure a map ID to zone mapping:
 
 1. In Backoffice execute `Dashboard.sync_floorplan_sizes`
 2. View and then copy the result, this shows the IDs and floor names
@@ -93,4 +93,4 @@ floorplan_mappings:
 
 ```
 
-`level_name` is there as a hint, building and level IDs are the only requirement
+`level_name` is there for readability, building and level IDs are what is actually used.

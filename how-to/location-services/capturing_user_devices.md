@@ -6,15 +6,15 @@ sidebar_position: 2
 
 # Discovering User Devices
 
-For mapping usernames to MAC addresses via IP address.
-This requires multiple points of integration and these scripts capture the data from Windows Domains.
+This is for mapping usernames to MAC addresses via IP address.
+It requires multiple points of integration and captures data from Windows Domains.
 
 * We use [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) for IP address filtering
 
 ## Remote Event Query
 
-For grabbing user device details that are interacting with the domain controller.
-This grabs five minutes worth of details and should be run every five minutes.
+This grabs user device details that are interacting with the domain controller.
+It takes five minutes worth of details, so should run every five minutes.
 
 * [Event result code details](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768)
 * [Event details](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4768)
@@ -172,7 +172,8 @@ if ($resultArr.length -gt 0) {
 
 ### Querying a MS Network Policy Server (RADIUS)
 
-This allows us to grab MAC addresses of BYOD devices. Useful if tracking mobile phones on the Wi-Fi is desirable.
+This allows us to grab MAC addresses of BYOD devices.
+Useful if tracking mobile phones on the Wi-Fi is desirable.
 
 ```powershell
 # Required for reliable Resolve-DnsName.
@@ -284,8 +285,9 @@ if ($resultArr.length -gt 0) {
 
 ## Workstation Monitoring
 
-Where users log onto a shared resource and we want to know who is sitting at which workstation.
+This is for when users log onto a shared resource and we want to know who is sitting at which workstation.
 We should attach an event to particular events using the filter below. More details on how to set this up [are here](https://docs.google.com/document/d/14XIJbnvJBg23Qc_oc3JN5Ub0geETTSmTWr8Sd8YryLM/edit?usp=sharing)
+<!-- This page should be brought onto doc site & updated -->
 
 * [Event Type Details](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4624)
 
@@ -305,7 +307,7 @@ We should attach an event to particular events using the filter below. More deta
 
 ```
 
-This allows log off events to be be caught and the workstation marked as free.
+This catches log off events and marks the workstation as free.
 
 ```powershell
 
@@ -354,7 +356,7 @@ add-type @"
 
 ## Protocol violation errors
 
-Add this to ignore errors, see: https://stackoverflow.com/questions/35260354/powershell-wget-protocol-violation
+Add this to ignore errors, see this thread on [Powershell wget protocol violation](https://stackoverflow.com/questions/35260354/powershell-wget-protocol-violation)
 
 ```powershell
 
