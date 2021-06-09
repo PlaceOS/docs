@@ -4,7 +4,7 @@ description: Steps required to import existing rooms into PlaceOS
 sidebar_position: 2
 ---
 
-The PlaceOS room bookings module performs multiple roles:
+The PlaceOS room bookings module performs the following roles:
   * A cache of upcoming bookings for staff apps
   * Data for real-time analytics (room booked, in-use, empty, etc)
   * Data for room booking panel displays
@@ -20,8 +20,8 @@ The script below runs through the level zones and updates any systems with a res
 
 ## Prerequisites
 
-Obtain the client ID and secret from the domains tab in backoffice.
-Then you can use any valid administration account credentials for that domain.
+The client ID and secret from the domains tab in backoffice.
+You can use any valid administration account credentials for that domain.
 
   * Create a calendar module that will be shared between all systems, note the module ID
   * Add the Bookings driver to the system and note the driver ID
