@@ -1,7 +1,7 @@
 ---
 title: Add a Domain to PlaceOS
 description: Steps required for adding a domain to PlaceOS
-sidebar_position: 10
+sidebar_position: 2
 ---
 
 ## Overview
