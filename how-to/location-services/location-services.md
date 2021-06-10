@@ -21,7 +21,7 @@ These are the supported formats:
 
 Such as a location calculated by a wireless network
 
-```json
+```yaml
 
 {
   "location": "wireless",
@@ -38,7 +38,7 @@ Such as a location calculated by a wireless network
   "map_width": 1234.2,
   "map_height": 123.8,
 
-  // driver can include additional data to help with debugging
+  # driver can include additional data to help with debugging
   "meraki_floor_id": "g_727894289736675",
   "meraki_floor_name": "BUILDING Name - L2"
 }
@@ -50,21 +50,21 @@ Such as a location calculated by a wireless network
 
 Such as a desk
 
-```json
+```yaml
 
 {
   "location": "desk",
-  // the count of people at the location, desks will typically be 0 or 1
-  // however other location types could have more
+  # the count of people at the location, desks will typically be 0 or 1
+  # however other location types could have more
   "at_location": 1,
   "map_id": "desk-4-1006",
   "level": "zone_1234",
   "building": "zone_1234",
-  
-  // if provided can be used to look up user details
+
+  # if provided can be used to look up user details
   "mac": "66e0fd1279ce",
-  
-  // provided if known
+
+  # provided if known
   "capacity": 1
 }
 
@@ -75,17 +75,17 @@ Such as a desk
 
 Such as an event in a meeting room
 
-```json
+```yaml
 
-{
+[{
   "location": "meeting",
   "resource_calendars": ["meeting2.city1@org.com", "meeting8.city4@org.com"],
   "event_id": "meet-1234567",
   "ends_at": 1234567
-}
+},
 
-// Or for a desk or car-space booking etc
-// where the asset ID is the map id
+# Or for a desk or car-space booking etc
+# where the asset ID is the map id
 
 {
   "location": "booking",
@@ -95,11 +95,11 @@ Such as an event in a meeting room
   "building": "zone_1234",
   "level": "zone_1234",
   "ends_at": 1234567,
-  
+
   "mac": "placeos-user-id",
   "staff_email": "bob@tmart",
   "staff_name": "Bob Jane"
-}
+}]
 
 ```
 
