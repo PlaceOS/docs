@@ -83,6 +83,7 @@ rules:
     - Cognipoint
     - ControlSpace
     - Denon
+    - DisplayLink
     - DynaLite
     - Echo360
     - ElastiCache
@@ -90,6 +91,7 @@ rules:
     - etcd
     - Extron
     - Fargate
+    - FindMe
     - Floorsense
     - Foxtel
     - frontend
@@ -98,6 +100,7 @@ rules:
     - Gmail
     - GSuite
     - Helvar
+    - Huawei
     - init
     - IoT
     - Kentix
@@ -121,6 +124,7 @@ rules:
     - PoE
     - PointGrab
     - Polycom
+    - PowerShell
     - PowerSoft
     - Pressac
     - proxying
@@ -165,11 +169,13 @@ rules:
     - "AWS CloudFormation"
     - "AWS ElastiCache"
     - "Cisco Meraki"
+    - "DisplayLink"
     - "Elasticsearch"
     - "init" # the service, otherwise spell out "initialize" etc (not handled)
     - "Kubernetes"
     - "NGINX"
     - "px"
+    - "PowerShell"
     - "RethinkDB"
     exclude:
     - 'Node(?:js)?'
@@ -182,6 +188,7 @@ filters:
   allowlist:
     allow:
     - '/<i>.*<\/i>/g'                         # idiomatic terms
-    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  #link text that is also in url
+    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  # link text that is also in url
+    - '/\{\#\S*\}/g'                          # header IDs often contain "imperfect english" 
     # getting around write-good's soft checks
     - '/requirement[s]?/i'
