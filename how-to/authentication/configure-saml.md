@@ -45,11 +45,11 @@ Here is a description of each field:
     -  Typically leave this blank on first save, and it will fill in the default value
     -  Clients sometimes request you change these to match their system
     -  Example:
-  |Name |Name_format| Friendly_name
-  --- | --- | ---
-  |email |urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified |E-Mail Address
-  |first_name |urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified |Given Name
-  |last_name |urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified |Surname
+  | Name | Name_format | Friendly_name |
+  | --- | --- | --- |
+  | email | urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified | E-Mail Address |
+  | first_name | urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified | Given Name |
+  | last_name | urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified | Surname |
 - `Assertion URL (Reply URL / Callback URL)`: the PlaceOS URL that SSO sends data back to - to log someone in
     -  First set this to the base domain of the application.
     After saving this configuration for the first time, it will generate an ID (`adfs_strat-XXXXXX`)
@@ -60,12 +60,12 @@ Here is a description of each field:
 - `Attribute Statements`: This maps requested attributes to database fields
     -  Typically leave this blank on first save, and it will fill in the default value
     -  Example:
-  |Name |Mappings
-  --- | ---
-  |email |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
-  |first_name |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
-  |last_name |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
-  |login_name |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+  | Name | Mappings |
+  | --- | --- |
+  | email | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress |
+  | first_name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname |
+  | last_name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname |
+  | login_name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress |
 
 Once you click save, it will generate an authentication ID.
 You can find it in the `/saml_auths` response on the Authentication tab.
