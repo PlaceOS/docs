@@ -1,14 +1,14 @@
 ---
 title: Add a Domain to PlaceOS
 description: Steps required for adding a domain to PlaceOS
-sidebar_position: 10
+sidebar_position: 2
 ---
 
 ## Overview
 
 This guide will step through the process of creating a domain and the associated application(s) that will exist on that domain. 
 
-You must create a domain before adding authentication sources (such as [SAML](../how-to/authentication/configure-saml.md)) to it.
+You must create a domain before adding authentication sources (such as [SAML](../../how-to/authentication/configure-saml.md)) to it.
 
 ## Prerequisites
 1. PlaceOS has been deployed
@@ -21,9 +21,9 @@ You must create a domain before adding authentication sources (such as [SAML](..
 3. Add the following fields:
    - `Name`: Can be anything to identify the domain, usually the domain itself i.e. `placeos.domain.com`
    - `Domain`: The actual domain, without a protocol i.e. `placeos.domain.com`
-   - `Login URL`: The URL redirected to when a user logs in.
+   - `Login URL`: The URL redirected to when a user logs in
       - You should usually set this to `/login?continue={{url}}`
-   - `Logout URL`: The URL redirected to when a user logs out.
+   - `Logout URL`: The URL redirected to when a user logs out
       - You should usually set this to `/auth/logout`
 
 ![Add Domain](./assets/add_domain.png)

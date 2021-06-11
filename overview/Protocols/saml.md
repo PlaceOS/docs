@@ -25,10 +25,10 @@ PlaceOS also supports Federated Authentication via SAML as the advised method of
 
 Under this configuration, by the SAML Standard, PlaceOS is the Service Provider (SP).
 
-Authentication providers can be associated with [Domains](../../how-to/add-domain.md) in PlaceOS.
+Authentication providers can be associated with [Domains](../../how-to/backoffice/add-domain.md) in PlaceOS.
 
 - [Configure SAML in PlaceOS](../../how-to/authentication/configure-saml.md)
-- [Add Domains in PlaceOS](../../how-to/add-domain.md)
+- [Add Domains in PlaceOS](../../how-to/backoffice/add-domain.md)
 
 ## Resources
 
