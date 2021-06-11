@@ -8,7 +8,7 @@ sidebar_position: 2
 
 This guide will step through the process of creating a domain and the associated application(s) that will exist on that domain. 
 
-You must create a domain before adding authentication sources (such as [SAML](../how-to/authentication/configure-saml.md)) to it.
+You must create a domain before adding authentication sources (such as [SAML](../../how-to/authentication/configure-saml.md)) to it.
 
 ## Prerequisites
 1. PlaceOS has been deployed
