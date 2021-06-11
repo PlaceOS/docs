@@ -21,9 +21,9 @@ You must create a domain before adding authentication sources (such as [SAML](..
 3. Add the following fields:
    - `Name`: Can be anything to identify the domain, usually the domain itself i.e. `placeos.domain.com`
    - `Domain`: The actual domain, without a protocol i.e. `placeos.domain.com`
-   - `Login URL`: The URL redirected to when a user logs in.
+   - `Login URL`: The URL redirected to when a user logs in
       - You should usually set this to `/login?continue={{url}}`
-   - `Logout URL`: The URL redirected to when a user logs out.
+   - `Logout URL`: The URL redirected to when a user logs out
       - You should usually set this to `/auth/logout`
 
 ![Add Domain](./assets/add_domain.png)
