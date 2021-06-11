@@ -5,10 +5,10 @@ description: Steps required for enabling SAML sign on for users logging in to Pl
 sidebar_position: 1
 ---
 
-By default, PlaceOS uses local authentication. 
-An admin account is generated upon initial deployment. 
+By default, PlaceOS uses local authentication.
+An admin account is generated upon initial deployment.
 The administrator can manually create user accounts in Backoffice (on the Users tab).
-We recommend switching to federated authentication. 
+We recommend switching to federated authentication.
 
 
 ## Prerequisites
@@ -21,31 +21,51 @@ We recommend switching to federated authentication.
 
 1. Login as an admin to Backoffice
 2. On the **Domains** tab, select the Domain that represents the URL where you wish to enable SAML
-3. In the **Authentication** section click **Add new** 
+3. In the **Authentication** section click **Add new**
 
-This will open up the SAML form. 
+This will open up the SAML form.
 Here is a description of each field:
 
 - `Name`: generic field for identifying the SSO
 - `Issuer (Identifier / Entity ID)`: this is what the SSO will use to identify this SSO integration
     -  Can be anything, typically use the DNS entry i.e. `staffapp.company.com`
+    -  Azure will be in the format: `spn:**client-id**`
+      - "Application (client) ID" can be found on the Overview page of your App Registration
+    -  OKTA will need the Issuer to be configured in the OKTA Application to match the value set here
 - `IDP target URL`: This is the URL where SSO will occur - the login page
     -  You can often guess it, but you can set it to any valid URL and change it later
     -  Request this URL when sending the metadata URL
+    -  Azure AD URLs are often in the format: https://login.microsoftonline.com/**tenant-ID**/saml2
+    -  OKTA URLs are often in the format: https://**okta.domain.com**/app/**app-name**/**app-id-number**/sso/saml
+    -  ADFS URLs are often in the format: https://adfs.myorganistaion.com/adfs/ls
+    -  Auth0 URLs are often in the format: https://myorganisation.auth0.com/samlp/
 - `Name Identifier Format`: the format of the response data
-    -  Typically leave this blank unless requested, and it will fill in the default value
+    -  Set to `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`
 - `Request Attributes`: these are the Active Directory fields requested to be sent to us
     -  Typically leave this blank on first save, and it will fill in the default value
     -  Clients sometimes request you change these to match their system
+    -  Example:
+  |Name |Name_format| Friendly_name
+  --- | --- | ---
+  |email |urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified |E-Mail Address
+  |first_name |urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified |Given Name
+  |last_name |urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified |Surname
 - `Assertion URL (Reply URL / Callback URL)`: the PlaceOS URL that SSO sends data back to - to log someone in
-    -  First set this to the base domain of the application. 
-    After saving this configuration for the first time, it will generate an ID (`adfs-XXXXXX`)
+    -  First set this to the base domain of the application.
+    After saving this configuration for the first time, it will generate an ID (`adfs_strat-XXXXXX`)
     -  See the image below and use the generated unique ID to build the Assertion URL
-- `Certificate Fingerprint / Full Certificate`: user for verifying a signed login request
+- `Certificate Fingerprint / Full Certificate`: used for verifying a signed login request
     -   Not required until after SSO configuration on the client-side
 - `UUID Attribute`: allows you to override the default unique ID returned by SSO to one of the requested attributes
 - `Attribute Statements`: This maps requested attributes to database fields
     -  Typically leave this blank on first save, and it will fill in the default value
+    -  Example:
+  |Name |Mappings
+  --- | ---
+  |email |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+  |first_name |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
+  |last_name |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
+  |login_name |http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
 
 Once you click save, it will generate an authentication ID.
 You can find it in the `/saml_auths` response on the Authentication tab.
@@ -79,9 +99,9 @@ You will need to configure your SAML Identity provider dashboard.
 From the above steps you will need:
 - The **Issuer** (also known as the **Identifier**)
 - The **Assertion URL** (also known as the **Callback URL**)
-- The **Login URL** which is the homepage of the app 
-- The **Metadata URL** (optional). 
-This can XML file contains the above information and can be fed into to some configuration dashboards (like ADFS). 
+- The **Login URL** which is the homepage of the app
+- The **Metadata URL** (optional).
+This can XML file contains the above information and can be fed into to some configuration dashboards (like ADFS).
 
 
 This process will vary by provider, see the below guides for common options:
@@ -97,7 +117,7 @@ Once you have tested the Login URL above you can update the default login page f
 
 - Click the edit icon for the Domain (above the authentication tab)
 - Set the login URL to `/auth/login?provider=adfs&id=[ADFS-ID-HERE]&continue={{url}}`, replacing the `[ADFS-ID-HERE]` and leaving the `{{url}}` as is
-- Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout 
+- Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout
 
 
 <!-- ![Image alt-text](images/image2.png "image_tooltip") -->
@@ -123,8 +143,8 @@ There are two methods of getting SSO data, described below:
 1. Open the Chrome or Firefox inspection tool
 2. Go to the network tab
 3. Select: **preserve log**
-4. Go through the login flow. 
-The request coming back to the assertion URL is the one you want to inspect. 
+4. Go through the login flow.
+The request coming back to the assertion URL is the one you want to inspect.
 Assertion URL: `/auth/adfs/callback?id=[ADFS-ID-HERE]`
 
 
