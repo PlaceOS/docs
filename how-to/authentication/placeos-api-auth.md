@@ -4,7 +4,7 @@ description: Steps required for authenticating against the PlaceOS API
 sidebar_position: 6
 ---
 
-Access to ACAEngine is secured via [OAuth2](https://auth0.com/docs/authorization/which-oauth-2-0-flow-should-i-use#is-the-client-a-native-mobile-app-).
+Access to PlaceOS is secured via [OAuth2](https://auth0.com/docs/authorization/which-oauth-2-0-flow-should-i-use#is-the-client-a-native-mobile-app-).
 Before interacting, your app or integration will need to authenticate and obtain a valid access token. 
 Once authenticated, this token must accompany all requests.
 
@@ -22,7 +22,7 @@ http example.com/api/control/systems bearer_token==<access token>
 
 ## Registering Your Application
 
-All applications using the ACAEngine API need to be registered in Backoffice. 
+All applications using the PlaceOS API need to be registered in Backoffice. 
 Details on this can be found in the [Add an Application](../backoffice/add-application.md) guide.
 
 Once registered, take note of the: 
@@ -38,8 +38,8 @@ Here's some recommendations based on common API uses:
 
 |Auth Flow |Recommended Use Case |
 |---|---|
-Implicit|Web, mobile and desktop apps communicating directly with the ACAEngine API.|
-Authorization Code|Web, mobile and desktop apps where your back-end communicates with the ACAEngine API on behalf of a user.|
+Implicit|Web, mobile and desktop apps communicating directly with the PlaceOS API.|
+Authorization Code|Web, mobile and desktop apps where your back-end communicates with the PlaceOS API on behalf of a user.|
 Password Grant|Server-to-server integration and highly trusted environments.|
 
 ### Implicit
@@ -66,15 +66,14 @@ URI fragments can be accessed from JavaScript with `document.location.hash`.
 
 :::caution
 If you included a `state` parameter (you should), this will also be returned and should be validated against your original request prior to commencing any interaction.
-
 :::
 
 
 ### Authorization Code
 
-When building application that contains server-side components you may find a need to provide users the ability to grant your infrastructure access to interact with the ACAEngine on their behalf. 
+When building application that contains server-side components you may find a need to provide users the ability to grant your infrastructure access to interact with the PlaceOS on their behalf. 
 
-This is commonly encountered if you have staff or venue app and your ACAEngine deployment is not accessible from public networks, or you may be interacting with the API asynchronously or in response to events from other systems.
+This is commonly encountered if you have staff or venue app and your PlaceOS deployment is not accessible from public networks, or you may be interacting with the API asynchronously or in response to events from other systems.
 
 As with the implicit flow, at no point does your application require direct knowledge of user credentials.
 
@@ -91,7 +90,8 @@ After authenticating and authorising your application, users will be redirected 
 `https://<your registered redirect URI>/?code=<authorisation code>`
 
 :::caution
-This response will also include the `state` parameter if it was included in your original request. This should be validated before continuing.
+This response will also include the `state` parameter if it was included in your original request. 
+This should be validated before continuing.
 :::
 
 Your backend infrastructure may then extract this and exchange it for an access token that can be used to perform actions as the authorising user by using the token endpoint.
