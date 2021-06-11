@@ -5,7 +5,8 @@ sidebar_position: 6
 ---
 
 Access to PlaceOS is secured via [OAuth2](https://auth0.com/docs/authorization/which-oauth-2-0-flow-should-i-use#is-the-client-a-native-mobile-app-).
-Before interacting, your app or integration will need to authenticate and obtain a valid access token. 
+
+Before interacting, your app or integration will need to authenticate and obtain a valid access token.   
 Once authenticated, this token must accompany all requests.
 
 This can either be included as an `Authorization` header (recommended):
@@ -112,21 +113,21 @@ This flow provides the ability to directly exchange a username and password for 
 
 ## Session Lifetime
 
-When receiving a token, the server response will include a token expiry - `expires_in` - which is the number of seconds the token is valid for. 
-By default, this is 14 days. 
-When this period has elapsed your application will need to obtain a new access token. 
+When receiving a token, the server response will include a token expiry - `expires_in` - which is the number of seconds the token is valid for.  
+By default, this is 14 days.  
+When this period has elapsed your application will need to obtain a new access token.  
 This can be done either by repeating the original authentication flow, or using a refresh token if provided.
 
 ### Refresh Tokens
 
-Along with the `access_token`, successful authentication requests may also contain a refresh_token. 
+Along with the `access_token`, successful authentication requests may also contain a refresh_token.  
 This can be used to renew the session at any time, extending access as long as both the application registration and user are still valid.
 
 //link to apiary
 
 ### Token Revocation
 
-To end a session, applications should request a token revocation. 
+To end a session, applications should request a token revocation.  
 This will invalidate the token, preventing further use.
 
 //link to apiary
