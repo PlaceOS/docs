@@ -1,7 +1,7 @@
 ---
 title: Area Management
 description: IoT data model for display and analytics
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 

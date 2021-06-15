@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Prerequisites
 
-Add the following driver from our [standard repository](https://github.com/PlaceOS/drivers).
+Add the Cisco DNA Spaces driver from our [standard repository](https://github.com/PlaceOS/drivers).
 
 ## Configure Cisco DNA Spaces
 

@@ -1,7 +1,7 @@
 ---
 title: Locating Users on a Network
-description: 
-sidebar_position: 5
+description: Locating users on a network with PlaceOS
+sidebar_position: 8
 ---
 <!-- This HAS NOT BEEN EDITED
 Please see original at https://docs.google.com/document/d/14XIJbnvJBg23Qc_oc3JN5Ub0geETTSmTWr8Sd8YryLM/edit -->
@@ -161,7 +161,7 @@ This is a simplified overview of data extraction from auditing events
 
 ### **Enable Auditing In** {#enable-auditing-in}
 
-![Alt text](images/image2.png "image tool tip")
+<!--![Alt text](images/image2.png "image tool tip")-->
 
 
 
@@ -185,7 +185,7 @@ Invoke-WebRequest -Uri http://yourcompany.com/control/api/webhooks/trig-O6AXyP7j
 
 ### **Create An Action For The Event** {#create-an-action-for-the-event}
 
-![Alt text](images/image3.png "image tool tip")
+<!--![Alt text](images/image3.png "image tool tip")-->
 
 
 1. Create a basic task that runs an application (click through next in the wizard)

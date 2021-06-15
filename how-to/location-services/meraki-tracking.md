@@ -1,7 +1,7 @@
 ---
 title: Meraki Wireless Tracking
 description: Configure Meraki Wireless Tracking on PlaceOS
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Cisco Meraki wireless tracking
