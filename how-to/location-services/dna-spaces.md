@@ -11,10 +11,25 @@ Add the following driver from our [standard repository](https://github.com/Place
 ## Configure Cisco DNA Spaces
 
 1. Install the PlaceOS app on your DNA spaces: `https://dnaspaces.io/partner/app/details/app-A575390EA4DD4915B863D6CA4F283F38`
+![DNA Spaces](./assets/dnaspaces-marketplace.png)
 2. On PlaceOS Backoffice Navigate to the Drivers tab
 3. Select the Cisco DNA Spaces Driver
 4. In the driver settings, Add your Activation key from DNA Spaces Portal as `dna_spaces_activation_key: 'your-key-here'`
+![Configure DNA Spaces Settings](./assets/drivers-dnaspaces.png)
 5. Start the driver and it will complete the DNA Spaces configuration
+
+Once PlaceOS and Cisco DNA Spaces are Configured, you will see connection status on the Cisco DNA Spaces Portal as well as PlaceOS.
+
+![Monitor App on DNA Spaces](./assets/dnaspaces-monitoring.png)
+
+If PlaceOS and Cisco DNA Spaces Portal are not connected:
+* Troubleshoot by adding the Cisco DNA Spaces Driver to a System
+* Enable the Driver
+* Under Execute Command, Select DNA Spaces
+* Under Select Function, Execute `Activate`
+
+![Execute Activation](./assets/exec-dnaspaces.png)
+
 
 
 ## Configuring location services
