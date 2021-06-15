@@ -7,9 +7,9 @@ sidebar_position: 3
 
 ## Points of failure
 
-### ETCD Failure
+### Etcd Failure
 
-ETCD is used by API and Core to determine the addresses of running Core services.  
+Etcd is used by API and Core to determine the addresses of running Core services.  
 As well as to determine where a module is executing in a cluster.
 
   * Some drivers may not function as the API won't be able to reach them
@@ -22,7 +22,7 @@ As well as to determine where a module is executing in a cluster.
 
 RethinkDB holds cluster configuration, primarily used by core during cluster init
 
-* Most API requests will stop functioning, including authentication
+* Most API requests will stop functioning, including authentication  
 * Existing Websocket requests will continue to function
 
 
@@ -35,10 +35,10 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 * Execute APIs and cross driver communication will be effected as module metadata will be unavailable
 
 
-### ElasticSearch failure
+### Elasticsearch failure
 
-* API index / listing / searching requests will fail - this will be mostly apparent when using backoffice
-* all other aspects of the system will continue functioning
+* API index / listing / searching requests will fail - this will be mostly apparent when using Backoffice
+* All other aspects of the system will continue functioning
 
 
 ### Driver compilation issue / crash
@@ -51,11 +51,11 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 In the event of a failure, being able to isolate which aspect of the system is not functioning is key to a quick recovery.
 
 * Can you log-in? If not it's probably a *RethinkDB Failure* or loadbalancer issue (check if requests are hitting the services)
-* Does backoffice list the systems? If not it's probably an *ElasticSearch failure*
+* Does backoffice list the systems? If not it's probably an *Elasticsearch failure*
 * Select a system you can safely use for testing
   * Does the list of modules and module functions load? If not it's probably a *Redis Failure*
   * Does executing a function work from backoffice? View the response to see the error if not
     * If the error says `no core instances` then *core* might be down or unable to connect to *etcd*
-    * If the error says `unable to connect to etcd` then *etcd* might be down or the *api* can't connect to etcd
+    * If the error says `unable to connect to etcd` then *etcd* might be down or the *API* can't connect to etcd
 
 This should help you identify the cause of most issues.
