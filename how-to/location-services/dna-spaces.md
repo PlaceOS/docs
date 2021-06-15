@@ -18,15 +18,19 @@ Add the following driver from our [standard repository](https://github.com/Place
 ![Configure Cisco DNA Spaces Settings](./assets/drivers-dnaspaces.png)
 5. Start the driver and it will complete the DNA Spaces configuration
 
-Once PlaceOS and Cisco DNA Spaces are Configured, you will see connection status on the Cisco DNA Spaces Portal as well as PlaceOS.
+If the Cisco DNA Spaces Driver is configured correctly:
+* You will see a positive connection status on the Cisco DNA Spaces Portal
+* The Cisco DNA Spaces Driver in PlaceOS will be green
+* The Cisco DNA Spaces Driver in PlaceOS will not have any errors when inspecting state
 
 ![Monitor App on Cisco DNA Spaces](./assets/dnaspaces-monitoring.png)
 
-If PlaceOS and Cisco DNA Spaces Portal are not connected:
+If PlaceOS and Cisco DNA Spaces Portal are not connected or configured correctly:
 1. Troubleshoot by adding the Cisco DNA Spaces Driver to a System
 2. Enable the Driver
 3. Under Execute Command, Select Cisco DNA Spaces
 4. Under Select Function, Execute `Activate`
+5. Inspect the response, if this fails it will report the failure reason.
 
 ![Execute Activation](./assets/exec-dnaspaces.png)
 
