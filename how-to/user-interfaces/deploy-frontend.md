@@ -1,20 +1,24 @@
-# Frontend Deployment
+---
+title: Deploy a Frontend Interface
+description: How to deploy a frontend interface and add to PlaceOS
+sidebar_position: 3
+---
 
 ## CI/CD
 
 To work with PlaceOS frontend repositories must have build artifacts committed to a standalone reposisitory or branch.
 
-If you're using the `user-interfaces` reposisitory this CI/CD pipeline has already been setup using GitHub Action.  
-For the `user-interfaces` repo it follows the follows the following steps for the build pipeline.
+The [user-interfaces](https://github.com/PlaceOS/user-interfaces) reposisitory already has CI/CD pipelines setup using GitHub Actions.  
+
+The [user-interfaces](https://github.com/PlaceOS/user-interfaces) repository follows these steps for the build pipeline:
 1. Commit made with changes to `libs` or an application(`apps/<project>`)
-1. Pipeline in GitHub Actions start.
-1. Install dependencies and build application(s).
-1. Commit build artifacts to associate branch. e.g. A development build of `workplace` will be committed to `build/workplace/dev`.
-1. Notify chat of pipeline status.
+2. Pipeline in GitHub Actions starts
+3. Install dependencies and build application(s)
+4. Commit build artifacts to associated branch e.g. A development build of `workplace` will be committed to `build/workplace/dev`
 
 ## Backoffice Setup
 
-Once a build has been created on a branch in a repository it can be added to backoffice so that frontends service can pull down the data.
+Once a build has been created it can be added to backoffice so that frontends service can pull down the interface.
 
 1. Navigate to the repositories page.
 
@@ -51,8 +55,11 @@ After that you should be able to access your application at the URL `https://my.
 
 ## Updating
 
-Once the application is setup in backoffice it should automatically pull any changes to the set branch every hour. If you need to update within that hour period there is a pull button in the about section of the repositories page.
+Once the application is setup in backoffice it should automatically pull any changes to the set branch every hour. 
+If you to make an adhoc update there is a pull button in the about section of the repositories page.
 
 <img width="1792" alt="Screen Shot 2020-12-22 at 2 48 34 pm" src="https://user-images.githubusercontent.com/20103948/102846756-ee474a80-4464-11eb-81d5-e1d13acbc0f3.png">
 
+:::tip
 Note that if you've set the commit on the repository not to be `HEAD` the automated pull will be disabled and the pull button will do nothing.
+:::
