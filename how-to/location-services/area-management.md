@@ -13,14 +13,17 @@ It exposes the following data:
 1. Overview of building use and recommended levels based on capacity
 2. A list of Areas on each level and the counts of people in those areas
 3. Location data for the levels, wireless and desks
-4. List of known desks on the level, for simplified processing of realtime visualisations
+4. List of known desks on the level, for simplified processing of real-time visualizations
 
-One of these modules needs to be configured per-building and relies on [Location services](location-services.md) for collecting location data.
+Each building needs one of these modules, and they rely on [Location Services](location-services.md) for collecting data.
 
 
 ## Configuration
 
-By default the view is updated once a minute, this batching rate can be increased based on requirements. Every 15 seconds would be a good minimum, systems like meraki only provide updated location information every minute so there is diminishing returns for higher rates. Locations services can also inform Area Management of updates and this increases the batching rate to at most every 3 seconds.
+By default the view updates once a minute, you can increase this batching rate based on requirements. 
+Intervals lower than about 15 seconds are not worth using, as it's still limited by systems which update once per minute.
+Locations Services can also inform Area Management of updates. 
+This increases the batching rate to at most every 3 seconds.
 
 ```yaml
 # The building this driver is monitoring
@@ -38,7 +41,7 @@ duplication_factor: 0.8
 location_service: LocationServices
 ```
 
-You'll also need to configure the `PlaceOS Staff API` driver for obtaining zone information via the public API
+You'll also need to configure the `PlaceOS Staff API` driver for getting zone data via the public API
 
 ```yaml
     # Create a service account for API access
@@ -54,12 +57,12 @@ You'll also need to configure the `PlaceOS Staff API` driver for obtaining zone 
 ## Data Model
 
 This is the state data that is exposed.
-It is used for display on a realtime interface and for analytics.
+It's used for display on a real-time interface and for analytics.
 Frontends can binding to the data points described below.
 
 ### Overview
 
-an overview of the building is provided
+This provides an overview of the building.
 
 ```yaml
 
@@ -97,9 +100,9 @@ an overview of the building is provided
 
 ### Desk IDs
 
-The list of desk IDs in a system is provided as a binding, allowing the frontend to highlight available desks.
+This provides the list of desk IDs in a system as a binding, allowing the frontend to highlight available desks.
 
-* available desks = all desks - (in-use or booked)
+* Available desks = all desks - (in-use or booked)
 
 ```yaml
 # Bind to `level_id:desk_ids`
@@ -116,10 +119,11 @@ The list of desk IDs in a system is provided as a binding, allowing the frontend
 
 ### Location Data
 
-This binding has all the location data for a level (desks and wireless)
-Allowing for desk highlighting and a point cloud.
+This binding has all the location data for a level (desks and wireless). 
+It allows for desk highlighting and a point cloud.
 
-The data returned doesn't include username, just MAC addresses where available and those MAC addresses can be resolved to a user via the `LocationServices` module.
+The data returned doesn't include usernames.
+It returns MAC addresses (if available) which can resolve to a user via the `LocationServices` module.
 
 ```yaml
 # The level id is the binding
@@ -177,7 +181,8 @@ Use `LocationServices.check_ownership_of(mac_address)` to determine who is at an
 
 ### Areas
 
-Its possible to have the system count how many devices are in an area on the map. These areas, like desk ids, are defined in metadata using a backoffice plugin.
+It's possible to have the system count the number of devices in an area on the map. 
+These areas, like desk ids, are defined in metadata using a Backoffice plugin.
 
 ```yaml
 
@@ -218,8 +223,8 @@ Its possible to have the system count how many devices are in an area on the map
 
 The desk ID metadata is stored in level zone metadata
 
-* with the key `desks`
-* the `id` of the desks are extracted from this data
+* With the key `desks`
+* The `id` of the desks are extracted from this data
 
 ```yaml
 
@@ -244,8 +249,8 @@ The desk ID metadata is stored in level zone metadata
 
 Area metadata is stored in level zone metadata
 
-* with the key `map_regions`
-* the `area_id` is extracted from this data
+* With the key `map_regions`
+* The `area_id` is extracted from this data
 
 ```yaml
 
@@ -290,11 +295,12 @@ Area metadata is stored in level zone metadata
 
 ### Defining Area Metadata
 
-Areas are defined using a backoffice plugin. To enable the plugin:
+Areas are defined using a Backoffice plugin. 
+To enable the plugin:
 
 1. From the domains tab, select the domain you wish to enable
-2. Select the config settings tab for that domain
-3. enter the following configuration
+2. Select the `config` settings tab for that domain
+3. Enter the following configuration
 
 ```json
 
@@ -319,4 +325,4 @@ Areas are defined using a backoffice plugin. To enable the plugin:
 
 ```
 
-Once configured, there is an additional tab added to zones where you can graphically define areas on the map
+Once configured, there is an extra tab added to zones where you can graphically define areas on the map
