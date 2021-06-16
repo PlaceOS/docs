@@ -5,25 +5,25 @@ description: Upload files to Backoffice
 
 ## Overview
 
-Backoffice supports uploading files to cloud storage for public read access.
-This is useful for device documentation and SVG Floor Maps.
+Backoffice supports uploading files to cloud storage for public read access.  
+This is useful for device documentation, SVG Floor Maps or Room Photos.
 
 ## Prerequisites
 
-1. Configure your bucket on the cloud storage platform
+1. Configure your storage bucket on the cloud storage platform
 2. Ensure CORS is enabled for the domain backoffice will be uploading from
-3. Note the bucket name
-4. Generate access credentials for the bucket
+3. Note the storage bucket name
+4. Generate access credentials for the storage bucket
 
 ## Backoffice configuration
 
-1. Goto the domains tab and select the domain Backoffice you use to access Backoffice
+1. Go to the domains tab and select the domain in Backoffice you use to access Backoffice
 2. From the `About` tab, select the `Internals` sub-tab
 3. Enter the bucket name and access keys, examples below:
 
 ![PlaceOS Internals Config](./assets/internals.png)
 
-### S3 example
+### S3 Example
 
 ```json
 {
