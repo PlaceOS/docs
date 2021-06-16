@@ -11,7 +11,7 @@ This is useful for device documentation, SVG Floor Maps or Room Photos.
 ## Prerequisites
 
 1. Configure your storage bucket on the cloud storage platform
-2. Ensure CORS is enabled for the domain backoffice will be uploading from
+2. Ensure CORS is enabled for the domain Backoffice will be uploading from
 3. Note the storage bucket name
 4. Generate access credentials for the storage bucket
 
@@ -100,7 +100,7 @@ This is useful for device documentation, SVG Floor Maps or Room Photos.
 
 ## Cloud configuration
 
-### S3 Config
+### S3 Configuration
 
 You will find this under bucket permissions -> CORS configuration.
 
