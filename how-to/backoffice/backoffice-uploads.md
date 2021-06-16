@@ -192,3 +192,8 @@ The file upload status will be displayed.
 Once the upload is complete, you can copy the file URL and use this as required.
 
 ![Map URL](./assets/map-url.png)
+
+:::tip
+The uploaded file will be given a discrete URL on the storage bucket, for example: `https://s3-ap-southeast-2.amazonaws.com/bucket.name/directory.name/16221818379492128.svg`.  
+Characters will be automatically encoded, if present.
+:::
