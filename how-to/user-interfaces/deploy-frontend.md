@@ -55,7 +55,7 @@ After that you should be able to access your application at the URL `https://my.
 
 ## Updating
 
-Once the application is setup in backoffice it should automatically pull any changes to the set branch every hour. 
+Once the application is setup in backoffice it should automatically pull any changes to the set branch every hour.  
 If you to make an adhoc update there is a pull button in the about section of the repositories page.
 
 <img width="1792" alt="Screen Shot 2020-12-22 at 2 48 34 pm" src="https://user-images.githubusercontent.com/20103948/102846756-ee474a80-4464-11eb-81d5-e1d13acbc0f3.png">
