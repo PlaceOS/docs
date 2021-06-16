@@ -128,7 +128,7 @@ Once you have tested the Login URL above you can update the default login page f
 
 ## Debugging
 
-The first step in this process should be to get the raw request.
+The first step in this process should be to get the raw request.  
 Often you can see if a request attribute is not lining up to an attribute statement by inspecting the XML.
 
 You can paste the resulting data into this [SAML Decoder](https://www.samltool.com/decode.php)
@@ -146,8 +146,10 @@ There are two methods of getting SSO data, described below:
 1. Open the Chrome or Firefox inspection tool
 2. Go to the network tab
 3. Select: **preserve log**
-4. Go through the login flow.
+4. Go through the login flow
+
 The request coming back to the assertion URL is the one you want to inspect.
+
 Assertion URL: `/auth/adfs/callback?id=[ADFS-ID-HERE]`
 
 
@@ -159,7 +161,7 @@ Copy and paste the SAML response into the SAML decoder.
 
 ### Docker logs
 
-Look for the text **"Callback phase initiated"** and the SAML response data is nearby
+Look for the text **"Callback phase initiated"** and the SAML response data is nearby.
 
 
 <!-- ## Example -->
