@@ -40,7 +40,10 @@ and https://github.com/place-labs/k8s-helm/
 ## Non-Production Environment
 
 ### Kubernetes Deployment
-
+- Clusters: 1
+- Regions: 1
+- Availability Zones: 1 or more
+- Nodes: 2 or more
 - Minimum node size:
   - 2 cores
   - 8GB RAM
