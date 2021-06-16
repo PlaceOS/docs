@@ -131,7 +131,7 @@ You will want to configure the access key with minimal permissions too:
 
 An example IAM user policy for file uploads:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
