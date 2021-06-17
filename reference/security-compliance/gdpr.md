@@ -3,6 +3,8 @@ title: GDPR
 description: General Data Protection Regulation and PlaceOS
 ---
 
+## General Data Protection Regulations (GDPR)
+
 The General Data Protection Regulation (GDPR) 2016/679 is a regulation in EU law on data protection and privacy in the European Union and the European Economic Area. 
 
 It also addresses the transfer of personal data outside the EU and EEA areas.
@@ -12,6 +14,19 @@ We have made every effort to provide a detailed overview of the GDPR compliance 
 But it is still advised to engage the services of a legal counsel in order to have a better understanding of GDPR compliance and the liabilities that come along with it. 
 
 The following compliance guide is actually the practices, procedures and upgrades introduced in the internal working of PlaceOS to make its services GDPR compliant.
+
+## GDPR Principles
+
+Place Technology and PlaceOS Applications comply with the six overall principles of GDPR, they are:
+
+* Lawfulness, transperancy and fairnss
+* Purpose Limitation
+* Data Minimisation
+* Data Accuracy
+* Storage Limitations
+* Confidentiality and Integrity
+
+Your privacy and security is very important and is a core consideration within the design of the PlaceOS Application. 
 
 ## Lawful Processing
 
