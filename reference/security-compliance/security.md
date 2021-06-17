@@ -42,7 +42,7 @@ This is stored by the data service and includes:
 |System and Zone configuration|<ul><li>System (room) / Zone names</li><li>System / Zone descriptions</li><li>Room resource mailbox address (if using a calendar integration)</li><li>System / Zone settings</li></ul>|
 |Device Settings|<ul><li>Device name</li><li>Device description</li><li>Device configuration</li><li>Device role based account username</li><li>Device role based account password (encrypted) </li></ul>|
 |Device metadata|<ul><li>1 month history of online/offline status of each device</li></ul>|
-|User data|<ul><li>Email address</li><li>First and last name</li><li>Username</li><li>User’s permissions within Engine application</li><li>Federated authentication source</li></ul>|
+|User data|<ul><li>Email address</li><li>First and last name</li><li>Username</li><li>User’s permissions within PlaceOS application</li><li>Federated authentication source</li></ul>|
 
 The search service stores an optimised index of system, zone and device names and descriptions.
 

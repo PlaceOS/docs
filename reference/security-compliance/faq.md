@@ -111,4 +111,4 @@ A: PlaceOS can pass data logs to data visualisation tools such as Splunk or a we
 
 We also provide time-series data via InfluxDB.
 
-Data streams are available via [MQTT](../../overview/protocols/mqtt.md).
+Data streams are available via [MQTT](../../overview/Protocols/mqtt.md).
