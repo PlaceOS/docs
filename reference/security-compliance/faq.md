@@ -17,17 +17,17 @@ Manipulated data is stored ephemerally in memory and access to any data requires
 
 **Q: Can you please outline each type of datastore / database / data repository included in your system?**
 
-A: The PlaceOS Solution uses Couchbase as the primary database and datastore. 
+A: The PlaceOS Solution uses RethinkDB as the primary database and datastore. 
 
-The PlaceOS Application does not store any data, all data is stored in Couchbase. 
+The PlaceOS Application does not store any data, all data is stored in RethinkDB. 
 
-Access to the Couchbase database can be arranged depending on client security for data modelling and/or extraction.
+Access to the RethinkDB database can be arranged depending on client security for data modelling and/or extraction.
 
 **Q: What type of data might you store?**
 
 A: All devices, device states, configuration and integrations are stored in the database. 
 
-Secure items such as passwords are all hashed on entry and are not human readable (AES-256-GCM/Salted Scrypt). 
+Secure items such as passwords are all encrypted on entry and are not human readable. 
 
 **Q: What happens to data stored when customers terminate their usage of PlaceOS?**
 
