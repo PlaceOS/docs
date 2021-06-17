@@ -11,7 +11,7 @@ Connectivity to these is then provided by a modern API service that supports reg
 
 ## Data in Transit
 
-PlaceOS API's and static resources are served over HTTPS only.
+PlaceOS APIs and static resources are served over HTTPS only.
 
 ### Supported Protocols
 
@@ -48,7 +48,7 @@ The search service stores an optimised index of system, zone and device names an
 
 ## Authentication
 
-All API requests use short-lived auth tokens obtained via OAuth2.
+All API requests use short-lived Auth tokens obtained via OAuth2.
 
 Authentication for token creation takes place via an external identify service (SSO). 
 

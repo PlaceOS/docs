@@ -21,7 +21,7 @@ Personally identifiable information may include, but is not limited to, your ema
 
 We may also collect information that your browser sends whenever you visit our Service (“Log Data”).
 
- This Log Data may include information such as your computer’s Internet Protocol (“IP”) address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages and other statistics.
+ This Log Data may include information such as your computer’s internet Protocol (“IP”) address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages and other statistics.
 
  ## Cookies
 
@@ -53,7 +53,7 @@ We will disclose your Personal Information where required to do so by law or sub
 
 ## Security
 
-The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. 
+The security of your Personal Information is important to us, but remember that no method of transmission over the internet, or method of electronic storage is 100% secure. 
 
 While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute secure.
 
@@ -89,13 +89,15 @@ If we become aware that we have collected Personal Information from a children u
 
 We may update our Privacy Policy from time to time. 
 
-We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. 
+We will notify you of any changes by posting the new Privacy Policy on this page. 
+
+You are advised to review this Privacy Policy periodically for any changes. 
 
 Changes to this Privacy Policy are effective when they are posted on this page.
 
 ## Contact Us
 
-If you have any questions about this Privacy Policy, please contact us at hello@place.technology
+If you have any questions about this Privacy Policy, please contact us at `hello@place.technology`
 
 
 

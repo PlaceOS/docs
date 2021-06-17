@@ -54,9 +54,9 @@ We may collect and process the following data about you:
 * Email Address
 * Phone Number
 * Details of your visits to our application including, but not limited to: 
-    * traffic data 
-    * location data 
-    * weblogs and other communication data
+    * Traffic data 
+    * Location data 
+    * Weblogs and other communication data
 
 ### How We Use Personal Data
 
