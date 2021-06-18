@@ -1,7 +1,7 @@
 ---
 title: Configure Endpoint Auto Login
 description: Allow automatic or unatteded authentication for PlaceOS Frontend Applications
-sidebar_position: 8
+sidebar_position: 2
 ---
 
 PlaceOS requires all interactions to be authenticated and associated with a specific identity.

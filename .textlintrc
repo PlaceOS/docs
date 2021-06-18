@@ -95,6 +95,7 @@ rules:
     - Pexip
     - PJLink
     - PlaceOS
+    - PoE
     - PointGrab
     - Polycom
     - PowerSoft
@@ -113,7 +114,9 @@ rules:
     - Vergesense
     - Webex
     - webhook
+    - Whispir
     - Wolfvision
+    - Xovis
 
   terminology:
     defaultTerms: true
@@ -144,6 +147,7 @@ rules:
     - "RethinkDB"
     exclude:
     - 'Node(?:js)?'
+    - 'web[- ]?site(s)?'
 
   write-good:
     severity: warning
