@@ -17,8 +17,6 @@ rules:
 
   one-sentence-per-line: true
 
-  period-in-list-item: true
-
   spelling:
     language: en
     skipPatterns:
