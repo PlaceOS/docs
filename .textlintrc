@@ -1,6 +1,6 @@
 rules:
   alex:
-    allow: 
+    allow:
     - execute
     - execution
     - special
@@ -11,8 +11,7 @@ rules:
   common-misspellings:
     ignore: []
 
-  en-capitalization: 
-    allowWords: [etcd, ingress]
+  en-capitalization: true
 
   no-empty-section: true
 
@@ -25,7 +24,7 @@ rules:
     skipPatterns:
     # for anything in terminology, add only the corrected version
     # hyphenated prefixes are considered separate words
-    - '/[0-9]+/g'             # numbers 
+    - '/[0-9]+/g'             # numbers
     - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
     - '/\b\S*\.\S{2,4}/g'     # filenames
     - '/analytics/i'
@@ -116,8 +115,6 @@ rules:
     - webhook
     - Wolfvision
 
-
-
   terminology:
     defaultTerms: true
     terms:
@@ -155,6 +152,4 @@ filters:
   allowlist:
     allow:
     - '/<i>.*<\/i>/g'                         # idiomatic terms
-    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  #link text that is also in url
-    # getting around write-good's soft checks
-    - '/requirement[s]?/i'
+    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  # link text that is also in url
