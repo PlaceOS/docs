@@ -20,23 +20,6 @@ rules:
 
   period-in-list-item: true
 
-  rousseau:
-    severity: warning
-    showLevels:
-    - suggestion
-    - warning
-    - error
-    ignoreInlineNodeTypes:
-    - Code
-    - Html
-    ignoreTypes:
-    - passive            # covered by write-good
-    - lexical-illusion
-    - so
-    - adverbs
-    - weasel
-    - sentence:uppercase # covered by en-capitalization
-
   spelling:
     language: en
     skipPatterns:

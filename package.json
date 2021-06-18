@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "dictionary-en": "^3.1.0",
-    "placeos-docs-site": "placeos/docs-site",
+    "placeos-docs-site": "github:placeos/docs-site",
     "textlint": "^12.0.0",
     "textlint-filter-rule-allowlist": "^3.0.0",
     "textlint-rule-alex": "^3.0.0",
@@ -20,7 +20,6 @@
     "textlint-rule-no-empty-section": "^1.1.0",
     "textlint-rule-one-sentence-per-line": "place-labs/textlint-rule-one-sentence-per-line#ed51f56",
     "textlint-rule-period-in-list-item": "^0.3.2",
-    "textlint-rule-rousseau": "^1.4.6",
     "textlint-rule-spelling": "^0.3.0",
     "textlint-rule-terminology": "^2.1.5",
     "textlint-rule-write-good": "^2.0.0"
