@@ -18,7 +18,7 @@
     "textlint-rule-common-misspellings": "^1.0.1",
     "textlint-rule-en-capitalization": "^2.0.3",
     "textlint-rule-no-empty-section": "^1.1.0",
-    "textlint-rule-one-sentence-per-line": "place-labs/textlint-rule-one-sentence-per-line#ed51f56",
+    "textlint-rule-one-sentence-per-line": "^2.0.0",
     "textlint-rule-spelling": "^0.3.0",
     "textlint-rule-terminology": "^2.1.5",
     "textlint-rule-write-good": "^2.0.0"
