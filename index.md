@@ -27,7 +27,7 @@ The documentation for PlaceOS is split into 4 categories.
 
 See the [overview](overview/drivers) for high-level coverage of topic areas.
 
-Try a [tutorial](tutorial/write-a-driver) to learn in more detail about a process or feature.
+Try a [tutorial](tutorial/backend/write-a-driver) to learn in more detail about a process or feature.
 
 Read a [how-to guide](how-to/authentication/configure-saml) for docs to help you with a specific task.
 
