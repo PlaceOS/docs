@@ -30,9 +30,10 @@ Once a build has been created it can be added to Backoffice so that `frontends` 
 ![Add a new repository](https://user-images.githubusercontent.com/20103948/102845586-fb166f00-4461-11eb-91a6-b8255f54e5a7.png)
 
 - Name should describe the UI
-- Folder name will be the path of the UI on the domain e.g. `workplace` would map to `https://my.domain/workplace/`
+- Folder name will be the path of the UI on the domain
+  e.g. `workplace` would map to `https://my.domain/workplace/`
 - Repository is the URL of your git repository with the UI builds
-- Repository type must be `Interface` for UIs
+- Repository type must be `Interface` for the deployment of a UI
 
 ![Set repository to interface](https://user-images.githubusercontent.com/20103948/102845880-ab847300-4462-11eb-97f4-addf986e547b.png)
 
@@ -59,10 +60,10 @@ After that you should be able to access your application at the URL `https://my.
 ## Updating
 
 Once the application is setup in Backoffice it should automatically pull any changes to the set branch every hour.  
-If you to make an adhoc update there is a pull button in the about section of the repositories page.
+If you to make a manual update there is a pull button in the about section of the repositories page.
 
 ![Updating Interface](https://user-images.githubusercontent.com/20103948/102846756-ee474a80-4464-11eb-81d5-e1d13acbc0f3.png)
 
 :::tip
-Note that if you've set the commit on the repository not to be `HEAD` the automated pull will be disabled and the pull button will do nothing.
+Note that if you've set the commit on the repository not to be `HEAD` the automated pull feature will be turned off and the pull button will do nothing.
 :::
