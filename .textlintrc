@@ -24,9 +24,9 @@ rules:
     skipPatterns:
     # for anything in terminology, add only the corrected version
     # hyphenated prefixes are considered separate words
-    - '/[0-9]+/g'             # numbers
-    - '/\b(?:[A-Z]){2,}\b/g'  # acronyms
-    - '/\b\S*\.\S{2,4}/g'     # filenames
+    - '/[0-9]+/g'              # numbers
+    - '/\b(?:[A-Z]){2,}s?\b/g' # acronyms (with plural)
+    - '/\b\S*\.\S{2,4}/g'      # filenames
     - '/analytics/i'
     - '/artboard[s]?/i'
     - '/automations/i'
@@ -112,7 +112,6 @@ rules:
     - Shure
     - Symmetrix
     - TriplePlay
-    - URIs                    # Accepted plural
     - Vergesense
     - Webex
     - webhook
