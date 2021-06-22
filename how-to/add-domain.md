@@ -52,7 +52,7 @@ This brings up the New Application form
    - `First Name`: Add the first name of the user, this is required
    - `Last Name`: Add the last name of the user, this is required
    - `Email`: This will be the username and is required
-   - `System Admin`: Denotes whether the user will be an admin (and thus can access and make changes in Backoffice). 
+   - `System Admin`: Denotes whether the user will be an admin (and thus can access and make changes in Backoffice)
       - This will usually be set to true when creating users in this interface
    - `Password` and `Confirm Password`: Enter the password which the user will use to login (when not using SSO)
 

@@ -51,7 +51,7 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 In the event of a failure, being able to isolate which aspect of the system is not functioning is key to a quick recovery.
 
 * Can you log-in? If not it's probably a *RethinkDB Failure* or loadbalancer issue (check if requests are hitting the services)
-* Does backoffice list the systems? If not it's probably an *Elasticsearch failure*
+* Does Backoffice list the systems? If not it's probably an *Elasticsearch failure*
 
 If you can login and see systems:
 * Select a system you can safely use for testing
