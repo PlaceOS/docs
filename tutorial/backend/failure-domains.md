@@ -23,7 +23,7 @@ As well as to determine where a module is executing in a cluster.
 RethinkDB holds cluster configuration, primarily used by core during cluster init
 
 * Most API requests will stop functioning, including authentication  
-* Existing Websocket requests will continue to function
+* Existing WebSocket requests will continue to function
 
 
 ### Redis Failure
