@@ -160,3 +160,4 @@ filters:
     allow:
     - '/<i>.*<\/i>/g'                         # idiomatic terms
     - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  # link text that is also in url
+    - '/\{#\S+\}/g'                           # header link overrides
