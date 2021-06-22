@@ -81,7 +81,7 @@ From the above steps you will need:
 - The **Assertion URL** (also known as the **Callback URL**)
 - The **Login URL** which is the homepage of the app 
 - The **Metadata URL** (optional). 
-This can XML file contains the above information and can be fed into to some configuration dashboards (like ADFS). 
+This can XML file contains the above information and can be fed into to some configuration dashboards (like AD FS). 
 
 
 This process will vary by provider, see the below guides for common options:
