@@ -7,9 +7,9 @@ sidebar_position: 3
 
 ## Points of failure
 
-### Etcd Failure
+### etcd Failure
 
-Etcd is used by API and Core to determine the addresses of running Core services.  
+etcd is used by API and Core to determine the addresses of running Core services.  
 As well as to determine where a module is executing in a cluster.
 
   * Some drivers may not function as the API won't be able to reach them

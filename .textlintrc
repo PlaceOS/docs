@@ -11,7 +11,9 @@ rules:
   common-misspellings:
     ignore: []
 
-  en-capitalization: true
+  en-capitalization:
+    allowWords:
+    - etcd
 
   no-empty-section: true
 
