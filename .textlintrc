@@ -126,9 +126,7 @@ rules:
     - ['adfs', 'AD FS']
     - ['back[- ]?office', 'Backoffice']
     - ['config', 'configuration']
-    - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
-    - ['frontends', 'Frontends'] # the application, can conflict with "frontend" as a term?
     - ['(google )?gsuite', 'Google Workspace (GSuite)']
     - ['google workplace', 'Google Workspace']
     - ['(cisco )?meraki', "Cisco Meraki"]
@@ -136,17 +134,6 @@ rules:
     - ['place\W?tech(nology)?', 'Place Technology']
     - ['saas', SaaS]
     - ['web[ -]?socket', 'WebSocket']
-    - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
-    - "Auth0"
-    - "AWS CloudFormation"
-    - "AWS ElastiCache"
-    - "Cisco Meraki"
-    - "Elasticsearch"
-    - "init" # the service, otherwise spell out "initialize" etc (not handled)
-    - "Kubernetes"
-    - "NGINX"
-    - "px"
-    - "RethinkDB"
     exclude:
     - 'Node(?:js)?'
     - 'web[- ]?site(s)?'
