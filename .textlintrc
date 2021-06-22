@@ -134,7 +134,6 @@ rules:
     - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-    - ['place\W?analytics', PlaceAnalytics]
     - ['saas', SaaS]
     - ['web[ -]?socket', 'WebSocket']
     - "Auth" # the service, otherwise spell out authorization/authentication (not handled)
