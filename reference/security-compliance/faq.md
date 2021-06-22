@@ -87,7 +87,7 @@ All internal services are secured by SSO with 2-Factor Authentication enforced.
 
 No client or customer information, credentials or otherwise are stored locally on staff hardware. A
 
-ll internal access to code and client information is least privileged role/group based. 
+All internal access to code and client information is least privileged role/group based. 
 
 ## Infrastructure
 
