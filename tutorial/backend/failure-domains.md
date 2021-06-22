@@ -56,7 +56,7 @@ In the event of a failure, being able to isolate which aspect of the system is n
 If you can login and see systems:
 * Select a system you can safely use for testing
   * Does the list of modules and module functions load? If not it's probably a *Redis Failure*
-  * Does executing a function work from backoffice? View the response to see the error:
+  * Does executing a function work from Backoffice? View the response to see the error:
     * If the error says `no core instances` then *core* might be down or unable to connect to *etcd*
     * If the error says `unable to connect to etcd` then *etcd* might be down or the *API* can't connect to etcd
 
