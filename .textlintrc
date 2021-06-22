@@ -30,7 +30,6 @@ rules:
     - '/analytics/i'
     - '/artboard[s]?/i'
     - '/automations/i'
-    - '/backoffice/i'
     - '/(re)?balance(r)?/i'
     - '/integrat(ion|or)[s]?/i'
     - '/microservice[s]?/i'
@@ -47,6 +46,7 @@ rules:
     - Auth
     - Auth0
     - B2C
+    - Backoffice
     - BACnet
     - Barco
     - Biamp
@@ -124,7 +124,7 @@ rules:
     defaultTerms: true
     terms:
     - ['adfs', 'AD FS']
-    - ['back\W?office', 'Backoffice']
+    - ['back[- ]?office', 'Backoffice']
     - ['config', 'configuration']
     - ['ETCD', 'etcd']
     - ['front[- ]end', 'frontend']
