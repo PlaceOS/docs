@@ -160,7 +160,7 @@ An example IAM user policy for file uploads:
 }
 ```
 
-If you don't want he user to have object permission management then you also override the bucket level policy, where all objects are public
+If you don't want the user to have object permission management then you also override the bucket level policy, where all objects are public
 
 ```json
 {
@@ -183,7 +183,7 @@ If you don't want he user to have object permission management then you also ove
 
 Once the above configuration steps are completed, you should be able to upload files to PlaceOS.
 
-To upload a file, simply drag and drop it into Backoffice in your browser.
+To upload a file, drag and drop it into Backoffice in your browser.
 
 The file upload status will be displayed.
 
