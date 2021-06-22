@@ -10,7 +10,7 @@ Drivers are written in [Crystal Lang](https://crystal-lang.org/) and based on ou
 <!-- consider the explain page for Crystal Lang -->
 
 If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk.
-Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) guide to write your own.
+Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-driver) guide to write your own.
 
 ## Authentication
 * OAuth2 (JWT)
