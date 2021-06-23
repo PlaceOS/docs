@@ -23,7 +23,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * Google Workspace (GSuite)
 
 ## Messaging
-* Email (MS Graph, Gmail, SMTP, AWS SES)
+* Email (MS Graph, Google Workspace, SMTP, AWS SES)
 * SMS (MessageMedia, Whispir, Amazon SNS)
 * MQTT
 * Webhooks

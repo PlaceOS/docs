@@ -20,7 +20,7 @@ As well as to determine where a module is executing in a cluster.
 
 ### RethinkDB Failure
 
-RethinkDB holds cluster configuration, primarily used by core during cluster init
+RethinkDB holds cluster configuration, primarily used by core during initialization.
 
 * Most API requests will stop functioning, including authentication  
 * Existing WebSocket requests will continue to function
@@ -51,7 +51,7 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 In the event of a failure, being able to isolate which aspect of the system is not functioning is key to a quick recovery.
 
 * Can you log-in?
-  If not it's probably a *RethinkDB Failure* or loadbalancer issue (check if requests are hitting the services)
+  If not it's probably a *RethinkDB Failure* or load balancer issue (check if requests are hitting the services)
 * Does Backoffice list the systems?
   If not it's probably an *Elasticsearch failure*
 

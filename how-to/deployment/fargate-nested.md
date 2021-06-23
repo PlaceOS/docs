@@ -12,10 +12,10 @@ This page assists with deploying PlaceOS on AWS using CloudFormation templates.
 The templates configure a PlaceOS Fargate deployment including an optional VPC configuration. 
 The basic premise is: 
 
-1) Upload the nested templates to an s3 bucket  
+1) Upload the nested templates to an S3 bucket  
 1) Orchestrate the deployment using a root stack template 
 
-You can use the `upload-s3.sh` script in the AWS command-line tool to upload the required files to a configurable s3 bucket.
+You can use the `upload-s3.sh` script in the AWS command-line tool to upload the required files to a configurable S3 bucket.
 
 A CloudFormation template specifies all the components.
 Each component is designed to deploy as its own CloudFormation stack.
@@ -52,7 +52,7 @@ For each of these the user can configure:
 The application load balancer is the only component that should deploy in public subnets.
 
 ## Configuring the root stack template {#Stack-configuration}
-Once you have uploaded the files to s3, use `root-stack-templates/placeos/deploy.yml` to deploy PlaceOS.
+Once you have uploaded the files to S3, use `root-stack-templates/placeos/deploy.yml` to deploy PlaceOS.
 The required parameters are:
 
 - **`BucketName`** S3 Bucket name where nested templates live

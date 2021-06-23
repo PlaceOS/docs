@@ -198,7 +198,7 @@ Ensure the following is correct:
 - [ ] Client/brand guidelines
 - [ ] Client/brand color pallet
 - [ ] Furniture and plants that follow client/brand guidelines
-- [ ] Have the latest Adobe Illustrator CC2019
+- [ ] Have the latest Adobe Illustrator
 - [ ] Name the file `client_map_level`
 - [ ] Name layers
 - [ ] Save As (Always)
