@@ -69,7 +69,7 @@ Lock the layer and name layer “outline”
 
 ## Step 5 - Floor Dimension
 
-Copy and paste outline and fill in with color (new layer) and lock the layer - name layer <i>“bkd”</i>. 
+Copy and paste outline and fill in with color (new layer) and lock the layer - name layer `bkd`. 
 To give a shadow or building structure effect to the “outline” layer, offset this layer from it.
 Shift this shape sideways or downward (building shapes vary).
 
@@ -185,7 +185,7 @@ Ensure the following is correct:
 2. Font > SVG
 3. Images > preserve
 4. Object IDs > Layer names Decimal > 3
-5. Tick <i> "minify" </i> and "responsive"
+5. Tick "minify" and "responsive"
 6. Select "OK"
 
 ![Exporting](./assets/svg-maps/svg20.png)

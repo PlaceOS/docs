@@ -6,14 +6,14 @@ sidebar_position: 3
 
 ## Overview
 
-Security Assertion Markup Language (SAML) is an open standard that allows Identity Providers <i>(IdP)</i> to pass authorization credentials to Service Providers (SP).
+Security Assertion Markup Language (SAML) is an open standard that allows Identity Providers (IdP) to pass authorization credentials to Service Providers (SP).
 
 SAML is an umbrella standard that covers federation, identity management and SSO.
 
 The SAML specification defines three roles: 
 - The principal (typically a human user) 
-- The Service Provider (SP) 
-- The Identity Provider <i>(IdP)</i> 
+- The Service Provider (SP)
+- The Identity Provider (IdP)
 
 In the primary use case addressed by SAML, the principal requests a service from the Service Provider.
 The Service Provider requests and obtains an authentication assertion from the Identity Provider.

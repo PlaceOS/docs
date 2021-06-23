@@ -18,7 +18,7 @@ Everything below delivers reliable and consistent results on the platform.
   |---| ---|---|---|---|---|
   AOpen|[WT-10M-FRG Chromebase Mini 10"](http://www.goodson.com.au/product/aopen-10-google-chromebase-mini-touch-system-wt10chrome-5587) | Room Booking, <br/>Room Control |Supports remote management via Google CDM.|Adapter|No
   AOpen|[ChromeBox Commercial](https://aopensolutions.com/product/chromebox-commercial/)|Visitor Kiosks, <br/>Information Kiosks|	Compatible with HID Touch Compliant Screens for Larger Kiosks. <br/> Supports remote management via Google CDM.|Yes|NA
-  <i>InTouch</i>|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.|No|No
+ InTouch|[INDT Range](https://intouchscreens.com.au/touch-screens/)|Room Booking, <br/>Room Control, <br/> Visitor Kiosks, <br/>Information Kiosks|Range of Chrome OS Based Display Solutions ranging from 10" - 55" including models with cameras, scanners and printers.|No|No
 
 # Android
 

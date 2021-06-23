@@ -34,8 +34,9 @@ rules:
     - Backoffice
     - '/\b[Ii]nit\b/'
     - PlaceOS
- 
+
     # Mixed-case acronyms
+    - IdP
     - IoT
     - OAuth
     - PoE
@@ -53,6 +54,7 @@ rules:
     - '/integrators?/i'
     - '/load balancer/i'
     - '/microservices?/i'
+    - '/minify/i'
     - '/preconfigure[ds]?/i'
     - '/proxying/i'
     - '/rebalance/i'
@@ -92,6 +94,7 @@ rules:
     - Gantner Relaxx
     - GSuite
     - Helvar
+    - InTouch
     - Kentix
     - Kubernetes
     - Lenel
@@ -141,18 +144,15 @@ rules:
     - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
     - ['place\W?tech(nology)?', 'Place Technology']
-    - ['saas', SaaS]
     - ['web[ -]?socket', 'WebSocket']
     exclude:
     - 'Node(?:js)?'
     - 'web[- ]?site(s)?'
 
-  write-good:
-    severity: warning
+  write-good: false
 
 filters:
   allowlist:
     allow:
-    - '/<i>.*<\/i>/g'                         # idiomatic terms
     - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  # link text that is also in url
     - '/\{#\S+\}/g'                           # header link overrides
