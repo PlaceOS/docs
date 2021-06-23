@@ -1,4 +1,6 @@
 rules:
+  # The `alex` rule flags usage of inconsiderate wording.
+  # https://alexjs.com
   alex:
     allow:
     - execute
@@ -8,16 +10,22 @@ rules:
     - traps
     profanitySureness: 2
 
+  # Corrections for:
+  # https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines
   common-misspellings: true
 
+  # Enforcement of correct usage of capitalization in different contexts.
   en-capitalization:
     allowWords:
     - etcd
 
+  # Checks for headings that have been defined with no content.
   no-empty-section: true
 
+  # Enforces semantic line breaks (https://sembr.org)
   one-sentence-per-line: true
 
+  # Dictionary
   spelling:
     language: en
     skipPatterns:
@@ -132,6 +140,8 @@ rules:
     - Wolfvision
     - Xovis
 
+  # Enforcement of capitalization, words breaks and other well defined
+  # structure.
   terminology:
     defaultTerms: true
     terms:
@@ -151,6 +161,12 @@ rules:
 
   write-good: false
 
+
+# Filters defined here exluded matching content for _all_ of the rules above.
+#
+# This should be used sparsely and as a last resort. While it may be tempting to
+# place terms here, this will result in sentences containing them not being
+# checked for complexity.
 filters:
   allowlist:
     allow:
