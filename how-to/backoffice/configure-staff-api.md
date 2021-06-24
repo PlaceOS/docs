@@ -3,10 +3,19 @@ title: Configure Staff API
 description: How to Configure the Staff API on PlaceOS
 ---
 
+The Staff API gives PlaceOS the ability to interact with Calendar and User Resources.
+
+To integrate room booking into your existing calendar environment the Staff API must be configured.
+
+When configured, PlaceOS will be able to create, edit, update and delete calendar bookings for users and resources.
+
+To show room status on floor maps, the [PlaceOS Calendar driver must also be configured](./placeos-calendar.md).
+
+To enable room bookings, the [PlaceOS Bookings driver must be also configured](./placeos-bookings.md).
 
 ## Prerequisites 
 
-- Access on Microsoft Azure or Google Cloud & Workspace to create apps and API permissions
+- Access on Microsoft Azure or Google Cloud Console & Workspace to create apps and API permissions
 - Administrator access to your PlaceOS Backoffice
 
 ## Configure Providers
@@ -59,6 +68,19 @@ You will now need to grant Graph API Permissions on your App.
 
 #### Generate Azure API Secret
 
+You will now need to create the secret to allow PlaceOS Staff API to Authenticate.
+
+1. Navigate to Certificates & Secrets  
+![Graph Application Grants](./assets/certificates.png)  
+2. Select New client secret  
+![New Secret](./assets/new-secret.png)  
+3. Give your secret a description e.g. `PlaceOS Prod App Secret` and click Add  
+4. Copy and Save the Secret Value (you will need this in the next step)  
+![New Secret](./assets/secret.png)  
+5. Return to the App Overview  
+6. Copy and Save the `Client ID` and `Tenant ID` (you will need these in the next step)  
+![Client ID and Tenant](./assets/client_tenant.png)
+
 # Google Workspace
 
 Google Workspace
@@ -69,7 +91,29 @@ Google Workspace
 
 You will now need to enter the information obtained from the App Registration and API Permissions.
 
+To complete this step, you will need the following information:
 
+- Microsoft Azure
+    - `Client ID`
+    - `Tenant ID`
+    - `Secret` 
+- Google Workspace
+    - `Domain`
+    - `Service Account Email`
+    - `Scopes`
+    - `Private Key`
+    - `Service User`
+    - `User Agent`
+
+1. Open PlaceOS Backoffice and login as an administrator
+2. Navigate to the Admin Tab
+3. Select Staff API
+4. Select the Domain you want to configure.  
+![Staff API Admin](./assets/staff_api_admin.png)  
+5. Click Add Tenant  
+6. Enter the information required  
+![Add Tenant Information](./assets/add_tenant.png)  
+7. Save
 
 ## Test Staff API Configuration
 
