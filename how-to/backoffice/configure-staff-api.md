@@ -25,28 +25,28 @@ If not, you will need to create a new App Registration on Azure.
 #### Create Azure App
 
 1. Navigate to the [Azure Portal](https://portal.azure.com)
-2. Log in and select the correct Subscription for your application.
+2. Log in and select the correct Subscription for your application
 3. Navigate to [App Registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 4. Select New Registration
 5. Enter the required information
 - Name it and select the appropriate "Support Account types" (typically "Single tenant")
 - Optionally paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](../authentication/configure-saml.md))  
-![New App Registration](./assets/new-app-registration.png)
+![New App Registration](./assets/new-app-registration.png)  
 6. Register the app
 
 #### Grant Graph API Permissions
 
 You will now need to grant Graph API Permissions on your App.
 
-1. Select the app you would like to give permissions.
-2. Click API Permissions
-![API Permissions](./assets/api-permissions.png)
-3. Click Add Permission
-![Add Permission](./assets/add-permissions.png)
-4. Click Microsoft Graph
-![Graph](./assets/graph-api.png)
+1. Select the app you would like to give permissions
+2. Click API Permissions 
+![API Permissions](./assets/api-permissions.png)  
+3. Click Add Permission 
+![Add Permission](./assets/add-permissions.png)  
+4. Click Microsoft Graph 
+![Graph](./assets/graph-api.png)  
 5. Select Application permissions
-![Graph Application Permissions](./assets/graph-app-permissions.png)
+![Graph Application Permissions](./assets/graph-app-permissions.png)  
 6. Grant API Access to the following resources:
 - `Calendars.ReadWrite`
 - `Calendars.ReadWrite.Shared`
@@ -54,7 +54,7 @@ You will now need to grant Graph API Permissions on your App.
 - `Group.Read.All`
 - `User.Read.All`
 - `Place.Read.All`
-![Graph Application Grants](./assets/grants.png)
+![Graph Application Grants](./assets/grants.png)  
 7. Click Add Permissions
 
 #### Generate Azure API Secret
@@ -67,7 +67,7 @@ Google Workspace
 
 ## Configure Staff API on PlaceOS
 
-You will now need to enter the information obtained from the App Registration and API permissions in the previous step.
+You will now need to enter the information obtained from the App Registration and API Permissions.
 
 
 
