@@ -49,4 +49,4 @@ jobs:
 
       - name: Proofread all docs
         if: ${{ github.event_name == 'push' }}
-        run: npm run lint .
+        run: npm run lint --quiet .

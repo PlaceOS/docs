@@ -197,7 +197,9 @@ rules:
     - 'Node(?:js)?'
     - 'web[- ]?site(s)?'
 
-  write-good: false
+  # Suggestions for direct and concise writing style.
+  write-good:
+    severity: warning
 
 
 # Filters defined here exluded matching content for _all_ of the rules above.
