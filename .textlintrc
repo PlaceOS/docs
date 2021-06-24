@@ -31,26 +31,46 @@ rules:
     skipPatterns:
     # Patterns
     - '/\b[0-9]+\b/'             # numbers
-    - '/\b(?:[A-Z]){2,}s?\b/'    # acronyms (with plural)
     - '/\b\S*\.\S{2,4}/'         # filenames
     - '/\b(pre)|(un)-\w/i'       # hyphenated prefixes
     - '/\b\d*(px)|(pt)\b/'       # pt and px measures
     - '/\bbase\d+\b/'            # base2, base16 etc
 
-    # Product Components
+    # Product components
     - '/\b[Aa]uth\b/'
     - Backoffice
     - '/\b[Ii]nit\b/'
     - PlaceOS
 
-    # Mixed-case acronyms
-    - IdP
+    # Protocols/common acronyms
+    #
+    # Only _very_ widely understood terms should be listed here. Abbreviations
+    # that are local to document context should be defined inline.
+    # See: https://github.com/PlaceOS/docs#abbreviations
+    - API
+    - DNS
+    - HTTP
+    - IO
+    - IP
     - IoT
+    - JSON
+    - JWT
+    - MQTT
     - OAuth
-    - PoE
     - SaaS
-    - SAML2
-    - SNMPv2
+    - SAML
+    - SMS
+    - SMTP
+    - SNMP
+    - SSL
+    - SSO
+    - SVG
+    - TCP
+    - TLS
+    - UAT
+    - UDP
+    - URI
+    - XML
 
     # Jargon
     - '/analytics/i'
@@ -65,6 +85,7 @@ rules:
     - '/minify/i'
     - '/preconfigure[ds]?/i'
     - '/proxying/i'
+    - '/README/'
     - '/rebalance/i'
     - '/serverless/i'
     - '/subnet/i'
@@ -72,11 +93,15 @@ rules:
     - '/webhooks?/i'
     - '/websocket/i'
 
-    # Brands
+    # Brands/brand terms
+    - AD FS
+    - Amazon SES
+    - Amazon SNS
     - AOpen
     - Arial
     - Atlona
     - Auth0
+    - AWS
     - B2C
     - BACnet
     - Barco
@@ -84,12 +109,15 @@ rules:
     - Chromebase
     - ChromeBox
     - ChromeOS
+    - Cisco CMX
+    - Cisco ISE
     - ClearOne
     - ClickShare
     - CloudFormation
     - Cognipoint
     - ControlSpace
     - Denon
+    - DNA Spaces
     - DynaLite
     - Echo360
     - ElastiCache
@@ -100,12 +128,16 @@ rules:
     - Floorsense
     - Foxtel
     - Gantner Relaxx
+    - Google CDM
     - GSuite
     - Helvar
+    - HP
     - InTouch
     - Kentix
+    - KNX
     - Kubernetes
     - Lenel
+    - LG
     - Lightware
     - Lumens
     - Lutron
@@ -116,7 +148,9 @@ rules:
     - Modbus
     - Moki
     - Multicast
+    - NEC
     - NGINX
+    - NX
     - OpenStack
     - Optica
     - Pexip
@@ -125,20 +159,25 @@ rules:
     - Polycom
     - PowerSoft
     - Pressac
+    - Q-SYS
     - QBic
+    - QSC
     - Rackspace
     - RealPresence
     - RethinkDB
     - S3
     - Screen Technics
     - Shure
+    - SVSI
     - Symmetrix
     - TriplePlay
     - Vergesense
+    - VISCA
     - Webex
     - Whispir
     - Wolfvision
     - Xovis
+    - XY Sense
 
   # Enforcement of capitalization, words breaks and other well defined
   # structure.
@@ -149,7 +188,6 @@ rules:
     - ['back[- ]?office', 'Backoffice']
     - ['config', 'configuration']
     - ['front[- ]end', 'frontend']
-    - ['(google )?gsuite', 'Google Workspace (GSuite)']
     - ['google workplace', 'Google Workspace']
     - ['(cisco )?meraki', "Cisco Meraki"]
     - ['place\W?os', 'PlaceOS']
@@ -170,5 +208,12 @@ rules:
 filters:
   allowlist:
     allow:
-    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/ig'  # link text that is also in url
-    - '/\{#\S+\}/g'                           # header link overrides
+    # Link text that also appears within the URL
+    - '/\[(.*\W)?(.+)(\W.*)?\]\(.*\2.*\)/i'
+
+    # Heading ID's (https://github.com/PlaceOS/docs#heading-ids)
+    - '/\{#\S+\}/'
+
+    # Abbreviations (https://github.com/PlaceOS/docs#abbreviations)
+    - '/^\*\[\S+\]:/m'                # definition
+    - '/(\S+)(?=[^]*^\*\[\1\]:.+)/m'  # usage

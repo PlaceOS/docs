@@ -81,7 +81,7 @@ The Stack name you choose for each component has no effect on the function of th
 [init](https://github.com/PlaceOS/init) initializes the PlaceOS instance and is the final step in the deployment. 
  
 :::info  
-This service will never actually finish as the task will exit after it has run. 
+This service will never actually finish as the task will exit after it has run.
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
 :::
 
@@ -93,3 +93,10 @@ The Backoffice application will be available at:
 
 The credentials are the email and password set by the `init` service.
 You can also find the application URL listed as an output for the `init` nested stack.
+
+
+*[ACM]: AWS Certificate Manager
+*[CIDR]: Classless Inter-Domain Routing
+*[ECS]: Elastic Container Service
+*[EFS]: Elastic File System
+*[VPC]: Virtual Private Cloud

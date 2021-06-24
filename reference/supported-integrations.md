@@ -23,7 +23,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * Google Workspace (GSuite)
 
 ## Messaging
-* Email (MS Graph, Google Workspace, SMTP, AWS SES)
+* Email (MS Graph, Google Workspace, SMTP, Amazon SES)
 * SMS (MessageMedia, Whispir, Amazon SNS)
 * MQTT
 * Webhooks
@@ -66,7 +66,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * Lenel
 * Gallagher
 
-## Conferencing / UC
+## Video Conferencing / Unified Collaboration
 * Cisco Collaboration Endpoints (via Webex API)
 * Microsoft Teams (via MS Graph)
 * Pexip Management API
@@ -121,7 +121,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 ## Other
 * Global Cache
 * Kentix Sensors
-* Foxtel STB
+* Foxtel Set Top Box
 * Gantner Relaxx Lockers
 
 ## Legacy or deprecated integrations

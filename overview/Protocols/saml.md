@@ -35,5 +35,6 @@ Authentication providers can be associated with [Domains](../../how-to/add-domai
 - [Security Assertion Markup Language (SAML) V2.0 Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html)
 
 
-*[SAML]: Security Assertion Markup Language  
+*[IdP]: Identity Provider
+*[SAML]: Security Assertion Markup Language
 *[SSO]: Single Sign-On

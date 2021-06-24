@@ -68,3 +68,6 @@ If you to make a manual update there is a pull button in the about section of th
 :::tip
 Note that if you've set the commit on the repository not to be `HEAD` the automated pull feature will be turned off and the pull button will do nothing.
 :::
+
+
+*[UI]: User Interface

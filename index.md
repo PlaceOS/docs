@@ -10,7 +10,7 @@ sidebar_position: 1
 <!-- This is a placeholder page in markdown to be replaced post-mvp with a more pleasing React page -->
 
 PlaceOS is a [software platform](https://place.technology/solutions/platform) which enriches interaction with physical space.
-It provides tools to design, build and iterate integrated digital experiences for physical environments. 
+It provides tools to design, build and iterate integrated digital experiences for physical environments.
 To do this, it merges any and all elements - from lighting and AV to entire BMS - without the legacy baggage.
 
 **Integration** of disparate systems, devices and services forms a seamless experience for your space.  
@@ -35,4 +35,5 @@ See the [reference material](reference/api) for detailed technical docs.
 
 <!-- Todo: add a neat version of the doc compass in suitable theme -->
 
+*[AV]: Audio Visual
 *[BMS]: Building Management Systems

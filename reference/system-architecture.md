@@ -79,10 +79,10 @@ It updates module configuration via RethinkDB.
 
 
 ### Service Discovery 
-Instances of PlaceOS Core advertise their existence to an etcd cluster as they come online. 
-They also query etcd to discover other active instances. 
-Each service continues to advertise it’s existence with the short TTL while it's are online. 
-If a service is offline, etcd will automatically remove it’s entry  after the TTL expires. 
+Instances of PlaceOS Core advertise their existence to an etcd cluster as they come online.
+They also query etcd to discover other active instances.
+Each service continues to advertise it’s existence with the short TTL while it's are online.
+If a service is offline, etcd will automatically remove it’s entry  after the TTL expires.
 Interested services are made aware of any changes to the cluster so they can rebalance.
 
 ### Distribution of Modules across Cores {#multi-core}
@@ -92,5 +92,5 @@ All Cores will push runtime Module state to Redis where other components can acc
 That state can persist the availability of the Core. 
 
 
-*[SSO]: Single Sign On  
+*[SSO]: Single Sign On
 *[TTL]: Time To Live
