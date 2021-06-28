@@ -62,7 +62,7 @@ You will now need to grant Graph API Permissions on your App.
 - `Contacts.Read`
 - `Group.Read.All`
 - `User.Read.All`
-- `Place.Read.All`
+- `Place.Read.All`  
 ![Graph Application Grants](./assets/grants.png)  
 7. Click Add Permissions
 
@@ -83,8 +83,108 @@ You will now need to create the secret to allow PlaceOS Staff API to Authenticat
 
 # Google Workspace
 
-Google Workspace
+To use Google APIs you will need a server to server OAuth2 application configured.
 
+This involves creating a service account that will be used for authentication.
+
+The service account can then “act as” staff in the organisation to perform action on their behalf, such as booking meeting rooms.
+
+For further information see [Creating and Managing Service Accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
+
+#### Configure Google Cloud API Project
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Configure an existing API Project or Create a New API Project  
+![Google API Project](./assets/google-api-project.png)  
+![Google New API Project](./assets/google-new-project.png)  
+3. Open your API Project and select `APIs & Services` followed by `Dashboard`
+![Google API Service](./assets/google-api-service.png)  
+4. Select `Enable APIs and Services`
+5. Search for and enable the following SDK:
+    * Admin SDK (for staff directory)
+    * Google Calendar API
+    * Google Drive API (for attachments)
+6. For limiting access to a subset of the organisation, you may also want to enable:
+    * Marketplace SDK (not Marketplace API)
+    * Drive API
+
+#### Configure the Service Account
+
+1. Under APIs & Services, navigate to Credentials  
+![Google API Credentials](./assets/google-credentials.png)  
+2. Click on the Create Credentials and select Service Account Key
+![Google Service API Key](./assets/google-service-key.png)  
+3. Create a new Service Account
+![Google New Service Account](./assets/google-new-service-acc.png)  
+4. You can ignore the next steps in the wizard, click Cancel to return to the list of service accounts
+5. Click the service account you just created to create an access key
+![Google JSON Key](./assets/google-json-key.png)  
+6. This will save a JSON File to your computer, these details will be required to configure the service.
+7. Once the key is saved, enable Domain Wide Delegation
+![Google Domain Wide Delegation](./assets/google-domain-delegation.png)  
+8. Click Save
+
+#### Configure Service Account Permissions
+
+:::tip
+If you want to configure this application for use in a subset of the organization, then ignore this step and follow the steps to “Create a marketplace application”.
+:::
+
+1. Open the JSON File that we saved in the previous step
+2. Copy the `client_id`
+![Google Client ID](./assets/google-client-id.png)  
+3. Navigate to [Google Workspace Admin](https://admin.google.com)
+4. Select `Security`
+5. Scroll down to `Advanced Settings`
+6. Select `Manage API Client Access`
+7. Add the following API Scopes to the `client_id` you extracted earlier
+    * `https://www.googleapis.com/auth/calendar`
+    * `https://www.googleapis.com/auth/admin.directory.user.readonly`
+    * `https://www.googleapis.com/auth/drive.file`
+![Google Scopes](./assets/google-scopes.png)  
+8. Click `Authorise`
+9. Ensure API Access is Enabled by going to `Security -> API Controls`
+10. Select `Trust internal, domain owned apps`
+![Google Trust Internal Apps](./assets/google-trust-apps.png)  
+
+:::caution
+`https://www.googleapis.com/auth/drive.file` allows the application to add attachments to calendar events, such as QR codes.  
+It does not allow for reading or modifying any files not created by the application.
+:::'
+
+#### Creating a Marketplace Application
+
+:::tip   
+This step applies to organizations where a specific region or department (OU) will be using the application. 
+
+This step is not applicable to most organizations.
+:::
+
+1. On [Google Cloud Console](http://console.cloud.google.com/) navigate to the API Services Dashboard
+2. Select the G Suite or Google Workspace Marketplace SDK
+![Google G Suite Marketplace](./assets/google-gsuite-marketplace.png)  
+3. Select the `Configuration` tab
+![Google G Suite Config Tab](./assets/google-gsuite-config.png)  
+4. Fill in the app name and description, uncheck `Enable individual install`
+![Google G Suite App](./assets/google-gsuite-app.png)  
+5. Upload icons as required
+6. A Terms of Service URL is also required, you can set this to your companies homepage
+7. Enter the following scope URL:
+    * `https://www.googleapis.com/auth/calendar`
+    * `https://www.googleapis.com/auth/admin.directory.user.readonly`
+    * `https://www.googleapis.com/auth/drive.file`
+8. Enable drive extension and click `Configure drive SDK`
+![Google Drive Extension](./assets/google-drive-ext.png)  
+9. Fill in the details and icons for the Drive Application
+10. Once completed, return to the marketplace application form
+11. Ensure visibility is set to `My Domain`
+![Google Visibility](./assets/google-visibility.png)  
+12. Click `Save Changes`
+
+
+You will need to deploy the marketplace application to the segment of the organization that will be using the application.
+
+Follow the steps to [Install a Google Workspace Marketplace App in your Domain](https://support.google.com/a/answer/172482?hl=en).
 <!--tabs end-->
 
 ## Configure Staff API on PlaceOS
