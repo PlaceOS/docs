@@ -5,9 +5,14 @@ description: How to Configure the Staff API on PlaceOS
 
 The Staff API gives PlaceOS the ability to interact with Calendar and User Resources.
 
-To integrate room booking into your existing calendar environment the Staff API must be configured.
+To integrate room booking into your existing calendar environment you must configure Staff API.
 
-When configured, PlaceOS will be able to create, edit, update and delete calendar bookings for users and resources.
+Once you have configured Staff API, PlaceOS can:
+* Create 
+* Edit 
+* Update 
+* Delete
+Calendar events in Microsoft 365 or Google Workspace.
 
 To show room status on floor maps, the [PlaceOS Calendar driver must also be configured](./placeos-calendar.md).
 
@@ -85,7 +90,7 @@ You will now need to create the secret to allow PlaceOS Staff API to Authenticat
 
 To use Google APIs you will need a server to server OAuth2 application configured.
 
-This involves creating a service account that will be used for authentication.
+This involves creating a service account that PlaceOS will use for authentication.
 
 The service account can then “act as” staff in the organisation to perform action on their behalf, such as booking meeting rooms.
 
@@ -117,9 +122,9 @@ For further information see [Creating and Managing Service Accounts](https://clo
 3. Create a new Service Account
 ![Google New Service Account](./assets/google-new-service-acc.png)  
 4. You can ignore the next steps in the wizard, click Cancel to return to the list of service accounts
-5. Click the service account you just created to create an access key
+5. Click the service account you created to create an access key
 ![Google JSON Key](./assets/google-json-key.png)  
-6. This will save a JSON File to your computer, these details will be required to configure the service.
+6. This will save a JSON File to your computer, you will need this information to configure the service.
 7. Once the key is saved, enable Domain Wide Delegation
 ![Google Domain Wide Delegation](./assets/google-domain-delegation.png)  
 8. Click Save
@@ -143,7 +148,7 @@ If you want to configure this application for use in a subset of the organizatio
     * `https://www.googleapis.com/auth/drive.file`
 ![Google Scopes](./assets/google-scopes.png)  
 8. Click `Authorise`
-9. Ensure API Access is Enabled by going to `Security -> API Controls`
+9. Ensure you enable API Access by going to `Security -> API Controls`
 10. Select `Trust internal, domain owned apps`
 ![Google Trust Internal Apps](./assets/google-trust-apps.png)  
 
@@ -177,12 +182,12 @@ This step is not applicable to most organizations.
 ![Google Drive Extension](./assets/google-drive-ext.png)  
 9. Fill in the details and icons for the Drive Application
 10. Once completed, return to the marketplace application form
-11. Ensure visibility is set to `My Domain`
+11. Ensure you set visibility to `My Domain`
 ![Google Visibility](./assets/google-visibility.png)  
 12. Click `Save Changes`
 
 
-You will need to deploy the marketplace application to the segment of the organization that will be using the application.
+Deploy the marketplace application to the organizational unit that will be using the application.
 
 Follow the steps to [Install a Google Workspace Marketplace App in your Domain](https://support.google.com/a/answer/172482?hl=en).
 <!--tabs end-->
@@ -193,17 +198,17 @@ You will now need to enter the information obtained from the App Registration an
 
 To complete this step, you will need the following information:
 
-- Microsoft Azure
+- Microsoft Azure (all information obtained from Azure App Register)
     - `Client ID`
     - `Tenant ID`
     - `Secret` 
 - Google Workspace
-    - `Domain`
-    - `Service Account Email`
-    - `Scopes`
-    - `Private Key`
-    - `Service User`
-    - `User Agent`
+    - `Domain` - this is the domain your users use when logging into Google
+    - `Service Account Email` - service account user created in previous steps
+    - `Scopes` - what Google services are we accessing (calendar, admin groups, etc)
+    - `Private Key` - available via the JSON downloaded from Google Cloud Console
+    - `Service User` - a Google Workspace user with required permissions to read resource calendars/user information
+    - `User Agent` - user defined and helps with looking at Google logs to see application actions
 
 1. Open PlaceOS Backoffice and login as an administrator
 2. Navigate to the Admin Tab
@@ -217,4 +222,25 @@ To complete this step, you will need the following information:
 
 ## Test Staff API Configuration
 
-Test the configuration
+The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](./placeos-calendar.md).
+
+The `staff-api` logs will show any errors in configuration.
+
+We can view these logs by connecting to the server and running `docker logs --tail 99 -f staff-api`.
+
+An example log with an authentication error to Microsoft 365:
+```
+level=[E] time=2021-06-24T04:10:58Z program=StaffAPI source=action-controller client_ip=218.214.254.247 request_id=50173a7d-a819-4413-8f8a-94adf592f309 domain=poc.placeos.com tenant_id=71 event=error method=GET path=/api/staff/v1/calendars/free_busy?period_start=1624507858&period_end=1624543199&zone_ids=zone-HDvnRd_9lAS status=500 duration=345.62ms
+error fetching token UNAUTHORIZED (401)
+{
+    "error": "invalid_client",
+    "error_description": "AADSTS7000215: Invalid client secret is provided.\r\nTrace ID: 6f090c0f-079f-4930-a123-b1242a4f3f00\r\nCorrelation ID: 0424faa6-2325-4c79-b0e3-726d68db7655\r\nTimestamp: 2021-06-24 04:10:58Z",
+    "error_codes": [
+        7000215
+    ],
+    "timestamp": "2021-06-24 04:10:58Z",
+    "trace_id": "6f090c0f-079f-4930-a123-b1242a4f3f00",
+    "correlation_id": "0424faa6-2325-4c79-b0e3-726d68db7655",
+    "error_uri": "https://login.microsoftonline.com/error?code=7000215"
+}
+```
