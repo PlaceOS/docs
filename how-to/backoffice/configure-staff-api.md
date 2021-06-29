@@ -25,6 +25,10 @@ To enable room bookings, the [PlaceOS Bookings driver must be also configured](.
 
 ## Configure Providers
 
+To enable Staff API you must complete the necessary configuration in your cloud provider.
+
+Instructions for Microsoft 365 and Google Workspace are below. 
+
 <!--tabs start-->
 ## Microsoft Azure (365)
 
@@ -92,7 +96,9 @@ To use Google APIs you will need a server to server OAuth2 application configure
 
 This involves creating a service account that PlaceOS will use for authentication.
 
-The service account can then “act as” staff in the organisation to perform action on their behalf, such as booking meeting rooms.
+The service account can “act as” staff in the organization.  
+
+The service account can perform actions on behalf of a user, such as booking meeting rooms.
 
 For further information see [Creating and Managing Service Accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
 
@@ -109,7 +115,7 @@ For further information see [Creating and Managing Service Accounts](https://clo
     * Admin SDK (for staff directory)
     * Google Calendar API
     * Google Drive API (for attachments)
-6. For limiting access to a subset of the organisation, you may also want to enable:
+6. For limiting access to a subset of the organization, you may also want to enable:
     * Marketplace SDK (not Marketplace API)
     * Drive API
 
@@ -125,14 +131,16 @@ For further information see [Creating and Managing Service Accounts](https://clo
 5. Click the service account you created to create an access key
 ![Google JSON Key](./assets/google-json-key.png)  
 6. This will save a JSON File to your computer, you will need this information to configure the service.
-7. Once the key is saved, enable Domain Wide Delegation
+7. Once the key has saved, enable Domain Wide Delegation
 ![Google Domain Wide Delegation](./assets/google-domain-delegation.png)  
 8. Click Save
 
 #### Configure Service Account Permissions
 
 :::tip
-If you want to configure this application for use in a subset of the organization, then ignore this step and follow the steps to “Create a marketplace application”.
+If you want to configure this application for use in a subset of the organization, ignore this step.
+
+Continue with the steps to “Create a marketplace application”.
 :::
 
 1. Open the JSON File that we saved in the previous step
@@ -152,8 +160,9 @@ If you want to configure this application for use in a subset of the organizatio
 10. Select `Trust internal, domain owned apps`
 ![Google Trust Internal Apps](./assets/google-trust-apps.png)  
 
-:::caution
-`https://www.googleapis.com/auth/drive.file` allows the application to add attachments to calendar events, such as QR codes.  
+:::caution 
+ The scope `https://www.googleapis.com/auth/drive.file` allows the application to add attachments to calendar events, such as QR codes.  
+
 It does not allow for reading or modifying any files not created by the application.
 :::'
 
@@ -170,10 +179,10 @@ This step is not applicable to most organizations.
 ![Google G Suite Marketplace](./assets/google-gsuite-marketplace.png)  
 3. Select the `Configuration` tab
 ![Google G Suite Config Tab](./assets/google-gsuite-config.png)  
-4. Fill in the app name and description, uncheck `Enable individual install`
+4. Fill in the app name and description, un-check `Enable individual install`
 ![Google G Suite App](./assets/google-gsuite-app.png)  
-5. Upload icons as required
-6. A Terms of Service URL is also required, you can set this to your companies homepage
+5. Upload icons as required 
+6. A Terms of Service URL is also required, you can set this to your companies homepage 
 7. Enter the following scope URL:
     * `https://www.googleapis.com/auth/calendar`
     * `https://www.googleapis.com/auth/admin.directory.user.readonly`
@@ -213,7 +222,7 @@ To complete this step, you will need the following information:
 1. Open PlaceOS Backoffice and login as an administrator
 2. Navigate to the Admin Tab
 3. Select Staff API
-4. Select the Domain you want to configure.  
+4. Select the Domain you want to configure  
 ![Staff API Admin](./assets/staff_api_admin.png)  
 5. Click Add Tenant  
 6. Enter the information required  
