@@ -51,22 +51,29 @@ That module is then added to each system that requires booking or calendar funct
 ### Configure Driver
 
 The driver is now instantiated as a module, we need to configure the API Credentials.
-
+<!-- TODO these steps will need review pending GH Issues -->
 1. Navigate to the Modules tab
 2. Select the Calendar Driver
-3. In the Settings view select `Unencrpyed`
-4. Copy the `calendar_config` section
+3. In the Settings view select `unencrypted` tab
+4. Delete all the example configuration provided by the driver
+5. If using Google Calendar API, paste this configuration into the `encrypted` tab:
 ```yaml
 calendar_config:
-  tenant: 'tenant_key'
-  client_id: 'client_id'
-  client_secret: 'secret'
-  conference_type: null
+      scopes:      ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/admin.directory.user.readonly"],
+      domain:      "primary.domain.com",
+      sub:         "default.service.account@google.com",
+      issuer:      "placeos@organisation.iam.gserviceaccount.com",
+      signing_key: "PEM encoded private key"
 ```
-5. Delete the selected content
-6. Click the `Encrypted` tab
-7. Paste in the copied configuration from Step 4
-8. Enter your API information for Microsoft Azure or Google Workspace
+6. If using Office365, paste this configuration into the `encrypted` tab:
+```yaml
+calendar_config:
+      tenant:          "",
+      client_id:       "",
+      client_secret:   "",
+      conference_type: nil # This can be set to "teamsForBusiness" to add a Teams link to EVERY created Event
+```
+7. Enter your API information for Microsoft Azure or Google Workspace replacing placeholder text
 ![Calendar Driver Config](./assets/calendar-driver-config.png)  
 
 ### Add Module to Systems
