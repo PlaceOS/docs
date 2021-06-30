@@ -223,6 +223,16 @@ Edits to address feedback will re-trigger automated review and provide new previ
 
 Updates to default branch will automatically trigger a build and deploy :robot:.
 
+### Todo
+
+If using VS Code Studio you can install the [Todo Tree Exentsion](https://github.com/Gruntfuggly/todo-tree).
+
+This allows contributors to note todo's in the docs for future attention i.e. content linking after a merge etc.
+
+To use, make a todo comment:
+
+ `<!-- TODO Foo-- >`
+
 
 ## Meta
 

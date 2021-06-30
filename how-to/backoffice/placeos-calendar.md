@@ -12,7 +12,8 @@ The Calendar Driver can also make ad-hoc bookings from kiosks or room booking pa
 ## Prerequisites 
 
 - Administrator access to your PlaceOS Backoffice
-- PlaceOS Drivers Repository Configured in Backoffice
+- PlaceOS Drivers Repository Configured in Backoffice 
+<!-- TODO Link to Add Respository Doc after Merge -->
 
 ## Add Driver
 
@@ -54,7 +55,18 @@ The driver is now instantiated as a module, we need to configure the API Credent
 1. Navigate to the Modules tab
 2. Select the Calendar Driver
 3. In the Settings view select `Unencrpyed`
-4. Enter your API information for Microsoft Azure or Google Workspace
+4. Copy the `calendar_config` section
+```yaml
+calendar_config:
+  tenant: 'tenant_key'
+  client_id: 'client_id'
+  client_secret: 'secret'
+  conference_type: null
+```
+5. Delete the selected content
+6. Click the `Encrypted` tab
+7. Paste in the copied configuration from Step 4
+8. Enter your API information for Microsoft Azure or Google Workspace
 ![Calendar Driver Config](./assets/calendar-driver-config.png)  
 
 ### Add Module to Systems
@@ -87,3 +99,5 @@ You can also execute a function on the module and view the response.
 As a test, executing the `list_users` function should return a list of users if connected properly.
 
 ![Exec Users](./assets/exec-users.png) 
+
+<!-- TODO Tutorials on Configuring email templates in Calendar Driver -->
