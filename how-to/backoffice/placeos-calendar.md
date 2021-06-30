@@ -12,7 +12,8 @@ The Calendar Driver can also make ad-hoc bookings from kiosks or room booking pa
 ## Prerequisites 
 
 - Administrator access to your PlaceOS Backoffice
-- PlaceOS Drivers Repository Configured in Backoffice 
+- PlaceOS Drivers Repository Configured in Backoffice
+- Systems have a valid calendar resource address from Microsoft 365 or Google Workspace
 <!-- TODO Link to Add Respository Doc after Merge -->
 
 ## Add Driver
