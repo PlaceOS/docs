@@ -24,10 +24,20 @@ Before we can use the PlaceOS Bookings Driver we must instantiate it as a driver
 4. Select the `drivers > place > bookings.cr` Driver Base
 5. Select the latest commit
 6. Click Save  
+![Add Bookings Driver](./assets/add-bookings-driver.png)
 
 ## Add to Systems
 
 You need to instantiate a single instance of the PlaceOS Bookings Driver in each system that has a bookable space.
+
+1. Navigate to a bookable system
+2. Select the `Modules` tab
+3. Click `Add New`
+4. Select `PlaceOS Bookings`  
+![Add Bookings Driver to System](./assets/bookings-to-system.png)  
+5. Click Save  
+![Save Bookings Driver](./assets/save-bookings.png)  
+6. Click the Black Dot next to the Module to start it
 
 ## Test Module
 
@@ -35,6 +45,6 @@ You can test by creating a booking and inspecting the state of the Bookings Driv
 
 Inspecting the state will return a JSON response of all bookings for that systems calendar resource.
 
-In the example below, you will see a positive response, but the room resource has no bookings.
+In the example below, you will see a positive response with a calendar booking.
 
-![Bookings State](./assets/bookings-state.png)  
+![Bookings State](./assets/bookings-view-state.png)  

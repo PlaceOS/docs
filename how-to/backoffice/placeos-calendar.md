@@ -5,7 +5,7 @@ description: How to Configure the Calendar Driver on PlaceOS
 
 The PlaceOS Calendar Driver connects to Microsoft Graph API (365) or Google Workspace.
 
-The Calendar Driver is used by the [Bookings Driver](./placeos-bookings.md) to obtain resource calendar events.
+The Calendar Driver is used by the [Bookings Driver](./placeos-bookings.md) to get resource calendar events.
 
 The Calendar Driver can also make ad-hoc bookings from kiosks or room booking panels.
 
