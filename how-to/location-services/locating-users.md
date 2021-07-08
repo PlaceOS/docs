@@ -13,7 +13,7 @@ Wireless networks provide a rough indication of location.
 Cabled infrastructure accurately shows who is sitting at individual desk locations.
 
 You can also augment this with sensors as required. 
-Sensors only show desk usage and will need to fall back to Wi-Fi for staff location.
+Sensors show desk usage and will need to fall back to Wi-Fi for staff location.
 
 ![Drawing](https://docs.google.com/drawings/d/12345/export/png)
 
@@ -133,7 +133,7 @@ For more details on how this is implemented please see our detailed [configurati
 
 ## **Wireless Location** {#wireless-location}
 
-There are multiple methods for locating users on the wireless network and ACA has integrations for various systems.
+There are many methods for locating users on the wireless network and ACA has integrations for various systems.
 
 *   [CISCO CMX](https://www.cisco.com/c/en/us/solutions/enterprise-networks/connected-mobile-experiences/index.html) 
 *   [CISCO Meraki](https://meraki.cisco.com/solutions/location-analytics) 

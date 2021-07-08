@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Location services
 
-Location services are any driver that implement the [Locatable Interface](https://github.com/PlaceOS/driver/blob/master/src/placeos-driver/interface/locatable.cr)
+Location services are any driver that support the [Locatable Interface](https://github.com/PlaceOS/driver/blob/master/src/placeos-driver/interface/locatable.cr)
 
 The [Location Service](https://github.com/PlaceOS/drivers/blob/master/drivers/place/location_services.cr) driver collects the responses of locatable modules in the same system and returns this as the result of a location search.
 

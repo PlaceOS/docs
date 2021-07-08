@@ -11,17 +11,17 @@ Configuring PlaceOS to interact with Cisco Meraki wireless systems
 
 ## Prerequisites
 
-For more detail information on requirements please read the following:
+For more detailed information on requirements please read the following:
 [People Finding with Meraki on PlaceOS](people-finding-with-meraki.md)
 
 * Enable the scanning API (provides x, y coordinates of MAC addresses)
   * [Cisco Meraki Scanning API](https://developer.cisco.com/meraki/scanning-api/#!introduction/scanning-api)
   * Use Version 3 of the API
-  * PlaceOS requires the secret and validator codes
+  * PlaceOS requires the `secret` and `validator` codes
 * Enable the dashboard API (provides IP address and usernames, mapping to MAC addresses)
   * [Cisco Meraki Dashboard API](https://documentation.meraki.com/zGeneral_Administration/Other_Topics/The_Cisco_Meraki_Dashboard_API)
   * Use Version 1 of the API
-  * PlaceOS requires the API key
+  * PlaceOS requires the `API` key
 
 
 ## Backoffice configuration
@@ -64,7 +64,8 @@ meraki_api_key: configure for the dashboard API
 
 ### Configuring location tracking
 
-To enable device learning provide a `default_network_id` setting, this ID should look like: `L_68xxx50007xxx0`
+To enable device learning provide a `default_network_id` setting, this ID should look like: `L_68xxx50007xxx0`.
+
 This will query for devices on the network and map MAC addresses to usernames.
 
 This enables the location functionality via the `locate_user(email, username)` function.
