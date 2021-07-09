@@ -5,7 +5,7 @@ description: How to Configure the Calendar Driver on PlaceOS
 
 The PlaceOS Calendar Driver connects to Microsoft Graph API (365) or Google Workspace.
 
-The Calendar Driver is used by the [Bookings Driver](./placeos-bookings.md) to get resource calendar events.
+The Calendar Driver and the [Bookings Driver](./placeos-bookings.md) work together to get resource calendar events.
 
 The Calendar Driver can also make ad-hoc bookings from kiosks or room booking panels.
 
@@ -51,9 +51,17 @@ That module is then added to each system that requires booking or calendar funct
 
 ### Configure Driver
 
+:::tip  
+For Google Integration, we recommend creating a Service User on Google Workspace.
+
+Service Users are the same as a regular Users Accounts with a descriptive name e.g. `placeos-service-user@yourdomain.com`
+
+For testing, you can use your own Google Workspace Account.  
+:::
+
 The driver is now instantiated as a module, we need to configure the API Credentials.
 <!-- TODO these steps will need review pending GH Issues -->
-1. Navigate to the Modules tab
+1. Navigate to the Drivers tab
 2. Select the Calendar Driver
 3. In the Settings view select `unencrypted` tab
 4. Delete all the example configuration provided by the driver
@@ -61,10 +69,10 @@ The driver is now instantiated as a module, we need to configure the API Credent
 ```yaml
 calendar_config:
       scopes:      ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/admin.directory.user.readonly"],
-      domain:      "primary.domain.com",
-      sub:         "default.service.account@google.com",
-      issuer:      "placeos@organisation.iam.gserviceaccount.com",
-      signing_key: "PEM encoded private key"
+      domain:      "primary.domain.com", #Your Google Workspace Domain
+      sub:         "default.service.account@google.com", # User or Service User Account
+      issuer:      "placeos@organisation.iam.gserviceaccount.com", # client_id from the JSON
+      signing_key: "PEM encoded private key" # private_key from the JSON
 ```
 6. If using Office365, paste this configuration into the `encrypted` tab:
 ```yaml

@@ -127,11 +127,11 @@ For further information see [Creating and Managing Service Accounts](https://clo
 ![Google Service API Key](./assets/google-service-key.png)  
 3. Create a new Service Account
 ![Google New Service Account](./assets/google-new-service-acc.png)  
-4. You can ignore the next steps in the wizard, click Cancel to return to the list of service accounts
-5. Click the service account you created to create an access key
+4. You can ignore the next steps in the wizard, click `Done` to return to the list of service accounts
+5. Click the service account you created and select the `Keys` tab to create an access key
 ![Google JSON Key](./assets/google-json-key.png)  
 6. This will save a JSON File to your computer, you will need this information to configure the service.
-7. Once the key has saved, enable Domain Wide Delegation
+7. Once the key has saved, return to the `Details` tab and enable Domain Wide Delegation
 ![Google Domain Wide Delegation](./assets/google-domain-delegation.png)  
 8. Click Save
 
@@ -148,14 +148,15 @@ Continue with the steps to “Create a marketplace application”.
 ![Google Client ID](./assets/google-client-id.png)  
 3. Navigate to [Google Workspace Admin](https://admin.google.com)
 4. Select `Security`
-5. Scroll down to `Advanced Settings`
-6. Select `Manage API Client Access`
-7. Add the following API Scopes to the `client_id` you extracted earlier
+5. Scroll down to `API Controls`
+6. Select `Manage Domain Wide Delegation`
+7. Click `Add new` and enter the `client_id` you extracted earlier
+7. Add the following API Scopes:
     * `https://www.googleapis.com/auth/calendar`
     * `https://www.googleapis.com/auth/admin.directory.user.readonly`
     * `https://www.googleapis.com/auth/drive.file`
-![Google Scopes](./assets/google-scopes.png)  
-8. Click `Authorise`
+![Google Scopes](./assets/add-new-client-id.png)  
+8. Click `Authorize`
 9. Ensure you enable API Access by going to `Security -> API Controls`
 10. Select `Trust internal, domain owned apps`
 ![Google Trust Internal Apps](./assets/google-trust-apps.png)  
