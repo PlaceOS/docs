@@ -79,9 +79,12 @@ Such as an event in a meeting room
 
 [{
   "location": "meeting",
-  "resource_calendars": ["meeting2.city1@org.com", "meeting8.city4@org.com"],
+  "mac": "meeting2.city1@resource.org.com",
   "event_id": "meet-1234567",
-  "ends_at": 1234567
+  "map_id": "map-1234",
+  "sys_id": "sys-id",
+  "ends_at": 1234567,
+  "private": false
 },
 
 # Or for a desk or car-space booking etc
