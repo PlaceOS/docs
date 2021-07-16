@@ -84,7 +84,9 @@ Such as an event in a meeting room
   "map_id": "map-1234",
   "sys_id": "sys-id",
   "ends_at": 1234567,
-  "private": false
+  "private": false,
+  "level": "zone-GAgFNk8vm67",
+  "building": "zone-GAf3dfZq80~"
 },
 
 # Or for a desk or car-space booking etc
