@@ -20,7 +20,7 @@ The script below runs through the level zones and updates any systems with a res
 
 ## Prerequisites
 
-The client ID and secret from the domains tab in backoffice.
+The client ID and secret from the domains tab in Backoffice.
 You can use any valid administration account credentials for that domain.
 
   * Create a calendar module that will be shared between all systems, note the module ID

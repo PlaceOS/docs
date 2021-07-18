@@ -7,9 +7,9 @@ sidebar_position: 3
 
 ## Points of failure
 
-### Etcd Failure
+### etcd Failure
 
-Etcd is used by API and Core to determine the addresses of running Core services.  
+etcd is used by API and Core to determine the addresses of running Core services.  
 As well as to determine where a module is executing in a cluster.
 
   * Some drivers may not function as the API won't be able to reach them
@@ -20,10 +20,10 @@ As well as to determine where a module is executing in a cluster.
 
 ### RethinkDB Failure
 
-RethinkDB holds cluster configuration, primarily used by core during cluster init
+RethinkDB holds cluster configuration, primarily used by core during initialization.
 
 * Most API requests will stop functioning, including authentication  
-* Existing Websocket requests will continue to function
+* Existing WebSocket requests will continue to function
 
 
 ### Redis Failure
@@ -50,13 +50,17 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 
 In the event of a failure, being able to isolate which aspect of the system is not functioning is key to a quick recovery.
 
-* Can you log-in? If not it's probably a *RethinkDB Failure* or loadbalancer issue (check if requests are hitting the services)
-* Does Backoffice list the systems? If not it's probably an *Elasticsearch failure*
+* Can you log-in?
+  If not it's probably a *RethinkDB Failure* or load balancer issue (check if requests are hitting the services)
+* Does Backoffice list the systems?
+  If not it's probably an *Elasticsearch failure*
 
 If you can login and see systems:
 * Select a system you can safely use for testing
-  * Does the list of modules and module functions load? If not it's probably a *Redis Failure*
-  * Does executing a function work from Backoffice? View the response to see the error:
+  * Does the list of modules and module functions load?
+    If not it's probably a *Redis Failure*
+  * Does executing a function work from Backoffice?
+    View the response to see the error:
     * If the error says `no core instances` then *core* might be down or unable to connect to *etcd*
     * If the error says `unable to connect to etcd` then *etcd* might be down or the *API* can't connect to etcd
 

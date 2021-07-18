@@ -6,10 +6,21 @@
     "start": "export DOCS_PATH=$INIT_CWD && npm explore placeos-docs-site -- npm start",
     "build": "export DOCS_PATH=$INIT_CWD && npm explore placeos-docs-site -- npm run build -- --out-dir ${INIT_CWD}/build",
     "serve": "npm explore placeos-docs-site -- npm run serve --dir ${INIT_CWD}/build",
-    "test": "textlint --format pretty-error '{,!(node_modules)/**/}*.md'"
+    "lint": "textlint --format compact",
+    "test": "textlint --format pretty-error ."
   },
   "devDependencies": {
-    "orthograph-err": "place-labs/orthograph-err",
-    "placeos-docs-site": "placeos/docs-site"
+    "dictionary-en": "^3.1.0",
+    "placeos-docs-site": "github:placeos/docs-site",
+    "textlint": "^12.0.0",
+    "textlint-filter-rule-allowlist": "^3.0.0",
+    "textlint-rule-alex": "^3.0.0",
+    "textlint-rule-common-misspellings": "^1.0.1",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-no-empty-section": "^1.1.0",
+    "textlint-rule-one-sentence-per-line": "^2.0.0",
+    "textlint-rule-spelling": "^0.3.0",
+    "textlint-rule-terminology": "^2.1.5",
+    "textlint-rule-write-good": "^2.0.0"
   }
 }

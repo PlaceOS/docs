@@ -12,10 +12,10 @@ This page assists with deploying PlaceOS on AWS using CloudFormation templates.
 The templates configure a PlaceOS Fargate deployment including an optional VPC configuration. 
 The basic premise is: 
 
-1) Upload the nested templates to an s3 bucket  
+1) Upload the nested templates to an S3 bucket  
 1) Orchestrate the deployment using a root stack template 
 
-You can use the `upload-s3.sh` script in the AWS command-line tool to upload the required files to a configurable s3 bucket.
+You can use the `upload-s3.sh` script in the AWS command-line tool to upload the required files to a configurable S3 bucket.
 
 A CloudFormation template specifies all the components.
 Each component is designed to deploy as its own CloudFormation stack.
@@ -52,7 +52,7 @@ For each of these the user can configure:
 The application load balancer is the only component that should deploy in public subnets.
 
 ## Configuring the root stack template {#Stack-configuration}
-Once you have uploaded the files to s3, use `root-stack-templates/placeos/deploy.yml` to deploy PlaceOS.
+Once you have uploaded the files to S3, use `root-stack-templates/placeos/deploy.yml` to deploy PlaceOS.
 The required parameters are:
 
 - **`BucketName`** S3 Bucket name where nested templates live
@@ -81,7 +81,7 @@ The Stack name you choose for each component has no effect on the function of th
 [init](https://github.com/PlaceOS/init) initializes the PlaceOS instance and is the final step in the deployment. 
  
 :::info  
-This service will never actually finish as the task will exit after it has run. 
+This service will never actually finish as the task will exit after it has run.
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
 :::
 
@@ -89,7 +89,14 @@ You can update the ECS Service to have zero **Number of tasks** once it has been
 You can expect the deployment to take 20-30 minutes, most of which is Elasticsearch.
 The Backoffice application will be available at:  
 
-<i>https://{`Application_Load_Balancer_DNS_NAME`}/login?continue=/backoffice</i>
+`https://{Application_Load_Balancer_DNS_NAME}/login?continue=/backoffice`
 
 The credentials are the email and password set by the `init` service.
 You can also find the application URL listed as an output for the `init` nested stack.
+
+
+*[ACM]: AWS Certificate Manager
+*[CIDR]: Classless Inter-Domain Routing
+*[ECS]: Elastic Container Service
+*[EFS]: Elastic File System
+*[VPC]: Virtual Private Cloud

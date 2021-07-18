@@ -160,7 +160,7 @@ An example IAM user policy for file uploads:
 }
 ```
 
-If you don't want he user to have object permission management then you also override the bucket level policy, where all objects are public
+If you don't want the user to have object permission management then you also override the bucket level policy, where all objects are public
 
 ```json
 {
@@ -183,7 +183,7 @@ If you don't want he user to have object permission management then you also ove
 
 Once the above configuration steps are completed, you should be able to upload files to PlaceOS.
 
-To upload a file, simply drag and drop it into Backoffice in your browser.
+To upload a file, drag and drop it into Backoffice in your browser.
 
 The file upload status will be displayed.
 
@@ -197,3 +197,7 @@ Once the upload is complete, you can copy the file URL and use this as required.
 The uploaded file will be given a discrete URL on the storage bucket, for example: `https://s3-ap-southeast-2.amazonaws.com/bucket.name/directory.name/16221818379492128.svg`.  
 Characters will be automatically encoded, if present.
 :::
+
+
+*[CORS]: Cross-Origin Resource Sharing
+*[IAM]: Identity & Access Management

@@ -41,7 +41,7 @@ The `EnvironmentName` parameter's uses include:
 - Service discovery 
 - Linking outputs of templates with inputs of later templates
 
-For example, the RethinkDB service uses EFS shares for it's `/data` directory. 
+For example, the RethinkDB service uses EFS shares for it's `/data` directory.
 To pick up the correct EFS share, the templates for EFS and RethinkDB must have the same `EnvironmentName`.
 
 Use the same `EnvironmentName` variable throughout the deployment process.
@@ -49,12 +49,12 @@ Use the same `EnvironmentName` variable throughout the deployment process.
 The Stack name you choose for each component should be descriptive but has no effect on the function of the deployment. 
 
 ## VPC Architecture: `vpc.yml` {#VPC}
-The **VPC** template deploys two private and two public subnets. 
+The **VPC** template deploys two private and two public subnets.
 For each of these, you can configure:
 
-- CIDR ranges 
-- An internet gateway 
-- Two NAT gateways 
+- CIDR ranges
+- An internet gateway
+- Two NAT gateways
 - Routes and route tables
 
 The application load balancer is the only component that should deploy in public subnets.
@@ -129,9 +129,9 @@ All inbound HTTP traffic redirects to its matching HTTPS.
 > ({`EnvironmentName`} | VPC)
 
 ## Elastic File System: `EFS.yml` {#EFS}
-As the application deployment consists of ephemeral containers, EFS is the persistent storage layer. 
-RethinkDB, NGINX and Frontends services use the Elastic File System created by this template. 
-EFS is the RethinkDB data directory. 
+As the application deployment consists of ephemeral containers, EFS is the persistent storage layer.
+RethinkDB, NGINX and Frontends services use the Elastic File System created by this template.
+EFS is the RethinkDB data directory.
 NGINX and Frontends us it for file storage of the Backoffice user interface.
 #### **Security Groups:**
 - SecurityGroupEFSNginxFrontends: 
@@ -151,7 +151,7 @@ This template deploys the Elastic Container Service (ECS) cluster for all PlaceO
 The ECS Cluster configuration requires the same `EnvironmentName` parameter as prior steps.
 
 ### Notes on deploying the Fargate services.
-The Fargate components of the deployment still need configuration. 
+The Fargate components of the deployment still need configuration.
 They share a lot of common parameters.
 Each template configures and deploys an ECS Task Definition, Service and Task.
 You can configure the ECS parameters as required but the default values specified are okay for this example.
@@ -295,7 +295,7 @@ E.g. `triggers.placeos`
 ## Rubber Soul: `rubber-soul-service.yml` {#Rubber-Soul}
 [Rubber Soul](https://github.com/PlaceOS/rubber-soul) is a service that connects to [`rethinkdb-orm`](https://github.com/spider-gazelle/rethinkdb-orm) models and generates Elasticsearch indices.
 
-This service references the Elasticsearch cluster configured earlier. 
+This service references the Elasticsearch cluster configured earlier.
 Configure the ESURI with the Elasticsearch **VPC Endpoint** which will have the form `https://xxxxxx...es.amazonaws.com.`
 
 #### **Required Services:** 
@@ -347,7 +347,7 @@ E.g. `init.placeos`
 > (`init` | {`EnvironmentName`} | security group)
  
 :::info  
-This service will never actually finish as the task will exit after it has run. 
+This service will never actually finish as the task will exit after it has run.
 You can update the ECS Service to have zero **Number of tasks** once it has been successful.
 :::
 
@@ -358,7 +358,10 @@ Once you have completed the above steps, the Backoffice application will be avai
 
 The credentials are the email and password set by the `init` service.
 
-*[ECS]: Elastic Container Service  
-*[ALB]: Application Load Balancer  
-*[ACM]: AWS Certificate Manager  
+*[ACM]: AWS Certificate Manager
+*[ALB]: Application Load Balancer
+*[CIDR]: Classless Inter-Domain Routing
+*[ECS]: Elastic Container Service
+*[EFS]: Elastic File System
 *[IAM]: Identity Access Management
+*[VPC]: Virtual Private Cloud

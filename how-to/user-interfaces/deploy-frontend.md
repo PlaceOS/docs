@@ -15,7 +15,8 @@ The [user-interfaces](https://github.com/PlaceOS/user-interfaces) repository fol
 1. Commit made with changes to `libs` or an application(`apps/<project>`)
 2. Pipeline in GitHub Actions starts
 3. Install dependencies and build application(s)
-4. Commit build artifacts to associated branch e.g. A development build of `workplace` will be committed to `build/workplace/dev`
+4. Commit build artifacts to associated branch.
+   For example, a development build of `workplace` will be committed to `build/workplace/dev`
 
 ## Backoffice Setup
 
@@ -67,3 +68,6 @@ If you to make a manual update there is a pull button in the about section of th
 :::tip
 Note that if you've set the commit on the repository not to be `HEAD` the automated pull feature will be turned off and the pull button will do nothing.
 :::
+
+
+*[UI]: User Interface

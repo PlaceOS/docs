@@ -31,8 +31,7 @@ You must create a domain before adding authentication sources (such as [SAML](..
 ## Step 2: Add an Application to the Domain
 
 1. Select the Applications tab
-2. Select the New Application button.
-This brings up the New Application form
+2. Choose New Application
 3. Add the following fields:
    - `Name`: Can be anything to identify the applications
       - Usually the folder path where the application resides but capitalized i.e. `Backoffice`

@@ -33,10 +33,10 @@ You need to instantiate a single instance of the PlaceOS Bookings Driver in each
 1. Navigate to a bookable system
 2. Select the `Modules` tab
 3. Click `Add New`
-4. Select `PlaceOS Bookings`  
-![Add Bookings Driver to System](./assets/bookings-to-system.png)  
-5. Click Save  
-![Save Bookings Driver](./assets/save-bookings.png)  
+4. Select `PlaceOS Bookings`
+   ![Add Bookings Driver to System](./assets/bookings-to-system.png)
+5. Click Save
+   ![Save Bookings Driver](./assets/save-bookings.png)
 6. Click the Black Dot next to the Module to start it
 
 ## Test Module
@@ -47,4 +47,4 @@ Inspecting the state will return a JSON response of all bookings for that system
 
 In the example below, you will see a positive response with a calendar booking.
 
-![Bookings State](./assets/bookings-view-state.png)  
+![Bookings State](./assets/bookings-view-state.png)

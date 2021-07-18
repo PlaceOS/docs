@@ -14,7 +14,7 @@ They define actions that will occur based on certain criteria, such as:
 ## Customization
 
 Triggers permit modules to influence the behavior of other modules directly. 
-In PlaceOS backoffice, users can create, assign and manage triggers.
+In PlaceOS Backoffice, users can create, assign and manage triggers.
 This way, they can customize extensive event driven behavior. 
 That accompanies more complex core system behavior written in the logic [modules](modules.md).
 
