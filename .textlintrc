@@ -36,6 +36,9 @@ rules:
     - '/\b\d*(px)|(pt)\b/'       # pt and px measures
     - '/\bbase\d+\b/'            # base2, base16 etc
 
+    # Notes
+    - '/\btodo\b/i'
+
     # Product components
     - '/\b[Aa]uth\b/'
     - Backoffice
