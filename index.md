@@ -33,6 +33,12 @@ Read a [how-to guide](how-to/authentication/configure-saml) for docs to help you
 
 See the [reference material](reference/api) for detailed technical docs.
 
+## Videos and Demonstration Apps
+
+You can watch a [short](https://placeos.wistia.com/medias/bnz61a0wfw) or [in-depth](https://placeos.wistia.com/medias/vyn0rsm5vi) video demonstrating the various functions of PlaceOS Backoffice. 
+
+Take our [Workplace](https://templates.demo.place.tech/workplace/#/) or [Concierge](https://templates.demo.place.tech/concierge/#/) Demo Apps for a spin.
+
 <!-- Todo: add a neat version of the doc compass in suitable theme -->
 
 *[AV]: Audio Visual
