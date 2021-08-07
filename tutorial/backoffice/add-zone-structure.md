@@ -127,7 +127,7 @@ You will need to repeat this step to create all your levels.
 
 ## System Zones
 
-System Zones can be used to group similar system types e.g. meeting rooms, video conference rooms etc.
+System Zones group similar system types e.g. meeting rooms, video conference rooms etc.
 
 These systems are optional.
 
