@@ -77,7 +77,7 @@ The remaining fields are optional:
 - **Location**: GPS Coordinates for the building
 - **Code**: Cost Center or Building Code
 - **Type**: Code category
-- **Capacity**: Total building capacity
+- **Capacity**: Primarily for defining floor/level capacity
 - **Map**: A relevant map file (see [How to Upload Files to Backoffice](../../how-to/backoffice/backoffice-uploads.md))
 
 ![Add new building zone](./assets/new-building-zone.png)
