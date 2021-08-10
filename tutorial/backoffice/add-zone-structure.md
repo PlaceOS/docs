@@ -31,7 +31,7 @@ The Org Zone is typically named after the organization.
 1. Login to PlaceOS Backoffice
 2. Navigate to Zones
 3. Click the `+` button to create a new zone  
-![Add new org zone](./assets/new-zone-button.png)  
+    ![Add new org zone](./assets/new-zone-button.png)  
 4. In the New Zone Modal, you will need to enter the following information:
 - **Parent Zone**: Your new org zone will be the parent, leave this blank
 - **Name**: The name of your org zone (typically your organization name)
@@ -65,7 +65,7 @@ The frontend will use Building Zones to allow end users to select buildings in y
 1. Login to PlaceOS Backoffice
 2. Navigate to Zones
 3. Click the `+` button to create a new zone  
-![Add new org zone](./assets/new-zone-button.png)  
+    ![Add new org zone](./assets/new-zone-button.png)  
 4. In the New Zone Modal, you will need to enter the following information:
 - **Parent Zone**: Select your Org Zone we created in the previous step as the parent
 - **Name**: The name of your building zone (you could put an address or physical location)
@@ -101,7 +101,7 @@ The frontend will use Level Zones (nested in building zones) to allow end users 
 1. Login to PlaceOS Backoffice
 2. Navigate to Zones
 3. Click the `+` button to create a new zone  
-![Add new org zone](./assets/new-zone-button.png)  
+    ![Add new org zone](./assets/new-zone-button.png)  
 4. In the New Zone Modal, you will need to enter the following information:
 - **Parent Zone**: Select your Building Zone we created in the previous step as the parent
 - **Name**: The name of your Level zone (Typically this will be Level 1, Level 2 etc.)
@@ -131,14 +131,14 @@ System Zones group similar system types e.g. meeting rooms, video conference roo
 
 These systems are optional.
 
-System Zones will allow specific configuration to be applied to a group of similar systems.
+System Zones will allow specific configuration for a group of similar systems.
 
 ### Create a System Zone
 
 1. Login to PlaceOS Backoffice
 2. Navigate to Zones
 3. Click the `+` button to create a new zone  
-![Add new org zone](./assets/new-zone-button.png)  
+    ![Add new org zone](./assets/new-zone-button.png)  
 4. In the New Zone Modal, you will need to enter the following information:
 - **Parent Zone**: Select your Building or Org Zone we created in the previous step as the parent
 - **Name**: The name of your System zone (Typically this will be 4 Person Meeting Room, MS Teams Rooms etc.)
