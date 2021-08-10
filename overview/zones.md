@@ -20,3 +20,7 @@ They serve two main purposes:
    - Systems of the same general concept.
    For example if you have customer-facing systems zoned separately to internal systems 
 1. A point to define [settings](settings.md) that need to affect a set of systems in the same way
+
+## Guides
+
+* [Add Zone Structure to Backoffice](./tutorial/backoffice/add-zone-structure.md)

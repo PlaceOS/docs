@@ -182,6 +182,9 @@ rules:
     - Xovis
     - XY Sense
 
+  # Semantics
+    - walkthrough
+
   # Enforcement of capitalization, words breaks and other well defined
   # structure.
   terminology:
