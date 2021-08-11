@@ -26,5 +26,10 @@ PlaceOS has drivers that fall into one of two categories:
 ## Drivers and Modules
 [Modules](modules.md) are instances of drivers, letting the rest of PlaceOS access their specific functions.
 
+## Driver Map
 
+The driver map shows driver dependencies in PlaceOS.
 
+[![Driver Dependency Map](./assets/driver-map.jpg)](./assets/driver-map.jpg)
+
+<!-- TODO: Change to MermaidJS Diagram when Supported -->
