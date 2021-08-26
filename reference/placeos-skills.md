@@ -14,9 +14,9 @@ This is the core area of PlaceOS specific knowledge.
 All interaction is via Backoffice and encompasses effort to structure, integrate and deploy existing drivers and user interfaces with an already deployed base platform.
 
 **External Knowledge:**
-* JSON or YAML for Settings.
+* `JSON` or `YAML` for Settings.
 * Identity providers (SAML, OAuth2) for integrating platform authentication as well as service integrations.
-* Familiarity with any external services, devices or systems that will be integrated with PlaceOS. 
+* Familiarity with any external services, devices or systems that will integrate with PlaceOS. 
 * Base level networking knowledge to be able to identify potential communication issues.
 
 **PlaceOS Specific Knowledge**
