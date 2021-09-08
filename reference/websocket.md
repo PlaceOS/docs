@@ -31,14 +31,15 @@ These are:
 
 Example of a `bind` command:
 
-```json
+```yaml
 {
-  "id": 1, // Any number
-  "cmd": "bind",
-  "sys": "sys-1234", // ID of the PlaceOS system
-  "mod": "Bookings", // Name of the PlaceOS module
-  "index": 1, // Non-zeroed index of the module in the system. i.e. 1st index is 1
-  "name": "bookings" // Name of the variable to bind to
+  
+  "id": 1, # Any number
+  "cmd": "bind", # ID of the PlaceOS system
+  "sys": "sys-1234", # Name of the PlaceOS module
+  "mod": "Bookings",
+  "index": 1, # Non-zeroed index of the module in the system. i.e. 1st index is 1
+  "name": "bookings" # Name of the variable to bind to
 }
 ```
 
@@ -63,11 +64,11 @@ value and any changes to the value until the `unbind` command is issued.
 
 Example of the value change notification:
 
-```json
+```yaml
 {
     "id": 18,
     "type": "notify",
-    "value": "[]", // Stringified JSON
+    "value": "[]", # Stringified JSON
     "meta": {
         "sys": "sys-1234",
         "mod": "Bookings",
@@ -83,14 +84,14 @@ Example of the value change notification:
 
 Example of a `unbind` command:
 
-```json
+```yaml
 {
-  "id": 2, // Any number
+  "id": 2, # Any number
   "cmd": "unbind",
-  "sys": "sys-1234", // ID of the PlaceOS system
-  "mod": "Bookings", // Name of the PlaceOS module
-  "index": 1, // Non-zeroed index of the module in the system. i.e. 1st index is 1
-  "name": "bookings" // Name of the variable to bind to
+  "sys": "sys-1234", # ID of the PlaceOS system
+  "mod": "Bookings", # Name of the PlaceOS module
+  "index": 1, # Non-zeroed index of the module in the system. i.e. 1st index is 1
+  "name": "bookings" # Name of the variable to bind to
 }
 ```
 
@@ -114,15 +115,15 @@ The ID of the response will match the ID of the message.
 
 The `exec` command allows you to call available methods on the target driver.
 
-```json
+```yaml
 {
-  "id": 3, // Any number
+  "id": 3, # Any number
   "cmd": "exec",
-  "sys": "sys-1234", // ID of the PlaceOS system
-  "mod": "Bookings", // Name of the PlaceOS module
-  "index": 1, // Non-zeroed index of the module in the system. i.e. 1st index is 1
-  "name": "make_booking", // Name of the method to call
-  "args": [1631058815] // List of arguments to pass into the function
+  "sys": "sys-1234", # ID of the PlaceOS system
+  "mod": "Bookings", # Name of the PlaceOS module
+  "index": 1, # Non-zeroed index of the module in the system. i.e. 1st index is 1
+  "name": "make_booking", # Name of the method to call
+  "args": [1631058815] # List of arguments to pass into the function
 }
 ```
 
