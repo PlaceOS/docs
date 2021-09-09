@@ -9,7 +9,6 @@ The real-time WebSocket works in conjunction with the [PlaceOS API](api.md).
 The PlaceOS API can list systems and zones that are then used with the WebSocket.
 :::
 
-# Real-time API
 
 PlaceOS exposes the endpoint `wss://<app_domain>/api/engine/v2/systems/control` to allow for real-time communication.
 The endpoint requires a valid API token.
