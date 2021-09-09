@@ -19,6 +19,10 @@ API tokens are sent in the header of the request.
 
 If you need to ping the channel to keep it alive you can send `"ping"` to which the server will respond `"pong"`.
 
+## Prerequisites
+
+- [PlaceOS API Key](./how-to/backoffice/api-keys.md)
+
 ## Commands
 
 5 commands available for the user to perform over the API.
