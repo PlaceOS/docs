@@ -1,6 +1,7 @@
 ---
 title: Writing A Driver
 description: Everything you need to know about writing drivers for PlaceOS
+sidebar_position: 1
 ---
 
 There are three main uses of drivers:

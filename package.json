@@ -1,19 +1,33 @@
 {
   "name": "placeos-docs",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "docusaurus build ${npm_package_config_site_dir}",
-    "start": "docusaurus start ${npm_package_config_site_dir}",
-    "test": "textlint --format pretty-error '{,!(node_modules)/**/}*.md'"
+    "start": "export DOCS_PATH=$INIT_CWD && npm explore placeos-docs-site -- npm start",
+    "build": "export DOCS_PATH=$INIT_CWD && npm explore placeos-docs-site -- npm run build -- --out-dir ${INIT_CWD}/build",
+    "serve": "npm explore placeos-docs-site -- npm run serve --dir ${INIT_CWD}/build",
+    "lint": "textlint --format compact",
+    "test": "textlint --format pretty-error ."
   },
-  "config": {
-    "site_dir": "node_modules/placeos-docs-site",
-    "docs_path": "../../"
-  },
-  "files": "{./,./**}/*.md",
   "devDependencies": {
-    "orthograph-err": "github:place-labs/orthograph-err",
-    "placeos-docs-site": "github:placeos/docs-site"
+    "dictionary-en": "^3.1.0",
+    "placeos-docs-site": "github:placeos/docs-site",
+    "textlint": "^12.0.0",
+    "textlint-filter-rule-allowlist": "^3.0.0",
+    "textlint-rule-alex": "^3.0.0",
+    "textlint-rule-common-misspellings": "^1.0.1",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-no-empty-section": "^1.1.0",
+    "textlint-rule-one-sentence-per-line": "^2.0.0",
+    "textlint-rule-spelling": "^0.3.0",
+    "textlint-rule-terminology": "^2.1.5",
+    "textlint-rule-write-good": "^2.0.0"
+  },
+  "dependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }
