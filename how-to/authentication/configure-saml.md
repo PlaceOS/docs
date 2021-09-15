@@ -37,7 +37,7 @@ Here is a description of each field:
     -  Request this URL when sending the metadata URL
     -  Azure AD URLs are often in the format: `https://login.microsoftonline.com/**tenant-ID**/saml2`
     -  OKTA URLs are often in the format: `https://**okta.domain.com**/app/**app-name**/**app-id-number**/sso/saml`
-    -  ADFS URLs are often in the format: `https://adfs.myorganistaion.com/adfs/ls`
+    -  AD FS URLs are often in the format: `https://adfs.myorganistaion.com/adfs/ls`
     -  Auth0 URLs are often in the format: `https://myorganisation.auth0.com/samlp/`
 - `Name Identifier Format`: the format of the response data
     -  Set to `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`
@@ -46,11 +46,11 @@ Here is a description of each field:
     -  Clients sometimes request you change these to match their system
     -  Example:
 
-  | Name | Name_format | Friendly_name |
+  | Name | `Name_format` | `Friendly_name` |
   | --- | --- | --- |
-  | email | urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified | Email Address |
-  | first_name | urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified | Given Name |
-  | last_name | urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified | Surname |
+  | `email` | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified` | Email Address |
+  | `first_name` | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified` | Given Name |
+  | `last_name` | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified` | Surname |
 
 - `Assertion URL (Reply URL / Callback URL)`: the PlaceOS URL that SSO sends data back to - to log someone in
     -  First set this to the base domain of the application.
@@ -65,10 +65,10 @@ Here is a description of each field:
 
   | Name | Mappings |
   | --- | --- |
-  | email | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
-  | first_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` |
-  | last_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname` |
-  | login_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
+  | `email` | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
+  | `first_name` | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` |
+  | `last_name` | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname` |
+  | `login_name` | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/objectidentifier` |
 
 Once you click save, it will generate an authentication ID.
 You can find it in the `/saml_auths` response on the Authentication tab.
@@ -105,7 +105,7 @@ From the above steps you will need:
 - The **Login URL** which is the homepage of the app
 - The **Metadata URL** (optional)  
 
-This XML file contains the above information and can be fed into to some configuration dashboards (like ADFS).
+This XML file contains the above information and can be fed into to some configuration dashboards (like AD FS).
 
 This process will vary by provider, see the below guides for common options:
 
@@ -172,3 +172,5 @@ Look for the text **"Callback phase initiated"** and the SAML response data is n
 
 
 *[AD FS]: Active Directory Federation Services
+*[OKTA]: `OKTA` Authentication Service
+*[IDP]: Identity Provider
