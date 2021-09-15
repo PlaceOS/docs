@@ -172,4 +172,5 @@ Look for the text **"Callback phase initiated"** and the SAML response data is n
 
 
 *[AD FS]: Active Directory Federation Services
-*[OKTA]: OKTA Authentication Service
+*[OKTA]: `OKTA` Authentication Service
+*[IDP]: Identity Provider
