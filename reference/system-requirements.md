@@ -22,7 +22,7 @@ and [PlaceOS Kubernetes Helm Charts](https://github.com/place-labs/k8s-helm/) fo
 
 - Clusters: 1
 - Regions: 1
-- Availability Zones: 3 or more
+- Availability Zones: 1 or more (3 recommended)
 - Nodes: 3 or more
 - Minimum node size:
   - 4 cores
@@ -45,7 +45,7 @@ and [PlaceOS Kubernetes Helm Charts](https://github.com/place-labs/k8s-helm/) fo
 - Clusters: 1
 - Regions: 1
 - Availability Zones: 1 or more
-- Nodes: 2 or more
+- Nodes: 3 or more
 - Minimum node size:
   - 2 cores
   - 8 GB RAM
