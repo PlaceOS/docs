@@ -68,7 +68,7 @@ Here is a description of each field:
   | email | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
   | first_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` |
   | last_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname` |
-  | login_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
+  | login_name | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/objectidentifier` |
 
 Once you click save, it will generate an authentication ID.
 You can find it in the `/saml_auths` response on the Authentication tab.
