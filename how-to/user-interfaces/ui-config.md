@@ -59,10 +59,21 @@ Configuration can be applied to the desk booking feature via the `desks` paramet
 
 Where the following is observed:
 
-* `ignore_questions`: Enable or disable the COVID Booking Questions.  
-* `available_period`: How far in advance desks can be booked. Default is 99.
+* `ignore_questions`: Enable or disable the COVID Booking Questions.
+* `available_period`: How far in advance desks can be booked, the Default is 99.
 
 ### Room Booking
+
+Configuration can be applied to hide features of the room booking workflow.
+
+This configuration is applied via the `booking` parameters.
+
+```json
+"booking": {
+        "allowed_daily_desk_count": 99,
+        "hide_user_actions": true
+    }
+```
 
 ### App Logo
 
@@ -86,14 +97,14 @@ Menu Items
 - My Day
 
 Desk Booking:
-- Questions are disabled.
+- Questions are turned off.
 - Desks can only be booked 7 days in advance.
 
 Logo:
 - Custom Light and Dark Logo is configured.
 
 Delivery:
-- The delivery display for mail room feature is disabled.
+- The delivery display for mail room feature is turned off.
 
 ```json
 {
