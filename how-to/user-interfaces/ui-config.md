@@ -3,7 +3,7 @@ title: UI Configurable Items
 description: Configure features on the PlaceOS Workplace and Concierge Apps
 ---
 
-PlaceOS User Interfaces allow configuration via metadata saved to [Zones](././tutorials/add-zone-structure.md) in Backoffice.
+PlaceOS User Interfaces allow configuration via metadata saved to [Zones](././tutorials/backoffice/add-zone-structure.md) in Backoffice.
 
 ## Workplace App
 
@@ -185,3 +185,5 @@ These items are stored as JSON metadata attached to a zone.
 The metadata field must be named `concierge_app`. 
 
 This configuration is typically associated with the `org` zone.
+
+A full list of configuration items are detailed in the [Concierge App Repository](https://github.com/PlaceOS/user-interfaces/blob/master/apps/concierge/src/environments/settings.ts).
