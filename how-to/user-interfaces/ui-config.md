@@ -3,7 +3,7 @@ title: UI Configurable Items
 description: Configure features on the PlaceOS Workplace and Concierge Apps
 ---
 
-PlaceOS User Interfaces allow configuration via metadata saved to [Zones](././tutorials/backoffice/add-zone-structure.md) in Backoffice.
+PlaceOS User Interfaces allow configuration via metadata saved to [Zones](../../tutorial/backoffice/add-zone-structure.md) in Backoffice.
 
 ## Workplace App
 
