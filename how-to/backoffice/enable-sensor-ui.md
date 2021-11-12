@@ -20,9 +20,9 @@ The first step is to enable the sensor extension.
 
 1. In PlaceOS Backoffice Navigate to the Admin Tab
 2. Under PlaceOS Admin select Extensions  
-![Admin Extensions](./assets/admin-extensions.png)
+    ![Admin Extensions](./assets/admin-extensions.png)  
 3. Select a Domain and Click `Add Extension`  
-![Extensions Domain](./assets/extensions-domain.png)  
+    ![Extensions Domain](./assets/extensions-domain.png)  
 4. Configure the new extension as below:
 * Type: `zones`
 * Name: `Sensors`
@@ -30,9 +30,9 @@ The first step is to enable the sensor extension.
 5. Click Add Condition and add the following condition:
 * Condition Field: `map_id`
 * Operation: `truthy`  
-![Sensors Config](./assets/sensors-config.png)  
+    ![Sensors Config](./assets/sensors-config.png)  
 6. Click `Add`  
-![Extension Added](./assets/extension-added.png)  
+    ![Extension Added](./assets/extension-added.png)  
 
 The Extension is now enabled.
 
@@ -46,8 +46,8 @@ Once enabled, you can place sensors on the floor maps of Level Zones.
 
 1. Navigate to Zones and select a zone with a tag of `level`
 2. In the options bar you will now see the `Sensors` option  
-![Sensor Menu](./assets/zones-sensors.png)
+    ![Sensor Menu](./assets/zones-sensors.png)
 3. Select the `Sensors` tab.  
-![Sensor View](./assets/sensor-view.png)
+    ![Sensor View](./assets/sensor-view.png)
 
 You will now be able to select sensors from the list and place them according to their physical location on the map.
