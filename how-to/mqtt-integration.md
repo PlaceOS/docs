@@ -120,3 +120,4 @@ PlaceOS can integrate with MQTT Brokers including the major service providers li
 
 
 *[MQTT]: Message Queuing Telemetry Transport
+*[VC]: Video Conferencing

@@ -10,7 +10,7 @@ Drivers are written in [Crystal Lang](https://crystal-lang.org/) and based on ou
 <!-- consider the explain page for Crystal Lang -->
 
 If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk.
-Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) guide to write your own.
+Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-driver) guide to write your own.
 
 ## Authentication
 * OAuth2 (JWT)
@@ -23,7 +23,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Google Workspace (GSuite)
 
 ## Messaging
-* Email (MS Graph, Gmail, SMTP, AWS SES)
+* Email (MS Graph, Google Workspace, SMTP, Amazon SES)
 * SMS (MessageMedia, Whispir, Amazon SNS)
 * MQTT
 * Webhooks
@@ -66,7 +66,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 * Lenel
 * Gallagher
 
-## Conferencing / UC
+## Video Conferencing / Unified Collaboration
 * Cisco Collaboration Endpoints (via Webex API)
 * Microsoft Teams (via MS Graph)
 * Pexip Management API
@@ -121,7 +121,7 @@ Or, you can refer to the [How to Write A Driver](../tutorial/write-a-driver) gui
 ## Other
 * Global Cache
 * Kentix Sensors
-* Foxtel STB
+* Foxtel Set Top Box
 * Gantner Relaxx Lockers
 
 ## Legacy or deprecated integrations

@@ -31,8 +31,7 @@ You must create a domain before adding authentication sources (such as [SAML](..
 ## Step 2: Add an Application to the Domain
 
 1. Select the Applications tab
-2. Select the New Application button.
-This brings up the New Application form
+2. Choose New Application
 3. Add the following fields:
    - `Name`: Can be anything to identify the applications
       - Usually the folder path where the application resides but capitalized i.e. `Backoffice`
@@ -52,7 +51,7 @@ This brings up the New Application form
    - `First Name`: Add the first name of the user, this is required
    - `Last Name`: Add the last name of the user, this is required
    - `Email`: This will be the username and is required
-   - `System Admin`: Denotes whether the user will be an admin (and thus can access and make changes in Backoffice). 
+   - `System Admin`: Denotes whether the user will be an admin (and thus can access and make changes in Backoffice)
       - This will usually be set to true when creating users in this interface
    - `Password` and `Confirm Password`: Enter the password which the user will use to login (when not using SSO)
 

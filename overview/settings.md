@@ -58,3 +58,6 @@ Similarly, modules inherit all the settings from the driver that they instantiat
 Settings inherited from a zone or driver combine with any settings defined directly on the system or module.
 If an inherited setting has the same key as one defined directly, the latter will override the inherited one.
 This lets you write general settings at a higher common level, with more specific ones on each lower tier.
+
+
+*[DSP]: Digital Signal Processor

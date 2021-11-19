@@ -20,41 +20,41 @@ They work in different combinations to best suit the needs of each site.
 <!-- See the [Docker Image]() and [Source on GitHub](). -->
 <!-- can rearrange as a table if needed -->
 
-### ingress
- Serves web requests (static files and upstream reverse proxying to REST-API).  
+### `ingress`
+ Serves web requests (static files and upstream reverse proxying to the API service).  
  See the [Docker Image](https://hub.docker.com/r/yobasystems/alpine-nginx) and [Source on GitHub](https://GitHub.com/nginx/nginx).
 
-### etcd
+### `etcd`
  Distributed key-value store used for PlaceOS service discovery and leader election.  
  See the [Docker Image](https://hub.docker.com/r/bitnami/etcd) and [Source on GitHub](https://GitHub.com/etcd-io/etcd).
 
-### RethinkDB
+### `rethinkdb`
  Database for permanent storage of PlaceOS configuration. 
  Configuration: Three node cluster in 3 different availability zones within same region for [HA](#HADC).  
  See the [Docker Image](https://hub.docker.com/_/rethinkdb) and [Source on GitHub](https://GitHub.com/rethinkdb/rethinkdb).
 
-### PlaceOS core
+### `core`
  Application in a Docker container that interfaces with external devices/services.  
  See the [Docker Image](https://hub.docker.com/r/placeos/core) and [Source on GitHub](https://GitHub.com/PlaceOS/core).
 
-### PlaceOS Auth
+### `auth`
  Application in a Docker container that provides authentication.  
  See the [Docker Image](https://hub.docker.com/r/placeos/auth) and [Source on GitHub](https://GitHub.com/PlaceOS/auth).
 
-### PlaceOS REST-API
+### `rest-api`
  Application in a Docker container that provides REST API for web applications.  
  See the [Docker Image](https://hub.docker.com/r/placeos/rest-api) and [Source on GitHub](https://GitHub.com/PlaceOS/rest-api).
 
-### PlaceOS triggers
+### `triggers`
  Perform user defined actions, without code, under certain conditions.  
  See the [Docker Image](https://hub.docker.com/r/placeos/triggers) and [Source on GitHub](https://GitHub.com/PlaceOS/triggers).
 
-### PlaceOS dispatch
+### `dispatch`
  Reverse proxy incoming communications from devices/services to PlaceOS core. 
- This is required to handle protocols like SNMP Traps - often not required.  
+ This is required to handle protocols like SNMP - often not required.  
  See the [Docker Image](https://hub.docker.com/r/placeos/dispatch) and [Source on GitHub](https://GitHub.com/PlaceOS/dispatch).
 
-### PlaceOS rubber-soul
+### `rubber-soul`
  Stream RethinkDB changes to Elasticsearch, which will index the documents for fast text searching.  
  See the [Docker Image](https://hub.docker.com/r/placeos/rubber-soul) and [Source on GitHub](https://GitHub.com/PlaceOS/rubber-soul).
 
@@ -79,10 +79,10 @@ It updates module configuration via RethinkDB.
 
 
 ### Service Discovery 
-Instances of PlaceOS Core advertise their existence to an etcd cluster as they come online. 
-They also query etcd to discover other active instances. 
-Each service continues to advertise it’s existence with the short TTL while it's are online. 
-If a service is offline, etcd will automatically remove it’s entry  after the TTL expires. 
+Instances of PlaceOS Core advertise their existence to an etcd cluster as they come online.
+They also query etcd to discover other active instances.
+Each service continues to advertise it’s existence with the short TTL while it's are online.
+If a service is offline, etcd will automatically remove it’s entry  after the TTL expires.
 Interested services are made aware of any changes to the cluster so they can rebalance.
 
 ### Distribution of Modules across Cores {#multi-core}
@@ -92,5 +92,5 @@ All Cores will push runtime Module state to Redis where other components can acc
 That state can persist the availability of the Core. 
 
 
-*[SSO]: Single Sign On  
+*[SSO]: Single Sign On
 *[TTL]: Time To Live
