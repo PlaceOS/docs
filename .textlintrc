@@ -51,7 +51,9 @@ rules:
     # that are local to document context should be defined inline.
     # See: https://github.com/PlaceOS/docs#abbreviations
     - API
+    - CMX
     - DNS
+    - EFI
     - HTTP
     - IO
     - IP
@@ -60,8 +62,11 @@ rules:
     - JWT
     - MQTT
     - OAuth
+    - R26
+    - RSSI
     - SaaS
     - SAML
+    - SCCM
     - SMS
     - SMTP
     - SNMP
@@ -74,6 +79,8 @@ rules:
     - UDP
     - URI
     - XML
+    - DHCP
+    - Wi-Fi
 
     # Jargon
     - '/analytics/i'
@@ -128,6 +135,7 @@ rules:
     - etcd
     - Extron
     - Fargate
+    - FindMe
     - Floorsense
     - Foxtel
     - Gantner Relaxx
@@ -135,6 +143,7 @@ rules:
     - GSuite
     - Helvar
     - HP
+    - Huawei
     - InTouch
     - Kentix
     - KNX
@@ -161,6 +170,7 @@ rules:
     - PointGrab
     - Polycom
     - PowerSoft
+    - PowerShell
     - Pressac
     - Q-SYS
     - QBic
@@ -184,6 +194,7 @@ rules:
 
   # Semantics
     - walkthrough
+    - validator
 
   # Enforcement of capitalization, words breaks and other well defined
   # structure.

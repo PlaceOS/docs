@@ -47,7 +47,7 @@ We need to ensure that the MAC address exposed by the docking station is unique 
 All commercial docking solutions offer a method for passing on a unique MAC, or do this by default. 
 Two of the more common docking solutions are HP (BIOS or EFI configuration) and [Displaylink](http://www.displaylink.com/products/universal-docking-stations) USB docks (Dell, Lenovo, Fujitsu, Targus, Kensington, HP and Toshiba among others).
 
-DisplayLink provides a PowerShell [script](https://drive.google.com/a/room.tools/file/d/1ie_cEe0tP4tmYvhw1vh3YXO45XSFIA3Y/view?usp=sharing) to automate the configuration which can be deployed via SCCM.
+Display Link provides a PowerShell [script](https://drive.google.com/a/room.tools/file/d/1ie_cEe0tP4tmYvhw1vh3YXO45XSFIA3Y/view?usp=sharing) to automate the configuration which can be deployed via SCCM.
 <!-- Should this be capturing_user_devices.md ?-->
 
 [https://support.displaylink.com/knowledgebase/articles/613455-how-to-configure-displaylink-ethernet#macclone](https://support.displaylink.com/knowledgebase/articles/613455-how-to-configure-displaylink-ethernet#macclone)
@@ -133,7 +133,7 @@ For more details on how this is implemented please see our detailed [configurati
 
 ## **Wireless Location** {#wireless-location}
 
-There are many methods for locating users on the wireless network and ACA has integrations for various systems.
+There are many methods for locating users on the wireless network and PlaceOS has integrations for various systems.
 
 *   [CISCO CMX](https://www.cisco.com/c/en/us/solutions/enterprise-networks/connected-mobile-experiences/index.html) 
 *   [CISCO Meraki](https://meraki.cisco.com/solutions/location-analytics) 
@@ -147,7 +147,7 @@ Depending on the wireless solution in place and it’s level of integration we m
 *   CISCO CMX for instance can provide usernames when users are connected to the wireless, if configured to do so. 
 *   Microsoft FindMe will always provide a username 
 *   Huawei provides raw RSSI values, IP and MAC addresses. 
-ACA manages floor fingerprinting and estimating location based on these values
+PlaceOS manages floor fingerprinting and estimating location based on these values
 
 
 ## **Shared Desktop Configuration** {#shared-desktop-configuration}
